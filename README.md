@@ -21,7 +21,8 @@ links de referencias:
 - Emprendimiento para el que vamos a trabajar:
 https://sanitariosnicuesa.com.ar/
 - Referentes del mercado:
-https://fvsa.com/?gclid=Cj0KCQjw4PKTBhD8ARIsAHChzRLZvK9siBlyabS3F872_XRXzB5gMAO338zJR98Aj52x61wTOcb5K7YaAtCFEALw_wcB
+https://fvsa.com/
+
 https://www.roca.com.ar/productos/descargas
 
 https://www.capea.com.ar/lavatorios
