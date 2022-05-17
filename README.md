@@ -8,6 +8,7 @@ Luciano Giuliani: Buenas, me  llamo Luciano, Soy de Buenos Aires, Argentina, Ten
 
 Esteban Somoza: Diseñador Industrial de 26 años, vive en Buenos Aires. Trabajo como docente de diseño en una escuela secundaria, y soy apasionado por criptomonedas.
 
+Carlos Palladino:  Soy de Buenos Aires, tengo 23 año, estudio diseño gráfic 
 
 
 Proyecto: Marketplace para un emprendimiento de venta de sanitarios para el hogar. 
