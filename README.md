@@ -9,10 +9,11 @@ Luciano Giuliani: Buenas, me  llamo Luciano, Soy de Buenos Aires, Argentina, Ten
 
 Esteban Somoza: Diseñador Industrial de 26 años, vive en Buenos Aires. Trabajo como docente de diseño en una escuela secundaria, y soy apasionado por criptomonedas.
 
-Carlos Palladino:  Soy de Buenos Aires, tengo 23 año, estudio diseño gráfic 
+Carlos Palladino:  Soy de Buenos Aires, tengo 23 años, estudio diseño gráfico. 
 
 
 Proyecto: Marketplace para un emprendimiento de venta de sanitarios para el hogar. 
+
 
 Publico: Hombres y mujeres de entre 25 y 45 años, con poder adquisitivo medio alto en instancia de remodelacion o fabricación de una vivienda. 
 Localizacion en zona norte de Buenos Aires, publico distinctivo pueden ser hogares y proyectos inmobiliarios de las islas del tigre.
