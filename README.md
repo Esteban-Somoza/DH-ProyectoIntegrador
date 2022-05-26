@@ -1,8 +1,9 @@
 Grupo 1
 ----------
 
-Integrantes: 
-David Flores:Soy David tengo 33 años trabajo en un banco como cajero me gusta el basquet y juego los fines de semana. Tengo dos perros y un gato y un sobrino de dos años con el cual me llevo genial..
+Integrantes:
+
+David Flores: Soy David tengo 33 años trabajo en un banco como cajero me gusta el basquet y juego los fines de semana. Tengo dos perros y un gato y un sobrino de dos años con el cual me llevo genial..
 
 Luciano Giuliani: Buenas, me  llamo Luciano, Soy de Buenos Aires, Argentina, Tengo 29 años, tengo mi propio emprendimiento de comidas, me gusta mucho la musica y la computacion, espero aprender mucho a traves de este proyecto y cumplir con el objetivo final!
 
@@ -33,4 +34,5 @@ https://www.blaisten.com.ar/sanitarios
 https://www.todogriferia.com/banos/sanitarios/
 
 Son los pioneros y lideres del mercado de sanitarios
-- 
+
+Figma : https://www.figma.com/file/gL6p7Tp8947yzZsQhbIMzM/Generales?node-id=0%3A1
