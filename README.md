@@ -1,12 +1,12 @@
 # Grupo 1 - sadfa - fasdf
 
-## [Equipo](/integrantes.md)
+## [Equipo] (/integrantes.md)
 
-## [Tematica](/proyecto.md)
+## [Tematica] (/proyecto.md)
 
-## [Referentes](/referencias.md)
+## [Referentes] (/referencias.md)
 
-## [Wireframe](/design/wireframe.md)
+## [Wireframe] (/design/wireframe.md)
 
 
 Grupo 1
