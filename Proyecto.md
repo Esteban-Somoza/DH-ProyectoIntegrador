@@ -1,0 +1,6 @@
+Proyecto: Marketplace para un emprendimiento de venta de sanitarios para el hogar. 
+
+
+Publico: Hombres y mujeres de entre 25 y 45 años, con poder adquisitivo medio alto en instancia de remodelacion o fabricación de una vivienda. 
+Localizacion en zona norte de Buenos Aires, publico distinctivo pueden ser hogares y proyectos inmobiliarios de las islas del tigre.
+
