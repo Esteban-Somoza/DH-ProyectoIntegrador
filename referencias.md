@@ -1,16 +1,11 @@
+Referentes del mercado:
+----------------------------------------------------------------
+## [FV](https://fvsa.com/)
 
-links de referencias:
-- Emprendimiento para el que vamos a trabajar:
-https://sanitariosnicuesa.com.ar/
-- Referentes del mercado:
-https://fvsa.com/
+## [Roca](https://www.roca.com.ar/productos/descargas)
 
-https://www.roca.com.ar/productos/descargas
+## [Capea](https://www.capea.com.ar/lavatorios)
 
-https://www.capea.com.ar/lavatorios
+## [Blaisten](https://www.blaisten.com.ar/sanitarios)
 
-https://www.blaisten.com.ar/sanitarios
-
-https://www.todogriferia.com/banos/sanitarios/
-
-Son los pioneros y lideres del mercado de sanitarios
+## [Todo Griferia](https://www.todogriferia.com/banos/sanitarios/)

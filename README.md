@@ -1,12 +1,14 @@
 # Grupo 1 - sadfa - fasdf
 
-## [Equipo] (/integrantes.md)
+## [Equipo](https://github.com/Esteban-Somoza/Grupo_1_Sanitarios/blob/master/Integrantes.md)
 
-## [Tematica] (/proyecto.md)
+## [Proyecto](https://github.com/Esteban-Somoza/Grupo_1_Sanitarios/blob/master/Proyecto.md)
 
-## [Referentes] (/referencias.md)
+## [Publico](https://github.com/Esteban-Somoza/Grupo_1_Sanitarios/blob/master/Publico.md)
 
-## [Wireframe] (/design/wireframe.md)
+## [Referentes](https://github.com/Esteban-Somoza/Grupo_1_Sanitarios/blob/master/Referentes.md)
+
+## [Wireframe](https://www.figma.com/team_invite/redeem/Cg87m43pTQkV3hv3tNOlQR)
 
 
 Grupo 1
