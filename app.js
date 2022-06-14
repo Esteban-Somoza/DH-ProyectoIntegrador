@@ -7,5 +7,6 @@ let public = path.resolve(__dirname, './public')
 server.use(express.static(public))
 
 server.get('/', (req, res) => res.sendFile(path.join(__dirname, './views/home.html')));
+server.get('/productos', (req, res) => res.sendFile(path.join(__dirname, './views/productFinder.html')));
 // server.get('/curso', (req, res) => res.send("Bienvenido al curso de nodejs"))
 

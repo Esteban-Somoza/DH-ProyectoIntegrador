@@ -1,0 +1,27 @@
+main {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+.categoria {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+main h2 {
+    font-size: 1.5em;
+
+}
+
+.grupo {
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+.producto {
+    margin-left: 2em;
+    font-weight: normal;
+}
