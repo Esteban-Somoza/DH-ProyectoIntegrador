@@ -1,0 +1,230 @@
+main {
+    padding: 1em 1.5em
+}
+
+h6 {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.ruta-resaltada {
+    font-weight: bold;
+}
+
+/* break point */
+
+h5 {
+    font-size: .6em;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+a {
+    font-size: 1em;
+}
+
+.precio {
+    color: #A5A1A7;
+}
+
+.menos,
+.mas {
+    color: #A5A1A7;
+}
+
+.bold {
+    font-weight: bold;
+    color: black;
+}
+
+/*  */
+.pagina {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column_productos {
+    width: 49%;
+    background-color: #A5A1A7;
+    padding: 1em;
+    border-radius: 1.5em;
+    gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.column_productos article {
+    background-color: #EDEDED;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1em;
+}
+
+.imagen {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.imagen img {
+    width: 100%;
+    margin: auto;
+}
+
+.informacion {
+    width: 50%;
+    flex-grow: 2;
+}
+
+.agregar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: .2em 1em;
+    margin: 0 0 .5em 0;
+    border-radius: .5em;
+}
+
+/* break */
+
+.column_compra {
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+
+.compra_envio {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #EDEDED;
+    padding: 1em;
+    border-radius: 1.5em;
+}
+
+.envio label {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.text {
+    width: 100%;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.form_envio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form {
+    padding: 1em 0;
+    border-top: 1px solid #A5A1A7;
+
+}
+
+.datos_envio {
+    width: 50%;
+    text-align: center;
+    color: #3A687E;
+}
+
+.codigoPostal {
+    width: 50%;
+}
+
+.contenedor_cp {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_cp label {
+    width: 50%;
+    margin: 5px 0
+}
+
+.contenedor_cp .input {
+    width: 50%;
+    height: auto;
+}
+
+.envio h3 {
+    display: inline;
+    width: 50%;
+}
+
+form div label {
+    display: flex;
+    align-items: center;
+}
+
+input[type=radio] {
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em;
+    -webkit-appearance: none;
+    background-color: #A5A1A7;
+    width: 1em;
+    height: 1em;
+}
+
+input[type=radio]:checked {
+    background-color: #3A687E;
+    background-size: 2px;
+    background-position: center;
+}
+
+.valor {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #A5A1A7;
+    padding-bottom: .75em;
+}
+
+.valor_total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: .75em;
+}
+
+/* break */
+
+.compra_pago {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #EDEDED;
+    padding: 1em;
+    border-radius: 1.5em;
+    justify-content: center;
+}
+
+.compra_pago h3 {
+    width: 100%;
+    margin-bottom: 1em
+}
+
+.compra_pago img {
+    border-radius: 1em;
+    width: 100%;
+    box-shadow: 0 2px 7px #A5A1A7;
+    justify-self: center;
+}

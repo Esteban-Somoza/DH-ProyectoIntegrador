@@ -1,11 +1,16 @@
 /*-------------FOOT CONT-------------*/
 
+footer {
+    z-index: 100;
+}
+
 .footer__container {
     display: flex;
     gap: 6em;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #3A687E;
+    
 }
 
 .footer__container h5 {
