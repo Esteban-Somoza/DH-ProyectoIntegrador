@@ -28,13 +28,13 @@ li {
     margin-top: 5px;
 }
 
-h4 {
+li.categoria h3 {
     border-radius: 5px;
     padding-left: 1em;
     background-color: #A5A1A7;
 }
 
-h4:hover {
+li.categoria h3:hover {
     background-color: #3A687E;
 }
 
@@ -47,11 +47,24 @@ main h2 {
     margin-top: 1em;
 }
 
+h6 {
+    display: inline-block;
+    font-weight: normal;
+}
+
+p.ruta{
+    margin-left: 3em;
+}
+
+.ruta-resaltada {
+    font-weight: bold;
+}
+
 .productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 1em;
+    /* margin: 0 1em; */
 }
 
 
@@ -73,6 +86,12 @@ main h2 {
 h3{
     display: inline-block;
     width: 100%;
+    font-size: 1em;
+}
+
+h4{
+    font-size: .8em;
+    font-weight: normal;
 }
 
 .informacion {

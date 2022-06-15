@@ -1,0 +1,166 @@
+main {
+    padding: 1em
+}
+
+h6 {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.ruta-resaltada {
+    font-weight: bold;
+}
+
+/* break */
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0 1em;
+}
+
+.producto div.imagen {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto img {
+    width: 80%;
+    margin: auto;
+}
+
+.informacion {
+    justify-self: flex-end;
+    width: 50%;
+    text-align: end;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: flex-end;
+}
+
+.producto ul {
+    list-style: none;
+}
+
+h4 {
+    font-size: .8em;
+    font-weight: normal;
+}
+
+h3,
+h4,
+h5 {
+    display: inline-block;
+}
+
+.compra h3 {
+    margin-left: 5px;
+}
+
+h5 {
+    font-size: .8em;
+    font-weight: normal;
+}
+
+.tabla {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.tabla_items {
+    text-align: start;
+    font-weight: bold
+}
+
+.tabla_info {}
+
+
+.compra {
+    background-color: #EDEDED;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em;
+    border-radius: .75em;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.agregarCarrito {
+    text-align: end;
+    padding: 5px;
+    background-color: #3A687E;
+    border-radius: .5em;
+}
+
+/* break */
+
+
+.detalles_producto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5em;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.detalles_producto h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.detalles_producto ul {
+    list-style: none;
+    background-color: #EDEDED;
+    border-radius: .5em .5em 0 0;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    justify-self: center;
+}
+
+.navegacion li {
+    padding: .7em 1em;
+}
+
+li.elegido {
+    background-color: #3A687E;
+    height: 100%;
+    border-radius: .5em .5em 0 0;
+}
+
+.informacion_adicional{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    border-top: 1px solid #A5A1A7;
+    padding-top:2em;
+}
+
+.detalles_producto .imagen {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles_producto img {
+    width: 100%;
+}
