@@ -1,0 +1,117 @@
+/*-------------MAIN CONTAINER-------------*/
+
+.main__container {
+    max-width: auto;
+}
+
+/*-------------BANNER-------------*/
+
+.banner img {
+    display: flex;
+   
+    width: 100%;
+    flex-grow: 1; 
+    margin-bottom: 0px ;
+}
+/*-------------PRODUCTOS-------------*/
+.productos {
+    display: flex;
+    width: 100%;
+    gap: 1em;
+    justify-content: space-between;
+    padding: 1.5em;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+.productos a {
+    flex-shrink: .5;
+}
+.productos img {
+    background-color: grey;
+    padding: .5em;
+    border-radius: 20%;
+    display: flex;
+    margin-top: 4px;
+    width: 100%;
+    flex-grow: 1; 
+    margin-bottom: 0px ;
+}
+
+.productos img:hover {
+    
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    background-color: #3A687E;
+}
+
+
+
+/*-------------MARCAS-------------*/
+.marcas {
+    background-color: rgb(194, 189, 189);
+}
+.marcas h2 {
+    *text-decoration:underline
+    
+}
+.marcas h2::after {
+    content:"";
+    display: block;
+    border-top: 2px solid black;
+    width: 20%;
+    margin:auto;
+}
+
+.marcas img {
+    display: flex;
+    width: 100%;
+    flex-grow: 1; 
+    margin-bottom: 0px ;
+}
+
+
+/*-------------ISLA-------------*/
+.isla img {
+    display: flex;
+    
+    width: 100%;
+    flex-grow: 1; 
+    margin-bottom: 0px ;
+}
+
+.isla h2 {
+    text-decoration:underline;
+    padding: 0.5em;
+
+}
+
+/*-------------MAPA/CONTACTO/EXPERIENCIA-------------*/
+
+.mapa {
+   
+    display: flex;
+    
+    flex-direction: row;
+
+}
+
+.img__map {
+    margin: 2em 2em 1em 1em;
+}
+
+.contacto {
+    margin-right:0.5em;
+   padding-top: 2em;
+}
+.contacto h4 {
+    text-decoration:underline
+}
+.experiencia {
+    padding-top: 2em;
+    margin-right: 0.5em;
+}
+.experiencia h4 {
+    text-decoration:underline
+}
+ 

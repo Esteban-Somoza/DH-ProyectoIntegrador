@@ -21,7 +21,7 @@ h2 {
 h3 {
     font-size: 1em;
     color: black;
-    
+  
 }
 h4 {
     font-size: 0.8em;
@@ -34,159 +34,8 @@ h6 {
     font-size: 0.4em;
 }
 
-.header__box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color:#3A687E ;
-    gap: 0.5em;
-    padding: 2px;
-}
-.burger__container {
-   
-   text-align: center;
-    border: 1px solid grey;
-    margin: 10px;
-    border-radius: 30%;
- 
-}
-.burga {
-    display: table;
-    background-color: #03264C;
-    text-align: center;
-    color: #DDCFBB;
-    border-radius: 20%;
-    text-decoration: none;
-    padding: 12px; 
-}
-
-.nav__container {
-       display: flex;
-       align-items: center;
-       gap: 10px;
-       background-color:#3A687E ;
-       
- } 
-
- .img__figure {
-    *background-color: rgb(192, 190, 190);
- }
-
- .cart__container {
-    border: #03264C 1px solid;
-    border-radius: 50%;
-    margin: 2px;
-    padding: 0.5rem;
-    background-color: grey;
- }
 
 
- .main__container {
-     max-width: auto;
-}
 
-.footer__container {
-    background-color: #3A687E;
-}  
 
- .banner img {
-    display: flex;
-   
-    width: 100%;
-    flex-grow: 1; 
-    margin-bottom: 0px ;
-}
 
-.productos {
-    display: flex;
-    width: 100%;
-    gap: 1em;
-    justify-content: space-between;
-    padding: 1.5em;
-    padding-left: 14px;
-    padding-right: 14px;
-}
-.productos img {
-    background-color: grey;
-    padding: .5em;
-    border-radius: 20%;
-}
-
-.productos img {
-    display: flex;
-    margin-top: 4px;
-    width: 100%;
-    flex-grow: 1; 
-    margin-bottom: 0px ;
-   
-}
-
-.marcas {
-    background-color: rgb(194, 189, 189);
-}
-.marcas h2 {
-    text-decoration:underline
-    
-}
-.isla h2 {
-    text-decoration:underline;
-    padding: 0.5em;
-
-}
-
-.marcas img {
-    display: flex;
-    width: 100%;
-    flex-grow: 1; 
-    margin-bottom: 0px ;
-}
-
-.isla img {
-    display: flex;
-    
-    width: 100%;
-    flex-grow: 1; 
-    margin-bottom: 0px ;
-}
-
-.mapa {
-   
-    display: flex;
-    
-    flex-direction: row;
-
-}
-
-.img__map {
-    margin: 2em 2em 1em 1em;
-}
-
-.footer__container {
-    display: flex;
-    
-    flex-direction: row;
-}
-
-.contacto {
-    margin-right:0.5em;
-   padding-top: 2em;
-}
-.contacto h4 {
-    text-decoration:underline
-}
-.experiencia {
-    padding-top: 2em;
-    margin-right: 0.5em;
-}
-.experiencia h4 {
-    text-decoration:underline
-}
- 
-
-.productos img:hover {
-    
-        transform: scale(1.075);
-        transition: 0.2s ease-in;
-        cursor: pointer;
-        background-color: #3A687E;
-}

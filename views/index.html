@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanitarios Nicuesa</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,11 +31,12 @@
             <div class="logo">
                 <h2>Sanitarios Nicuesa e Hijos</h2>
             </div>
-            <div class="search__container">
-                <form action="#" class="search"> 
-                    <input type="search" name="search" class="search-bar" placeholder="Buscar productos, marcas y más">
-                    <button class="search__btn"" type="submit"><i class="fas fa-search"></i></button>
-            </div>
+                <div id="busqueda">
+                    <form action="GET">
+                        <input placeholder="Buscar productos, marcas y mas" type="text" name="user" id="name" data-error="Error">
+                    </form>
+                    <i class="fa-solid fa-magnifying-glass"> </i>
+                </div>
             <div class="cart__container">
                  <a class="cart" href="/"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
@@ -104,18 +108,18 @@
                 <a href="#" class="politica"><h6>Política de privacidad</h6></a>
              </div>
              <div class="garantia">
-                <h5>Garantía</h4>
-                <p>Conoce mas sobre nuestras politicas de garantía</p>
+                <h5>Garantía</h5>
+                <h6>Conoce mas sobre nuestras politicas de garantía</h6>
              </div>
              <div class="seguinos">
-                <h5>Seguinos</h4>
-                <a href="#" class="facebook">Facebook</a>
-                <a href="#" class="whatsapp">Whatsapp</a>
-                <a href="#" class="instagram">Instagram</a>
-                <a href="#" class="mail">E-mail</a>
+                <h5>Seguinos</h5>
+                <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="mail"><i class="fa-solid fa-envelope"></i></a>
              </div>
              <div class="copyright">
-                <h5>Copyright @ 2022 realizado por estudio DH</h5>
+                <h6>Copyright @ 2022 realizado por estudio DH</h6>
              </div>
         </nav>
     </footer>

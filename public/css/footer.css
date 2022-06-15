@@ -1,0 +1,63 @@
+/*-------------FOOT CONT-------------*/
+
+.footer__container {
+    display: flex;
+    gap: 6em;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #3A687E;
+}
+
+.footer__container h5 {
+    color: snow;
+    text-decoration: underline snow;
+    
+
+}
+
+/*-------------INFO-------------*/
+.info {
+    display: block;
+    margin-top: auto;
+
+}
+
+
+.info h5 {
+    margin:1em; 
+    align-items: center;
+}
+.info h6 {
+    color: snow;
+}
+
+/*-------------GARANTIA-------------*/
+
+.garantia h5 {
+    margin:1em; 
+    align-items: center;
+}
+.garantia h6 {
+    color: snow;
+}
+
+/*-------------SEGUINOS-------------*/
+
+.seguinos h5 {
+    margin:1em; 
+    align-items: center;
+}
+
+
+.seguinos a {
+  
+    color: snow;
+}
+/*-------------COPYRIGHT-------------*/
+
+.copyright {
+  color: snow;
+  display:flex ;
+  align-items: flex-end;
+
+}

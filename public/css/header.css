@@ -1,0 +1,76 @@
+/*-------------HEADER BOX-------------*/
+
+.header__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem ;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color:#3A687E ;
+    padding: 2px;
+}
+
+/*-------------NAV CONTAINER-------------*/
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2em;
+    background-color:#3A687E ;
+    
+} 
+/*-------------BURGA-------------*/
+.burger__container {
+   
+    text-align: center;
+     border: 1px solid grey;
+     margin: 10px;
+     border-radius: 30%;
+  
+ }
+ .burga {
+     display: table;
+     background-color: #03264C;
+     text-align: center;
+     color: #DDCFBB;
+     border-radius: 20%;
+     text-decoration: none;
+     padding: 12px; 
+     padding-bottom: 4px;
+     padding-top: 4px;
+
+ }
+ /*-------------BUSCADOR-------------*/
+
+#busqueda {
+    display: flex;
+    height: 2em;
+    padding: 0 1em;
+    color: #666;
+    background-color: white;
+    width: auto;
+    border-radius: 1em;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    flex-grow: 2;
+}
+
+
+ /*-------------CARRO-------------*/
+ .cart__container {
+    
+    right: 2em;
+    border-radius: 50%;
+    margin: 2px;
+    padding: 0.5rem;
+    background-color: rgb(181, 177, 177);
+ }
+
+ .cart {
+    color: rgb(0, 0, 0);
+ }
+
+ 
