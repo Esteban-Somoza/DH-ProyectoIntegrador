@@ -1,0 +1,91 @@
+main {
+    padding: 1em 3em
+}
+
+h6 {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.ruta-resaltada {
+    font-weight: bold;
+}
+
+/* break point */
+
+h5 {
+    font-size: .6em;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+a{
+    font-size: 1em;
+}
+
+.precio{
+    font-weight:normal;
+    color: #A5A1A7;
+}
+
+.menos,
+.mas{
+    font-weight: normal;
+    color: #A5A1A7;
+}
+
+.total h3,
+.cant {
+    font-weight: bold;
+    color: black;
+}
+
+/*  */
+.productos {
+    width: 50%;
+    background-color: #A5A1A7;
+    padding:1em;
+    border-radius: 1.5em;
+
+}
+
+.productos article {
+    background-color: #EDEDED;
+    padding:1em;
+    border-radius: 1em;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1em;
+}
+
+.imagen {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.imagen img {
+    width: 100%;
+    margin: auto;
+}
+
+.informacion {
+    width: 50%;
+}
+
+.agregar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: .2em 1em;
+    margin: .5em 0;
+    border-radius: .5em;
+}
+
