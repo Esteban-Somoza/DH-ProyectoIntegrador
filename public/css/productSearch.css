@@ -6,9 +6,9 @@ main {
 .buscador {
     background-color: #ededed;
     padding: 0 1em;
-    position: fixed;
-    width: 175px;
-    height: 100vh;
+    position:sticky;
+    *width: 175px;
+   *height: 100vh;
 }
 
 li {

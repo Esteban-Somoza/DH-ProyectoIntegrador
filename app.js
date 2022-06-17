@@ -1,14 +1,16 @@
 const path = require('path');
 const express = require('express');
-const server = express();
+const app = express();
 
-server.listen(3000,() => console.log('Abiendo servidor en http://localhost:3000'))
+app.listen(3000,() => console.log('Abiendo servidor en http://localhost:3000'))
 let public = path.resolve(__dirname, './public')
-server.use(express.static(public))
+app.use(express.static(public))
 
-server.get('/', (req, res) => res.sendFile(path.join(__dirname, './views/index.html')));
-server.get('/productos', (req, res) => res.sendFile(path.join(__dirname, './views/productDetail.html')));
-server.get('/buscador', (req, res) => res.sendFile(path.join(__dirname, './views/productSearch.html')));
-server.get('/carrito', (req, res) => res.sendFile(path.join(__dirname, './views/productCart.html')));
-// server.get('/curso', (req, res) => res.send("Bienvenido al curso de nodejs"))
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, './views/index.html')));
+app.get('/productos', (req, res) => res.sendFile(path.join(__dirname, './views/productDetail.html')));
+app.get('/buscador', (req, res) => res.sendFile(path.join(__dirname, './views/productSearch.html')));
+app.get('/carrito', (req, res) => res.sendFile(path.join(__dirname, './views/productCart.html')));
+app.get('/register', (req, res) => res.sendFile(path.join(__dirname, './views/register.html')));
+app.get('/login', (req, res) => res.sendFile(path.join(__dirname, './views/login.html')));
+// app.get('/curso', (req, res) => res.send("Bienvenido al curso de nodejs"))
 
