@@ -16,15 +16,16 @@
 /*-------------PRODUCTOS-------------*/
 .productos {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 1em;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 1.5em;
     padding-left: 14px;
     padding-right: 14px;
 }
 .productos a {
-    flex-shrink: .5;
+    /* flex-shrink: .5; */
 }
 .productos img {
     background-color: grey;
@@ -94,6 +95,8 @@
     
     flex-direction: row;
 
+    justify-content: space-around;
+
 }
 
 .img__map {
@@ -103,6 +106,7 @@
 .contacto {
     margin-right:0.5em;
    padding-top: 2em;
+   width: 15%;
 }
 .contacto h4 {
     text-decoration:underline
@@ -110,6 +114,7 @@
 .experiencia {
     padding-top: 2em;
     margin-right: 0.5em;
+    width: 15%;
 }
 .experiencia h4 {
     text-decoration:underline
