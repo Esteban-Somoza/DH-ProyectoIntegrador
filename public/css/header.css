@@ -11,7 +11,8 @@
     background-color:#3A687E ;
     padding: 2px;
     gap: 2em;
-    padding-left: 15px;
+    padding: 0 1em;
+    height: 80px;
 }
 
 /*-------------NAV CONTAINER-------------*/
@@ -70,10 +71,14 @@
     margin: 2px;
     padding: 0.5rem;
     background-color: rgb(181, 177, 177);
+    display: flex;
+    width: 2.5em;
+    aspect-ratio: 1/1;
  }
 
  .cart {
     color: rgb(0, 0, 0);
+    margin: auto;
  }
 /*-------------logo-------------*/
 
@@ -95,10 +100,12 @@
     top: 0;
     z-index: 999;
 }
-.header__box h2{
+.header__box a h2{
     font-size: 32px;
-    
+    justify-self: flex-start;
+    color:black
 }
+
 .navbar__menu {
     display: flex;
     align-items: center;
@@ -251,12 +258,12 @@
     display: block;
     cursor: pointer;
 }
-    #mobile-menu.is-active .bar:nth-child(2) {
-    opacity: 0;
-} 
-    #mobile-menu.is-active .bar:nth-child(1){
+#mobile-menu.is-active .bar:nth-child(1){
     transform: translateY(8px) rotate(45deg);
 }
+#mobile-menu.is-active .bar:nth-child(2) {
+opacity: 0;
+} 
     #mobile-menu.is-active .bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
 }

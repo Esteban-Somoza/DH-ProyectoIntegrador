@@ -8,9 +8,9 @@ footer {
     display: flex;
     gap: 4em;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #3A687E;
-    
+    padding: .5em;
 }
 
 .footer__container h5 {

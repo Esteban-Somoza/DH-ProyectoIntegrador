@@ -2,17 +2,26 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+main {
+    /* v total de altura - header que es 80px */
+    min-height: calc(100vh - 80px); 
+}
+
+
+
 *{
     box-sizing: border-box;
     border: none;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
     text-align: center;
 }
+
 h2 {
     font-size: 1.3em;
     text-align: center;
@@ -20,16 +29,16 @@ h2 {
 
 h3 {
     font-size: 1em;
-    color: black;
-  
+    color: black;  
 }
+
 h4 {
     font-size: 0.9em;
-
 }
+
 h5 {font-size: 0.7em;
-
 }
+
 h6 {
     font-size: 0.6em;
 }

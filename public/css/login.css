@@ -13,10 +13,7 @@
   }
   
   .login-container input {
-      *display: flex ;
-      *gap:2px;
       padding: 5px;
       border: none;
       border-radius: 5px;
-    
   }
