@@ -6,17 +6,20 @@ footer {
 
 .footer__container {
     display: flex;
-    gap: 4em;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: #3A687E;
     padding: .5em;
+    *gap: 4em;
+    *position: relative;
+
 }
 
 .footer__container h5 {
     color: snow;
     text-decoration: underline snow;
-    
+
 
 }
 
@@ -24,51 +27,72 @@ footer {
 .info {
     display: block;
     margin-top: auto;
-
+    min-width: 115px;
+    text-align: start;
+    margin-right: 1em;
 }
-.info h6:hover{
+
+.info h6:hover {
     color: #418b8b;
 }
 
 
 .info h5 {
-    margin:.5em; 
+    margin: .5em 0;
     align-items: center;
 }
+
 .info h6 {
     color: snow;
+    text-align: start;
 }
 
 /*-------------GARANTIA-------------*/
+.garantia {
+    min-width: 115px;
+}
 
 .garantia h5 {
-    margin:.5em; 
+    margin: .5em 0;
     align-items: center;
 }
+
 .garantia h6 {
     color: snow;
+    max-width: 100px;
 }
 
 /*-------------SEGUINOS-------------*/
 
 .seguinos h5 {
-    margin:.5em; 
+    margin: .5em 0;
     align-items: center;
 }
-.seguinos a:hover{
+
+.seguinos a:hover {
     color: #418b8b;
 }
 
 
 .seguinos a {
-  
+
     color: snow;
 }
+
 /*-------------COPYRIGHT-------------*/
 
 .copyright {
-  color: snow;
-  display:flex ;
-  align-items: flex-end;
+    color: snow;
+    /* *display: flex;
+    *align-self: flex-end;
+    *position: absolute;
+    *bottom: .75em;
+    *right: 1em; */
+    width: 100%;
+    text-align: end;
+    margin-top: .5em;
+}
 
+.copyright h6{
+    font-size: .5em;
 }

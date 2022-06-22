@@ -8,11 +8,12 @@
 
 .banner img {
     display: flex;
-   
+
     width: 100%;
-    flex-grow: 1; 
-    margin-bottom: 0px ;
+    flex-grow: 1;
+    margin-bottom: 0px;
 }
+
 /*-------------PRODUCTOS-------------*/
 .productos {
     display: flex;
@@ -23,10 +24,13 @@
     padding: 1.5em;
     padding-left: 14px;
     padding-right: 14px;
+    margin: 1em 0;
 }
+
 .productos a {
     /* flex-shrink: .5; */
 }
+
 .productos img {
     background-color: grey;
     padding: .5em;
@@ -34,12 +38,12 @@
     display: flex;
     margin-top: 4px;
     width: 100%;
-    flex-grow: 1; 
-    margin-bottom: 0px ;
+    flex-grow: 1;
+    margin-bottom: 0px;
 }
 
 .productos img:hover {
-    
+
     transform: scale(1.075);
     transition: 0.3s ease-in;
     cursor: pointer;
@@ -51,38 +55,41 @@
 /*-------------MARCAS-------------*/
 .marcas {
     background-color: rgb(194, 189, 189);
+    margin: 1em 0;
+    padding: 1em;
 }
+
 .marcas h2 {
-    *text-decoration:underline
-    
+    *text-decoration: underline;
 }
+
 .marcas h2::after {
-    content:"";
+    content: "";
     display: block;
     border-top: 2px solid black;
     width: 20%;
-    margin:auto;
+    margin: auto;
 }
 
 .marcas img {
     display: flex;
     width: 100%;
-    flex-grow: 1; 
-    margin-bottom: 0px ;
+    flex-grow: 1;
+    margin-bottom: 0px;
 }
 
 
 /*-------------ISLA-------------*/
 .isla img {
     display: flex;
-    
+    /* margin: 1em 0; */
     width: 100%;
-    flex-grow: 1; 
-    margin-bottom: 0px ;
+    flex-grow: 1;
+    margin-bottom: 0px;
 }
 
 .isla h2 {
-    text-decoration:underline;
+    text-decoration: underline;
     padding: 0.5em;
 
 }
@@ -90,33 +97,42 @@
 /*-------------MAPA/CONTACTO/EXPERIENCIA-------------*/
 
 .mapa {
-   
+
     display: flex;
-    
+    flex-wrap: wrap;
     flex-direction: row;
 
     justify-content: space-around;
 
+    margin: 1em 0;
+    padding: 1em;
 }
 
 .img__map {
     margin: 2em 2em 1em 1em;
+    max-width: 115px;
+}
+
+.img__map img {
+    width: 100%;
 }
 
 .contacto {
-    margin-right:0.5em;
-   padding-top: 2em;
-   width: 15%;
+    margin-right: 0.5em;
+    padding-top: 2em;
+    max-width: 150px;
 }
+
 .contacto h4 {
-    text-decoration:underline
+    text-decoration: underline
 }
+
 .experiencia {
     padding-top: 2em;
     margin-right: 0.5em;
-    width: 15%;
+    max-width: 150px;
 }
+
 .experiencia h4 {
-    text-decoration:underline
+    text-decoration: underline
 }
- 
