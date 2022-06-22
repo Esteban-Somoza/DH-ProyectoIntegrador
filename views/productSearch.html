@@ -8,6 +8,7 @@
     <title>Sanitarios Nicuesa - Buscador</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/productSearch.css">
+    <link rel="stylesheet" href="/css/mediaQ-productSearch.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +33,9 @@
                     </div>
                     <ul class="navbar__menu">
                         <li class="navbar__item">
+                            <a href="/" class="navbar__links">Home</a>
+                        </li>
+                        <li class="navbar__item">
                             <a href="/productos" class="navbar__links"> Productos </a>
                         </li>
                         <li class="navbar__item">
@@ -39,9 +43,6 @@
                         </li>
                         <li class="navbar__item">
                             <a href="/carrito" class="navbar__links">Carro</a>
-                        </li>
-                        <li class="navbar__item">
-                            <a href="/" class="navbar__links">Home</a>
                         </li>
                         <li class="navbar__item">
                             <a href="/register" class="navbar__links">Registro</a>
@@ -53,7 +54,9 @@
                     </ul>
                 </div>
             </nav>
-            <h2>Sanitarios Nicuesa e Hijos</h2>
+            <a href="/">
+                <h2>Sanitarios Nicuesa e Hijos</h2>
+            </a>
         </div>
         <div class="b">
             <div id="busqueda">
@@ -71,7 +74,8 @@
 
     <!-- break  -->
     <main>
-        <div class="buscador">
+        <h2 class="categorias" tabindex="9999"> - filtrar categorias  - </h2>
+        <nav class="desplegable">
             <section class="grupo">
                 <h2>Categorias</h2>
                 <ul>
@@ -117,71 +121,120 @@
                     </li>
                 </ul>
             </section>
-        </div>
-        <div class="articulos">
-            <p class="ruta">
-            <h6>productos - baño - </h6>
-            <h6 class="ruta-resaltada"> Bidet</h6>
-            </p>
-            <section class="productos">
-                <article class="articulo">
-                    <h3>Bidet</h3>
-                    <div class="informacion">
-                        <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
-                        <div class="texto">
-                            <h4 class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </h4>
-                            <h4 class="modelos">
-                                >> Ver modelos
-                            </h4>
+        </nav>
+        <div class="main">
+            <div class="buscador">
+                <section class="grupo">
+                    <h2>Categorias</h2>
+                    <ul>
+                        <li class="categoria">
+                            <h3>Baño</h3>
+                            <ul>
+                                <li class="tipo">Bidet</li>
+                                <li class="tipo">Inodoro</li>
+                                <li class="tipo">Griferia</li>
+                                <li class="tipo">Piletas</li>
+                                <li class="tipo">Ducha</li>
+                            </ul>
+                        </li>
+                        <li class="categoria">
+                            <h3>Cocina</h3>
+                        </li>
+                        <li class="categoria">
+                            <h3>Tanques</h3>
+                        </li>
+                        <li class="categoria">
+                            <h3>Calefaccion</h3>
+                        </li>
+                        <li class="categoria">
+                            <h3>Instaladores</h3>
+                        </li>
+                    </ul>
+                </section>
+                <div id="break"></div>
+                <section class="grupo">
+                    <h2>Marcas</h2>
+                    <ul>
+                        <li class="categoria">
+                            <h3>Roca</h3>
+                        </li>
+                        <li class="categoria">
+                            <h3>FV</h3>
+                        </li>
+                        <li class="categoria">
+                            <h3>Capea</h3>
+                        </li>
+                        <li class="categoria">
+                            <h3>Rotoplast</h3>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="articulos">
+                <p class="ruta">
+                <h6>productos - baño - </h6>
+                <h6 class="ruta-resaltada"> Bidet</h6>
+                </p>
+                <section class="productos">
+                    <article class="articulo">
+                        <h3>Bidet</h3>
+                        <div class="informacion">
+                            <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
+                            <div class="texto">
+                                <h4 class="descripcion">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </h4>
+                                <h4 class="modelos">
+                                    >> Ver modelos
+                                </h4>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <h3>Bidet</h3>
-                    <div class="informacion">
-                        <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
-                        <div class="texto">
-                            <h4 class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </h4>
-                            <h4 class="modelos">
-                                >> Ver modelos
-                            </h4>
+                    </article>
+                    <article class="articulo">
+                        <h3>Bidet</h3>
+                        <div class="informacion">
+                            <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
+                            <div class="texto">
+                                <h4 class="descripcion">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </h4>
+                                <h4 class="modelos">
+                                    >> Ver modelos
+                                </h4>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <h3>Bidet</h3>
-                    <div class="informacion">
-                        <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
-                        <div class="texto">
-                            <h4 class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </h4>
-                            <h4 class="modelos">
-                                >> Ver modelos
-                            </h4>
+                    </article>
+                    <article class="articulo">
+                        <h3>Bidet</h3>
+                        <div class="informacion">
+                            <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
+                            <div class="texto">
+                                <h4 class="descripcion">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </h4>
+                                <h4 class="modelos">
+                                    >> Ver modelos
+                                </h4>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="articulo">
-                    <h3>Bidet</h3>
-                    <div class="informacion">
-                        <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
-                        <div class="texto">
-                            <h4 class="descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </h4>
-                            <h4 class="modelos">
-                                >> Ver modelos
-                            </h4>
+                    </article>
+                    <article class="articulo">
+                        <h3>Bidet</h3>
+                        <div class="informacion">
+                            <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
+                            <div class="texto">
+                                <h4 class="descripcion">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </h4>
+                                <h4 class="modelos">
+                                    >> Ver modelos
+                                </h4>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-            </section>
+                </section>
+            </div>
         </div>
     </main>
     <!-- break -->

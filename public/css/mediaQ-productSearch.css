@@ -1,0 +1,77 @@
+@media (min-width: 300px) {
+    .buscador {
+        display: none;
+        /* position: absolute; */
+    }
+
+
+    .buscador h2 {
+        font-size: 1em;
+    }
+
+    .articulos h6 {
+        visibility: hidden;
+    }
+    .desplegable h3:hover {
+        background-color: #3A687E;
+    }
+
+    .categorias {
+        display: block;
+        width: 100%;
+        margin: .5em 0;
+        position: relative;
+        z-index: 100;
+        font-weight: normal;
+    }
+
+    .categorias:focus+.desplegable {
+        display: inline;
+        transition: .5s;
+        background-color:#EDEDED;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .desplegable {
+        width: 100%;
+        display: none;
+        /* margin-top: 1em; */
+        padding-bottom: 1em;
+
+
+    }
+
+}
+
+@media (min-width: 481px) {
+    .buscador {
+        display: block;
+    }
+
+    .desplegable {
+        display: none;
+    }
+
+    .categorias {
+        display: none;
+        background-color: aqua;
+    }
+
+    .articulo {
+        /* max-width: 45%;
+        min-width: 280px; */
+        min-height: 40%;
+        width: clamp(280px, 400px, 500px);
+    }
+
+    .articulos {
+        padding: 0 2em;
+        margin-top: 0;
+    }
+
+    .articulos h6 {
+        visibility: visible;
+    }
+}

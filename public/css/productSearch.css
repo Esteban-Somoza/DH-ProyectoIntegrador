@@ -1,4 +1,4 @@
-main {
+.main {
     display: flex;
     height: auto;
 }
@@ -6,9 +6,9 @@ main {
 .buscador {
     background-color: #ededed;
     padding: 0 1em;
-    position:sticky;
+    position: sticky;
     *width: 175px;
-   *height: 100vh;
+    height: 100vh;
 }
 
 li {
@@ -46,15 +46,15 @@ li.categoria h3:hover {
 /* fonts  */
 main h2 {
     font-size: 1.5em;
-    
+
 }
 
-main h3{
+main h3 {
     display: inline-block;
     width: 100%;
 }
 
-main h4{
+main h4 {
     font-weight: normal;
 }
 
@@ -62,9 +62,10 @@ main h6 {
     display: inline-block;
     font-weight: normal;
 }
+
 /*  */
 
-p.ruta{
+p.ruta {
     margin-left: 3em;
 }
 
@@ -82,16 +83,17 @@ p.ruta{
 
 .articulos {
     padding: 0 2em;
+    margin-top: -1.5em;
 }
 
 .articulo {
-    max-width: 45%;
-    min-height: 40%;
-    height: auto;
+    /* max-width: 45%;
+    min-width: 280px;
+    min-height: 40%; */
     background-color: #EDEDED;
     padding: 1em;
     border-radius: 1em;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 
@@ -105,11 +107,12 @@ p.ruta{
     height: 150px;
     display: flex;
 }
+
 img {
-height: 75%;
-margin:auto;
-display: inline-block;
-align-self: center;
+    height: 75%;
+    margin: auto;
+    display: inline-block;
+    align-self: center;
 }
 
 .texto {
@@ -123,6 +126,6 @@ align-self: center;
 .modelos {
     align-self: flex-end;
     background-color: #A5A1A7;
-    padding:5px;
+    padding: 5px;
     border-radius: 10px;
 }

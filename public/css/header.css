@@ -76,15 +76,22 @@ padding: 0 1em;
     padding: 0 1em;
     color: #666;
     background-color: white;
-    width: auto;
+    width: 0px;
     border-radius: 1em;
-    justify-content: space-between;
-    /* gap: 5px; */
+    justify-content: flex-end;
+    gap: .75em;
     align-items: center;
     flex-grow: 1.1;
     /* max-width: max-content; */
 }
 
+#busqueda form {
+    width: 100%;
+}
+
+#busqueda input {
+    width: 100%;
+}
 
 /*-------------CARRO-------------*/
 .cart__container {
@@ -126,8 +133,6 @@ padding: 0 1em;
 }
 
 .header__box a h2 {
-    font-size: 32px;
-    justify-self: flex-start;
     color: black
 }
 
@@ -167,9 +172,6 @@ padding: 0 1em;
     max-width: 1300px;
     margin: 0 auto;
     *padding: 0 50px;
-
-
-
 }
 
 .navbar__links:hover {
@@ -183,9 +185,6 @@ padding: 0 1em;
     align-items: center;
     padding: 0 1rem;
     width: 100%;
-
-
-
 }
 
 .button {
@@ -267,8 +266,8 @@ padding: 0 1em;
 
     #mobile-menu {
         position: relative;
-        top: 12%;
-        right: 5%;
+        top: 11%;
+        *right: 5%;
         transform: translate(5%, 20%);
 
     }
