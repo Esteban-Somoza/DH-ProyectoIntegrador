@@ -23,50 +23,51 @@
 
 <body>
     <header class="header__box">
-        <nav class="navbar">
-            <div class="navbar__container">
-                <a href="/" id="navbar__logo"></i></a>
-                <div class="navbar__toggle" id="mobile-menu">
-                    <span class="bar"></span><span class="bar"></span>
-                    <span class="bar"></span>
+        <div class="a">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="/" id="navbar__logo"></i></a>
+                    <div class="navbar__toggle" id="mobile-menu">
+                        <span class="bar"></span><span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item">
+                            <a href="/productos" class="navbar__links"> Productos </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/buscador" class="navbar__links"> Buscador </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/carrito" class="navbar__links">Carro</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/" class="navbar__links">Home</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/register" class="navbar__links">Registro</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/login" class="navbar__links">Login</a>
+                        </li>
+
+                    </ul>
                 </div>
-                <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a href="/" class="navbar__links">Home</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/buscador" class="navbar__links"> Buscador </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/productos" class="navbar__links"> Productos </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/carrito" class="navbar__links">Carro</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/register" class="navbar__links">Registro</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/login" class="navbar__links">Login</a>
-                    </li>
-
-                </ul>
+            </nav>
+            <h2>Sanitarios Nicuesa e Hijos</h2>
+        </div>
+        <div class="b">
+            <div id="busqueda">
+                <form action="GET">
+                    <input placeholder="Buscar productos, marcas y mas" type="text" name="user" id="name"
+                        data-error="Error">
+                </form>
+                <i class="fa-solid fa-magnifying-glass"> </i>
             </div>
-        </nav>
-        <h2>Sanitarios Nicuesa e Hijos</h2>
+            <div class="cart__container">
+                <a class="cart" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
         </div>
-        <div id="busqueda">
-            <form action="GET">
-                <input placeholder="Buscar productos, marcas y mas" type="text" name="user" id="name"
-                    data-error="Error">
-            </form>
-            <i class="fa-solid fa-magnifying-glass"> </i>
-        </div>
-        <div class="cart__container">
-            <a class="cart" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-
-        </nav>
     </header>
     <!-- break  -->
     <main>

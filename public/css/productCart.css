@@ -2,10 +2,22 @@ main {
     padding: 1em 1.5em
 }
 
-h6 {
+/* fonts */
+
+main h6 {
     display: inline-block;
     font-weight: normal;
 }
+main h5,
+main h3 {
+    font-weight: normal;
+}
+
+main a {
+    font-size: 1em;
+}
+
+/*  */
 
 .ruta-resaltada {
     font-weight: bold;
@@ -13,19 +25,6 @@ h6 {
 
 /* break point */
 
-h5 {
-    font-size: .6em;
-    font-weight: normal;
-}
-
-h3 {
-    font-size: 1em;
-    font-weight: normal;
-}
-
-a {
-    font-size: 1em;
-}
 
 .precio {
     color: #A5A1A7;
@@ -136,7 +135,6 @@ a {
 
 form {
     padding: 1em 0;
-    border-top: 1px solid #A5A1A7;
 
 }
 

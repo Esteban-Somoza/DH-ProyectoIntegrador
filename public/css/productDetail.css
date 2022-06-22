@@ -2,14 +2,36 @@ main {
     padding: 1em 3em
 }
 
-h6 {
-    display: inline-block;
-    font-weight: normal;
-}
 
 .ruta-resaltada {
     font-weight: bold;
 }
+
+/* fonts */
+
+main h4 {
+    font-weight: normal;
+}
+
+main h3,
+main h4,
+main h5 {
+    display: inline-block;
+}
+
+.compra h3 {
+    margin-left: 5px;
+}
+
+main h5 {
+    font-weight: normal;
+}
+
+main h6 {
+    display: inline-block;
+    font-weight: normal;
+}
+
 
 /* break */
 
@@ -47,25 +69,6 @@ h6 {
     list-style: none;
 }
 
-h4 {
-    font-size: .8em;
-    font-weight: normal;
-}
-
-h3,
-h4,
-h5 {
-    display: inline-block;
-}
-
-.compra h3 {
-    margin-left: 5px;
-}
-
-h5 {
-    font-size: .8em;
-    font-weight: normal;
-}
 
 .tabla {
     margin-top: 2em;
@@ -80,7 +83,7 @@ h5 {
     font-weight: bold
 }
 
-.tabla_info {}
+/* .tabla_info {} */
 
 
 .compra {

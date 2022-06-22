@@ -22,49 +22,51 @@
 
 <body>
     <header class="header__box">
-        <nav class="navbar">
-            <div class="navbar__container">
-                <a href="/" id="navbar__logo"></i></a>
-                <div class="navbar__toggle" id="mobile-menu">
-                    <span class="bar"></span><span class="bar"></span>
-                    <span class="bar"></span>
+        <div class="a">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="/" id="navbar__logo"></i></a>
+                    <div class="navbar__toggle" id="mobile-menu">
+                        <span class="bar"></span><span class="bar"></span>
+                        <span class="bar"></span>
                     </div>
                     <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a href="/productos" class="navbar__links"> Productos  </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/buscador" class="navbar__links"> Buscador </a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/carrito" class="navbar__links">Carro</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/" class="navbar__links">Home</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/register" class="navbar__links">Registro</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/login" class="navbar__links">Login</a>
-                    </li>
-                   
-                </ul>
-            </div>
-        </nav> 
-                <h2>Sanitarios Nicuesa e Hijos</h2>
-            </div>
-                <div id="busqueda">
-                    <form action="GET">
-                        <input placeholder="Buscar productos, marcas y mas" type="text" name="user" id="name" data-error="Error">
-                    </form>
-                    <i class="fa-solid fa-magnifying-glass"> </i>
+                        <li class="navbar__item">
+                            <a href="/productos" class="navbar__links"> Productos </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/buscador" class="navbar__links"> Buscador </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/carrito" class="navbar__links">Carro</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/" class="navbar__links">Home</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/register" class="navbar__links">Registro</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/login" class="navbar__links">Login</a>
+                        </li>
+
+                    </ul>
                 </div>
+            </nav>
+            <h2>Sanitarios Nicuesa e Hijos</h2>
+        </div>
+        <div class="b">
+            <div id="busqueda">
+                <form action="GET">
+                    <input placeholder="Buscar productos, marcas y mas" type="text" name="user" id="name"
+                        data-error="Error">
+                </form>
+                <i class="fa-solid fa-magnifying-glass"> </i>
+            </div>
             <div class="cart__container">
-                 <a class="cart" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-                
-         </nav>
+                <a class="cart" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
     </header>
 
     <!-- break  -->
@@ -73,7 +75,8 @@
             <section class="grupo">
                 <h2>Categorias</h2>
                 <ul>
-                    <li class="categoria"> <h3>Baño</h3>
+                    <li class="categoria">
+                        <h3>Baño</h3>
                         <ul>
                             <li class="tipo">Bidet</li>
                             <li class="tipo">Inodoro</li>
@@ -82,25 +85,44 @@
                             <li class="tipo">Ducha</li>
                         </ul>
                     </li>
-                    <li class="categoria"><h3>Cocina</h3></li>
-                    <li class="categoria"><h3>Tanques</h3></li>
-                    <li class="categoria"><h3>Calefaccion</h3></li>
-                    <li class="categoria"><h3>Instaladores</h3></li>
+                    <li class="categoria">
+                        <h3>Cocina</h3>
+                    </li>
+                    <li class="categoria">
+                        <h3>Tanques</h3>
+                    </li>
+                    <li class="categoria">
+                        <h3>Calefaccion</h3>
+                    </li>
+                    <li class="categoria">
+                        <h3>Instaladores</h3>
+                    </li>
                 </ul>
             </section>
             <div id="break"></div>
             <section class="grupo">
                 <h2>Marcas</h2>
                 <ul>
-                    <li class="categoria"><h3>Roca</h3></li>
-                    <li class="categoria"><h3>FV</h3></li>
-                    <li class="categoria"><h3>Capea</h3></li>
-                    <li class="categoria"><h3>Rotoplast</h3></li>
+                    <li class="categoria">
+                        <h3>Roca</h3>
+                    </li>
+                    <li class="categoria">
+                        <h3>FV</h3>
+                    </li>
+                    <li class="categoria">
+                        <h3>Capea</h3>
+                    </li>
+                    <li class="categoria">
+                        <h3>Rotoplast</h3>
+                    </li>
                 </ul>
             </section>
         </div>
         <div class="articulos">
-            <p class="ruta"><h6>productos - baño - </h6><h6 class="ruta-resaltada"> Bidet</h6></p>
+            <p class="ruta">
+            <h6>productos - baño - </h6>
+            <h6 class="ruta-resaltada"> Bidet</h6>
+            </p>
             <section class="productos">
                 <article class="articulo">
                     <h3>Bidet</h3>
@@ -165,26 +187,36 @@
     <!-- break -->
     <footer class="footer__box">
         <nav class="footer__container">
-             <div class="info">
+            <div class="info">
                 <h5>Información general</h4>
-                <a href="#" class="cancel"> <h6> Cancelar una compra</h6></a>
-                <a href="#" class="preguntas__frecuentes"><h6>Preguntas frecuentes</h6></a>
-                <a href="#" class="politica"><h6>Política de privacidad</h6></a>
-             </div>
-             <div class="garantia">
+                    <a href="#" class="cancel">
+                        <h6> Cancelar una compra</h6>
+                    </a>
+                    <a href="#" class="preguntas__frecuentes">
+                        <h6>Preguntas frecuentes</h6>
+                    </a>
+                    <a href="#" class="politica">
+                        <h6>Política de privacidad</h6>
+                    </a>
+            </div>
+            <div class="garantia">
                 <h5>Garantía</h5>
                 <h6>Conoce mas sobre nuestras politicas de garantía</h6>
-             </div>
-             <div class="seguinos">
+            </div>
+            <div class="seguinos">
                 <h5>Seguinos</h5>
-                <a href="https://www.facebook.com/SANITARIOSNICUESA" target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=5491163987256&text=" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/sanitariosnicuesa/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="contacto@sanitariosnicuesa.com.ar" target="_blank" class="mail"><i class="fa-solid fa-envelope"></i></a>
-             </div>
-             <div class="copyright">
+                <a href="https://www.facebook.com/SANITARIOSNICUESA" target="_blank" class="facebook"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5491163987256&text=" target="_blank" class="whatsapp"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/sanitariosnicuesa/" target="_blank" class="instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="contacto@sanitariosnicuesa.com.ar" target="_blank" class="mail"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="copyright">
                 <h6>Copyright @ 2022 realizado por estudio DH</h6>
-             </div>
+            </div>
         </nav>
     </footer>
     <script src="menu.js"></script>

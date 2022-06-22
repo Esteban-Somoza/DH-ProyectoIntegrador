@@ -38,19 +38,31 @@ li.categoria h3:hover {
     background-color: #3A687E;
 }
 
-main h2 {
-    font-size: 1.5em;
-    
-}
 
 .grupo {
     margin-top: 1em;
 }
 
-h6 {
+/* fonts  */
+main h2 {
+    font-size: 1.5em;
+    
+}
+
+main h3{
+    display: inline-block;
+    width: 100%;
+}
+
+main h4{
+    font-weight: normal;
+}
+
+main h6 {
     display: inline-block;
     font-weight: normal;
 }
+/*  */
 
 p.ruta{
     margin-left: 3em;
@@ -82,16 +94,6 @@ p.ruta{
     margin: 1em;
 }
 
-h3{
-    display: inline-block;
-    width: 100%;
-    font-size: 1em;
-}
-
-h4{
-    font-size: .8em;
-    font-weight: normal;
-}
 
 .informacion {
     display: flex;

@@ -13,7 +13,7 @@ footer {
     padding: .5em;
     *gap: 4em;
     *position: relative;
-
+    padding-left: 1em;
 }
 
 .footer__container h5 {
@@ -93,6 +93,6 @@ footer {
     margin-top: .5em;
 }
 
-.copyright h6{
+.copyright h6 {
     font-size: .5em;
 }
