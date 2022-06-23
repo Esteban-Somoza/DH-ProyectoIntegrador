@@ -13,7 +13,7 @@
         visibility: hidden;
     }
     .desplegable h3:hover {
-        background-color: #3A687E;
+        background-color:  var(--color-footerNav);
     }
 
     .categorias {

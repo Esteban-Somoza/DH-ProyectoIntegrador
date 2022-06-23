@@ -48,9 +48,9 @@ main h2 {
 
 .productos a:hover img {
     transform: scale(1.075);
-    transition: all 0.3s ;
+    transition: all 0.5s ease-in-out ;
     cursor: pointer;
-    background-color: #3A687E;
+    background-color: var(--color-footerNav);
 }
 
 
@@ -121,16 +121,15 @@ main h2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
-    justify-content: space-around;
-
+    justify-content: flex-start;
+    gap: 2em;
     margin: 1em 0;
     padding: 1em;
 }
 
 .img__map {
-    margin: 2em 2em 1em 1em;
-    max-width: 115px;
+    *margin: 2em 2em 1em 1em;
+    max-width: 240px;
 }
 
 .img__map img {

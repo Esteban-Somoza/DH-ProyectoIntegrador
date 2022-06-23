@@ -103,7 +103,7 @@ main h6 {
 .agregarCarrito {
     text-align: end;
     padding: 5px;
-    background-color: #3A687E;
+    background-color:  var(--color-footerNav);
     border-radius: .5em;
 }
 
@@ -146,7 +146,7 @@ main h6 {
 }
 
 li.elegido {
-    background-color: #3A687E;
+    background-color:  var(--color-footerNav);
     height: 100%;
     border-radius: .5em .5em 0 0;
 }

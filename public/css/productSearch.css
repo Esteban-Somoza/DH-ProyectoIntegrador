@@ -35,7 +35,7 @@ li.categoria h3 {
 }
 
 li.categoria h3:hover {
-    background-color: #3A687E;
+    background-color:  var(--color-footerNav);
 }
 
 
