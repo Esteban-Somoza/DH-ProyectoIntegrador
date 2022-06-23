@@ -82,6 +82,8 @@ padding: 0 1em;
     gap: .75em;
     align-items: center;
     flex-grow: 1.1;
+    min-width: 100px;
+    max-width: 320px;
     /* max-width: max-content; */
 }
 

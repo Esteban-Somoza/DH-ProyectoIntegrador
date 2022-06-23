@@ -4,6 +4,10 @@
     max-width: auto;
 }
 
+main h2 {
+    text-align: center;
+}
+
 /*-------------BANNER-------------*/
 
 .banner img {
@@ -70,11 +74,28 @@
     margin: auto;
 }
 
+.marcas ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    margin-top: 1em;
+}
+
+.marcas li {
+    list-style: none;
+    /* margin:auto; */
+}
+
 .marcas img {
     display: flex;
-    width: 100%;
-    flex-grow: 1;
-    margin-bottom: 0px;
+    margin: 1em 5em;
+    min-height: 15px;
+    max-height: 35px;
+    /* width: 100%; */
+    /* flex-grow: 1; */
+    flex-shrink: .8;
 }
 
 

@@ -1,4 +1,4 @@
-@media (min-width: 300px) {
+@media (max-width: 480px) {
     .buscador {
         display: none;
         /* position: absolute; */
@@ -23,6 +23,7 @@
         position: relative;
         z-index: 100;
         font-weight: normal;
+        text-align: center;
     }
 
     .categorias:focus+.desplegable {
@@ -60,10 +61,11 @@
     }
 
     .articulo {
-        /* max-width: 45%;
-        min-width: 280px; */
+        /* max-width: 45%; */
+        min-width: 280px;
         min-height: 40%;
         width: clamp(280px, 400px, 500px);
+        flex-grow: 2;
     }
 
     .articulos {

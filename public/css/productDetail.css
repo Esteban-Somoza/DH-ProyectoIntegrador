@@ -32,6 +32,9 @@ main h6 {
     font-weight: normal;
 }
 
+.titulo {
+    
+}
 
 /* break */
 
@@ -148,13 +151,13 @@ li.elegido {
     border-radius: .5em .5em 0 0;
 }
 
-.informacion_adicional{
+.informacion_adicional {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     border-top: 1px solid #A5A1A7;
-    padding-top:2em;
+    padding-top: 2em;
 }
 
 .detalles_producto .imagen {
