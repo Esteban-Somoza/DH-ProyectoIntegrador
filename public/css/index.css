@@ -44,11 +44,11 @@ main h2 {
     width: 200px;
     flex-grow: 1;
     margin-bottom: 0px;
+    transition: all 0.3s ease;
 }
 
 .productos a:hover img {
     transform: scale(1.075);
-    transition: all 0.3s ;
     cursor: pointer;
     background-color: #3A687E;
 }
@@ -96,6 +96,12 @@ main h2 {
     /* width: 100%; */
     /* flex-grow: 1; */
     flex-shrink: .8;
+    transition: all .2s ease;
+}
+
+.marcas img:hover {
+    /* box-shadow: 1px 0px 10px black; */
+    scale: 1.05;
 }
 
 
@@ -156,4 +162,3 @@ main h2 {
 .experiencia h4 {
     text-decoration: underline
 }
-
