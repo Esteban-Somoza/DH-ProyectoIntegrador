@@ -74,17 +74,36 @@
         </div>
     </header>
     <!-- break  -->
+
+
     <main>
+        <!-- <h6>productos - baño - griferia -</h6> -->
+        <h2 class="titulo">Login</h2>
         <section class="login-section">
-            <form action="" class="login-container">
-                <label for="usuario">Nombre de usuario</label>
-                <input type="text" name="usuario" id="usuario" />
-
-
-                <label for="contraseña">Contraseña</label>
-                <input type="password" name="contraseña" id="contraseña" required />
-                <button type="submit" class="form-btn">Ingresar</button>
-            </form>
+            <article class="login">
+                <form action="" class="login-container">
+                    <label for="usuario">Nombre de usuario</label>
+                    <input type="text" name="usuario" id="usuario" />
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" name="contraseña" id="contraseña" required />
+                    <button type="submit" class="form-btn"><h4>Ingresar</h4></button>
+                </form>
+                <div class="recordarme">
+                    <a href=""><h4>Recupera tu contraseña</h4></a>
+                    <form action="">
+                        <label for="usuario">recordarme</label>
+                        <input class="checkbox" type="checkbox" id="retiro_local" name="envio" value="retiro_local">
+                    </form>
+                </div>
+            </article>
+            <article class="registro">
+                <h3>¿Sos nuevo en Sanitarios Nicuesa?</h3>
+                <h5>Registrate en nuestro sitio y enterate de todas
+                    las oportunidades que tenemos para vos</h5>
+                <a href="/register" id="registro-boton">
+                    <h4>Registrarme</h4>
+                </a>
+            </article>
         </section>
     </main>
 
