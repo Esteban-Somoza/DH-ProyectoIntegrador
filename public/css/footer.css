@@ -9,7 +9,7 @@ footer {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: #3A687E;
+    background-color: var(--color-footerNav);
     padding: .5em;
     *gap: 4em;
     *position: relative;
@@ -24,14 +24,13 @@ footer {
 /*-------------INFO-------------*/
 .info {
     display: block;
-    margin-top: auto;
     min-width: 115px;
     text-align: start;
     margin-right: 1em;
 }
 
 .info h6:hover {
-    color: #418b8b;
+    color: var(--color-footerNav);
 }
 
 
@@ -68,7 +67,7 @@ footer {
 }
 
 .seguinos a:hover {
-    color: #418b8b;
+    color:  var(--color-footerNav);
 }
 
 

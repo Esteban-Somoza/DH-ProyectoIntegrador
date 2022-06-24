@@ -15,7 +15,7 @@ padding: 0 1em;
     display: flex;
     /* gap: 2em; */
     padding: .5em;
-    background-color: #3A687E;
+    background-color: var(--color-footerNav);
     flex-wrap: wrap;
 }
 
@@ -123,7 +123,7 @@ padding: 0 1em;
 
 /*-------------prueba desplegable-------------*/
 .navbar {
-    background: #3a687e;
+    background:var(--color-footerNav);
     height: 0px;
     display: flex;
     justify-content: center;
@@ -235,7 +235,7 @@ padding: 0 1em;
     }
 
     .navbar__menu.active {
-        background: #3a687e;
+        background: var(--color-footerNav);
         top: 50px;
         opacity: 1;
         transition: all 0.5s ease;

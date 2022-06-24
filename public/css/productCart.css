@@ -166,7 +166,7 @@ form {
 .datos_envio {
     width: 50%;
     text-align: center;
-    color: #3A687E;
+    color:  var(--color-footerNav);
     justify-content: center;
 }
 
