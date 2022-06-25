@@ -30,7 +30,7 @@ footer {
 }
 
 .info h6:hover {
-    color: var(--color-footerNav);
+    color: rgb(104, 161, 210);
 }
 
 
@@ -67,7 +67,7 @@ footer {
 }
 
 .seguinos a:hover {
-    color:  var(--color-footerNav);
+    color:  rgb(100, 138, 170);
 }
 
 

@@ -112,6 +112,9 @@ padding: 0 1em;
     color: rgb(0, 0, 0);
     margin: auto;
 }
+.cart:hover {
+    color: var(--color-footerNav);
+}
 
 /*-------------logo-------------*/
 
