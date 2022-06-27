@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanitarios Nicuesa - Productos</title>
+    <title>Sanitarios Nicuesa</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/productDetail.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,7 +23,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="body__box">
     <header class="header__box">
         <div class="a">
             <nav class="navbar">
@@ -71,73 +74,40 @@
         </div>
     </header>
     <!-- break  -->
+
+
     <main>
-        <p class="ruta">
-        <h6>productos - baño - griferia -</h6>
-        <h6 class="ruta-resaltada"> H3 Urbano</h6>
-        </p>
-        <section class="producto">
-            <div class="imagen">
-                <img src="/images/griferia1.jpg" alt="">
-            </div>
-            <article class="informacion">
-                <h2 class="titulo">
-                    0207 / H3 Urbano - Juego para lavatorio
-                </h2>
-                <h5 class="tabla">
-                    <div class="tabla_items">
-                        <ul>
-                            <li>Apto</li>
-                            <li>Color</li>
-                            <li>Diseño</li>
-                            <li>Línea</li>
-                            <li>Presentación</li>
-                            <li>Tecnología</li>
-                            <li>Tipo</li>
-                            <li>Estilos</li>
-                        </ul>
-                    </div>
-                    <div class="tabla_info">
-                        <ul>
-                            <li>Apto termotanque y calefón</li>
-                            <li>Cromo, Rose gold</li>
-                            <li>Volante Cruz</li>
-                            <li>H3 Urbano</li>
-                            <li>Cierre suave</li>
-                            <li>Cierre cerámico</li>
-                            <li>Tradicional</li>
-                            <li>Industrial, minimalista, moderno</li>
-                        </ul>
-                </h5>
-                <div class="compra">
-                    <div>
-                        <h5>Valor Final:</h5>
-                        <h3>$23.900</h3>
-                    </div>
-                    <h4 class="agregarCarrito">+ Carrito</h4>
-                </div>
+        <!-- <h6>productos - baño - griferia -</h6> -->
+        <h2 class="titulo">Login</h2>
+        <section class="login-section">
+            <article class="login">
+                <form action="" class="login-container">
+                    <label for="usuario">Nombre de usuario</label>
+                    <input type="text" name="usuario" id="usuario" />
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" name="contraseña" id="contraseña" required />
+                    <button type="submit" class="form-btn"><h4>Ingresar</h4></button>
+                </form>
+                <div class="recordarme">
+                    <a href=""><h4>Recupera tu contraseña</h4></a>
+                    <form action="">
+                        <label for="usuario">recordarme</label>
+                        <input class="checkbox" type="checkbox" id="retiro_local" name="envio" value="retiro_local">
+                    </form>
                 </div>
             </article>
-        </section>
-        <section class="detalles_producto">
-            <h3>Detalles del producto</h3>
-            <article class="navegacion">
-                <ul>
-                    <li>Descripcion</li>
-                    <li class="elegido">Esquema</li>
-                    <li>Despiece</li>
-                    <li>Documentación</li>
-                    <li>Video</li>
-                </ul>
-            </article>
-            <article class="informacion_adicional">
-                <div class="imagen">
-                    <img src="/images/griferia_esquema.png" alt="">
-                </div>
+            <article class="registro">
+                <h3>¿Sos nuevo en Sanitarios Nicuesa?</h3>
+                <h5>Registrate en nuestro sitio y enterate de todas
+                    las oportunidades que tenemos para vos</h5>
+                <a href="/register" id="registro-boton">
+                    <h4>Registrarme</h4>
+                </a>
             </article>
         </section>
     </main>
-    <!-- break -->
+
+
     <footer class="footer__box">
         <nav class="footer__container">
             <div class="info">
@@ -172,7 +142,7 @@
             </div>
         </nav>
     </footer>
-    <script src="menu.js"></script>
+    <script src="./scripts/menu.js"></script>
 </body>
 
 </html>
