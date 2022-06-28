@@ -1,9 +1,18 @@
 :root {
     --color-footerNav: #3A687E;
-    --color-font: rgb(47, 47, 47);
+    --color-font: rgb(22, 20, 20);
     --color-hover: #24d6ed;
+    --color-white: rgb(239, 245, 244);
+    --color-grey: rgb(190, 185, 185);
 }
 
+*{
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -14,35 +23,27 @@ main {
     min-height: calc(100vh - 80px); 
 }
 
-
-
-*{
-    box-sizing: border-box;
-    border: none;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
 a {
     text-decoration: none;
 }
 
 h2 {
-    font-size: 1.3em;
-    
+    font-size: 1.3em;  
+    color: var(--color-font);
 }
 
 h3 {
     font-size: 1em;
-    color: black;  
+    color: var(--color-font);  
 }
 
 h4 {
     font-size: 0.9em;
+    color: var(--color-font);
 }
 
-h5 {font-size: 0.7em;
+h5 {
+    font-size: 0.7em;
 }
 
 h6 {
