@@ -17,8 +17,8 @@ footer {
 }
 
 .footer__container h5 {
-    color: snow;
-    text-decoration: underline snow;
+    color:var(--color-white);
+    text-decoration: underline var(--color-white);
 }
 
 /*-------------INFO-------------*/
@@ -30,7 +30,7 @@ footer {
 }
 
 .info h6:hover {
-    color: rgb(104, 161, 210);
+    color:var(--color-hover);
 }
 
 
@@ -40,56 +40,51 @@ footer {
 }
 
 .info h6 {
-    color: snow;
+    color:var(--color-white);
     text-align: start;
 }
 
 /*-------------GARANTIA-------------*/
-.garantia {
+#garantia {
     min-width: 115px;
 }
 
-.garantia h5 {
+#garantia h5 {
     margin: .5em 0;
     align-items: center;
 }
 
-.garantia h6 {
-    color: snow;
+#garantia h6 {
+    color:var(--color-white);
     max-width: 100px;
 }
 
 /*-------------SEGUINOS-------------*/
 
-.seguinos h5 {
+#seguinos h5 {
     margin: .5em 0;
     align-items: center;
 }
 
-.seguinos a:hover {
-    color:  rgb(100, 138, 170);
+#seguinos a:hover {
+    color: var(--color-hover);
 }
 
 
-.seguinos a {
+#seguinos a {
 
-    color: snow;
+    color:var(--color-white);
 }
 
 /*-------------COPYRIGHT-------------*/
 
-.copyright {
-    color: snow;
-    /* *display: flex;
-    *align-self: flex-end;
-    *position: absolute;
-    *bottom: .75em;
-    *right: 1em; */
+#copyright {
+    color: var(--color-white);
     width: 100%;
     text-align: end;
     margin-top: .5em;
 }
 
-.copyright h6 {
+#copyright h6 {
     font-size: .5em;
 }
