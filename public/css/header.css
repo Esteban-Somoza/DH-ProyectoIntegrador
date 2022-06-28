@@ -1,14 +1,16 @@
 /*-------------HEADER BOX-------------*/
 
 header {
-    align-items: center;
-    min-height: 80px;
-    justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    *min-height: 80px;
+    *max-height: 100px;
+    justify-content: space-between;
     padding: .5em;
     background-color: var(--color-footerNav);
-    flex-wrap: wrap;
-    gap: 4em;
+    gap: 1em;
 }
 
 
@@ -91,6 +93,7 @@ header a h2 {
     align-items: center;
     list-style: none;
     text-align: center;
+    flex-wrap: nowrap;
 
 }
 
@@ -99,7 +102,8 @@ header a h2 {
 }
 
 .navbar__item {
-    height: 80px;
+    height: 56px;
+    width: 100%;
 }
 
 .navbar__links {
@@ -121,7 +125,11 @@ header a h2 {
 }
 
 
-
+@media (max-width: 580px) {
+    .navbar__menu {
+        flex-wrap: wrap;
+    }
+}
 
 
 
@@ -129,14 +137,14 @@ header a h2 {
 @media screen and (max-width: 2440px) {
 
     .navbar__menu {
-        display: grid;
-        grid-template-columns: auto;
+        *display: grid;
+        *grid-template-columns: auto;
         margin: -25px;
         width: 100%;
         position: absolute;
         top: -1000px;
         opacity: 0;
-        transition: all 0.5s ease;
+        *transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
         background: var(--color-white);
@@ -144,15 +152,15 @@ header a h2 {
 
     .navbar__menu.active {
         background: var(--color-footerNav);
-        top: 50px;
+        top: 52px;
         opacity: 1;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
         z-index: 99;
         height: auto;
         width: auto;
         font-size: 1.6rem;
-        border-radius: 0 0 1em 0;
-        left: 2px;
+        border-radius: 0 0 1em 1em;
+        left: 15px;
     }
 
     .navbar__toggle #bar {
@@ -163,10 +171,7 @@ header a h2 {
         background: var(--color-white);
     }
 
-    .navbar__item {
-        width: 100%;
 
-    }
 
     .navbar__links {
         text-align: center;
