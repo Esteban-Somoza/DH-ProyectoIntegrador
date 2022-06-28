@@ -4,7 +4,7 @@ main {
     padding: 0 2em;
 }
 
-.login-section {
+#section {
     /* display: flex; */
     /* align-items: center; */
     padding: 30px;
@@ -15,12 +15,14 @@ main {
     max-width: 500px;
 }
 
-.titulo {
+/* login */
+
+#titulo {
     margin-top: 1em;
     text-align: center;
 }
 
-.login-container input {
+#login__form input {
     display: block;
     padding: 5px;
     border:1px solid  var(--color-footerNav);
@@ -28,47 +30,48 @@ main {
     margin: .5em 0;
   }
 
-  .form-btn{
+  #login__boton{
     padding: 1em;
     background-color: #3A687E;
     border-radius: 1em;
     margin: 1em 0;
   }
 
-  .recordarme {
+  /* recordarme */
+
+  #recordarme {
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
     text-align: left;
+    margin-bottom: 2em;
   }
 
- .recordarme h4 {
+ #recordarme__titulo {
     font-weight: 200;
     text-decoration: underline;
     color:black;    
   }
 
-  .login{
-    margin-bottom: 2em;
-  }
+/* login */
 
-  .registro {
+  #registro {
     border-top: 1px #667 solid;
     padding-top: 2em;
     display: block;
   }
 
-  main h5 {
+  #registro__parrafo {
     font-weight: normal;
     max-width: 300px;
     margin-bottom: 1em
   }
 
-  #registro-boton a {
+  #registro__boton {
     display: block;
   }
 
-  #registro-boton h4 {
+  #registro__textoBoton{
     display: block;
     padding: 1em;
     background-color: #667;

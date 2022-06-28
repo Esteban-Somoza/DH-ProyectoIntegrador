@@ -3,19 +3,19 @@
         display: none;
     }
 
-    .titulo {
+    #pagina__titulo {
         margin-top: 0px;
     }
 
-    .pagina {
+    #pagina {
         display: block;
     }
 
-    .pagina section {
+    #pagina section {
         width: 100%;
     }
 
-    .compra_envio {
+    #compra__envio {
         margin-top: 1em;
     } 
 }

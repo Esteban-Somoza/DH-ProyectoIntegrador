@@ -3,5 +3,4 @@ const {join} = require('path');
 
 let public = static(join(__dirname, '../public'));
 
-module.exports = public 
-
+module.exports = public
