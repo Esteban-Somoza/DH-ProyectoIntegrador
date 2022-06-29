@@ -1,0 +1,16 @@
+@media (max-width: 768px) { 
+    body{
+        background-color: hsla(205, 100%, 50%, 0.1)
+    }
+    #producto {
+        flex-wrap: wrap;
+    }
+    #producto__informacion {
+        max-width: none;
+    }
+    #producto__titulo {
+        text-align: center;
+        margin:auto;
+        margin-top: 1em;
+    }
+}

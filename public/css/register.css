@@ -2,7 +2,6 @@
 #title {
   margin: auto;
   padding: 10px;
-  padding-left: 2.2em;
   font-size: 1.3em;
 }
 
@@ -10,15 +9,15 @@
   width: 90%;
   display: flex;
   margin: auto;
-  margin-top: 5px;
-  padding: 15px;
+  margin-bottom: 2em;
+  padding: 2em;
   align-items: flex-start;
-  border: 1px solid rgb(106, 106, 106);
   border-radius: 30px;
-  margin-bottom: 1em;
   background: #ededed;
   padding-bottom: 2em;
   flex-direction: column;
+  min-height: 50vh;
+  /* align-items: center; */
 }
 
 #form label,
@@ -35,7 +34,7 @@
   padding: 5px;
   /* border: 1px solid var(--color-footerNav); */
   border-radius: 5px;
-  width: 90%;
+  width: 100%;
 }
 
 .checkbox-inputs {
@@ -46,6 +45,7 @@
 
 #form__botonContainer {
   display: flex;
+  margin:auto;
   flex-wrap: nowrap;
   margin-top: 15px;
   justify-content: space-between;
@@ -55,10 +55,9 @@
 
 .form__boton {
   background-color: var(--color-footerNav);
-
+color: white;
   margin: 8px;
   padding: 5px;
-  color: rgb(0, 0, 0);
   border-radius: 5px;
   transition: all 0.3s ease;
   font-weight: 700;
@@ -72,11 +71,7 @@
 }
 
 #form {
-  width: 80%;
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  margin: auto;
+ 
 }
 
 #form input {

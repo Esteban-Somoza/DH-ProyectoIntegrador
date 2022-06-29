@@ -67,168 +67,158 @@
 
     <!-- break  -->
     <main>
-        <h2 class="categorias" tabindex="9999"> - filtrar categorias  - </h2>
-        <nav class="desplegable">
-            <section class="grupo">
+        <h2 id="desplegable" tabindex="9999"> - filtrar categorias - </h2>
+        <nav id="buscador__navbarDesplegable">
+            <h2>Categorias</h2>
+            <ul>
+                <li class="buscador__categoria">
+                    <h3>Baño</h3>
+                    <ul>
+                        <li class="buscador__tipo">Bidet</li>
+                        <li class="buscador__tipo">Inodoro</li>
+                        <li class="buscador__tipo">Griferia</li>
+                        <li class="buscador__tipo">Piletas</li>
+                        <li class="buscador__tipo">Ducha</li>
+                    </ul>
+                </li>
+                <li class="buscador__categoria">
+                    <h3>Cocina</h3>
+                </li>
+                <li class="buscador__categoria">
+                    <h3>Tanques</h3>
+                </li>
+                <li class="buscador__categoria">
+                    <h3>Calefaccion</h3>
+                </li>
+                <li class="buscador__categoria">
+                    <h3>Instaladores</h3>
+                </li>
+            </ul>
+            <br>
+            <h2>Marcas</h2>
+            <ul>
+                <li class="buscador__categoria">
+                    <h3>Roca</h3>
+                </li>
+                <li class="buscador__categoria">
+                    <h3>FV</h3>
+                </li>
+                <li class="buscador__categoria">
+                    <h3>Capea</h3>
+                </li>
+                <li class="buscador__categoria">
+                    <h3>Rotoplast</h3>
+                </li>
+            </ul>
+        </nav>
+        <section id="main">
+            <nav id="buscador">
                 <h2>Categorias</h2>
                 <ul>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>Baño</h3>
                         <ul>
-                            <li class="tipo">Bidet</li>
-                            <li class="tipo">Inodoro</li>
-                            <li class="tipo">Griferia</li>
-                            <li class="tipo">Piletas</li>
-                            <li class="tipo">Ducha</li>
+                            <li class="buscador__tipo">Bidet</li>
+                            <li class="buscador__tipo">Inodoro</li>
+                            <li class="buscador__tipo">Griferia</li>
+                            <li class="buscador__tipo">Piletas</li>
+                            <li class="buscador__tipo">Ducha</li>
                         </ul>
                     </li>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>Cocina</h3>
                     </li>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>Tanques</h3>
                     </li>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>Calefaccion</h3>
                     </li>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>Instaladores</h3>
                     </li>
                 </ul>
-            </section>
-            <div id="break"></div>
-            <section class="grupo">
                 <h2>Marcas</h2>
                 <ul>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>Roca</h3>
                     </li>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>FV</h3>
                     </li>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>Capea</h3>
                     </li>
-                    <li class="categoria">
+                    <li class="buscador__categoria">
                         <h3>Rotoplast</h3>
                     </li>
                 </ul>
-            </section>
-        </nav>
-        <div class="main">
-            <div class="buscador">
-                <section class="grupo">
-                    <h2>Categorias</h2>
-                    <ul>
-                        <li class="categoria">
-                            <h3>Baño</h3>
-                            <ul>
-                                <li class="tipo">Bidet</li>
-                                <li class="tipo">Inodoro</li>
-                                <li class="tipo">Griferia</li>
-                                <li class="tipo">Piletas</li>
-                                <li class="tipo">Ducha</li>
-                            </ul>
-                        </li>
-                        <li class="categoria">
-                            <h3>Cocina</h3>
-                        </li>
-                        <li class="categoria">
-                            <h3>Tanques</h3>
-                        </li>
-                        <li class="categoria">
-                            <h3>Calefaccion</h3>
-                        </li>
-                        <li class="categoria">
-                            <h3>Instaladores</h3>
-                        </li>
-                    </ul>
-                </section>
-                <div id="break"></div>
-                <section class="grupo">
-                    <h2>Marcas</h2>
-                    <ul>
-                        <li class="categoria">
-                            <h3>Roca</h3>
-                        </li>
-                        <li class="categoria">
-                            <h3>FV</h3>
-                        </li>
-                        <li class="categoria">
-                            <h3>Capea</h3>
-                        </li>
-                        <li class="categoria">
-                            <h3>Rotoplast</h3>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-            <div class="articulos">
-                <p class="ruta">
-                <h6>productos - baño - </h6>
-                <h6 class="ruta-resaltada"> Bidet</h6>
-                </p>
+            </nav>
+            <section class="articulos">
+                <div id="ruta">
+                    <h6 class="texto">productos - baño - griferia -</h6>
+                    <h6 class="ruta__texto ruta__texto--resaltado"> H3 Urbano</h6>
+                </div>
                 <section class="productos">
-                    <article class="articulo">
+                    <article class="productos__elemento">
                         <h3>Bidet</h3>
-                        <div class="informacion">
-                            <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
-                            <div class="texto">
+                        <div class="productos__informacion">
+                            <picture class="imagen"><img src="/images/bidet1.png" alt=""></picture>
+                            <div class="productos__texto">
                                 <h4 class="descripcion">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </h4>
-                                <h4 class="modelos">
+                                <h4 class="productos__modelos">
                                     >> Ver modelos
                                 </h4>
                             </div>
                         </div>
                     </article>
-                    <article class="articulo">
+                    <article class="productos__elemento">
                         <h3>Bidet</h3>
-                        <div class="informacion">
-                            <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
-                            <div class="texto">
+                        <div class="productos__informacion">
+                            <picture class="imagen"><img src="/images/bidet1.png" alt=""></picture>
+                            <div class="productos__texto">
                                 <h4 class="descripcion">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </h4>
-                                <h4 class="modelos">
+                                <h4 class="productos__modelos">
                                     >> Ver modelos
                                 </h4>
                             </div>
                         </div>
                     </article>
-                    <article class="articulo">
+                    <article class="productos__elemento">
                         <h3>Bidet</h3>
-                        <div class="informacion">
-                            <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
-                            <div class="texto">
+                        <div class="productos__informacion">
+                            <picture class="imagen"><img src="/images/bidet1.png" alt=""></picture>
+                            <div class="productos__texto">
                                 <h4 class="descripcion">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </h4>
-                                <h4 class="modelos">
+                                <h4 class="productos__modelos">
                                     >> Ver modelos
                                 </h4>
                             </div>
                         </div>
                     </article>
-                    <article class="articulo">
+                    <article class="productos__elemento">
                         <h3>Bidet</h3>
-                        <div class="informacion">
-                            <div class="imagen"><img src="/images/bidet1.png" alt=""></div>
-                            <div class="texto">
+                        <div class="productos__informacion">
+                            <picture class="imagen"><img src="/images/bidet1.png" alt=""></picture>
+                            <div class="productos__texto">
                                 <h4 class="descripcion">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </h4>
-                                <h4 class="modelos">
+                                <h4 class="productos__modelos">
                                     >> Ver modelos
                                 </h4>
                             </div>
                         </div>
                     </article>
-
                 </section>
-            </div>
-        </div>
+            </section>
+        </section>
     </main>
     <!-- break -->
     <footer id="footer">
