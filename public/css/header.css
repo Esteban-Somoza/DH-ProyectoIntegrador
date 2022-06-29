@@ -2,22 +2,24 @@
 
 header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
-    *min-height: 80px;
-    *max-height: 100px;
     justify-content: space-between;
     padding: .5em;
     /* background-color: var(--color-footerNav); */
     background: rgb(38, 68, 83);
     background: linear-gradient(145deg, rgba(38, 68, 83, 1) 0%, rgba(78, 138, 167, 1) 100%);
     gap: 1em;
+    min-height: 74px;
+    max-height: 74px;
 }
 
 
 /*-------------NAV CONTAINER-------------*/
-
+.navbar__toggle {
+    top:20px
+}
 
 /*-------------BUSCADOR-------------*/
 
@@ -64,7 +66,13 @@ header {
 }
 
 .cart__container:hover {
-    color: var(--color-linksHover);
+    color: var(--color-hover);
+}
+
+@media (max-width: 617px){
+    #cart {
+        display: none;
+    }
 }
 
 /*-------------logo-------------*/
@@ -123,7 +131,7 @@ header a h2 {
 
 
 .navbar__links:hover {
-    color: var(--color-linksHover);
+    color: var(--color-hover);
     transition: all 0.3s ease;
 }
 
@@ -154,8 +162,8 @@ header a h2 {
     }
 
     .navbar__menu.active {
-        background: var(--color-footerNav);
-        top: 52px;
+        background: linear-gradient(20deg, rgba(38, 68, 83, 1) 30%, rgb(67, 105, 126) 100%);
+        top: 62px;
         opacity: 1;
         transition: all 0.3s ease;
         z-index: 99;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<%- include ('./includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+    <body>
+
+        <%- include ('./includes/header.ejs') %>
+
+            <!-- break  -->
+            <main>
+                <h2 id="title">Registro</h2>
+                <form action="/" id="form">
+                    <label for="nombre-apellido">Nombres y apellidos</label>
+                    <input type="text" name="nombre-apellido" id="nombre-apellido" min="1" />
+                    <label for="usuario">Nombre de usuario</label>
+                    <input type="text" name="usuario" id="usuario" min="1" />
+                    <label for="domicilio">Domicilio</label>
+                    <input type="text" name="domicilio" id="domicilio" placeholder="direccion de residencia" min="1" />
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" name="contraseña" id="contraseña" required />
+                    <label for="contraseña-val">Confirmar contraseña</label>
+                    <input type="password" name="contraseña-val" id="contraseña-val" required />
+                    <div id="form__botonContainer">
+                        <button type="reset" class="form__boton">Borrar</button>
+                        <button type="submit" class="form__boton">Enviar</button>
+                    </div>
+                </form>
+            </main>
+
+            <%- include ('./includes/footer.ejs') %>
+
+                <script src="./scripts/menu.js"></script>
+    </body>
+
+</html>

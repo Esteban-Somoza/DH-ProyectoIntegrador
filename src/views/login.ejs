@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<%- include ('./includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+    <body>
+
+        <%- include ('./includes/header.ejs') %>
+
+            <!-- break  -->
+            <main>
+                <!-- <h6>productos - baño - griferia -</h6> -->
+                <h2 id="titulo">Login</h2>
+                <section id="section">
+                    <article id="login">
+                        <form action="" id="login__form">
+                            <label for="usuario">Nombre de usuario</label>
+                            <input type="text" name="usuario" id="usuario" />
+                            <label for="contraseña">Contraseña</label>
+                            <input type="password" name="contraseña" id="contraseña" required />
+                            <button type="submit" id="login__boton">
+                                <h4>Ingresar</h4>
+                            </button>
+                        </form>
+                    </article>
+                    <article id="recordarme">
+                        <a href="">
+                            <h4 id="recordarme__titulo">Recupera tu contraseña</h4>
+                        </a>
+                        <form action="">
+                            <label for="usuario">recordarme</label>
+                            <input class="checkbox" type="checkbox" id="retiro_local" name="envio" value="retiro_local">
+                        </form>
+                    </article>
+                    <article id="registro">
+                        <h3 id="registro__titulo">¿Sos nuevo en Sanitarios Nicuesa?</h3>
+                        <h5 id="registro__parrafo">Registrate en nuestro sitio y enterate de todas
+                            las oportunidades que tenemos para vos</h5>
+                        <a href="/register" id="registro__boton">
+                            <h4 id="registro__textoBoton">Registrarme</h4>
+                        </a>
+                    </article>
+                </section>
+            </main>
+
+            <%- include ('./includes/footer.ejs') %>
+                <script src="./scripts/menu.js"></script>
+    </body>
+
+</html>

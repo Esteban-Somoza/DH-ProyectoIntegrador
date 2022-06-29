@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include ('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/productDetail.css">
+<link rel="stylesheet" href="/css/mediaQ-productDetail.css">
+<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/footer.css">
+    </head>
+
+    <body>
+        <%- include ('./includes/header.ejs') %>
+            <!-- break  -->
+            <main>
+                <div id="ruta">
+                    <h6 class="texto">productos - baño - griferia -</h6>
+                    <h6 class="ruta__texto ruta__texto--resaltado"> H3 Urbano</h6>
+                </div>
+                <section id="producto">
+                    <picture id="producto__imagen">
+                        <img src="/images/griferia1.jpg" alt="">
+                    </picture>
+                    <article id="producto__informacion">
+                        <h2 id="producto__titulo">
+                            0207 / H3 Urbano - Juego para lavatorio
+                        </h2>
+                        <h5 id="producto__tabla">
+                            <div id="producto__itemsTabla">
+                                <ul>
+                                    <li>Apto</li>
+                                    <li>Color</li>
+                                    <li>Diseño</li>
+                                    <li>Línea</li>
+                                    <li>Presentación</li>
+                                    <li>Tecnología</li>
+                                    <li>Tipo</li>
+                                    <li>Estilos</li>
+                                </ul>
+                            </div>
+                            <div id="producto__infoTabla">
+                                <ul>
+                                    <li>Apto termotanque y calefón</li>
+                                    <li>Cromo, Rose gold</li>
+                                    <li>Volante Cruz</li>
+                                    <li>H3 Urbano</li>
+                                    <li>Cierre suave</li>
+                                    <li>Cierre cerámico</li>
+                                    <li>Tradicional</li>
+                                    <li>Industrial, minimalista, moderno</li>
+                                </ul>
+                        </h5>
+                        <div id="producto__compra">
+                            <h5>Valor Final:</h5>
+                            <h3>$23.900</h3>
+                            <h4>+ Carrito</h4>
+                        </div>
+                    </article>
+                </section>
+                <section id="detalles">
+                    <h3>Detalles del producto</h3>
+                    <ul id="detalles__navegacion">
+                        <li>Descripcion</li>
+                        <li class="elegido">Esquema</li>
+                        <li>Despiece</li>
+                        <li>Documentación</li>
+                        <li>Video</li>
+                    </ul>
+                    <article id="detalles__infoDetalle">
+                        <picture class="imagen">
+                            <img src="/images/griferia_esquema.png" alt="">
+                        </picture>
+                    </article>
+                </section>
+            </main>
+            <!-- break -->
+
+            <%- include ('./includes/footer.ejs') %>
+
+                <script src="./scripts/menu.js"></script>
+    </body>
+
+</html>
