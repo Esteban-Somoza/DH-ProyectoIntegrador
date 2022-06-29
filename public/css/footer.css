@@ -4,7 +4,7 @@ footer {
     z-index: 100;
 }
 
-.footer__container {
+#footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -16,7 +16,7 @@ footer {
     padding-left: 1em;
 }
 
-.footer__container h5 {
+#footer h5 {
     color:var(--color-white);
     text-decoration: underline var(--color-white);
 }
