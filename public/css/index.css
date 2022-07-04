@@ -37,7 +37,7 @@ main h2 {
     border-radius: 20%;
     display: flex;
     margin-top: 4px;
-    width: 200px;
+    width: 175px;
     flex-grow: 1;
     margin-bottom: 0px;
     transition: all 0.3s ease;
@@ -47,6 +47,13 @@ main h2 {
     transform: scale(1.075);
     cursor: pointer;
     background-color: var(--color-footerNav);
+}
+
+@media (max-width: 420px) {
+    .productos img {
+        width: 125px;
+    }
+
 }
 
 /*-------------MARCAS-------------*/
