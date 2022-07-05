@@ -1,0 +1,46 @@
+
+.fondo{
+    background-color: #EDEDED;
+    text-align: center;
+    width: 35%;
+    border-radius: 1em;
+    margin: auto;
+    padding: 6em 1em;
+    margin-top: 7em;
+    height:42vh;
+}
+.opciones{
+    width: 70%;
+    
+}
+#boton{
+    display: flex;
+   margin:auto;
+   flex-wrap: nowrap;
+   margin-top: 15px;
+   justify-content: space-evenly;
+   /* border-radius: 5px; */
+   width: 50%;
+ }
+ .botoncancelar {
+    background-color: brown;
+    color: white;
+    margin: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+ }
+
+ .botonform{
+    background-color: var(--color-footerNav);
+    color: white;
+      margin: 8px;
+      padding: 5px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      font-weight: 700;
+
+}
+ 
+

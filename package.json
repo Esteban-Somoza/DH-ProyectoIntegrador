@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/Esteban-Somoza/Grupo_1_Sanitarios#readme",
   "devDependencies": {
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.19"
   }
 }
