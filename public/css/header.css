@@ -33,7 +33,7 @@ header {
     align-items: center;
     border-radius:60px;
     padding: 10px 20px;
-    height: 40px;
+    height: 35px;
 }
 
 .search-bar input {
@@ -52,17 +52,17 @@ header {
 
 }
 .search-bar button img{
-    width: 25px;
+    width: 17px;
 
 }
 .search-bar button {
     border: 0;
     border-radius: 50%;
-    width: 39px;
-    height: 36px;
     background: #4f839b;
     cursor: pointer;
-
+    padding: .5em;
+    aspect-ratio: 1/1;
+    margin-right: -17px;
 }
 @media (max-width: 508px){
     .search-bar {
