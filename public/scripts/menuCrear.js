@@ -4,37 +4,50 @@ let categories = {
     tanques: ["termotanques", "tanques de agua"],
     calefaccion: ["salamandra", "caloventores", "aires acondicionados"],
     instalaciones: ["tubos", "cintas", "adhesivos"]
-}
+} //array de subcategorias segun la categoria elegida
+
 function populate() {
-    let s1 = document.getElementById("categoria");
-    let s2 = document.getElementById("subCategoria");
-    s2.innerHTML = "elegir una opcion";
-    let optionArray = []
+    let s1 = document.getElementById("categoria"); // agarra el selector categoria
+    let s2 = document.getElementById("subCategoria"); // agarra el selector subCategoria
+    let optionArray = [] // variable que va a ser el listado de opciones
+
+    s2.innerHTML = "elegir una opcion"; // hace que las opciones de subCategoria sean "elegir una opcion" cuando hay un cambio de categoria
+
+    /*  da valor a optionArray dependiendo de cual sea el valor (opcion elegida) de categoria  */
     if (s1.value == "banio") {
         optionArray = categories.banio
-        console.log(optionArray)
-    } else if (s1.value == "cocina") {
+    }
+
+    else if (s1.value == "cocina") {
         optionArray = categories.cocina
-    } else if (s1.value == "tanques") {
+    }
+
+    else if (s1.value == "tanques") {
         optionArray = categories.tanques
     }
+
     else if (s1.value == "calefaccion") {
         optionArray = categories.calefaccion
     }
+
     else if (s1.value == "instalaciones") {
         optionArray = categories.instalaciones
     }
+
+
+    /*  bucle que agrega una opcion por cada elemento en el array optionArray  */
     for (let i = 0; i < optionArray.length; i++) {
-        let newOption = document.createElement("option");
-        if (i == 0 ) {
-            newOption.value = "";
+        let newOption = document.createElement("option"); // crea opcion para subCategoria
+        if (i == 0) {
+            newOption.value = ""; 
             newOption.innerHTML = "opciones";
-            s2.options.add(newOption);
-        }
+            s2.options.add(newOption); 
+        } // agrega "opciones" como primer opcion 
+
         else {
-            newOption.value = optionArray[i];
-            newOption.innerHTML = optionArray[i];
-            s2.options.add(newOption);
-        }
+            newOption.value = optionArray[i]; // define el VALOR de la opcion
+            newOption.innerHTML = optionArray[i]; // define el nombre de la opcion
+            s2.options.add(newOption); // agrega nueva opcion al listao de opciones
+        } 
     }
 }
