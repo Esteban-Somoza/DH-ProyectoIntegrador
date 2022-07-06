@@ -34,20 +34,18 @@ function populate() {
         optionArray = categories.instalaciones
     }
 
+    let option1 = document.createElement("option"); // crea opcion para subCategoria
+    option1.value = "";
+    option1.innerHTML = "";
+    s2.options.add(option1); // agrega nueva opcion al listao de opciones
 
     /*  bucle que agrega una opcion por cada elemento en el array optionArray  */
     for (let i = 0; i < optionArray.length; i++) {
         let newOption = document.createElement("option"); // crea opcion para subCategoria
-        if (i == 0) {
-            newOption.value = ""; 
-            newOption.innerHTML = "opciones";
-            s2.options.add(newOption); 
-        } // agrega "opciones" como primer opcion 
-
-        else {
-            newOption.value = optionArray[i]; // define el VALOR de la opcion
-            newOption.innerHTML = optionArray[i]; // define el nombre de la opcion
-            s2.options.add(newOption); // agrega nueva opcion al listao de opciones
-        } 
+        newOption.value = "";
+        newOption.innerHTML = "opciones";
+        newOption.value = optionArray[i]; // define el VALOR de la opcion
+        newOption.innerHTML = optionArray[i]; // define el nombre de la opcion
+        s2.options.add(newOption); // agrega nueva opcion al listao de opciones
     }
 }
