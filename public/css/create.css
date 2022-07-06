@@ -2,17 +2,28 @@
 .fondo{
     background-color: #EDEDED;
     text-align: center;
-    width: 35%;
+    max-width: 300px;
     border-radius: 1em;
     margin: auto;
-    padding: 6em 1em;
-    margin-top: 7em;
+    /* padding: 6em 1em; */
     height:42vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 .opciones{
     width: 70%;
     
 }
+
+main {
+    padding-top: 7em
+}
+
+.nombres{ 
+    width: 100%;
+    margin:auto
+}
+
 #boton{
     display: flex;
    margin:auto;
@@ -48,5 +59,16 @@
       font-weight: 700;
 
 }
+
+.opciones {
+    width: 70%;
+    background-color: white;
+    padding: .5em;
+    margin: .5em;
+    border-radius: .5em;
+}
  
+.nombres h2 {
+    margin-top: 1em
+}
 

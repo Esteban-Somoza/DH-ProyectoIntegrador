@@ -1,6 +1,5 @@
 @media (max-width: 768px) { 
     body{
-        background-color: hsla(205, 100%, 50%, 0.1)
     }
     #producto {
         flex-wrap: wrap;

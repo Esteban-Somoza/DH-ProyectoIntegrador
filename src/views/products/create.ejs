@@ -3,74 +3,39 @@
 
 <head>
     <%- include ('../includes/head.ejs') %>
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <link rel="stylesheet" href="/css/mediaQ-newproduct.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/admin.css">
-    <script type="text/javascript">
-        function populate(s1, s2) {
-
-
-            var s1 = document.getElementById(s1);
-            var s2 = document.getElementById(s2);
-            s2.innerHTML = "";
-            if (s1.value == "chevy") {
-                var optionArray = [
-                    " |", "camaro | camaro", "corvette|corvete", "impala|impala"]
-            } else if (s1.value == "dodge") {
-                var optionArray = [
-                    " |", "calleger | challenger", "charger|charger", "sport|sport"]
-            } else if (s1.value == "ford") {
-                var optionArray = [
-                    " |", "mustang | mustang", "falcon|falcon", "impala|impala"]
-            }
-            /* for (var option in optionArray) {
-                 var pair = optionArray[option].splint("|");
-                 var newOption = document.createElement("option");
-                 newOption.value = pair[0];
-                 newOption.innerHTML = pair[1];
-                 s2.option.add(newOption);
-             } */
-        }
-    </script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/create.css">
+        
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <script defer src="/scripts/menuCrear.js"></script>
 </head>
+
 <body>
     <%- include ('../includes/header.ejs') %>
+        <main>
+            <div class="fondo">
+                <div class="nombres">
 
-    <main>
-        <div class="fondo">
-            <div class="nombres">
-
-                <h2> categorias</h2>
-                <select id="slct1" name="slct1" onChange="populate(this.id,'slct2' )">
-                    <option value=""></option>
-                    <option value="chevy">chevy</option>
-                    <option value="dodge">dodge</option>
-                    <option value="ford">ford</option>
-
-                </select>
-                <hr />
-                <h2>Sub-categorias</h2>
-                <select id="slct2" name="slct2"></select>
-                <hr />
-
-
-
+                    <h2> categorias</h2>
+                    <select id="categoria" name="categoria" class="opciones" onchange="populate()">
+                        <option value="">Elija una opcion</option>
+                        <option value="banio">banio</option>
+                        <option value="cocina">cocina</option>
+                        <option value="tanques">tanques</option>
+                        <option value="calefaccion">calefaccion</option>
+                        <option value="instalaciones">instalaciones</option>
+                    </select>
+                    <hr />
+                    <h2>Sub-categorias</h2>
+                    <select id="subCategoria" name="subCategoria" class="opciones"></select>
+                    <hr />
+                </div>
+                <div id="boton">
+                    <button type="reset" class="Cancelar">Cancelar</button>
+                    <a href="/create/product"><button type="submit" class="botonform">siguiente</button></a>
+                </div>
             </div>
-            <div id="boton">
-                <button type="reset" class="Cancelar">Cancelar</button>
-                <a href="/create/product"><button type="submit" class="botonform">siguiente</button></a>
-
-            </div>
-        </div>
-
-
-
-
-    </main>
- 
-    <%- include ('../includes/footer.ejs') %>
+        </main>
+        <%- include ('../includes/footer.ejs') %>
 </body>

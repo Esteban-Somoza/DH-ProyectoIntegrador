@@ -46,9 +46,6 @@ li {
     color: white;
 }
 
-.buscador__categoriaRaudio+label {
-    /* color:yellow */
-}
 
 .buscador__list {
     display: none;
@@ -102,7 +99,7 @@ li {
 }
 
 
-.grupo {
+.grupo { 
     margin-top: 1em;
 }
 
