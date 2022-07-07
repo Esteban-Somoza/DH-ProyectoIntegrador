@@ -19,32 +19,31 @@
             <section class="back">
                 <form action="">
                     <div class="formulario">
-                        <label for="nombre-apellido">Nombres del producto</label>
-                        <input class="relleno" type="text" name="nombre-prodcito" min="1" />
-                        <label for="usuario">Código</label>
-                        <input class="relleno" type="text" name="usuario" id="usuario" min="1" />
-                        <label for="marca">marca</label>
-                        <input class="relleno" type="text" name="marca" id="marca" " min=" 1" />
-                        <label for="number">precio</label>
-                        <input class="relleno" required />
-                        <label class="infodenombres" for="nombre-apellido">imagen del producto</label>
-                        <input class="relleno" type="file" name="imagenProducto">
+                        <h2 id="Detalle">Detalle</h2>
 
-                        <h2 id="info">Informacion</h2>
+                        <label for="nombre-apellido">Nombres del producto</label>
+                        <input class="fomulario_relleno" type="text" name="nombre-prodcito" min="1" />
+                        <label for="usuario">Código</label>
+                        <input class="formulario_relleno" type="text" name="usuario" id="usuario" min="1" />
+                        <label for="marca">marca</label>
+                        <input class="formulario_relleno" type="text" name="marca" id="marca" " min=" 1" />
+                        <label for="number">precio</label>
+                        <input class="formulario_relleno" required />
+
+
+
 
                         <label class="infodenombres" for="nombre-apellido">Colores</label>
-                        <input class="relleno" type="text" name="nombre-prodcito" min="1" required />
+                        <input class="formulario_relleno" type="text" name="nombre-prodcito" min="1" required />
 
                         <label class="infodenombres" for="nombre-apellido">Apto</label>
-                        <input class="relleno" type="text" name="nombre-prodcito" min="1" required />
+                        <input class="formulario_relleno" type="text" name="nombre-prodcito" min="1" required />
 
                         <label for="nombre-apellido">cierre</label>
-                        <input class="relleno" type="text" name="nombre-prodcito" min="1" required />
+                        <input class="formulario_relleno" type="text" name="nombre-prodcito" min="1" required />
+                        <label class="infodenombres" for="nombre-apellido">imagen del producto</label>
+                        <input class="formulario_relleno" type="file" name="imagenProducto">
 
-
-                        <h2 id="Detalle">Detalle</h2>
-                        <label class="infodenombres" for="nombre-apellido">Video</label>
-                        <input class="relleno" type="text" name="nombre-prodcito" min="1" required />
 
                         <label class="infodenombres" for="nombre-apellido">grafico</label>
                         <input class="relleno" type="file" name="nombre-prodcito" min="1" required />
@@ -56,7 +55,7 @@
 
                         <input class="descripcion" type="text" name="nombre-prodcito" min="1" required />
                         <div id="boton">
-                            <a href="/">  <button type="" class="Cancelar">Cancelar</button></a>
+                            <a href="/"> <button type="" class="Cancelar">Cancelar</button></a>
                             <button type="submit" class="botonform">Enviar</button>
                         </div>
                     </div>
@@ -66,5 +65,5 @@
 
         </main>
         <%- include ('../includes/footer.ejs') %>
-        <script src="../scripts/menu.js"></script>
+            <script src="../scripts/menu.js"></script>
 </body>

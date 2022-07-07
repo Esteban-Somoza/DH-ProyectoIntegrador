@@ -1,0 +1,24 @@
+[
+    {
+        "id": "",
+        "name": "",
+        "price": 0,
+        "image": "",
+        "cathegory": "",
+        "sub-cathegory":"",
+        "information": {
+            "colors": "",
+            "apto": "",
+            "tecnology": "",
+            "linea": "",
+            "diseño": "",
+            "configuration":""
+        },
+        "details": {
+            "description": "",
+            "esquema": "",
+            "documento": "",
+            "video": ""
+        }
+    }
+]

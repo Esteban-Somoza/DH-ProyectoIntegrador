@@ -1,0 +1,14 @@
+[
+    {
+        "id": "",
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "password": "",
+        "domicilio": "",
+        "informations": {
+            "admins": "",
+            "users": ""
+        }
+    }
+]
