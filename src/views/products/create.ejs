@@ -18,9 +18,10 @@
                 <div class="nombres">
 
                     <h2> categorias</h2>
+                    
                     <select id="categoria" name="categoria" class="opciones" onchange="populate()">
                         <option value=""></option>
-                        <option value="banio">baño</option>
+                        <option value="baño">baño</option>
                         <option value="cocina">cocina</option>
                         <option value="tanques">tanques</option>
                         <option value="calefaccion">calefacción</option>
@@ -30,12 +31,15 @@
                     <h2>Sub-categorias</h2>
                     <select id="subCategoria" name="subCategoria" class="opciones"></select>
                     <hr />
+                
                 </div>
                 <div id="boton">
                     <button type="reset" class="Cancelar">Cancelar</button>
                     <a href="/create/product"><button type="submit" class="botonform">siguiente</button></a>
                 </div>
+           
             </div>
+    
         </main>
         <%- include ('../includes/footer.ejs') %>
         <script src="./scripts/menu.js"></script>

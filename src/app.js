@@ -19,10 +19,11 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(require('method-override')('m'));
 
+
 app.use(require('./routes/main.routes'))
 app.use(require('./routes/product.routes'))
 app.use(require('./routes/users.routes'))
-app.get('/create', (req, res) => res.render(path.join(__dirname, '/views/products/create.ejs')));
+
 app.get('/edit', (req, res) => res.render(path.join(__dirname, '/views/products/edit.ejs')));
 app.get('/create/product', (req, res) => res.render(path.join(__dirname, '/views/products/createProduct.ejs')));
 

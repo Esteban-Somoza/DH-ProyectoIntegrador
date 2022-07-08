@@ -19,5 +19,18 @@ module.exports = {
         products: index,
     })
   },
+  productCreate: (req, res) => {
+    return res.render("./products/create", {
+        title: "Product Create",
+        products: index,
+    })
+  },
+  productSave: (req, res) => {
+    let id = req.params.id;
+    return res.render(`./products/${id}`, {
+        title: "Product Create",
+        products: index,
+    })
+  },
  
 };

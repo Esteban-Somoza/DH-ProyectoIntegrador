@@ -6,9 +6,6 @@
         "email": "",
         "password": "",
         "domicilio": "",
-        "informations": {
-            "admins": "",
-            "users": ""
-        }
+        "type" : " " 
     }
 ]

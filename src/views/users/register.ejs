@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-<%- include ('../includes/head.ejs') %>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/register.css">
+
+<head>
+    <%- include ('../includes/head.ejs') %>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/register.css">
 </head>
-    <body>
 
-        <%- include ('../includes/header.ejs') %>
+<body>
 
-            <!-- break  -->
-            <main>
-                <h2 id="title">Registro</h2>
-                <form action="/" id="form">
-                    <label for="nombre-apellido">Nombres y apellidos</label>
-                    <input type="text" name="nombre-apellido" id="nombre-apellido" min="1" />
-                    <label for="usuario">Nombre de usuario</label>
-                    <input type="text" name="usuario" id="usuario" min="1" />
-                    <label for="domicilio">Domicilio</label>
-                    <input type="text" name="domicilio" id="domicilio" placeholder="direccion de residencia" min="1" />
-                    <label for="contraseña">Contraseña</label>
-                    <input type="password" name="contraseña" id="contraseña" required />
-                    <label for="contraseña-val">Confirmar contraseña</label>
-                    <input type="password" name="contraseña-val" id="contraseña-val" required />
-                    <div id="form__botonContainer">
-                        <button type="reset" class="form__boton">Borrar</button>
-                        <button type="submit" class="form__boton">Enviar</button>
-                    </div>
-                </form>
-            </main>
+    <%- include ('../includes/header.ejs') %>
 
-            <%- include ('../includes/footer.ejs') %>
+        <!-- break  -->
+        <main>
+            <h2 id="title">Registro</h2>
+            <form action="" id="form" method="post">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" 
+                    value=" <%= locals.oldData ? oldData.nombre: null %>  ">
+                <% if ( locals.errors && errors.nombre ) { %>
+                    <p class="msg-error">
+                        <%= errors.nombre.msg %>
+                    </p>
+                    <% } %>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" 
+                            value=" <%= locals.oldData ? oldData.apellido: null %>  ">
+                        <% if ( locals.errors && errors.apellido ) { %>
+                            <p class="msg-error">
+                                <%= errors.apellido.msg %>
+                            </p>
+                            <% } %>
 
-                <script src="./scripts/menu.js"></script>
-    </body>
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="direccion de corre electrónico"
+                                     value=" <%= locals.oldData ? oldData.email: null %>  ">
+                                <% if ( locals.errors && errors.email ) { %>
+                                    <p class="msg-error">
+                                        <%= errors.email.msg %>
+                                    </p>
+                                    <% } %>
+
+                                        <label for="contraseña">Contraseña</label>
+                                        <input type="password" name="password" id="contraseña" 
+                                            value=" <%= locals.oldData ? oldData.password: null %>  ">
+                                        <% if ( locals.errors && errors.password ) { %>
+                                            <p class="msg-error">
+                                                <%= errors.password.msg %>
+                                            </p>
+                                            <% } %>
+
+                                                <label for="contraseña-val">Confirmar contraseña</label>
+                                                <input type="password" name="password" id="contraseña-val" 
+                                                    value=" <%= locals.oldData ? oldData.password: null %>  ">
+                                                <% if ( locals.errors && errors.password ) { %>
+                                                    <p class="msg-error">
+                                                        <%= errors.password.msg %>
+                                                    </p>
+                                                    <% } %>
+
+                                                        <div id="form__botonContainer">
+                                                            <button type="reset" class="form__boton">Borrar</button>
+                                                            <button type="submit" class="form__boton">Enviar</button>
+                                                        </div>
+            </form>
+        </main>
+
+        <%- include ('../includes/footer.ejs') %>
+
+            <script src="./scripts/menu.js"></script>
+</body>
 
 </html>
