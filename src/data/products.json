@@ -1,22 +1,66 @@
 [
     {
-        "id": "",
-        "name": "",
-        "price": 0,
-        "image": "",
-        "cathegory": "",
-        "sub-cathegory":"",
+        "id": "1",
+        "name": "H3 Urbano - Juego para lavatorio",
+        "price": 20.000,
+        "imagen": "/images/productos/griferia1.jpg",
+        "cathegoria": "baño",
+        "sub-cathegoria":"griferia",
         "information": {
-            "colors": "",
-            "apto": "",
-            "tecnology": "",
-            "linea": "",
-            "diseño": "",
-            "configuration":""
+            "colores": "Cromo, Rose Gold",
+            "apto": "Apto termotanque y calefón",
+            "tecnologia": "Cierre cerámico",
+            "linea": "H3 Urbano",
+            "diseño": "Volante Cruz",
+            "configuracion":"Bicomando"
         },
         "details": {
             "description": "",
-            "esquema": "",
+            "esquema": "/images/griferia_esquema.png",
+            "documento": "",
+            "video": ""
+        }
+    },
+    {
+        "id": "2",
+        "name": "H3 Urbano - Juego para lavatorio",
+        "price": 20.000,
+        "imagen": "/images/productos/griferia1.jpg",
+        "cathegoria": "baño",
+        "sub-cathegoria":"griferia",
+        "information": {
+            "colores": "Cromo, Rose Gold",
+            "apto": "Apto termotanque y calefón",
+            "tecnologia": "Cierre cerámico",
+            "linea": "H3 Urbano",
+            "diseño": "Volante Cruz",
+            "configuracion":"Bicomando"
+        },
+        "details": {
+            "description": "",
+            "esquema": "/images/griferia_esquema.png",
+            "documento": "",
+            "video": ""
+        }
+    },
+    {
+        "id": "3",
+        "name": "H3 Urbano - Juego para lavatorio",
+        "price": 20.000,
+        "imagen": "/images/productos/griferia1.jpg",
+        "cathegoria": "baño",
+        "sub-cathegoria":"griferia",
+        "information": {
+            "colores": "Cromo, Rose Gold",
+            "apto": "Apto termotanque y calefón",
+            "tecnologia": "Cierre cerámico",
+            "linea": "H3 Urbano",
+            "diseño": "Volante Cruz",
+            "configuracion":"Bicomando"
+        },
+        "details": {
+            "description": "",
+            "esquema": "/images/griferia_esquema.png",
             "documento": "",
             "video": ""
         }
