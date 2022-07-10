@@ -16,6 +16,20 @@ header {
     *position: fixed;
     width: 100%;
 }
+/*-------------NAV left-------------*/
+.navbar_left {
+    display: flex;
+    align-items: center;
+}
+
+
+/*-------------NAV right-------------*/
+
+.navbar_right {
+    display: flex;
+    align-items: center;
+}
+
 
 
 /*-------------NAV CONTAINER-------------*/
@@ -222,7 +236,7 @@ header a h2 {
 
     .navbar__menu.active {
         background: linear-gradient(20deg, rgba(38, 68, 83, 1) 30%, rgb(67, 105, 126) 100%);
-        top: 62px;
+        top: 61px;
         opacity: 1;
         transition: all 0.3s ease;
         z-index: 99;
