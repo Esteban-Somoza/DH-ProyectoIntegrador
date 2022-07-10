@@ -8,10 +8,12 @@
     height: 42vh;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
 
 .opciones {
     width: 70%;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 
 }
 
@@ -50,6 +52,7 @@ main {
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: 700;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
 
 .botonform {
@@ -60,6 +63,7 @@ main {
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: 700;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 
 }
 
