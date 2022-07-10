@@ -297,3 +297,8 @@ header a h2 {
         transition: all 0.3s ease;
     }
 }
+
+.carga i:hover {
+    color: var(--color-hover);
+
+}
