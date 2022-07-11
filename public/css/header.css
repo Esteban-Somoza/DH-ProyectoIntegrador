@@ -16,6 +16,20 @@ header {
     *position: fixed;
     width: 100%;
 }
+/*-------------NAV left-------------*/
+.navbar_left {
+    display: flex;
+    align-items: center;
+}
+
+
+/*-------------NAV right-------------*/
+
+.navbar_right {
+    display: flex;
+    align-items: center;
+}
+
 
 
 /*-------------NAV CONTAINER-------------*/
@@ -42,9 +56,10 @@ header {
     border: 0;
     outline: none;
     padding: 0px 4px;
-    font-size: 20px;
+    font-size: 17px;
     color: var(--color-white);
     width: 100%;
+    font-style: italic;
 }
 
 ::placeholder{
@@ -62,7 +77,7 @@ header {
     cursor: pointer;
     padding: .5em;
     aspect-ratio: 1/1;
-    margin-right: -17px;
+    margin-right: -22px;
 }
 .carga {
     color : var(--color-white);
@@ -221,7 +236,7 @@ header a h2 {
 
     .navbar__menu.active {
         background: linear-gradient(20deg, rgba(38, 68, 83, 1) 30%, rgb(67, 105, 126) 100%);
-        top: 62px;
+        top: 61px;
         opacity: 1;
         transition: all 0.3s ease;
         z-index: 99;
@@ -281,4 +296,9 @@ header a h2 {
         margin-bottom: 0px;
         transition: all 0.3s ease;
     }
+}
+
+.carga i:hover {
+    color: var(--color-hover);
+
 }
