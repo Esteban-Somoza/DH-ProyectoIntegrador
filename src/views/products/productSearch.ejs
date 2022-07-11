@@ -92,9 +92,10 @@
                         </ul>
 
                         <label for="tanques" class="buscador__categoria">Tanques</label>
-                        <input type="radio" name="categorias" id="tanques"class="buscador__categoriaRadio">
+                        <input type="radio" name="categorias" id="tanques" class="buscador__categoriaRadio">
                         <ul class="buscador__list">
-                            <input type="radio" value="Termotanques" name="subcategoria" id="t1" class="buscador__tipo"></input>
+                            <input type="radio" value="Termotanques" name="subcategoria" id="t1"
+                                class="buscador__tipo"></input>
                             <label for="t1">Termotanques</label>
                             <input type="radio" name="subcategoria" id="t2" class="buscador__tipo"></input>
                             <label for="t2">Tanques de Agua</label>
@@ -110,7 +111,7 @@
                             <input type="radio" name="subcategoria" id="ca3" class="buscador__tipo"></input>
                             <label for="ca3">Aires Acondicionados</label>
                         </ul>
-                        
+
                         <label for="instalaciones" class="buscador__categoria">Instalaciones</label>
                         <input type="radio" name="categorias" id="instalaciones" class="buscador__categoriaRadio">
                         <ul class="buscador__list">
@@ -154,19 +155,33 @@
                         <h6 class="ruta__texto ruta__texto--resaltado"> H3 Urbano</h6>
                     </div>
                     <section class="productos">
-                        <article class="productos__elemento">
-                            <h3>Bidet</h3>
-                            <div class="productos__informacion">
-                                <picture class="imagen"><img src="/images/bidet1.png" alt=""></picture>
-                                <div class="productos__texto">
-                                    <h4 class="descripcion">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    </h4>
-                                   <a href="/productos" class="productos__modelos">ver </a>
+                        <% products.forEach(element=> { %>
+                            <article class="productos__elemento">
+                                <h3><%= element.name %> </h3>
+                                <div class="productos__informacion">
+                                    <picture class="imagen"><img src="<%= element.imagen %>" alt=""></picture>
+                                    <div class="productos__texto">
+                                        <h4 class="descripcion">
+                                            <%= element.details.description %>
+                                        </h4>
+                                        <a href="/products/<%= element.id %> " class="productos__modelos"> ver</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                        
+                            </article>
+                            <% }) %>
+                            <!-- <article class="productos__elemento">
+                                <h3>Bidet</h3>
+                                <div class="productos__informacion">
+                                    <picture class="imagen"><img src="/images/bidet1.png" alt=""></picture>
+                                    <div class="productos__texto">
+                                        <h4 class="descripcion">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </h4>
+                                        <a href="/productos" class="productos__modelos">ver </a>
+                                    </div>
+                                </div>
+                            </article> -->
+
                     </section>
                 </section>
             </section>
