@@ -9,13 +9,13 @@ module.exports = {
     }
 
     let propiedades = Object.getOwnPropertyNames(product.information)
-    let detalles = Object.getOwnPropertyNames(product.detalles)
+    let details = Object.getOwnPropertyNames(product.details)
 
     return res.render("./products/productDetail", {
       title: "Productos",
       product: product,
       informacion: propiedades,
-      detalles: detalles,
+      details: details,
       // styles: [""]
     });
   },

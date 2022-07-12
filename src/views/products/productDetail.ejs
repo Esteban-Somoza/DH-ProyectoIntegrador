@@ -53,16 +53,16 @@
             <section id="detalles">
                 <h3>Detalles del producto</h3>
                 <ul id="detalles__navegacion">
-                    <% for( let i=0; i < detalles.length; i++ ) { let item=detalles[i] 
-                        if(product.detalles[item]=="" ){ continue }%>
+                    <% for( let i=0; i < details.length; i++ ) { let item=details[i] 
+                        if(product.details[item]=="" ){ continue }%>
                         <li>
-                            <%= detalles[i] %>
+                            <%= details[i] %>
                         </li>
                         <% } %>
                 </ul>
                 <article id="detalles__infoDetalle">
                     <picture class="imagen">
-                        <img src="<%= product.detalles.esquema %> " alt="">
+                        <img src="<%= product.details.esquema %> " alt="">
                     </picture>
                 </article>
             </section>
