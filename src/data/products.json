@@ -2,8 +2,8 @@
     {
         "id": "1",
         "name": "H3 Urbano - Juego para lavatorio",
-        "price": 20.000,
-        "imagen": "./images/productos/griferia1.jpg",
+        "price": 20000,
+        "imagen": "/images/productos/griferia1.jpg",
         "cathegoria": "baño",
         "sub-cathegoria":"griferia",
         "marca" : "FV",
@@ -17,7 +17,7 @@
         },
         "details": {
             "description": "Griferia de baño moderna de linea H3",
-            "esquema": "./images/griferia_esquema.png",
+            "esquema": "/images/griferia_esquema.png",
             "documento": "",
             "video": ""
         }
@@ -25,7 +25,7 @@
     {
         "id": "2",
         "name": "49 Alesia - Juego para lavatorio",
-        "price": 25.010,
+        "price": 25010,
         "imagen": "/images/productos/griferia2.jpg",
         "cathegoria": "baño",
         "sub-cathegoria":"griferia",
@@ -40,7 +40,7 @@
         },
         "details": {
             "description": "Griferia de baño moderna de linea H3",
-            "esquema": "./images/griferia_esquema.png",
+            "esquema": "/images/griferia_esquema.png",
             "documento": "",
             "video": ""
         }
@@ -48,7 +48,7 @@
     {
         "id": "3",
         "name": "Inodoro largo RIMLESS de pie con salida dual",
-        "price": 20.000,
+        "price": 20000,
         "imagen": "/images/productos/inodoro1.jpeg",
         "cathegoria": "baño",
         "sub-cathegoria":"inodoro",
@@ -71,7 +71,7 @@
     {
         "id": "4",
         "name": "Bidé de pie Monobloque",
-        "price": 24.000,
+        "price": 24000,
         "imagen": "/images/productos/bidet1.jpeg",
         "cathegoria": "baño",
         "sub-cathegoria":"bidet",

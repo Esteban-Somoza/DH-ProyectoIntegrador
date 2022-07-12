@@ -6,31 +6,39 @@ module.exports = {
     if (!product) {
       return res.redirect('/products')
     }
-    let info = product.information
-    let propiedades = Object.getOwnPropertyNames(info)
-    console.log(product.information[1]);
-    console.log(propiedades)
+
+    let propiedades = Object.getOwnPropertyNames(product.information)
+    let detalles = Object.getOwnPropertyNames(product.details)
+
     return res.render("./products/productDetail", {
-      title: "Product Detail",
+      title: "Productos",
       product: product,
-      informacion: Object.getOwnPropertyNames(info)
+      informacion: propiedades,
+      detalles: detalles,
+      styles: [""]
     });
   },
   productSearch: (req, res) => {
     return res.render("./products/productSearch", {
-      title: "Product Search",
+      title: "Detalle de producto",
       products: index(),
     });
   },
   productCart: (req, res) => {
     return res.render("./products/productCart", {
-      title: "Product Cart",
+      title: "Carrito de compras",
       products: index(),
     })
   },
   productCreate: (req, res) => {
-    return res.render("./products/create", {
+    return res.render("./products/productCreate", {
       title: "Product Create",
+      products: index(),
+    })
+  },
+  productCreateDetail: (req, res) => {
+    return res.render("./products/productCreateDetail", {
+      title: "Product Create Details",
       products: index(),
     })
   },

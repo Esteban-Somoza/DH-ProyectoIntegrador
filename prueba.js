@@ -8,7 +8,7 @@ let prod = {
     [edad]: 4
 }
 
-console.log(prod{1})
+// console.log(prod{1})
 
 
 let informacion = ["Apto",
@@ -39,3 +39,8 @@ for (let i = 0; i < info.length; i++) {
 
 let inf = Object.getOwnPropertyNames(prod);
 console.log(inf)
+
+let str ="stringify"
+
+str.includea("9")
+console.log(str)

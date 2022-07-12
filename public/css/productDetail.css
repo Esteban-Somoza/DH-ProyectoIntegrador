@@ -38,8 +38,9 @@ main h6 {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    margin: 0 1em;
+    margin: 1.5em 1em 0 1em;
     flex-wrap: wrap;
+
 }
 
 #producto__imagen {
@@ -80,20 +81,29 @@ main h6 {
 
 #producto__tabla {
     margin-top: 2em;
+    width: 100%;
+    font-size: .8em;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.producto__tablaItem {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    border-bottom: 1px lightgray solid;
+    margin: .5em 0
 }
 
-
-#producto__itemsTabla ul {
+.producto__itemsTabla {
     text-align: left;
     font-weight: bold;
+    
 }
 
-#producto__infoTabla {
+.producto__infoTabla {
     text-align: right;
-
+    font-weight: normal;
 }
 
 #producto__compra {
