@@ -4,8 +4,8 @@
         "name": "H3 Urbano - Juego para lavatorio",
         "price": 20000,
         "imagen": "/images/productos/griferia1.jpg",
-        "cathegoria": "baño",
-        "sub-cathegoria":"griferia",
+        "categoria": "baño",
+        "subCategoria":"griferia",
         "marca" : "FV",
         "information": {
             "colores": "Cromo, Rose Gold",
@@ -28,7 +28,7 @@
         "price": 25010,
         "imagen": "/images/productos/griferia2.jpg",
         "cathegoria": "baño",
-        "sub-cathegoria":"griferia",
+        "subCategoria":"griferia",
         "marca" : "FV",
         "information": {
             "colores": "Cromo",
@@ -51,7 +51,7 @@
         "price": 20000,
         "imagen": "/images/productos/inodoro1.jpeg",
         "cathegoria": "baño",
-        "sub-cathegoria":"inodoro",
+        "subCategoria":"inodoro",
         "marca" : "Roca",
         "information": {
             "colores": "Blanco",
@@ -74,7 +74,7 @@
         "price": 24000,
         "imagen": "/images/productos/bidet1.jpeg",
         "cathegoria": "baño",
-        "sub-cathegoria":"bidet",
+        "subCategoria":"bidet",
         "marca" : "Roca",
         "information": {
             "colores": "Blanco",
@@ -84,7 +84,7 @@
             "diseño": "Cuadrado",
             "configuracion":"De pie"
         },
-        "details": {
+        "detalles": {
             "description": "Bidet elegante con griferia monocomando",
             "esquema": "/images/griferia_esquema.png",
             "documento": "",

@@ -6,7 +6,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: .5em;
+    padding: .5em 2em;
     /* background-color: var(--color-footerNav); */
     background: rgb(38, 68, 83);
     background: linear-gradient(145deg, rgba(38, 68, 83, 1) 0%, rgba(78, 138, 167, 1) 100%);
@@ -15,6 +15,7 @@ header {
     max-height: 74px;
     *position: fixed;
     width: 100%;
+
 }
 /*-------------NAV left-------------*/
 .navbar_left {

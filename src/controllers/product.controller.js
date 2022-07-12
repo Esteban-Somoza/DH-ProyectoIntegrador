@@ -1,52 +1,60 @@
-const { index, find } = require("../models/product.model");
+const { index, find , filter} = require("../models/product.model");
 module.exports = {
 
   productDetail: (req, res) => {
     let product = find(parseInt(req.params.id))
+
     if (!product) {
-      return res.redirect('/products')
+      return res.redirect('/finder')
     }
 
     let propiedades = Object.getOwnPropertyNames(product.information)
-    let detalles = Object.getOwnPropertyNames(product.details)
+    let detalles = Object.getOwnPropertyNames(product.detalles)
 
     return res.render("./products/productDetail", {
       title: "Productos",
       product: product,
       informacion: propiedades,
       detalles: detalles,
-      styles: [""]
+      // styles: [""]
     });
   },
+  
   productSearch: (req, res) => {
+    let filtered = filter(req.query.subcategoria)
+    
+    if (filtered.length < 1) {
+      filtered = index()
+    }
+
     return res.render("./products/productSearch", {
       title: "Detalle de producto",
-      products: index(),
+      products: filtered,
     });
   },
+
   productCart: (req, res) => {
     return res.render("./products/productCart", {
       title: "Carrito de compras",
-      products: index(),
     })
   },
+
   productCreate: (req, res) => {
     return res.render("./products/productCreate", {
       title: "Product Create",
-      products: index(),
     })
   },
+
   productCreateDetail: (req, res) => {
     return res.render("./products/productCreateDetail", {
       title: "Product Create Details",
-      products: index(),
     })
   },
+
   productSave: (req, res) => {
     let id = req.params.id;
     return res.render(`./products/${id}`, {
-      title: "Product Create",
-      products: index(),
+      title: "Product Save",
     })
   },
 

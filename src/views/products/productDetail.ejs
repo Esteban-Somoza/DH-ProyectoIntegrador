@@ -24,35 +24,37 @@
                 <picture id="producto__imagen">
                     <img src="<%= product.imagen %> " alt="">
                 </picture>
-                <% product %>
-                    <article id="producto__informacion">
-                        <h2 id="producto__titulo">
-                            <%= product.name %>
-                        </h2>
-                        <ul id="producto__tabla">
-                            <% for( let i=0; i < informacion.length; i++ ) { let item=informacion[i]%>
-                                <li class="producto__tablaItem">
-                                    <h3 class="producto__itemsTabla">
-                                        <%= informacion[i] %>
-                                    </h3>
-                                    <h3 class="producto__infoTabla">
-                                        <%= product.information[item] %>
-                                    </h3>
-                                </li>
-                                <% } %>
-                        </ul>
-                        <div id="producto__compra">
-                            <h5>Valor Final:</h5>
-                            <h3> $ <%= product.price %>
-                            </h3>
-                            <h4>+ Carrito</h4>
-                        </div>
-                    </article>
+                <article id="producto__informacion">
+                    <h2 id="producto__titulo">
+                        <%= product.name %>
+                    </h2>
+                    <ul id="producto__tabla">
+                        <!-- generador -->
+                        <% for( let i=0; i < informacion.length; i++ ) { let item=informacion[i] 
+                        if(product.information[item]=="" ){ continue } %>
+                            <li class="producto__tablaItem">
+                                <h3 class="producto__itemsTabla">
+                                    <%= informacion[i] %>
+                                </h3>
+                                <h3 class="producto__infoTabla">
+                                    <%= product.information[item] %>
+                                </h3>
+                            </li>
+                            <% } %>
+                    </ul>
+                    <div id="producto__compra">
+                        <h5>Valor Final:</h5>
+                        <h3> $ <%= product.price %>
+                        </h3>
+                        <h4>+ Carrito</h4>
+                    </div>
+                </article>
             </section>
             <section id="detalles">
                 <h3>Detalles del producto</h3>
                 <ul id="detalles__navegacion">
-                    <% for( let i=0; i < detalles.length; i++ ) { %>
+                    <% for( let i=0; i < detalles.length; i++ ) { let item=detalles[i] 
+                        if(product.detalles[item]=="" ){ continue }%>
                         <li>
                             <%= detalles[i] %>
                         </li>
@@ -60,7 +62,7 @@
                 </ul>
                 <article id="detalles__infoDetalle">
                     <picture class="imagen">
-                        <img src="<%= product.details.esquema %> " alt="">
+                        <img src="<%= product.detalles.esquema %> " alt="">
                     </picture>
                 </article>
             </section>

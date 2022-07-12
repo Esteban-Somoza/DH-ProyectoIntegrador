@@ -5,5 +5,5 @@ module.exports = {
       title: "Sanitarios Nicuesa",
     });
   }
-
+ 
 };
