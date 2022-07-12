@@ -6,10 +6,14 @@ module.exports = {
     if (!product) {
       return res.redirect('/products')
     }
-    let info = product.informacion
+    let info = product.information
+    let propiedades = Object.getOwnPropertyNames(info)
+    console.log(product.information[1]);
+    console.log(propiedades)
     return res.render("./products/productDetail", {
       title: "Product Detail",
       product: product,
+      informacion: Object.getOwnPropertyNames(info)
     });
   },
   productSearch: (req, res) => {

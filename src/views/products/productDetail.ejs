@@ -28,7 +28,16 @@
                         <%= product.name %>
                     </h2>
                     <h5 id="producto__tabla">
-                        <div id="producto__itemsTabla">
+                        <ul>
+                            <% for( let i = 0; i < informacion.length; i++ ) { 
+                                let hola = informacion[i]%>
+                                <li>
+                                    <span><%= informacion[i] %></span> 
+                                    <span><%= product.information[hola] %></span>
+                                </li>
+                            <% } %>
+                        </ul>
+                        <!-- <div id="producto__itemsTabla">
                             <ul>
                                 <li>Apto</li>
                                 <li>Color</li>
@@ -50,7 +59,7 @@
                                 <li>Cierre cerámico</li>
                                 <li>Tradicional</li>
                                 <li>Industrial, minimalista, moderno</li>
-                            </ul>
+                            </ul> -->
                     </h5>
                     <div id="producto__compra">
                         <h5>Valor Final:</h5>
