@@ -8,14 +8,11 @@ module.exports = {
       return res.redirect('/finder')
     }
 
-    let propiedades = Object.getOwnPropertyNames(product.information)
-    let details = Object.getOwnPropertyNames(product.details)
-
     return res.render("./products/productDetail", {
       title: "Productos",
       product: product,
-      informacion: propiedades,
-      details: details,
+      informacion: Object.getOwnPropertyNames(product.information),
+      details: Object.getOwnPropertyNames(product.details),
       // styles: [""]
     });
   },
