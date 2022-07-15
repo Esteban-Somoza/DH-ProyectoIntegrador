@@ -22,7 +22,30 @@ module.exports = {
         let productFilter = products.filter(product => product.subCategoria == subcategoria)
         // console.log(productFilter);
         return productFilter
-    }
+    },
+    create: function(data){
+        let file = resolve(__dirname,'../data','products.json');
+        let info = readFileSync(file);
+        let products = JSON.parse(info);
+        let lastProduct= products[products.length - 1];
+        return Object({
+          id: products.length == 0 ? 1 : parseInt(lastProduct.id) + 1,
+          name: data.nombreProducto,
+          price: parseInt(data.price),
+          imagen: data.imagenProducto,
+          categoria: "",
+          subCategoria: data.subCategoria,
+          marca : data.marca,
+          information: {colores: data.colores},
+          details: {description:data.descripcion}          
+        },)
+    },
+        write: function(data) {
+            let file = resolve(__dirname,'../data','products.json');
+            let info = JSON.stringify(data,null,2);
+            return writeFileSync(file, info);
+          },
+      
     // create: function (data) {
     //     let file = resolve(__dirname, '../data', 'products.json')
     //     let info = readinfoync(file)

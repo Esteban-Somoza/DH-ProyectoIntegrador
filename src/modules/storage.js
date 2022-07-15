@@ -1,7 +1,7 @@
 const {extname} = require('path')
 const {diskStorage} = require('multer');
 let destination = function (folder){
-    return (req, file, callback) => callback(null, './uploads/'+folder)
+    return (req, file, callback) => callback(null, './public/images/'+folder)
 };
 
 let filename = (req, file, callback) => {

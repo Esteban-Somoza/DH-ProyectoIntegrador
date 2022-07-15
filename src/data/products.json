@@ -1,94 +1,95 @@
 [
-    {
-        "id": "1",
-        "name": "H3 Urbano - Juego para lavatorio",
-        "price": 20000,
-        "imagen": "/images/productos/griferia1.jpg",
-        "categoria": "baño",
-        "subCategoria":"griferia",
-        "marca" : "FV",
-        "information": {
-            "colores": "Cromo, Rose Gold",
-            "apto": "Apto termotanque y calefón",
-            "tecnologia": "Cierre cerámico",
-            "linea": "H3 Urbano",
-            "diseño": "Volante Cruz",
-            "configuracion":"Bicomando"
-        },
-        "details": {
-            "description": "Griferia de baño moderna de linea H3",
-            "esquema": "/images/griferia_esquema.png",
-            "documento": "",
-            "video": ""
-        }
+  {
+    "id": "1",
+    "name": "H3 Urbano - Juego para lavatorio",
+    "price": 20000,
+    "imagen": "griferia1.jpg",
+    "categoria": "baño",
+    "subCategoria": "griferia",
+    "marca": "FV",
+    "information": {
+      "colores": "Cromo, Rose Gold",
+      "apto": "Apto termotanque y calefón",
+      "tecnologia": "Cierre cerámico",
+      "linea": "H3 Urbano",
+      "diseño": "Volante Cruz",
+      "configuracion": "Bicomando"
     },
-    {
-        "id": "2",
-        "name": "49 Alesia - Juego para lavatorio",
-        "price": 25010,
-        "imagen": "/images/productos/griferia2.jpg",
-        "cathegoria": "baño",
-        "subCategoria":"griferia",
-        "marca" : "FV",
-        "information": {
-            "colores": "Cromo",
-            "apto": "Apto termotanque y calefón",
-            "tecnologia": "Cierre cerámico",
-            "linea": "49 Alesia",
-            "diseño": "Volante Cruz",
-            "configuracion":"Bicomando"
-        },
-        "details": {
-            "description": "Griferia de baño moderna de linea H3",
-            "esquema": "/images/griferia_esquema.png",
-            "documento": "",
-            "video": ""
-        }
-    },
-    {
-        "id": "3",
-        "name": "Inodoro largo RIMLESS de pie con salida dual",
-        "price": 20000,
-        "imagen": "/images/productos/inodoro1.jpeg",
-        "cathegoria": "baño",
-        "subCategoria":"inodoro",
-        "marca" : "Roca",
-        "information": {
-            "colores": "Blanco",
-            "mochila": "Con mochila",
-            "tecnologia": "Arrastre",
-            "linea": "The Gap",
-            "diseño": "Cuadrado",
-            "configuracion":"De pie"
-        },
-        "details": {
-            "description": "Inodoro cuadrado elegante linea The Gap",
-            "esquema": "/images/griferia_esquema.png",
-            "documento": "",
-            "video": ""
-        }
-    },
-    {
-        "id": "4",
-        "name": "Bidé de pie Monobloque",
-        "price": 24000,
-        "imagen": "/images/productos/bidet1.jpeg",
-        "cathegoria": "baño",
-        "subCategoria":"bidet",
-        "marca" : "Roca",
-        "information": {
-            "colores": "Blanco",
-            "apto": "",
-            "tecnologia": "Griferia monocomando",
-            "linea": "The Gap",
-            "diseño": "Cuadrado",
-            "configuracion":"De pie"
-        },
-        "details": {
-            "description": "Bidet elegante con griferia monocomando",
-            "esquema": "/images/griferia_esquema.png",
-            "documento": "",
-            "video": ""
-        }
+    "details": {
+      "description": "Griferia de baño moderna de linea H3",
+      "esquema": "griferia_esquema.png",
+      "documento": "",
+      "video": ""
     }
+  },
+  {
+    "id": "2",
+    "name": "49 Alesia - Juego para lavatorio",
+    "price": 25010,
+    "imagen": "griferia2.jpg",
+    "categoria": "baño",
+    "subCategoria": "griferia",
+    "marca": "FV",
+    "information": {
+      "colores": "Cromo",
+      "apto": "Apto termotanque y calefón",
+      "tecnologia": "Cierre cerámico",
+      "linea": "49 Alesia",
+      "diseño": "Volante Cruz",
+      "configuracion": "Bicomando"
+    },
+    "details": {
+      "description": "Griferia de baño moderna de linea H3",
+      "esquema": "/images/griferia_esquema.png",
+      "documento": "",
+      "video": ""
+    }
+  },
+  {
+    "id": "3",
+    "name": "Inodoro largo RIMLESS de pie con salida dual",
+    "price": 20000,
+    "imagen": "inodoro1.jpeg",
+    "categoria": "baño",
+    "subCategoria": "inodoro",
+    "marca": "Roca",
+    "information": {
+      "colores": "Blanco",
+      "mochila": "Con mochila",
+      "tecnologia": "Arrastre",
+      "linea": "The Gap",
+      "diseño": "Cuadrado",
+      "configuracion": "De pie"
+    },
+    "details": {
+      "description": "Inodoro cuadrado elegante linea The Gap",
+      "esquema": "/images/griferia_esquema.png",
+      "documento": "",
+      "video": ""
+    }
+  },
+  {
+    "id": "4",
+    "name": "Bidé de pie Monobloque",
+    "price": 24000,
+    "imagen": "bidet1.jpeg",
+    "categoria": "baño",
+    "subCategoria": "bidet",
+    "marca": "Roca",
+    "information": {
+      "colores": "Blanco",
+      "apto": "",
+      "tecnologia": "Griferia monocomando",
+      "linea": "The Gap",
+      "diseño": "Cuadrado",
+      "configuracion": "De pie"
+    },
+    "details": {
+      "description": "Bidet elegante con griferia monocomando",
+      "esquema": "griferia_esquema.png",
+      "documento": "",
+      "video": ""
+    }
+  }
+ 
 ]

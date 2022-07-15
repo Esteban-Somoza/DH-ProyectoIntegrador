@@ -1,4 +1,4 @@
-const { index, find , filter} = require("../models/product.model");
+const { write, create, index, find , filter} = require("../models/product.model");
 module.exports = {
 
   productDetail: (req, res) => {
@@ -46,6 +46,14 @@ module.exports = {
     return res.render("./products/productCreateDetail", {
       title: "Product Create Details",
     })
+  },
+  save: (req, res) => { res.send(req.body)
+    req.body.imagenProducto = req.files[0].filename
+    let newProduct = create(req.body)
+    let products = index();
+    products.push(newProduct)
+    write(products)
+    //return res.redirect('/products')
   },
 
   productSave: (req, res) => {

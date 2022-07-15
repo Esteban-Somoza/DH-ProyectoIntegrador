@@ -112,7 +112,7 @@
                             <label for="t2">Tanques de Agua</label>
                         </ul>
 
-                        <label for="calefaccion" class="buscador__categoria">Calefaccion</label>
+                     <!--    <label for="calefaccion" class="buscador__categoria">Calefaccion</label>
                         <input type="radio" name="categorias" valor="calefaccion" id="calefaccion"
                             class="buscador__categoriaRadio">
                         <ul class="buscador__list">
@@ -122,9 +122,9 @@
                             <label for="ca2">Caloventores</label>
                             <input type="radio" name="subcategoria" id="ca3" class="buscador__tipo"></input>
                             <label for="ca3">Aires Acondicionados</label>
-                        </ul>
+                        </ul>--> 
 
-                        <label for="instalaciones" class="buscador__categoria">Instalaciones</label>
+                       <!--   <label for="instalaciones" class="buscador__categoria">Instalaciones</label>
                         <input type="radio" name="categorias" valor="instalaciones" id="instalaciones"
                             class="buscador__categoriaRadio">
                         <ul class="buscador__list">
@@ -134,9 +134,9 @@
                             <label for="i2">Cintas</label>
                             <input type="radio" name="subcategoria" id="i3" class="buscador__tipo"></input>
                             <label for="i3">Adhesivos</label>
-                        </ul>
-                        </input type="radio" name="categorias">
-                    </ul>
+                        </ul>--> 
+                        
+                    </ul>  
                     <!-- <h3>Marcas</h3>
                     <ul>
                         <label for="roca" class="buscador__categoria">Roca</label>
@@ -162,7 +162,7 @@
                                     <%= element.name %>
                                 </h3>
                                 <div class="productos__informacion">
-                                    <picture class="imagen"><img src="<%= element.imagen %>" alt=""></picture>
+                                    <picture class="imagen"><img src="/images/productos/<%= element.imagen %>" alt=""></picture>
                                     <div class="productos__texto">
                                         <h4 class="descripcion">
                                             <%= element.details.description %>
