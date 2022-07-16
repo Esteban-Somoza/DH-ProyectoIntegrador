@@ -47,7 +47,7 @@ module.exports = {
       title: "Product Create Details",
     })
   },
-  save: (req, res) => { res.send(req.body)
+  save: (req, res) => { 
     req.body.imagenProducto = req.files[0].filename
     let newProduct = create(req.body)
     let products = index();

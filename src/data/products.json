@@ -40,7 +40,7 @@
     },
     "details": {
       "description": "Griferia de baño moderna de linea H3",
-      "esquema": "/images/griferia_esquema.png",
+      "esquema": "griferia_esquema.png",
       "documento": "",
       "video": ""
     }
@@ -91,5 +91,5 @@
       "video": ""
     }
   }
- 
+  
 ]

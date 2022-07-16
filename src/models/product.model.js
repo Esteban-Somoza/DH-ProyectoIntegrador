@@ -33,11 +33,20 @@ module.exports = {
           name: data.nombreProducto,
           price: parseInt(data.price),
           imagen: data.imagenProducto,
-          categoria: "",
+          categoria:data.categoria,
           subCategoria: data.subCategoria,
           marca : data.marca,
-          information: {colores: data.colores},
-          details: {description:data.descripcion}          
+          information: {colores: data.colores,
+                        linea:data.linea,
+                        diseño:data.diseño,
+                        configuracion:data.configuracion,
+                        apto: data.apto,
+                        tecnologia:data.tecnologia,
+                        },
+          details: {description:data.descripcion,
+                    documento: data.documento,
+                    esquema: data.esquema,
+                            }          
         },)
     },
         write: function(data) {
