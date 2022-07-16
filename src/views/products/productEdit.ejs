@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../includes/head.ejs') %>
+
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/productDetail.css">
+        <link rel="stylesheet" href="/css/mediaQ-newproduct.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/productofinal.css">
+</head>
+
+<body>
+    <%- include ('../includes/header.ejs') %>
+
+        <main>
+            <section class="back">
+                <form action="/products/edit?m=PUT " method="post" enctype="multipart/form-data">
+                    <div class="formulario">
+                        <h2 id="Detalle">Detalle</h2>
+
+
+                        <label for="Categoria">Categoria</label>
+                        <input class="formulario_relleno" type="text" name="categoria" id="categoria" min="1" />
+                        <label for="subCategoria">SubCategoria</label>
+                        <input class="formulario_relleno" type="text" name="subCategoria" id="subCategoria" min="1" />
+                        <label for="nombre-producto">Nombres del producto</label>
+                        <input class="formulario_relleno" type="text" name="nombreProducto" min="1" />
+                        <label for="price">Precio</label>
+                        <input class="formulario_relleno" type="number" name="price" id="price" min="1" />
+                        <label for="tecnologia">Tecnologia</label>
+                        <input class="formulario_relleno" type="text" name="Tecnologia" id="subCategoria" min="1" />
+                        <label for="usuario">Código</label>
+                        <input class="formulario_relleno" type="text" name="Codigo" id="Codigo" min="1" />
+                        <label for="marca">Marca</label>
+                        <input class="formulario_relleno" type="text" name="marca" id="marca" min="1" />
+                        <label class="infodenombres" for="Linea">Linea</label>
+                        <input class="formulario_relleno" type="text" name="linea" min="1" />
+                        <label class="infodenombres" for="Colores">Colores</label>
+                        <input class="formulario_relleno" type="text" name="colores" min="1" />
+                        <label class="infodenombres" for="Diseño">Diseño</label>
+                        <input class="formulario_relleno" type="text" name="diseño" min="1" />
+                        <label class="infodenombres" for="Apto">Apto</label>
+                        <input class="formulario_relleno" type="text" name="apto" min="1" />
+                        <label class="infodenombres" for="Apto">Configuracion</label>
+                        <input class="formulario_relleno" type="text" name="configuracion" min="1" />
+                        <label for="nombre-apellido">Documento</label>
+                        <input class="formulario_relleno" type="text" name="documento" min="1" />
+                        <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
+                        <input class="relleno" type="file" name="imagenProducto">
+                        <label class="infodenombres" for="grafico">Grafico</label>
+                        <input class="relleno" type="file" name="grafico" min="1" />
+                        <label class="infodenombres" for="esquema">Esquema</label>
+                        <input class="relleno" type="file" name="esquema">
+                        <label for="nombre-apellido">Medidas</label>
+                        <input class="formulario_relleno" type="text" name="medidas" min="1" />
+                        <label for="descripcion">Descripcion</label>
+                        <textarea class="descripcion" name="description" > </textarea>
+                        <div id="boton">
+                            <a href="/"> <button type="" class="Cancelar">Cancelar</button></a>
+                            <button type="submit" class="botonform">Enviar</button>
+                        </div>
+                    </div>
+            </section>
+
+
+
+        </main>
+        <%- include ('../includes/footer.ejs') %>
+            <script src="../../scripts/menu.js"></script>
+</body>

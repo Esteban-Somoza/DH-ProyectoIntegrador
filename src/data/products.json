@@ -234,5 +234,23 @@
     "details": {
       "documento": ""
     }
+  },
+  {
+    "id": 13,
+    "name": "buenisimoooo",
+    "price": null,
+    "imagen": "imagenProducto-1658008455416-969710739.jpg",
+    "categoria": "",
+    "subCategoria": "",
+    "marca": "",
+    "information": {
+      "colores": "",
+      "linea": "",
+      "configuracion": "",
+      "apto": ""
+    },
+    "details": {
+      "documento": ""
+    }
   }
 ]

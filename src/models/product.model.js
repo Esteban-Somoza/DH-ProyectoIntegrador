@@ -2,18 +2,23 @@ const { readFileSync, writeFileSync } = require('fs')
 const { resolve } = require('path')
 
 module.exports = {
+
     index: function () {
         let file = resolve(__dirname, '../data', 'products.json') // levanta DB
         let data = readFileSync(file) // convierte a JS
         return JSON.parse(data) //exporta
     },
+
+
     find: function (id) {
         let file = resolve(__dirname, '../data', 'products.json')
         let data = readFileSync(file)
         let products = JSON.parse(data);
         return products.find(product => product.id == id)
     },
-    filter: function (subcategoria){
+
+
+    filter: function (subcategoria) {
         // console.log(subcategoria);
         let file = resolve(__dirname, '../data', 'products.json')
         let data = readFileSync(file)
@@ -23,56 +28,72 @@ module.exports = {
         // console.log(productFilter);
         return productFilter
     },
-    create: function(data){
-        let file = resolve(__dirname,'../data','products.json');
+
+
+    write: function (data) {
+        let file = resolve(__dirname, '../data', 'products.json');
+        let info = JSON.stringify(data, null, 2);
+        return writeFileSync(file, info);
+    },
+
+
+    create: function (data) {
+        let file = resolve(__dirname, '../data', 'products.json');
         let info = readFileSync(file);
         let products = JSON.parse(info);
-        let lastProduct= products[products.length - 1];
+        let lastProduct = products[products.length - 1];
         return Object({
-          id: products.length == 0 ? 1 : parseInt(lastProduct.id) + 1,
-          name: data.nombreProducto,
-          price: parseInt(data.price),
-          imagen: data.imagenProducto,
-          categoria:data.categoria,
-          subCategoria: data.subCategoria,
-          marca : data.marca,
-          information: {colores: data.colores,
-                        linea:data.linea,
-                        diseño:data.diseño,
-                        configuracion:data.configuracion,
-                        apto: data.apto,
-                        tecnologia:data.tecnologia,
-                        },
-          details: {description:data.descripcion,
-                    documento: data.documento,
-                    esquema: data.esquema,
-                            }          
-        },)
+            id: products.length == 0 ? 1 : parseInt(lastProduct.id) + 1,
+            name: data.nombreProducto,
+            price: parseInt(data.price),
+            imagen: data.imagenProducto,
+            categoria: data.categoria,
+            subCategoria: data.subCategoria,
+            marca: data.marca,
+            information: {
+                colores: data.colores,
+                linea: data.linea,
+                diseño: data.diseño,
+                configuracion: data.configuracion,
+                apto: data.apto,
+                tecnologia: data.tecnologia,
+            },
+            details: {
+                description: data.descripcion,
+                documento: data.documento,
+                esquema: data.esquema,
+            }
+        })
     },
-        write: function(data) {
-            let file = resolve(__dirname,'../data','products.json');
-            let info = JSON.stringify(data,null,2);
-            return writeFileSync(file, info);
-          },
-      
-    // create: function (data) {
-    //     let file = resolve(__dirname, '../data', 'products.json')
-    //     let info = readinfoync(file)
-    //     let registers = JSON.parse(info)
-    //     let lastProduct = products(registers.length - 1)
 
-    //     return Object({
-    //         "id": products.length == 0 ? 1 : lastProduct.id + 1,
-    //         "name": data.name,
-    //         "price": parseInt(data.price),
-    //         "description": data.description,
-    //         "image": data.image
-    //     })
-    // },
-    // write: function (data) {
-    //     let file = resolve(__dirname, '../data', 'products.json');
-    //     let info = JSON.stringify(data, null, 2);
-    //     return writeFileSync(file, info);
-    // }
+
+    edit: function (data) {
+        let file = resolve(__dirname, '../data', 'products.json');
+        let info = readFileSync(file);
+
+        return Object({
+            id: data.id,
+            name: data.nombreProducto,
+            price: parseInt(data.price),
+            imagen: data.imagenProducto,
+            categoria: data.categoria,
+            subCategoria: data.subCategoria,
+            marca: data.marca,
+            information: {
+                colores: data.colores,
+                linea: data.linea,
+                diseño: data.diseño,
+                configuracion: data.configuracion,
+                apto: data.apto,
+                tecnologia: data.tecnologia,
+            },
+            details: {
+                description: data.descripcion,
+                documento: data.documento,
+                esquema: data.esquema,
+            }
+        })
+    }
+    
 }
 
