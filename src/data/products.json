@@ -90,6 +90,149 @@
       "documento": "",
       "video": ""
     }
+  },
+  {
+    "id": 5,
+    "name": "Tromen",
+    "price": 1200,
+    "imagen": "imagenProducto-1657991059843-170237178.png",
+    "categoria": "Calefaccion",
+    "subCategoria": "Hogar",
+    "marca": "FV",
+    "information": {
+      "colores": "Azul",
+      "linea": "12",
+      "configuracion": "",
+      "apto": "Si"
+    },
+    "details": {
+      "documento": ""
+    }
+  },
+  {
+    "id": 6,
+    "name": "Tromen",
+    "price": 1200,
+    "imagen": "imagenProducto-1657991060178-568539741.png",
+    "categoria": "Calefaccion",
+    "subCategoria": "Hogar",
+    "marca": "FV",
+    "information": {
+      "colores": "Azul",
+      "linea": "12",
+      "configuracion": "",
+      "apto": "Si"
+    },
+    "details": {
+      "documento": ""
+    }
+  },
+  {
+    "id": 7,
+    "name": "Hogar Tromen",
+    "price": 149333,
+    "imagen": "imagenProducto-1657992721797-909225770.png",
+    "categoria": "Calefaccion",
+    "subCategoria": "Hogar",
+    "marca": "asd",
+    "information": {
+      "colores": "asd",
+      "linea": "asd",
+      "configuracion": "asd",
+      "apto": "asd"
+    },
+    "details": {
+      "documento": "asd"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Hogar Tromen",
+    "price": 149333,
+    "imagen": "imagenProducto-1657992722152-526154434.png",
+    "categoria": "Calefaccion",
+    "subCategoria": "Hogar",
+    "marca": "asd",
+    "information": {
+      "colores": "asd",
+      "linea": "asd",
+      "configuracion": "asd",
+      "apto": "asd"
+    },
+    "details": {
+      "documento": "asd"
+    }
+  },
+  {
+    "id": 9,
+    "name": "a",
+    "price": 123,
+    "imagen": "imagenProducto-1657993216561-797636909.png",
+    "categoria": "Calefaccion",
+    "subCategoria": "Hogar",
+    "marca": "asd",
+    "information": {
+      "colores": "asd",
+      "linea": "asd",
+      "configuracion": "",
+      "apto": "asd"
+    },
+    "details": {
+      "documento": ""
+    }
+  },
+  {
+    "id": 10,
+    "name": "a",
+    "price": 123,
+    "imagen": "imagenProducto-1657993216895-926710710.png",
+    "categoria": "Calefaccion",
+    "subCategoria": "Hogar",
+    "marca": "asd",
+    "information": {
+      "colores": "asd",
+      "linea": "asd",
+      "configuracion": "",
+      "apto": "asd"
+    },
+    "details": {
+      "documento": ""
+    }
+  },
+  {
+    "id": 11,
+    "name": "a",
+    "price": 123,
+    "imagen": "imagenProducto-1657993555884-895047974.png",
+    "categoria": "Baño",
+    "subCategoria": "inodoro",
+    "marca": "asd",
+    "information": {
+      "colores": "asd",
+      "linea": "asd",
+      "configuracion": "asd",
+      "apto": "asd"
+    },
+    "details": {
+      "documento": "asd"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Hola",
+    "price": 444,
+    "imagen": "imagenProducto-1657993639778-706019061.webp",
+    "categoria": "Calefaccion",
+    "subCategoria": "Hogar",
+    "marca": "",
+    "information": {
+      "colores": "",
+      "linea": "",
+      "configuracion": "",
+      "apto": ""
+    },
+    "details": {
+      "documento": ""
+    }
   }
-  
 ]

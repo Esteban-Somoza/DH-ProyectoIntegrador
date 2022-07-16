@@ -53,7 +53,7 @@ module.exports = {
     let products = index();
     products.push(newProduct)
     write(products)
-    //return res.redirect('/products')
+    return res.redirect('/finder')
   },
 
   productSave: (req, res) => {

@@ -292,8 +292,8 @@ header a h2 {
         border-radius: 20%;
         display: flex;
         margin-top: 4px;
-        width: 50px;
-        flex-grow: 1;
+        width: 130px;
+        *flex-grow: 1;
         margin-bottom: 0px;
         transition: all 0.3s ease;
     }
