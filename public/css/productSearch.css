@@ -144,6 +144,9 @@ main h6 {
     /* margin: 0 1em; */
 }
 .imagen img {
+    border-radius: 20%;
+    background-color: var(--color-grey);
+    padding: 0.5em;
    
 }
 
