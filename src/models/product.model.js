@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync } = require('fs')
+const { readFileSync, writeFileSync , unlinkSync, unlink} = require('fs')
 const { resolve } = require('path')
 
 module.exports = {
@@ -67,37 +67,46 @@ module.exports = {
     },
 
 
-    edit: function (data) {
-        let file = resolve(__dirname, '../data', 'products.json');
-        let info = readFileSync(file);
+    edit: function (data, productoOriginal) {
+        // let file = resolve(__dirname, '../data', 'products.json');
+        // let info = readFileSync(file);
+        let imagen = data.imagenProducto
 
+        console.log("id es: " + productoOriginal.id)
         return Object({
-            id: data.id,
+            id: productoOriginal.id,
             name: data.nombreProducto,
             price: parseInt(data.price),
-            imagen: data.imagenProducto,
+            imagen: imagen,
             categoria: data.categoria,
             subCategoria: data.subCategoria,
             marca: data.marca,
             information: {
                 colores: data.colores,
                 linea: data.linea,
-                diseño: data.diseño,
+                disenio: data.disenio,
                 configuracion: data.configuracion,
                 apto: data.apto,
                 tecnologia: data.tecnologia,
             },
             details: {
-                description: data.descripcion,
+                description: data.description,
                 documento: data.documento,
                 esquema: data.esquema,
             }
         })
+    },
+
+    deleteImage: function (file) {
+        let route = resolve(__dirname, "../../public/images/productos/", file) 
+        return unlinkSync(route)
     }
     /* delate: function(delate) {
          let file = resolve(__dirname, '../data', 'products.json');
  let info = readFileSync(file);
  return = ? ? 
+
+}
 
     }
 }

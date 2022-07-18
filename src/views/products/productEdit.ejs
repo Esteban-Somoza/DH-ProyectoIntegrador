@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,47 +17,62 @@
 
         <main>
             <section class="back">
-                <form action="/products/edit?m=PUT " method="post" enctype="multipart/form-data">
+                <form action="/products/editForm/<%= product.id %>?m=PUT " method="post" enctype="multipart/form-data">
                     <div class="formulario">
                         <h2 id="Detalle">Detalle</h2>
 
 
                         <label for="Categoria">Categoria</label>
-                        <input class="formulario_relleno" type="text" name="categoria" id="categoria" min="1" />
+                        <input class="formulario_relleno" type="text" name="categoria" id="categoria" min="1"
+                            value="<%= product.categoria %> " >
                         <label for="subCategoria">SubCategoria</label>
-                        <input class="formulario_relleno" type="text" name="subCategoria" id="subCategoria" min="1" />
+                        <input class="formulario_relleno" type="text" name="subCategoria" id="subCategoria" min="1"
+                            value="<%= product.subCategoria %> " >
                         <label for="nombre-producto">Nombres del producto</label>
-                        <input class="formulario_relleno" type="text" name="nombreProducto" min="1" />
+                        <input class="formulario_relleno" type="text" name="nombreProducto" min="1"
+                            value="<%= product.name %> " >
                         <label for="price">Precio</label>
-                        <input class="formulario_relleno" type="number" name="price" id="price" min="1" />
+                        <input class="formulario_relleno" type="text" name="price" id="price" min="1"
+                            value="<%= product.price %>" >
                         <label for="tecnologia">Tecnologia</label>
-                        <input class="formulario_relleno" type="text" name="Tecnologia" id="subCategoria" min="1" />
-                        <label for="usuario">Código</label>
-                        <input class="formulario_relleno" type="text" name="Codigo" id="Codigo" min="1" />
+                        <input class="formulario_relleno" type="text" name="tecnologia" id="subCategoria" min="1"
+                            value="<%= product.information.tecnologia %> " >
+                        <!-- <label for="usuario">Código</label>
+                        <input class="formulario_relleno" type="text" name="Codigo" id="Codigo" min="1" value="" > -->
                         <label for="marca">Marca</label>
-                        <input class="formulario_relleno" type="text" name="marca" id="marca" min="1" />
+                        <input class="formulario_relleno" type="text" name="marca" id="marca" min="1"
+                            value="<%= product.marca %> " >
                         <label class="infodenombres" for="Linea">Linea</label>
-                        <input class="formulario_relleno" type="text" name="linea" min="1" />
+                        <input class="formulario_relleno" type="text" name="linea" min="1"
+                            value="<%= product.information.linea %> " >
                         <label class="infodenombres" for="Colores">Colores</label>
-                        <input class="formulario_relleno" type="text" name="colores" min="1" />
-                        <label class="infodenombres" for="Diseño">Diseño</label>
-                        <input class="formulario_relleno" type="text" name="diseño" min="1" />
+                        <input class="formulario_relleno" type="text" name="colores" min="1"
+                            value="<%= product.information.colores %> " >
+                        <label class="infodenombres" for="Disenio">Diseño</label>
+                        <input class="formulario_relleno" type="text" name="disenio" min="1"
+                            value="<%= product.information.disenio %> " >
                         <label class="infodenombres" for="Apto">Apto</label>
-                        <input class="formulario_relleno" type="text" name="apto" min="1" />
+                        <input class="formulario_relleno" type="text" name="apto" min="1"
+                            value="<%= product.information.apto %> " >
                         <label class="infodenombres" for="Apto">Configuracion</label>
-                        <input class="formulario_relleno" type="text" name="configuracion" min="1" />
+                        <input class="formulario_relleno" type="text" name="configuracion" min="1"
+                            value="<%= product.information.configuracion %> ">
                         <label for="nombre-apellido">Documento</label>
-                        <input class="formulario_relleno" type="text" name="documento" min="1" />
+                        <input class="formulario_relleno" type="text" name="documento" min="1"
+                            value="<%= product.details.documento %> ">
                         <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
-                        <input class="relleno" type="file" name="imagenProducto">
+                        <input class="relleno" type="file" name="imagenProducto" value="">
                         <label class="infodenombres" for="grafico">Grafico</label>
-                        <input class="relleno" type="file" name="grafico" min="1" />
+                        <input class="relleno" type="file" name="grafico" min="1"
+                            value="" >
                         <label class="infodenombres" for="esquema">Esquema</label>
-                        <input class="relleno" type="file" name="esquema">
+                        <input class="relleno" type="file" name="esquema" value="">
                         <label for="nombre-apellido">Medidas</label>
-                        <input class="formulario_relleno" type="text" name="medidas" min="1" />
-                        <label for="descripcion">Descripcion</label>
-                        <textarea class="descripcion" name="description" > </textarea>
+                        <input class="formulario_relleno" type="text" name="medidas" min="1"
+                            value="<%= product.details.medidas %> " >
+                        <label for="description">Descripcion</label>
+                        <textarea class="descripcion" type="textarea"
+                            name="description"><%= product.details.description %></textarea>
                         <div id="boton">
                             <a href="/"> <button type="" class="Cancelar">Cancelar</button></a>
                             <button type="submit" class="botonform">Enviar</button>

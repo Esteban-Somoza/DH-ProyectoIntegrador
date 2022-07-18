@@ -1,25 +1,23 @@
 [
   {
     "id": "1",
-    "name": "H3 Urbano - Juego para lavatorio",
+    "name": "H3 Urbano - Juego para lavatorio    ",
     "price": 20000,
     "imagen": "griferia1.jpg",
-    "categoria": "baño",
-    "subCategoria": "griferia",
-    "marca": "FV",
+    "categoria": "BAÑO  ",
+    "subCategoria": "griferia      ",
+    "marca": "FV      ",
     "information": {
-      "colores": "Cromo, Rose Gold",
-      "apto": "Apto termotanque y calefón",
-      "tecnologia": "Cierre cerámico",
-      "linea": "H3 Urbano",
-      "diseño": "Volante Cruz",
-      "configuracion": "Bicomando"
+      "colores": "Cromo, Rose Gold      ",
+      "linea": "H3 Urbano      ",
+      "disenio": "Volante Cruz      ",
+      "configuracion": "Bicomando      ",
+      "apto": "Apto termotanque y calefón      ",
+      "tecnologia": "Cierre cerámico      "
     },
     "details": {
       "description": "Griferia de baño moderna de linea H3",
-      "esquema": "griferia_esquema.png",
-      "documento": "",
-      "video": ""
+      "documento": "      "
     }
   },
   {
@@ -35,7 +33,7 @@
       "apto": "Apto termotanque y calefón",
       "tecnologia": "Cierre cerámico",
       "linea": "49 Alesia",
-      "diseño": "Volante Cruz",
+      "disenio": "Volante Cruz",
       "configuracion": "Bicomando"
     },
     "details": {
@@ -58,7 +56,7 @@
       "mochila": "Con mochila",
       "tecnologia": "Arrastre",
       "linea": "The Gap",
-      "diseño": "Cuadrado",
+      "disenio": "Cuadrado",
       "configuracion": "De pie"
     },
     "details": {
@@ -70,25 +68,23 @@
   },
   {
     "id": "4",
-    "name": "Bidé de pie Monobloque",
-    "price": 24000,
+    "name": "Bidé de pie Monobloque ",
+    "price": 50000,
     "imagen": "bidet1.jpeg",
-    "categoria": "baño",
-    "subCategoria": "bidet",
-    "marca": "Roca",
+    "categoria": "baño ",
+    "subCategoria": "bidet ",
+    "marca": "Roca ",
     "information": {
-      "colores": "Blanco",
-      "apto": "",
-      "tecnologia": "Griferia monocomando",
-      "linea": "The Gap",
-      "diseño": "Cuadrado",
-      "configuracion": "De pie"
+      "colores": "Blanco ",
+      "linea": "The Gap ",
+      "disenio": "Cuadrado ",
+      "configuracion": "De pie ",
+      "apto": " ",
+      "tecnologia": "Griferia monocomando "
     },
     "details": {
       "description": "Bidet elegante con griferia monocomando",
-      "esquema": "griferia_esquema.png",
-      "documento": "",
-      "video": ""
+      "documento": " "
     }
   },
   {
@@ -96,24 +92,6 @@
     "name": "Tromen",
     "price": 1200,
     "imagen": "imagenProducto-1657991059843-170237178.png",
-    "categoria": "Calefaccion",
-    "subCategoria": "Hogar",
-    "marca": "FV",
-    "information": {
-      "colores": "Azul",
-      "linea": "12",
-      "configuracion": "",
-      "apto": "Si"
-    },
-    "details": {
-      "documento": ""
-    }
-  },
-  {
-    "id": 6,
-    "name": "Tromen",
-    "price": 1200,
-    "imagen": "imagenProducto-1657991060178-568539741.png",
     "categoria": "Calefaccion",
     "subCategoria": "Hogar",
     "marca": "FV",
@@ -146,24 +124,6 @@
     }
   },
   {
-    "id": 8,
-    "name": "Hogar Tromen",
-    "price": 149333,
-    "imagen": "imagenProducto-1657992722152-526154434.png",
-    "categoria": "Calefaccion",
-    "subCategoria": "Hogar",
-    "marca": "asd",
-    "information": {
-      "colores": "asd",
-      "linea": "asd",
-      "configuracion": "asd",
-      "apto": "asd"
-    },
-    "details": {
-      "documento": "asd"
-    }
-  },
-  {
     "id": 9,
     "name": "a",
     "price": 123,
@@ -176,78 +136,6 @@
       "linea": "asd",
       "configuracion": "",
       "apto": "asd"
-    },
-    "details": {
-      "documento": ""
-    }
-  },
-  {
-    "id": 10,
-    "name": "a",
-    "price": 123,
-    "imagen": "imagenProducto-1657993216895-926710710.png",
-    "categoria": "Calefaccion",
-    "subCategoria": "Hogar",
-    "marca": "asd",
-    "information": {
-      "colores": "asd",
-      "linea": "asd",
-      "configuracion": "",
-      "apto": "asd"
-    },
-    "details": {
-      "documento": ""
-    }
-  },
-  {
-    "id": 11,
-    "name": "a",
-    "price": 123,
-    "imagen": "imagenProducto-1657993555884-895047974.png",
-    "categoria": "Baño",
-    "subCategoria": "inodoro",
-    "marca": "asd",
-    "information": {
-      "colores": "asd",
-      "linea": "asd",
-      "configuracion": "asd",
-      "apto": "asd"
-    },
-    "details": {
-      "documento": "asd"
-    }
-  },
-  {
-    "id": 12,
-    "name": "Hola",
-    "price": 444,
-    "imagen": "imagenProducto-1657993639778-706019061.webp",
-    "categoria": "Calefaccion",
-    "subCategoria": "Hogar",
-    "marca": "",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "configuracion": "",
-      "apto": ""
-    },
-    "details": {
-      "documento": ""
-    }
-  },
-  {
-    "id": 13,
-    "name": "buenisimoooo",
-    "price": null,
-    "imagen": "imagenProducto-1658008455416-969710739.jpg",
-    "categoria": "",
-    "subCategoria": "",
-    "marca": "",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "configuracion": "",
-      "apto": ""
     },
     "details": {
       "documento": ""
