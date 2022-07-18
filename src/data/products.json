@@ -10,7 +10,7 @@
     "information": {
       "colores": "Cromo, Rose Gold      ",
       "linea": "H3 Urbano      ",
-      "disenio": "Volante Cruz      ",
+      "design": "Volante Cruz      ",
       "configuracion": "Bicomando      ",
       "apto": "Apto termotanque y calefón      ",
       "tecnologia": "Cierre cerámico      "
@@ -22,25 +22,22 @@
   },
   {
     "id": "2",
-    "name": "49 Alesia - Juego para lavatorio",
-    "price": 25010,
-    "imagen": "griferia2.jpg",
-    "categoria": "baño",
-    "subCategoria": "griferia",
-    "marca": "FV",
+    "name": "49 Alesia - Juego para lavatorio      ",
+    "price": 50000,
+    "imagen": "esquema-1658181683640-845564304.png",
+    "categoria": "baño      ",
+    "subCategoria": "griferia      ",
+    "marca": "FV      ",
     "information": {
-      "colores": "Cromo",
-      "apto": "Apto termotanque y calefón",
-      "tecnologia": "Cierre cerámico",
-      "linea": "49 Alesia",
-      "disenio": "Volante Cruz",
-      "configuracion": "Bicomando"
+      "colores": "Cromo      ",
+      "linea": "49 Alesia      ",
+      "configuracion": "Bicomando      ",
+      "apto": "Apto termotanque y calefón      ",
+      "tecnologia": "Cierre cerámico      "
     },
     "details": {
       "description": "Griferia de baño moderna de linea H3",
-      "esquema": "griferia_esquema.png",
-      "documento": "",
-      "video": ""
+      "documento": "      "
     }
   },
   {
@@ -140,5 +137,42 @@
     "details": {
       "documento": ""
     }
+  },
+  {
+    "id": 10,
+    "name": "Tromeen ",
+    "price": 50000,
+    "imagen": "imagenProducto-1658180730583-516783985.png",
+    "categoria": "Calefaccion ",
+    "subCategoria": "Hogar ",
+    "marca": "FV ",
+    "information": {
+      "colores": "Azul ",
+      "linea": "21 ",
+      "configuracion": "asd ",
+      "apto": "asd ",
+      "tecnologia": " Avanzada"
+    },
+    "details": {
+      "description": "asdasdasd",
+      "documento": " "
+    }
+  },
+  {
+    "id": 11,
+    "name": "asd",
+    "price": 1213,
+    "imagen": "esquema-1658181737697-442486878.png",
+    "categoria": "Baños",
+    "subCategoria": "Inodoro",
+    "marca": "d",
+    "information": {
+      "colores": "",
+      "linea": "",
+      "diseño": "",
+      "configuracion": "",
+      "apto": ""
+    },
+    "details": {}
   }
 ]
