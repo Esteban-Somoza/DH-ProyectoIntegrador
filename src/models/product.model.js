@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync } = require('fs')
+const { readFileSync, writeFileSync , unlinkSync, unlink} = require('fs')
 const { resolve } = require('path')
 
 module.exports = {
@@ -95,6 +95,11 @@ module.exports = {
                 esquema: data.esquema,
             }
         })
+    },
+
+    deleteImage: function (file) {
+        let route = resolve(__dirname, "../../public/images/productos/", file) 
+        return unlinkSync(route)
     }
 
 }

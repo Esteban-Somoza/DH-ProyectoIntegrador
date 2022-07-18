@@ -1,4 +1,4 @@
-const { write, create, index, find, filter, edit } = require("../models/product.model");
+const { write, create, index, find, filter, edit, deleteImage } = require("../models/product.model");
 module.exports = {
 
   productDetail: (req, res) => {
@@ -89,16 +89,15 @@ module.exports = {
 
     req.body.imagenProducto = productToEdit.imagen
     if (req.files[0] != undefined) {
+      deleteImage(productToEdit.imagen)
       req.body.imagenProducto = req.files[0].filename
     }
-    // console.log(req.body.imagenProducto);
 
     let edited = edit(req.body, productToEdit)
 
     try {
       let productModified = products.map(p => {
         if (p.id == edited.id) {
-          // console.log(p)
           p = edited
         }
         return p
