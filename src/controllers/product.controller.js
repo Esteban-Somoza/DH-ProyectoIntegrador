@@ -105,4 +105,8 @@ module.exports = {
 
     return res.redirect('/products/detail/')
   }
-}
+  /*
+  productDelate: (req, res) => {
+
+  } */
+}  

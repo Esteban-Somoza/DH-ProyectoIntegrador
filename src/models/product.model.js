@@ -94,6 +94,12 @@ module.exports = {
             }
         })
     }
-    
-}
+    /* delate: function(delate) {
+         let file = resolve(__dirname, '../data', 'products.json');
+ let info = readFileSync(file);
+ return = ? ? 
 
+    }
+}
+*/
+}
