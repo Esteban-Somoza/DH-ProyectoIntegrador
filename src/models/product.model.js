@@ -53,7 +53,7 @@ module.exports = {
             information: {
                 colores: data.colores,
                 linea: data.linea,
-                diseño: data.diseño,
+                diseño: data.design,
                 configuracion: data.configuracion,
                 apto: data.apto,
                 tecnologia: data.tecnologia,
@@ -84,7 +84,7 @@ module.exports = {
             information: {
                 colores: data.colores,
                 linea: data.linea,
-                disenio: data.disenio,
+                diseño: data.design,
                 configuracion: data.configuracion,
                 apto: data.apto,
                 tecnologia: data.tecnologia,
