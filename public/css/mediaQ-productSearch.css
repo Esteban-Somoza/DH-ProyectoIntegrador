@@ -69,12 +69,12 @@
         flex-grow: 2;
     }
 
-    .productos__elementos {
-        padding: 0 2em;
+    .productos__elemento {
+        padding:0.5em;
         margin-top: 0;
     }
 
-    .productos__elementos h6 {
+    .productos__elemento h6 {
         visibility: visible;
     }
 }

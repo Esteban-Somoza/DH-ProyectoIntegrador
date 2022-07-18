@@ -4,6 +4,7 @@
     --color-hover: #24d6ed;
     --color-white: rgb(239, 245, 244);
     --color-grey: rgb(190, 185, 185);
+    --font-family: 'Ubuntu', sans-serif;
 }
 
 *{
@@ -15,7 +16,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family)
 }
 
 main {

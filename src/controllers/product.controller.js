@@ -18,14 +18,14 @@ module.exports = {
   },
 
 
-  productSearch: (req, res) => {
+  finder: (req, res) => {
     let filtered = filter(req.query.subcategoria)
 
     if (filtered.length < 1) {
       filtered = index()
     }
 
-    return res.render("./products/productSearch", {
+    return res.render("./products/finder", {
       title: "Detalle de producto",
       products: filtered,
     });

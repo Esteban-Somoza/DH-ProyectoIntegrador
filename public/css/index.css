@@ -106,11 +106,12 @@ main h2 {
 
 /*-------------ISLA-------------*/
 .isla img {
-    display: flex;
+    
     /* margin: 1em 0; */
     width: 100%;
     flex-grow: 1;
     margin-bottom: 0px;
+    border-radius: 18px;
 }
 
 .isla h2 {
@@ -124,21 +125,21 @@ main h2 {
 #mapa {
 
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: flex-start;
     gap: 2em;
     margin: 1em 0;
     padding: 1em;
+    align-items: center;
 }
 
 .img__map {
     *margin: 2em 2em 1em 1em;
-    max-width: 240px;
-}
+    *max-width: 240px;
+    *min-width: 50px;
+    *width: 100%;
 
-.img__map img {
-    width: 100%;
 }
 
 #contacto {
@@ -159,4 +160,41 @@ main h2 {
 
 #experiencia h4 {
     text-decoration: underline
+}
+/*-------------MAPA/CONTACTO/EXPERIENCIA MEDIAS QUERIS-------------*/
+
+@media (max-width:390px) {
+    #experiencia{
+        display: none;
+    }
+    #contacto {
+        display: none;
+    }
+    .isla img {
+    display: none;
+    }
+    
+    .isla h2 {
+        display: none;
+    
+    }
+}
+
+@media (max-width:1250px) {
+    .isla img {
+        display: none;
+        }
+        
+        .isla h2 {
+            display: none;
+        
+        }
+}
+@media (max-width:610px){
+    #experiencia{
+        display: none;
+    }
+    #contacto {
+        display: none;
+    }
 }
