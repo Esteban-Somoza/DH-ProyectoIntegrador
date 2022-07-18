@@ -84,25 +84,31 @@ module.exports = {
 
 
   edit: (req, res) => {
-    console.log(req.params.id);
     let productToEdit = find(parseInt(req.params.id))
     let products = index();
-    let edited = edit(req.body)
 
-    // let productModified = products.map(p => {
-    //   if (p.id == product.id) {
-    //     p.name = req.body.name
-    //     p.description = req.body.description
-    //     p.price = parseInt(req.body.price)
-    //     p.image = req.files && req.files.length > 0 ? req.files[0].filename : p.image
-    //   }
-    // });
-    console.log(productToEdit);
-    console.log(edited);
-    productToEdit = edited
+    req.body.imagenProducto = productToEdit.imagen
+    if (req.files[0] != undefined) {
+      req.body.imagenProducto = req.files[0].filename
+    }
+    // console.log(req.body.imagenProducto);
 
-    write(products)
+    let edited = edit(req.body, productToEdit)
 
-    return res.redirect('/products/detail/')
+    try {
+      let productModified = products.map(p => {
+        if (p.id == edited.id) {
+          // console.log(p)
+          p = edited
+        }
+        return p
+      });
+
+      write(productModified)
+    } catch (error) {
+      console.log(error);
+    }
+
+    return res.redirect(`/products/${req.params.id}`)
   }
 }
