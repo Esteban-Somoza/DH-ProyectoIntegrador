@@ -19,16 +19,31 @@ module.exports = {
 
 
   finder: (req, res) => {
-    let filtered = filter(req.query.subcategoria)
+    let productList = index()
+    try {
 
-    if (filtered.length < 1) {
-      filtered = index()
+
+      if (req.query && req.query.subcategoria) {
+        productList = filter("subCategoria", req.query.subcategoria)
+      }
+
+      if (req.query && req.query.search) {
+        productList = filter("search", req.query.search.toLowerCase())
+        // productList = filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
+      }
+      // console.log(productList.length);
+      if (productList.length < 1) {
+        productList = index()
+      }
+
+      return res.render("./products/finder", {
+        title: "Detalle de producto",
+        products: productList,
+      });
+    } catch (error) {
+      console.log(error)
+      res.redirect("./products/finder")
     }
-
-    return res.render("./products/finder", {
-      title: "Detalle de producto",
-      products: filtered,
-    });
   },
 
 
@@ -114,5 +129,5 @@ module.exports = {
   productDelate: (req, res) => {
 
   } */
-}  
+}
 
