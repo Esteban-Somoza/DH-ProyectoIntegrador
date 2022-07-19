@@ -4,7 +4,7 @@
     "name": "H3 Urbano - Juego para lavatorio    ",
     "price": 20000,
     "imagen": "griferia1.jpg",
-    "categoria": "BAÑO  ",
+    "categoria": "baño",
     "subCategoria": "griferia      ",
     "marca": "FV      ",
     "information": {
@@ -69,7 +69,7 @@
     "price": 50000,
     "imagen": "bidet1.jpeg",
     "categoria": "baño ",
-    "subCategoria": "bidet ",
+    "subCategoria": "bidet",
     "marca": "Roca ",
     "information": {
       "colores": "Blanco ",
@@ -163,7 +163,7 @@
     "name": "asd",
     "price": 1213,
     "imagen": "esquema-1658181737697-442486878.png",
-    "categoria": "Baños",
+    "categoria": "baño",
     "subCategoria": "Inodoro",
     "marca": "d",
     "information": {
