@@ -11,6 +11,7 @@ module.exports = {
     return res.render("./products/productDetail", {
       title: product.name,
       product: product,
+      esquema: product.esquema,
       informacion: Object.getOwnPropertyNames(product.information),
       details: Object.getOwnPropertyNames(product.details),
       // styles: [""]
@@ -63,6 +64,7 @@ module.exports = {
 
   save: (req, res) => {
     req.body.imagenProducto = req.files[0].filename
+    req.body.details.esquema = req.files[0].filename
     let newProduct = create(req.body)
     let products = index();
     products.push(newProduct)
