@@ -103,6 +103,7 @@ module.exports = {
     let products = index();
 
     req.body.imagenProducto = productToEdit.imagen
+    
     if (req.files[0] != undefined) {
       deleteImage(productToEdit.imagen)
       req.body.imagenProducto = req.files[0].filename
@@ -110,24 +111,16 @@ module.exports = {
 
     let edited = edit(req.body, productToEdit)
 
-    try {
-      let productModified = products.map(p => {
-        if (p.id == edited.id) {
-          p = edited
-        }
-        return p
-      });
+    let productModified = products.map(p => {
+      if (p.id == edited.id) {
+        p = edited
+      }
+      return p
+    });
 
-      write(productModified)
-    } catch (error) {
-      console.log(error);
-    }
+    write(productModified)
 
     return res.redirect(`/products/${req.params.id}`)
   }
-  /*
-  productDelate: (req, res) => {
-
-  } */
 }
 

@@ -140,22 +140,22 @@
   },
   {
     "id": 10,
-    "name": "Tromeen ",
+    "name": "Tromeen  hola",
     "price": 50000,
-    "imagen": "imagenProducto-1658180730583-516783985.png",
-    "categoria": "Calefaccion ",
-    "subCategoria": "Hogar ",
-    "marca": "FV ",
+    "imagen": "imagenProducto-1658261710809-373730423.jpeg",
+    "categoria": "Calefaccion    ",
+    "subCategoria": "Hogar    ",
+    "marca": "FV    ",
     "information": {
-      "colores": "Azul ",
-      "linea": "21 ",
-      "configuracion": "asd ",
-      "apto": "asd ",
-      "tecnologia": " Avanzada"
+      "colores": "Azul    ",
+      "linea": "21    ",
+      "configuracion": "asd    ",
+      "apto": "asd    ",
+      "tecnologia": " Avanzada   "
     },
     "details": {
       "description": "asdasdasd",
-      "documento": " "
+      "documento": "    "
     }
   },
   {
