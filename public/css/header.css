@@ -117,6 +117,10 @@ header {
     width: 100%;
 }
 
+.search-bar i {
+    color: var(--color-white);
+}
+
 /*-------------CARRO-------------*/
 #cart {
 

@@ -22,8 +22,10 @@ module.exports = {
   finder: (req, res) => {
     let productList = index()
     try {
-
-
+      if (req.query && req.query.categoria) {
+        productList = filter("categoria", req.query.categoria)
+      }
+      
       if (req.query && req.query.subcategoria) {
         productList = filter("subCategoria", req.query.subcategoria)
       }
@@ -55,13 +57,6 @@ module.exports = {
   },
 
 
-  productCreate: (req, res) => {
-    return res.render("./products/productCreate", {
-      title: "Product Create",
-    })
-  },
-
-
   productCreateDetail: (req, res) => {
     return res.render("./products/productCreateDetail", {
       title: "Product Create Details",
@@ -78,8 +73,7 @@ module.exports = {
 
 
   save: (req, res) => {
-    req.body.imagenProducto = req.files[0].filename
-    req.body.details.esquema = req.files[0].filename
+    req.body.imagenProducto = req.files[0]?.filename
     let newProduct = create(req.body)
     let products = index();
     products.push(newProduct)
@@ -105,6 +99,7 @@ module.exports = {
     let products = index();
 
     req.body.imagenProducto = productToEdit.imagen
+
     if (req.files[0] != undefined) {
       deleteImage(productToEdit.imagen)
       req.body.imagenProducto = req.files[0].filename
@@ -112,24 +107,15 @@ module.exports = {
 
     let edited = edit(req.body, productToEdit)
 
-    try {
-      let productModified = products.map(p => {
-        if (p.id == edited.id) {
-          p = edited
-        }
-        return p
-      });
+    let productModified = products.map(p => {
+      if (p.id == edited.id) {
+        p = edited
+      }
+      return p
+    });
 
-      write(productModified)
-    } catch (error) {
-      console.log(error);
-    }
+    write(productModified)
 
     return res.redirect(`/products/${req.params.id}`)
   }
-  /*
-  productDelate: (req, res) => {
-
-  } */
 }
-

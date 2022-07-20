@@ -26,10 +26,15 @@ module.exports = {
         // console.log(filterType + " " + value)
 
         // let filter = products.filter(product => product.name.toLowerCase().indexOf(subcategoria.toLowerCase()) > -1)
+        
+        if (filterType == "categoria") {
+            filteredList = products.filter(product => product.categoria == value)
+        }
+
         if (filterType == "subCategoria") {
             filteredList = products.filter(product => product.subCategoria == value)
         }
-
+        
         else if (filterType == "search") {
             filteredList = products.filter(product => product.name.toLowerCase().includes(value) || product.marca.toLowerCase().includes(value))
             if (value == "" || null) { filteredList = [] }
@@ -87,8 +92,8 @@ module.exports = {
             name: data.nombreProducto,
             price: parseInt(data.price),
             imagen: imagen,
-            categoria: data.categoria,
-            subCategoria: data.subCategoria,
+            categoria: productoOriginal.categoria,
+            subCategoria: productoOriginal.subCategoria,
             marca: data.marca,
             information: {
                 colores: data.colores,

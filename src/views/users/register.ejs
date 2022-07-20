@@ -17,10 +17,10 @@
         <!-- break  -->
         <main>
             <h2 id="title">Registro</h2>
-            <form action="" id="form" method="post">
+            <form action="/register" id="form" method="post">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" 
-                    value=" <%= locals.oldData ? oldData.nombre: null %>  ">
+                    value="<%= locals.oldData ? oldData.nombre: null %>">
                 <% if ( locals.errors && errors.nombre ) { %>
                     <p class="msg-error">
                         <%= errors.nombre.msg %>
@@ -28,7 +28,7 @@
                     <% } %>
                         <label for="apellido">Apellido</label>
                         <input type="text" name="apellido" id="apellido" 
-                            value=" <%= locals.oldData ? oldData.apellido: null %>  ">
+                            value="<%= locals.oldData ? oldData.apellido: null %>">
                         <% if ( locals.errors && errors.apellido ) { %>
                             <p class="msg-error">
                                 <%= errors.apellido.msg %>
@@ -37,7 +37,7 @@
 
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" placeholder="direccion de corre electrónico"
-                                     value=" <%= locals.oldData ? oldData.email: null %>  ">
+                                     value="<%= locals.oldData ? oldData.email: null %>">
                                 <% if ( locals.errors && errors.email ) { %>
                                     <p class="msg-error">
                                         <%= errors.email.msg %>
@@ -46,7 +46,7 @@
 
                                         <label for="contraseña">Contraseña</label>
                                         <input type="password" name="password" id="contraseña" 
-                                            value=" <%= locals.oldData ? oldData.password: null %>  ">
+                                            value="<%= locals.oldData ? oldData.password: null %>">
                                         <% if ( locals.errors && errors.password ) { %>
                                             <p class="msg-error">
                                                 <%= errors.password.msg %>
@@ -55,7 +55,7 @@
 
                                                 <label for="contraseña-val">Confirmar contraseña</label>
                                                 <input type="password" name="password" id="contraseña-val" 
-                                                    value=" <%= locals.oldData ? oldData.password: null %>  ">
+                                                    value="<%= locals.oldData ? oldData.password: null %>">
                                                 <% if ( locals.errors && errors.password ) { %>
                                                     <p class="msg-error">
                                                         <%= errors.password.msg %>

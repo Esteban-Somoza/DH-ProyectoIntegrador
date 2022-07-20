@@ -6,6 +6,7 @@ let categories = {
     instalaciones: ["tubos", "cintas", "adhesivos"]
 } //array de subcategorias segun la categoria elegida
 
+
 function populate() {
     let s1 = document.getElementById("categoria"); // agarra el selector categoria
     let s2 = document.getElementById("subCategoria"); // agarra el selector subCategoria
@@ -49,3 +50,22 @@ function populate() {
         s2.options.add(newOption); // agrega nueva opcion al listao de opciones
     }
 }
+
+// function selected(value){
+//     console.log(value);
+//     let s1 = document.getElementById("categoria"); 
+//     let s2 = document.getElementById("subCategoria"); 
+
+//     s1.options.forEach(element => {
+//         if(element.value == value ) {
+//             element.setAttribute("selected", "selected");
+//         }
+//     });
+//     s2.options.forEach(element => {
+//         if(element.value == value ) {
+//             element.setAttribute("selected", "selected");
+//         }
+//     });
+// }
+
+
