@@ -31,7 +31,8 @@ a {
 }
 
 textarea {
-  resize: none
+  resize: none;
+  padding: 5px;
 }
 
 .formulario h2 {

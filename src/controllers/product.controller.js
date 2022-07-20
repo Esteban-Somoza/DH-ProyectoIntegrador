@@ -54,13 +54,6 @@ module.exports = {
   },
 
 
-  productCreate: (req, res) => {
-    return res.render("./products/productCreate", {
-      title: "Product Create",
-    })
-  },
-
-
   productCreateDetail: (req, res) => {
     return res.render("./products/productCreateDetail", {
       title: "Product Create Details",

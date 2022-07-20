@@ -1,23 +1,23 @@
 [
   {
     "id": "1",
-    "name": "H3 Urbano - Juego para lavatorio    ",
+    "name": "H3 Urbano - Juego para lavatorio",
     "price": 20000,
     "imagen": "griferia1.jpg",
     "categoria": "baño",
-    "subCategoria": "griferia      ",
-    "marca": "FV      ",
+    "subCategoria": "griferia",
+    "marca": "FV",
     "information": {
-      "colores": "Cromo, Rose Gold      ",
-      "linea": "H3 Urbano      ",
-      "design": "Volante Cruz      ",
-      "configuracion": "Bicomando      ",
-      "apto": "Apto termotanque y calefón      ",
-      "tecnologia": "Cierre cerámico      "
+      "colores": "Cromo, Rose Gold",
+      "linea": "H3 Urbano",
+      "design": "Volante Cruz",
+      "configuracion": "Bicomando",
+      "apto": "Apto termotanque y calefón",
+      "tecnologia": "Cierre cerámico"
     },
     "details": {
       "description": "Griferia de baño moderna de linea H3",
-      "documento": "      "
+      "documento": ""
     }
   },
   {
@@ -26,18 +26,18 @@
     "price": 50000,
     "imagen": "esquema-1658181683640-845564304.png",
     "categoria": "baño      ",
-    "subCategoria": "griferia      ",
-    "marca": "FV       ",
+    "subCategoria": "griferia",
+    "marca": "FV",
     "information": {
-      "colores": "Cromo       ",
-      "linea": "49 Alesia       ",
-      "configuracion": "Bicomando       ",
-      "apto": "Apto termotanque y calefón       ",
-      "tecnologia": "Cierre cerámico       "
+      "colores": "Cromo",
+      "linea": "49 Alesia",
+      "configuracion": "Bicomando",
+      "apto": "Apto termotanque y calefón",
+      "tecnologia": "Cierre cerámico"
     },
     "details": {
       "description": "Griferia de baño moderna de linea H3",
-      "documento": "       "
+      "documento": ""
     }
   },
   {
@@ -65,22 +65,22 @@
   },
   {
     "id": "4",
-    "name": "Bidé de pie Monobloque  ",
+    "name": "Bidé de pie Monobloque",
     "price": 50000,
     "imagen": "bidet1.jpeg",
     "categoria": "baño",
     "subCategoria": "bidet",
-    "marca": "Roca ",
+    "marca": "Roca",
     "information": {
-      "colores": "Blanco ",
-      "linea": "The Gap ",
+      "colores": "Blanco",
+      "linea": "The Gap",
       "configuracion": "De pie",
-      "apto": "  ",
-      "tecnologia": "Griferia monocomando "
+      "apto": "",
+      "tecnologia": "Griferia monocomando"
     },
     "details": {
       "description": "Bidet elegante con griferia monocomando",
-      "documento": " "
+      "documento": ""
     }
   },
   {
