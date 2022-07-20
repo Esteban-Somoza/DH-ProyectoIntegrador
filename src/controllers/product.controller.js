@@ -21,8 +21,10 @@ module.exports = {
   finder: (req, res) => {
     let productList = index()
     try {
-
-
+      if (req.query && req.query.categoria) {
+        productList = filter("categoria", req.query.categoria)
+      }
+      
       if (req.query && req.query.subcategoria) {
         productList = filter("subCategoria", req.query.subcategoria)
       }
