@@ -189,5 +189,36 @@
       "apto": ""
     },
     "details": {}
+  },
+  {
+    "id": 13,
+    "name": "",
+    "price": null,
+    "categoria": "banio",
+    "subCategoria": "inodoro",
+    "marca": "",
+    "information": {
+      "colores": "",
+      "linea": "",
+      "diseño": "",
+      "configuracion": "",
+      "apto": ""
+    },
+    "details": {}
+  },
+  {
+    "id": 14,
+    "name": "",
+    "price": null,
+    "categoria": "",
+    "marca": "",
+    "information": {
+      "colores": "",
+      "linea": "",
+      "diseño": "",
+      "configuracion": "",
+      "apto": ""
+    },
+    "details": {}
   }
 ]
