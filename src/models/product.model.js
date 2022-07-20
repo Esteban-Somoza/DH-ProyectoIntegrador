@@ -87,8 +87,8 @@ module.exports = {
             name: data.nombreProducto,
             price: parseInt(data.price),
             imagen: imagen,
-            categoria: data.categoria,
-            subCategoria: data.subCategoria,
+            categoria: productoOriginal.categoria,
+            subCategoria: productoOriginal.subCategoria,
             marca: data.marca,
             information: {
                 colores: data.colores,

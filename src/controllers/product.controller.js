@@ -77,7 +77,7 @@ module.exports = {
 
 
   save: (req, res) => {
-    req.body.imagenProducto = req.files[0].filename
+    req.body.imagenProducto = req.files[0]?.filename
     let newProduct = create(req.body)
     let products = index();
     products.push(newProduct)
@@ -103,7 +103,7 @@ module.exports = {
     let products = index();
 
     req.body.imagenProducto = productToEdit.imagen
-    
+
     if (req.files[0] != undefined) {
       deleteImage(productToEdit.imagen)
       req.body.imagenProducto = req.files[0].filename
@@ -123,4 +123,3 @@ module.exports = {
     return res.redirect(`/products/${req.params.id}`)
   }
 }
-

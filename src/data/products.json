@@ -22,22 +22,22 @@
   },
   {
     "id": "2",
-    "name": "49 Alesia - Juego para lavatorio      ",
+    "name": "49 Alesia - Juego para baño",
     "price": 50000,
     "imagen": "esquema-1658181683640-845564304.png",
     "categoria": "baño      ",
     "subCategoria": "griferia      ",
-    "marca": "FV      ",
+    "marca": "FV       ",
     "information": {
-      "colores": "Cromo      ",
-      "linea": "49 Alesia      ",
-      "configuracion": "Bicomando      ",
-      "apto": "Apto termotanque y calefón      ",
-      "tecnologia": "Cierre cerámico      "
+      "colores": "Cromo       ",
+      "linea": "49 Alesia       ",
+      "configuracion": "Bicomando       ",
+      "apto": "Apto termotanque y calefón       ",
+      "tecnologia": "Cierre cerámico       "
     },
     "details": {
       "description": "Griferia de baño moderna de linea H3",
-      "documento": "      "
+      "documento": "       "
     }
   },
   {
@@ -65,18 +65,17 @@
   },
   {
     "id": "4",
-    "name": "Bidé de pie Monobloque ",
+    "name": "Bidé de pie Monobloque  ",
     "price": 50000,
     "imagen": "bidet1.jpeg",
-    "categoria": "baño ",
+    "categoria": "baño",
     "subCategoria": "bidet",
     "marca": "Roca ",
     "information": {
       "colores": "Blanco ",
       "linea": "The Gap ",
-      "disenio": "Cuadrado ",
-      "configuracion": "De pie ",
-      "apto": " ",
+      "configuracion": "De pie",
+      "apto": "  ",
       "tecnologia": "Griferia monocomando "
     },
     "details": {
@@ -171,6 +170,22 @@
       "linea": "",
       "diseño": "",
       "configuracion": "",
+      "apto": ""
+    },
+    "details": {}
+  },
+  {
+    "id": 12,
+    "name": "uhhooil",
+    "price": null,
+    "categoria": "",
+    "subCategoria": "",
+    "marca": "",
+    "information": {
+      "colores": "",
+      "linea": "",
+      "diseño": "",
+      "configuracion": "asdfasd",
       "apto": ""
     },
     "details": {}

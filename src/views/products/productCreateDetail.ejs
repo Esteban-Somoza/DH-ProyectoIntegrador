@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/productofinal.css">
+        <script defer src="/scripts/menuCrear.js"></script>
 </head>
 
 <body>
@@ -19,20 +20,36 @@
             <section class="back">
                 <form action="/products/save" method="post" enctype="multipart/form-data">
                     <div class="formulario">
-                        <h2 id="Detalle">Detalle</h2>
+                        <h2 id="detalle">Publicar un nuevo producto</h2>
 
-
+                        <!-- <h2> categorias</h2> -->
                         <label for="Categoria">Categoria</label>
-                        <input class="formulario_relleno" type="text" name="categoria" id="categoria" min="1" />
+                        <select id="categoria" name="categoria" class="formulario_relleno" onchange="populate()">
+                            <option value=""></option>
+                            <option value="banio">baño</option>
+                            <option value="cocina">cocina</option>
+                            <option value="tanques">tanques</option>
+                            <!--    <option value="calefaccion">calefacción</option>
+                                <option value="instalaciones">instalaciones</option>  -->
+                        </select>
                         <label for="subCategoria">SubCategoria</label>
-                        <input class="formulario_relleno" type="text" name="subCategoria" id="subCategoria" min="1" />
+                        <select id="subCategoria" name="subCategoria" class="formulario_relleno"></select>
+
+                        <!-- producto -->
+                        <h2 class="titulo">Producto</h2>
                         <label for="nombre-producto">Nombres del producto</label>
                         <input class="formulario_relleno" type="text" name="nombreProducto" min="1" />
+                        <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
+                        <input class="formulario_relleno" type="file" name="imagenProducto">
+                        <label for="descripcion">Descripcion</label>
+                        <textarea class="descripcion" name="description"> </textarea>
                         <label for="price">Precio</label>
                         <input class="formulario_relleno" type="number" name="price" id="price" min="1" />
+
+                        <!-- informacion -->
+                        <h2 class="titulo">Información</h2>
                         <label for="tecnologia">Tecnologia</label>
                         <input class="formulario_relleno" type="text" name="Tecnologia" id="subCategoria" min="1" />
-
                         <label for="marca">Marca</label>
                         <input class="formulario_relleno" type="text" name="marca" id="marca" min="1" />
                         <label class="infodenombres" for="Linea">Linea</label>
@@ -45,20 +62,19 @@
                         <input class="formulario_relleno" type="text" name="apto" min="1" />
                         <label class="infodenombres" for="Apto">Configuracion</label>
                         <input class="formulario_relleno" type="text" name="configuracion" min="1" />
+
+                        <!-- informacion -->
+                        <h2 class="titulo">Detalles</h2>
                         <label for="nombre-apellido">Documento</label>
-                        <input class="formulario_relleno" type="file" name="documento"/>
-                        <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
-                        <input class="relleno" type="file" name="imagenProducto">
+                        <input class="formulario_relleno" type="file" name="documento" />
                         <label class="infodenombres" for="grafico">Grafico</label>
-                        <input class="relleno" type="file" name="grafico" min="1" />
+                        <input class="formulario_relleno" type="file" name="grafico" min="1" />
                         <label class="infodenombres" for="esquema">Esquema</label>
-                        <input class="relleno" type="file" name="esquema">
+                        <input class="formulario_relleno" type="file" name="esquema">
                         <label for="nombre-apellido">Medidas</label>
                         <input class="formulario_relleno" type="text" name="medidas" min="1" />
-                        <label for="descripcion">Descripcion</label>
-                        <textarea class="descripcion" name="description"> </textarea>
                         <div id="boton">
-                            <a href="/"> <button type="" class="Cancelar">Cancelar</button></a>
+                            <button type="" class="Cancelar"><a href="/"> Cancelar</a></button>
                             <button type="submit" class="botonform">Enviar</button>
                         </div>
                     </div>
