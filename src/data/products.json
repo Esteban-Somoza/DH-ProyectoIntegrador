@@ -159,12 +159,10 @@
   },
   {
     "id": 11,
-    "name": "asd",
-    "price": 1213,
-    "imagen": "esquema-1658181737697-442486878.png",
-    "categoria": "baño",
-    "subCategoria": "Inodoro",
-    "marca": "d",
+    "name": "Ho",
+    "price": null,
+    "categoria": "",
+    "marca": "",
     "information": {
       "colores": "",
       "linea": "",
@@ -176,39 +174,7 @@
   },
   {
     "id": 12,
-    "name": "uhhooil",
-    "price": null,
-    "categoria": "cocina",
-    "subCategoria": "",
-    "marca": "",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "diseño": "",
-      "configuracion": "asdfasd",
-      "apto": ""
-    },
-    "details": {}
-  },
-  {
-    "id": 13,
-    "name": "",
-    "price": null,
-    "categoria": "banio",
-    "subCategoria": "inodoro",
-    "marca": "",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": ""
-    },
-    "details": {}
-  },
-  {
-    "id": 14,
-    "name": "",
+    "name": "as",
     "price": null,
     "categoria": "",
     "marca": "",

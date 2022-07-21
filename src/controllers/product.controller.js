@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const { write, create, index, find, filter, edit, deleteImage } = require("../models/product.model");
 module.exports = {
 
@@ -117,5 +118,24 @@ module.exports = {
     write(productModified)
 
     return res.redirect(`/products/${req.params.id}`)
+  },
+  process: function (req, res) {
+    let validaciones = validationResult(req)
+    let { errors } = validaciones;
+    console.log(validaciones);
+    if (errors && errors.length > 0) {
+      return res.render('products/productCreateDetail', {
+        title: "Publicar un nuevo producto",
+       
+        oldData: req.body,
+        errors: validaciones.mapped()
+      });
+    }else  { req.body.imagenProducto = req.files[0]?.filename
+    let newProduct = create(req.body)
+    let products = index();
+    products.push(newProduct)
+    write(products)
+    return res.redirect("../products/save")}
+
   }
 }
