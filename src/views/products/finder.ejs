@@ -16,8 +16,8 @@
 
         <!-- break  -->
         <main>
-          <!--  <h2 id="desplegable" tabindex="9999"> - filtrar categorias - </h2> -->
-            <nav id="buscador__navbarDesplegable">
+            <!--  <h2 id="desplegable" tabindex="9999"> - filtrar categorias - </h2> -->
+            <!-- <nav id="buscador__navbarDesplegable">
                 <h2>Categorias</h2>
                 <ul>
                     <li class="buscador__categoria">
@@ -59,60 +59,64 @@
                         <h3>Rotoplast</h3>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
             <section id="main">
                 <form id="buscador">
                     <h3>Categorias</h3>
-                    <button type="submit" name=""> Buscar </button>
-                    <a href="/finder"> Reset </a>
                     <ul>
-                        <label for="banio" class="buscador__categoria">Baño</label>
+                        <label for="banio" class="buscador__categoria">Baño<a href="/finder?categoria=baño"><i
+                                    class="fa-solid fa-magnifying-glass"></i></a></label>
                         <input type="radio" name="categorias" valor="banio" id="banio" class="buscador__categoriaRadio">
                         <ul class="buscador__list buscador">
                             <input type="radio" name="subcategoria" value="bidet" id="b1"
                                 class="buscador__tipo"></input>
-                            <label for="b1">Bidet</label>
+                            <a href="/finder?subcategoria=bidet">Bidet</a>
                             <input type="radio" name="subcategoria" value="inodoro" id="b2"
                                 class="buscador__tipo"></input>
-                            <label for="b2">Inodoro</label>
+                            <a href="/finder?subcategoria=inodoro">Inodoro</label></a>
                             <input type="radio" name="subcategoria" value="griferia" id="b3"
                                 class="buscador__tipo"></input>
-                            <label for="b3">Griferia</label>
+                            <a href="/finder?subcategoria=griferia">Griferia</a>
                             <input type="radio" name="subcategoria" value="piletas" id="b4"
                                 class="buscador__tipo"></input>
-                            <label for="b4">Piletas</label>
+                            <a href="/finder?subcategoria=piletas">Piletas</a>
                             <input type="radio" name="subcategoria" value="ducha" id="b5"
                                 class="buscador__tipo"></input>
-                            <label for="b5">Ducha</label>
+                            <a href="/finder?subcategoria=ducha">Ducha</a>
                         </ul>
 
-                        <label for="cocina" class="buscador__categoria">Cocina</label>
+                        <label for="cocina" class="buscador__categoria">Cocina<a href="/finder?categoria=cocina"><i
+                                    class="fa-solid fa-magnifying-glass"></i></a></label>
                         <input type="radio" name="categorias" valor="cocina" id="cocina"
                             class="buscador__categoriaRadio">
                         <ul class="buscador__list">
                             <input type="radio" name="subcategoria" value="bachas" id="c1"
                                 class="buscador__tipo"></input>
-                            <label for="c1">Bachas</label>
+                            <a href="/finder?subcategoria=bacha">Bachas</a>
                             <input type="radio" name="subcategoria" value="hornos" id="c2"
                                 class="buscador__tipo"></input>
-                            <label for="c2">Hornos</label>
+                            <a href="/finder?subcategoria=horno">Hornos</a>
                             <input type="radio" name="subcategoria" value="griferia" id="c3"
                                 class="buscador__tipo"></input>
-                            <label for="c3">Griferia</label>
+                            <a href="/finder?subcategoria=griferiaCocina">Griferia</a>
                         </ul>
 
-                        <label for="tanques" class="buscador__categoria">Tanques</label>
+                        <label for="tanques" class="buscador__categoria">Tanques<a href="/finder?categoria=tanques"><i
+                                    class="fa-solid fa-magnifying-glass"></i></a></label>
                         <input type="radio" name="categorias" valor="tanque" id="tanques"
                             class="buscador__categoriaRadio">
                         <ul class="buscador__list">
                             <input type="radio" value="termotanques" name="subcategoria" id="t1"
                                 class="buscador__tipo"></input>
-                            <label for="t1">Termotanques</label>
-                            <input type="radio" name="subcategoria" id="t2" class="buscador__tipo"></input>
-                            <label for="t2">Tanques de Agua</label>
+                            <a href="/finder?subcategoria=termotanques">Termotanques</a>
+                            <input type="radio" name="subcategoria" id="t2" name="subcategoria"
+                                class="buscador__tipo"></input>
+                            <a href="/finder?subcategoria=tanquesDeAgua">Tanques de Agua</a>
                         </ul>
 
-                     <!--    <label for="calefaccion" class="buscador__categoria">Calefaccion</label>
+                        <button type="reset" class="Cancelar"><a href="/finder" id="reiniciar">Reiniciar
+                                Busqueda</a></button>
+                        <!--    <label for="calefaccion" class="buscador__categoria">Calefaccion</label>
                         <input type="radio" name="categorias" valor="calefaccion" id="calefaccion"
                             class="buscador__categoriaRadio">
                         <ul class="buscador__list">
@@ -122,9 +126,9 @@
                             <label for="ca2">Caloventores</label>
                             <input type="radio" name="subcategoria" id="ca3" class="buscador__tipo"></input>
                             <label for="ca3">Aires Acondicionados</label>
-                        </ul>--> 
+                        </ul>-->
 
-                       <!--   <label for="instalaciones" class="buscador__categoria">Instalaciones</label>
+                        <!--   <label for="instalaciones" class="buscador__categoria">Instalaciones</label>
                         <input type="radio" name="categorias" valor="instalaciones" id="instalaciones"
                             class="buscador__categoriaRadio">
                         <ul class="buscador__list">
@@ -134,9 +138,9 @@
                             <label for="i2">Cintas</label>
                             <input type="radio" name="subcategoria" id="i3" class="buscador__tipo"></input>
                             <label for="i3">Adhesivos</label>
-                        </ul>--> 
-                        
-                    </ul>  
+                        </ul>-->
+
+                    </ul>
                     <!-- <h3>Marcas</h3>
                     <ul>
                         <label for="roca" class="buscador__categoria">Roca</label>
@@ -151,26 +155,35 @@
                 </form>
                 <section class="articulos">
                     <div id="ruta">
-                      <!--  <h6 class="texto">productos - baño - griferia -</h6> 
+                        <!--  <h6 class="texto">productos - baño - griferia -</h6> 
                         <h6 class="ruta__texto ruta__texto--resaltado"> H3 Urbano</h6>-->
                     </div>
                     <section class="productos">
-                       
+
                         <% products.forEach(element=> { %>
-                          <article class="productos__elemento"><a href="/products/<%= element.id %> "> 
-                                <h3>
-                                    <%= element.name %>
-                                </h3>
-                                <div class="productos__informacion">
-                                    <picture class="imagen"><img src="/images/productos/<%= element.imagen %>" alt=""></picture>
-                                    <div class="productos__texto">
-                                        <h4 class="descripcion">
-                                            <%= element.details.description %>
-                                        </h4>
-                                        
+                            <article class="productos__elemento"><a class="link" href="/products/<%= element.id %> ">
+                                    <h3>
+                                        <%= element.name %>
+                                    </h3>
+                                    <div class="productos__informacion">
+                                        <picture class="imagen"><img src="/images/productos/<%= element.imagen %>"
+                                                alt=""></picture>
+                                        <div class="productos__texto">
+                                            <h4 class="descripcion">
+                                                <%= element.details.description %>
+                                            </h4>
+                                            <h4 class="marca">
+                                                <%= element.marca %>
+                                            </h4>
+                                            <h5 class="linea">
+                                                <%= element.information.linea %>
+                                            </h5>
+                                            <h4 class="precio">
+                                                $<%= element.price %>
+                                            </h4>
+                                        </div>
                                     </div>
-                                </div>
-                          </a> </article>
+                                </a> </article>
                             <% }) %>
 
                     </section>

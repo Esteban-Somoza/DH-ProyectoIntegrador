@@ -70,11 +70,26 @@
     }
 
     .productos__elemento {
-        padding:0.5em;
+        padding:1em;
         margin-top: 0;
     }
 
     .productos__elemento h6 {
         visibility: visible;
+    }
+}
+
+@media (max-width: 390px) {
+  
+    .productos img {
+        /* background-color: var(--color-grey);
+        padding: .5em;
+        border-radius: 20%; */
+        display: flex;
+        margin-top: 4px;
+        /* width: 130px; */
+        *flex-grow: 1;
+        margin-bottom: 0px;
+        transition: all 0.3s ease;
     }
 }

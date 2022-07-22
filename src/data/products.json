@@ -106,7 +106,7 @@
     "imagen": "imagenProducto-1658499591244-941992503.jpeg",
     "categoria": "baño",
     "subCategoria": "ducha",
-    "marca": "",
+    "marca": "FV",
     "information": {
       "colores": "cromado",
       "linea": "",
@@ -237,7 +237,7 @@
     "price": 20000,
     "imagen": "imagenProducto-1658501101970-824151628.webp",
     "categoria": "cocina",
-    "subCategoria": "griferia",
+    "subCategoria": "griferiaCocina",
     "marca": "Piazza",
     "information": {
       "colores": "cromado, negro, blanco, azul, dorado, rosa",
@@ -257,7 +257,7 @@
     "price": 25700,
     "imagen": "imagenProducto-1658501223249-527293375.webp",
     "categoria": "cocina",
-    "subCategoria": "griferia",
+    "subCategoria": "griferiaCocina",
     "marca": "Piazza",
     "information": {
       "colores": "Cromo, acero inoxidable y negro",
@@ -277,7 +277,7 @@
     "price": 26400,
     "imagen": "imagenProducto-1658501435347-234126518.webp",
     "categoria": "tanques",
-    "subCategoria": "tanques de agua",
+    "subCategoria": "tanquesDeAgua",
     "marca": "Waterplast",
     "information": {
       "colores": "Veige",
@@ -297,7 +297,7 @@
     "price": 27500,
     "imagen": "imagenProducto-1658501527584-245310318.webp",
     "categoria": "tanques",
-    "subCategoria": "tanques de agua",
+    "subCategoria": "tanquesDeAgua",
     "marca": "Rotoplast",
     "information": {
       "colores": "veige",
@@ -331,6 +331,50 @@
     "details": {
       "description": " Termotanque multigas Heineken ADN AP-80 blanco 80L",
       "medidas": "108cm x 41cm de diamtro"
+    }
+  },
+  {
+    "id": 18,
+    "name": " Lavatorio de FINECERAMIC",
+    "price": 74230,
+    "imagen": "imagenProducto-1658505445429-373025578.jpeg",
+    "categoria": "baño",
+    "subCategoria": "lavatorio",
+    "marca": "Roca",
+    "information": {
+      "colores": "blanco",
+      "linea": "SOFT",
+      "modelo": "",
+      "diseño": "",
+      "configuracion": "sobre encimera",
+      "apto": "",
+      "medidas": "500 x 370 x 140 mm",
+      "capacidad": "18L"
+    },
+    "details": {
+      "description": " SOFT - Lavatorio de FINECERAMIC® de sobre encimera"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Lavatorio de FINECERAMIC",
+    "price": 54600,
+    "imagen": "imagenProducto-1658505620349-157315177.jpg",
+    "categoria": "baño",
+    "subCategoria": "lavatorio",
+    "marca": "Roca",
+    "information": {
+      "colores": "blanco ceramica",
+      "linea": "Fineceramic",
+      "modelo": "",
+      "diseño": "Cuadrado elegante",
+      "configuracion": "sobre mueble y suspendido",
+      "apto": "",
+      "medidas": "1000 x 490 x 120 mm",
+      "capacidad": "14L"
+    },
+    "details": {
+      "description": " Lavatorio de FINECERAMIC® mural o sobre encimera"
     }
   }
 ]
