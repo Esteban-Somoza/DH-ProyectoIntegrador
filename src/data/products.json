@@ -118,73 +118,7 @@
     "details": {
       "documento": "asd"
     }
-  },
-  {
-    "id": 9,
-    "name": "a",
-    "price": 123,
-    "imagen": "imagenProducto-1657993216561-797636909.png",
-    "categoria": "Calefaccion",
-    "subCategoria": "Hogar",
-    "marca": "asd",
-    "information": {
-      "colores": "asd",
-      "linea": "asd",
-      "configuracion": "",
-      "apto": "asd"
-    },
-    "details": {
-      "documento": ""
-    }
-  },
-  {
-    "id": 10,
-    "name": "Tromeen  hola",
-    "price": 50000,
-    "imagen": "imagenProducto-1658261710809-373730423.jpeg",
-    "categoria": "Calefaccion    ",
-    "subCategoria": "Hogar    ",
-    "marca": "FV    ",
-    "information": {
-      "colores": "Azul    ",
-      "linea": "21    ",
-      "configuracion": "asd    ",
-      "apto": "asd    ",
-      "tecnologia": " Avanzada   "
-    },
-    "details": {
-      "description": "asdasdasd",
-      "documento": "    "
-    }
-  },
-  {
-    "id": 11,
-    "name": "Ho",
-    "price": null,
-    "categoria": "",
-    "marca": "",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": ""
-    },
-    "details": {}
-  },
-  {
-    "id": 12,
-    "name": "as",
-    "price": null,
-    "categoria": "",
-    "marca": "",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": ""
-    },
-    "details": {}
   }
+  
+  
 ]

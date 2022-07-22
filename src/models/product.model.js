@@ -1,5 +1,5 @@
 const { readFileSync, writeFileSync, unlinkSync, unlink } = require('fs')
-const { resolve } = require('path')
+const { resolve,  } = require('path')
 
 module.exports = {
 

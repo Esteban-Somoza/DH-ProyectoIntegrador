@@ -46,18 +46,33 @@
                             </p>
                             <% } %>
                         <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
-                        <input class="formulario_relleno" type="file" name="imagenProducto">
+                        <input class="formulario_relleno" type="file" name="imagenProducto"
+                        <% if (locals.errors && errors.imagenProducto) { %>
+                            <p class="msg-error"> <%= errors.imagenProducto.msg %> </p>
+                        <% } %>
                         <label for="descripcion">Descripcion</label>
                         <textarea class="descripcion" name="description"> </textarea>
                         <label for="price">Precio</label>
-                        <input class="formulario_relleno" type="number" name="price" id="price" min="1" />
+                        <input class="formulario_relleno" type="number" name="price" id="price" min="1" 
+                        value="<%= locals.oldData ? oldData.precio: null %>">
+                        <% if ( locals.errors && errors.precio ) { %>
+                            <p class="msg-error">
+                                <%= errors.precio.msg %>
+                            </p>
+                            <% } %>
 
                         <!-- informacion -->
                         <h2 class="titulo">Información</h2>
                         <label for="tecnologia">Tecnologia</label>
                         <input class="formulario_relleno" type="text" name="Tecnologia" id="subCategoria" min="1" />
                         <label for="marca">Marca</label>
-                        <input class="formulario_relleno" type="text" name="marca" id="marca" min="1" />
+                        <input class="formulario_relleno" type="text" name="marca" id="marca" min="1" 
+                        value="<%= locals.oldData ? oldData.marca: null %>">
+                        <% if ( locals.errors && errors.marca ) { %>
+                            <p class="msg-error">
+                                <%= errors.marca.msg %>
+                            </p>
+                            <% } %> 
                         <label class="infodenombres" for="Linea">Linea</label>
                         <input class="formulario_relleno" type="text" name="linea" min="1" />
                         <label class="infodenombres" for="Colores">Colores</label>
