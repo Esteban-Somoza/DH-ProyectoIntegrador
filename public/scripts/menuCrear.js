@@ -1,10 +1,11 @@
 let categories = {
-    banio: ["ducha", "inodoro", "bidet", "griferia"],
-    cocina: ["bacha", "horno", "griferia"],
-    tanques: ["termotanques", "tanques de agua"],
+    baño: ["ducha", "inodoro", "bidet", "griferia", "lavatorio"],
+    cocina: ["bacha", "horno", "griferiaCocina"],
+    tanques: ["termotanques", "tanquesDeAgua"],
     calefaccion: ["salamandra", "caloventores", "aires acondicionados"],
     instalaciones: ["tubos", "cintas", "adhesivos"]
 } //array de subcategorias segun la categoria elegida
+
 
 function populate() {
     let s1 = document.getElementById("categoria"); // agarra el selector categoria
@@ -14,8 +15,8 @@ function populate() {
     s2.innerHTML = "elegir una opcion"; // hace que las opciones de subCategoria sean "elegir una opcion" cuando hay un cambio de categoria
 
     /*  da valor a optionArray dependiendo de cual sea el valor (opcion elegida) de categoria  */
-    if (s1.value == "banio") {
-        optionArray = categories.banio
+    if (s1.value == "baño") {
+        optionArray = categories.baño
     }
 
     else if (s1.value == "cocina") {
@@ -35,8 +36,8 @@ function populate() {
     }
 
     let option1 = document.createElement("option"); // crea opcion para subCategoria
-    option1.value = "";
-    option1.innerHTML = "";
+        option1.value = "";
+        option1.innerHTML = "Elija subcategoria";
     s2.options.add(option1); // agrega nueva opcion al listao de opciones
 
     /*  bucle que agrega una opcion por cada elemento en el array optionArray  */
@@ -49,3 +50,22 @@ function populate() {
         s2.options.add(newOption); // agrega nueva opcion al listao de opciones
     }
 }
+
+// function selected(value){
+//     console.log(value);
+//     let s1 = document.getElementById("categoria"); 
+//     let s2 = document.getElementById("subCategoria"); 
+
+//     s1.options.forEach(element => {
+//         if(element.value == value ) {
+//             element.setAttribute("selected", "selected");
+//         }
+//     });
+//     s2.options.forEach(element => {
+//         if(element.value == value ) {
+//             element.setAttribute("selected", "selected");
+//         }
+//     });
+// }
+
+

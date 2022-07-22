@@ -1,5 +1,5 @@
-const { readFileSync, writeFileSync , unlinkSync, unlink} = require('fs')
-const { resolve } = require('path')
+const { readFileSync, writeFileSync, unlinkSync, unlink } = require('fs')
+const { resolve,  } = require('path')
 
 module.exports = {
 
@@ -18,15 +18,29 @@ module.exports = {
     },
 
 
-    filter: function (subcategoria) {
-        // console.log(subcategoria);
+    filter: function (filterType, value) {
         let file = resolve(__dirname, '../data', 'products.json')
         let data = readFileSync(file)
         let products = JSON.parse(data);
+        let filteredList
+        // console.log(filterType + " " + value)
+
         // let filter = products.filter(product => product.name.toLowerCase().indexOf(subcategoria.toLowerCase()) > -1)
-        let productFilter = products.filter(product => product.subCategoria == subcategoria)
-        // console.log(productFilter);
-        return productFilter
+        
+        if (filterType == "categoria") {
+            filteredList = products.filter(product => product.categoria == value)
+        }
+
+        if (filterType == "subCategoria") {
+            filteredList = products.filter(product => product.subCategoria == value)
+        }
+        
+        else if (filterType == "search") {
+            filteredList = products.filter(product => product.name.toLowerCase().includes(value) || product.marca.toLowerCase().includes(value))
+            if (value == "" || null) { filteredList = [] }
+        }
+
+        return filteredList
     },
 
 
@@ -53,10 +67,13 @@ module.exports = {
             information: {
                 colores: data.colores,
                 linea: data.linea,
+                modelo: data.modelo,
                 diseño: data.design,
                 configuracion: data.configuracion,
                 apto: data.apto,
                 tecnologia: data.tecnologia,
+                medidas: data.medidas,
+                capacidad: data.capacidad,
             },
             details: {
                 description: data.descripcion,
@@ -78,16 +95,19 @@ module.exports = {
             name: data.nombreProducto,
             price: parseInt(data.price),
             imagen: imagen,
-            categoria: data.categoria,
-            subCategoria: data.subCategoria,
+            categoria: productoOriginal.categoria,
+            subCategoria: productoOriginal.subCategoria,
             marca: data.marca,
             information: {
                 colores: data.colores,
                 linea: data.linea,
+                modelo: data.modelo,
                 diseño: data.design,
                 configuracion: data.configuracion,
                 apto: data.apto,
                 tecnologia: data.tecnologia,
+                medidas: data.medidas,
+                capacidad: data.capacidad,
             },
             details: {
                 description: data.description,
@@ -98,8 +118,12 @@ module.exports = {
     },
 
     deleteImage: function (file) {
-        let route = resolve(__dirname, "../../public/images/productos/", file) 
-        return unlinkSync(route)
+        try {
+            let route = resolve(__dirname, "../../public/images/productos/", file)
+            return unlinkSync(route)
+        } catch (error) {
+            console.log(error);
+        }
     }
 
 

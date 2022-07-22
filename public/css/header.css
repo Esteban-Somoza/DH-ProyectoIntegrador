@@ -117,6 +117,10 @@ header {
     width: 100%;
 }
 
+.search-bar i {
+    color: var(--color-white);
+}
+
 /*-------------CARRO-------------*/
 #cart {
 
@@ -284,20 +288,6 @@ header a h2 {
     }
 }
 
-@media (max-width: 390px) {
-  
-    .productos img {
-        background-color: var(--color-grey);
-        padding: .5em;
-        border-radius: 20%;
-        display: flex;
-        margin-top: 4px;
-        width: 130px;
-        *flex-grow: 1;
-        margin-bottom: 0px;
-        transition: all 0.3s ease;
-    }
-}
 
 .carga i:hover {
     color: var(--color-hover);

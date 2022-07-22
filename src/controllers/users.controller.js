@@ -18,13 +18,15 @@ const usersController = {
   process: function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
+    console.log(validaciones);
     if (errors && errors.length > 0) {
       return res.render('users/register', {
-        styles: ['forms'],
+        title: "Registro",
+       
         oldData: req.body,
         errors: validaciones.mapped()
       });
-    }
+    }else {res.redirect("../")}
 
   }
 }

@@ -1,4 +1,5 @@
-const { write, create, index, find, filter, edit, deleteImage,  } = require("../models/product.model");
+const { validationResult } = require('express-validator');
+const { write, create, index, find, filter, edit, deleteImage } = require("../models/product.model");
 module.exports = {
 
   productDetail: (req, res) => {
@@ -11,6 +12,7 @@ module.exports = {
     return res.render("./products/productDetail", {
       title: product.name,
       product: product,
+      esquema: product.esquema,
       informacion: Object.getOwnPropertyNames(product.information),
       details: Object.getOwnPropertyNames(product.details),
       // styles: [""]
@@ -19,29 +21,39 @@ module.exports = {
 
 
   finder: (req, res) => {
-    let filtered = filter(req.query.subcategoria)
+    let productList = index()
+    try {
+      if ( req.query?.categoria) {
+        productList = filter("categoria", req.query.categoria)
+      }
+      
+      if (req.query && req.query.subcategoria) {
+        productList = filter("subCategoria", req.query.subcategoria)
+      }
 
-    if (filtered.length < 1) {
-      filtered = index()
+      if (req.query && req.query.search) {
+        productList = filter("search", req.query.search.toLowerCase())
+        // productList = filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
+      }
+      // console.log(productList.length);
+      if (productList.length < 1) {
+        productList = index()
+      }
+
+      return res.render("./products/finder", {
+        title: "Detalle de producto",
+        products: productList,
+      });
+    } catch (error) {
+      console.log(error)
+      res.redirect("./products/finder")
     }
-
-    return res.render("./products/finder", {
-      title: "Detalle de producto",
-      products: filtered,
-    });
   },
 
 
   productCart: (req, res) => {
     return res.render("./products/productCart", {
       title: "Carrito de compras",
-    })
-  },
-
-
-  productCreate: (req, res) => {
-    return res.render("./products/productCreate", {
-      title: "Product Create",
     })
   },
 
@@ -62,7 +74,7 @@ module.exports = {
 
 
   save: (req, res) => {
-    req.body.imagenProducto = req.files[0].filename
+    req.body.imagenProducto = req.files[0]?.filename
     let newProduct = create(req.body)
     let products = index();
     products.push(newProduct)
@@ -88,6 +100,7 @@ module.exports = {
     let products = index();
 
     req.body.imagenProducto = productToEdit.imagen
+
     if (req.files[0] != undefined) {
       deleteImage(productToEdit.imagen)
       req.body.imagenProducto = req.files[0].filename
@@ -100,6 +113,8 @@ module.exports = {
       }
       return p
     });
+
+   
 
     write(productModified)
 
@@ -130,10 +145,30 @@ module.exports = {
     return res.redirect("/finder");
   
 
- }
+ },
 
 
 
- }
+ 
   
 
+  process: function (req, res) {
+    let validaciones = validationResult(req)
+    let { errors } = validaciones;
+    console.log(validaciones);
+    if (errors && errors.length > 0) {
+      return res.render('products/productCreateDetail', {
+        title: "Publicar un nuevo producto",
+       
+        oldData: req.body,
+        errors: validaciones.mapped()
+      });
+    }else  { req.body.imagenProducto = req.files[0]?.filename
+    let newProduct = create(req.body)
+    let products = index();
+    products.push(newProduct)
+    write(products)
+    return res.redirect("/finder")}
+
+    }
+}
