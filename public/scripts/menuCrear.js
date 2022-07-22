@@ -15,7 +15,7 @@ function populate() {
     s2.innerHTML = "elegir una opcion"; // hace que las opciones de subCategoria sean "elegir una opcion" cuando hay un cambio de categoria
 
     /*  da valor a optionArray dependiendo de cual sea el valor (opcion elegida) de categoria  */
-    if (s1.value == "banio") {
+    if (s1.value == "baño") {
         optionArray = categories.banio
     }
 

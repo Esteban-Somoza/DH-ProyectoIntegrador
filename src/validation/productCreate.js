@@ -9,9 +9,9 @@ const productCreate = [
     .bail()
     .isLength({ min: 2 })
     .withMessage("El nombre debe contener minimo dos caracteres")
-    .bail() 
-    .isLength({ max: 16 })
-    .withMessage("El nombre debe contener maximo 16 caracteres")
+    .bail()   
+    .isLength({ max: 50 })
+    .withMessage("El nombre debe contener maximo 50 caracteres")
     .bail(),
    
   
