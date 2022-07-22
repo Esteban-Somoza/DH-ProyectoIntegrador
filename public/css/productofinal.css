@@ -34,6 +34,7 @@ a {
 }
 
 textarea {
+  opacity: 75%;
   resize: none;
   padding: 5px;
 }

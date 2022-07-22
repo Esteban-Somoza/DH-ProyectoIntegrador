@@ -49,6 +49,25 @@ const productCreate = [
 
       return true
   })
+  .bail(),
+  /*body('categoria').custom(( value,{req})=>{
+    console.log(req.body.categoria);
+    if (req.body.categoria == null){
+      throw new Error('Seleccionar Categoria')
+
+    }
+    return true
+  })
+ 
+*/
+
+body('categoria')
+.isEmpty()
+ .withMessage("Seleccione Categoria")
+
+  
+  
+
     
    
   
