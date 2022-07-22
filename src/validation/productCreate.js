@@ -50,22 +50,28 @@ const productCreate = [
       return true
   })
   .bail(),
-  /*body('categoria').custom(( value,{req})=>{
+   body('categoria').custom(( value,{req})=>{
     console.log(req.body.categoria);
-    if (req.body.categoria == null){
+    if (!req.body.categoria){
       throw new Error('Seleccionar Categoria')
 
     }
     return true
   })
- 
-*/
+  .bail(),
 
-body('categoria')
-.isEmpty()
- .withMessage("Seleccione Categoria")
+  body('subCategoria').custom(( value,{req})=>{
+    console.log(req.body.subCategoria);
+    if (!req.body.subCategoria){
+      throw new Error('Seleccionar subCategoria')
 
-  
+    }
+    return true
+  })
+
+
+
+
   
 
     

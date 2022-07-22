@@ -376,5 +376,25 @@
     "details": {
       "description": " Lavatorio de FINECERAMIC® mural o sobre encimera"
     }
+  },
+  {
+    "id": 20,
+    "name": "Baño",
+    "price": 14141414,
+    "imagen": "imagenProducto-1658529587998-157871199.webp",
+    "categoria": "baño",
+    "subCategoria": "inodoro",
+    "marca": "Baño",
+    "information": {
+      "colores": "",
+      "linea": "",
+      "modelo": "",
+      "diseño": "",
+      "configuracion": "",
+      "apto": "",
+      "medidas": "",
+      "capacidad": ""
+    },
+    "details": {}
   }
 ]
