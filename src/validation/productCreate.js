@@ -1,7 +1,8 @@
 const { body } = require("express-validator");
 const { extname, resolve } = require("path");
 const { unlinkSync } = require("fs");
-const { index } = require("../models/product.model");
+const { index, deleteImage } = require("../models/product.model");
+
 const productCreate = [
   body("nombreProducto")
     .notEmpty()
@@ -13,7 +14,7 @@ const productCreate = [
     .isLength({ max: 50 })
     .withMessage("El nombre debe contener maximo 50 caracteres")
     .bail(),
-    body("precio") //solucionar problema numeros
+    body("price") //solucionar problema numeros
     .notEmpty()
     .withMessage("Complete los campos")
     .bail(),
@@ -32,17 +33,17 @@ const productCreate = [
       if(!archivos || archivos.length == 0){
           throw new Error('No se subio ninguna imagen')
       }
-      let extensiones = ['.svg','.png','.jpg','.jpeg']
+      let extensiones = ['.svg','.png','.jpg','.jpeg','.webp']
       let imagenProducto = archivos[0]
       let extension = extname(imagenProducto.filename)
 
-      if(!extensiones.includes(extension)){
-          unlinkSync(resolve(__dirname, '/public/images','imagenProducto',imagenProducto.filename))
+      if(!extensiones.includes(extension)){ 
+         deleteImage(imagenProducto.filename)
           throw new Error('La imagen no tiene una extension valida')
       }
 
       if(imagenProducto.size > 2097152){
-          unlinkSync(resolve(__dirname, '/public/images','imagenProducto',imagenProducto.filename))
+        deleteImage(imagenProducto.filename)
           throw new Error('La imagen supera el peso de 2MB')
       }
 

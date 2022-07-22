@@ -39,7 +39,7 @@
 
                         <!-- producto -->
                         <h2 class="titulo">Producto</h2>
-                        <label for="nombre-producto">Nombres del producto</label>
+                        <label for="nombre-producto">* Nombre del producto</label>
                         <input class="formulario_relleno" type="text" name="nombreProducto" id="nombreProducto"
                             value="<%= locals.oldData ? oldData.nombreProducto: null %>">
                         <% if ( locals.errors && errors.nombreProducto ) { %>
@@ -47,19 +47,27 @@
                                 <%= errors.nombreProducto.msg %>
                             </p>
                             <% } %>
-                        <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
+                            <label for="marca">* Marca</label>
+                            <input class="formulario_relleno" type="text" name="marca" id="marca" min="1" 
+                            value="<%= locals.oldData ? oldData.marca: null %>">
+                            <% if ( locals.errors && errors.marca ) { %>
+                                <p class="msg-error">
+                                    <%= errors.marca.msg %>
+                                </p>
+                                <% } %> 
+                        <label class="infodenombres" for="imagenProducto">* Imagen del producto</label>
                         <input class="formulario_relleno" type="file" name="imagenProducto"
                         <% if (locals.errors && errors.imagenProducto) { %>
                             <p class="msg-error"> <%= errors.imagenProducto.msg %> </p>
                         <% } %>
                         <label for="descripcion">Descripcion</label>
                         <textarea class="descripcion" name="description"> </textarea>
-                        <label for="price">Precio</label>
+                        <label for="price">* Precio</label>
                         <input class="formulario_relleno" type="number" name="price" id="price" min="1" 
-                        value="<%= locals.oldData ? oldData.precio: null %>">
-                        <% if ( locals.errors && errors.precio ) { %>
+                        value="<%= locals.oldData ? oldData.price: null %>">
+                        <% if ( locals.errors && errors.price ) { %>
                             <p class="msg-error">
-                                <%= errors.precio.msg %>
+                                <%= errors.price.msg %>
                             </p>
                             <% } %>
 
@@ -67,16 +75,10 @@
                         <h2 class="titulo">Información</h2>
                         <label for="tecnologia">Tecnologia</label>
                         <input class="formulario_relleno" type="text" name="Tecnologia" id="subCategoria" min="1" />
-                        <label for="marca">Marca</label>
-                        <input class="formulario_relleno" type="text" name="marca" id="marca" min="1" 
-                        value="<%= locals.oldData ? oldData.marca: null %>">
-                        <% if ( locals.errors && errors.marca ) { %>
-                            <p class="msg-error">
-                                <%= errors.marca.msg %>
-                            </p>
-                            <% } %> 
                         <label class="infodenombres" for="Linea">Linea</label>
                         <input class="formulario_relleno" type="text" name="linea" min="1" />
+                        <label class="infodenombres" for="Modelo">Modelo</label>
+                        <input class="formulario_relleno" type="text" name="modelo" min="1" >
                         <label class="infodenombres" for="Colores">Colores</label>
                         <input class="formulario_relleno" type="text" name="colores" min="1" />
                         <label class="infodenombres" for="Diseño">Diseño</label>
@@ -85,6 +87,14 @@
                         <input class="formulario_relleno" type="text" name="apto" min="1" />
                         <label class="infodenombres" for="Apto">Configuracion</label>
                         <input class="formulario_relleno" type="text" name="configuracion" min="1" />
+                        <label for="nombre-apellido" for="medidas">Medidas</label>
+                        <input class="formulario_relleno" type="text" name="medidas" min="1" />
+
+                        <label for="nombre-apellido" for="capacidad">Capacidad</label>
+                        <input class="formulario_relleno" type="text" name="capacidad" min="1">
+
+
+
 
                                 <!-- detalles -->
                                 <!-- <h2 class="titulo">Detalles</h2> -->
