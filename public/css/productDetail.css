@@ -184,3 +184,7 @@ li.elegido {
 #detalles img {
     width: 100%;
 }
+.basura {
+    position: relative;
+    right: 50px;
+}

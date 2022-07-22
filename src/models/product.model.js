@@ -101,14 +101,6 @@ module.exports = {
         let route = resolve(__dirname, "../../public/images/productos/", file) 
         return unlinkSync(route)
     }
-    /* delate: function(delate) {
-         let file = resolve(__dirname, '../data', 'products.json');
- let info = readFileSync(file);
- return = ? ? 
 
-}
 
-    }
-}
-*/
-}
+ }

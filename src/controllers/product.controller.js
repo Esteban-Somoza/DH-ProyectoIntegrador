@@ -1,4 +1,4 @@
-const { write, create, index, find, filter, edit, deleteImage } = require("../models/product.model");
+const { write, create, index, find, filter, edit, deleteImage,  } = require("../models/product.model");
 module.exports = {
 
   productDetail: (req, res) => {
@@ -94,25 +94,46 @@ module.exports = {
     }
 
     let edited = edit(req.body, productToEdit)
+    let productModified = products.map(p => {
+      if (p.id == edited.id) {
+        p = edited
+      }
+      return p
+    });
 
-    try {
-      let productModified = products.map(p => {
-        if (p.id == edited.id) {
-          p = edited
-        }
-        return p
-      });
-
-      write(productModified)
-    } catch (error) {
-      console.log(error);
-    }
+    write(productModified)
 
     return res.redirect(`/products/${req.params.id}`)
-  }
-  /*
-  productDelate: (req, res) => {
+  },
 
-  } */
-}  
+
+  productDelete: (req, res) => {
+  let product = find(parseInt(req.params.id))
+  if (!product) {
+    return res.redirect('/finder')
+  }
+  return res.render('./products/productDelete', {
+    title: `delete ${product.name}`,
+    product: product
+
+  })
+},
+ 
+  destroid :(req,res) => {
+    let product = find(parseInt(req.params.id))
+    if (!product) {
+      return res.redirect('/finder')
+    }
+    let products= index ()
+    let productDelete = products.filter(p=> p.id !==product.id)
+    write(productDelete)
+    return res.redirect("/finder");
+  
+
+ }
+
+
+
+ }
+  
 

@@ -1,23 +1,22 @@
 [
   {
     "id": "1",
-    "name": "H3 Urbano - Juego para lavatorio    ",
+    "name": "H3 Urbano - Juego para lavatorio     ",
     "price": 20000,
     "imagen": "griferia1.jpg",
-    "categoria": "BAÑO  ",
-    "subCategoria": "griferia      ",
-    "marca": "FV      ",
+    "categoria": "BAÑO   ",
+    "subCategoria": "griferia       ",
+    "marca": "FV       ",
     "information": {
-      "colores": "Cromo, Rose Gold      ",
-      "linea": "H3 Urbano      ",
-      "design": "Volante Cruz      ",
-      "configuracion": "Bicomando      ",
-      "apto": "Apto termotanque y calefón      ",
-      "tecnologia": "Cierre cerámico      "
+      "colores": "Cromo, Rose Gold       ",
+      "linea": "H3 Urbano       ",
+      "configuracion": "Bicomando       ",
+      "apto": "Apto termotanque y calefón       ",
+      "tecnologia": "Cierre cerámico       "
     },
     "details": {
       "description": "Griferia de baño moderna de linea H3",
-      "documento": "      "
+      "documento": "       "
     }
   },
   {
@@ -85,24 +84,6 @@
     }
   },
   {
-    "id": 5,
-    "name": "Tromen",
-    "price": 1200,
-    "imagen": "imagenProducto-1657991059843-170237178.png",
-    "categoria": "Calefaccion",
-    "subCategoria": "Hogar",
-    "marca": "FV",
-    "information": {
-      "colores": "Azul",
-      "linea": "12",
-      "configuracion": "",
-      "apto": "Si"
-    },
-    "details": {
-      "documento": ""
-    }
-  },
-  {
     "id": 7,
     "name": "Hogar Tromen",
     "price": 149333,
@@ -157,22 +138,5 @@
       "description": "asdasdasd",
       "documento": " "
     }
-  },
-  {
-    "id": 11,
-    "name": "asd",
-    "price": 1213,
-    "imagen": "esquema-1658181737697-442486878.png",
-    "categoria": "Baños",
-    "subCategoria": "Inodoro",
-    "marca": "d",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": ""
-    },
-    "details": {}
   }
 ]
