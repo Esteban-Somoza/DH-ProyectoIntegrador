@@ -1,7 +1,7 @@
 let categories = {
-    banio: ["ducha", "inodoro", "bidet", "griferia"],
-    cocina: ["bacha", "horno", "griferia"],
-    tanques: ["termotanques", "tanques de agua"],
+    baño: ["ducha", "inodoro", "bidet", "griferia", "lavatorio"],
+    cocina: ["bacha", "horno", "griferiaCocina"],
+    tanques: ["termotanques", "tanquesDeAgua"],
     calefaccion: ["salamandra", "caloventores", "aires acondicionados"],
     instalaciones: ["tubos", "cintas", "adhesivos"]
 } //array de subcategorias segun la categoria elegida
@@ -16,7 +16,7 @@ function populate() {
 
     /*  da valor a optionArray dependiendo de cual sea el valor (opcion elegida) de categoria  */
     if (s1.value == "baño") {
-        optionArray = categories.banio
+        optionArray = categories.baño
     }
 
     else if (s1.value == "cocina") {
@@ -36,8 +36,8 @@ function populate() {
     }
 
     let option1 = document.createElement("option"); // crea opcion para subCategoria
-    option1.value = "";
-    option1.innerHTML = "";
+        option1.value = "";
+        option1.innerHTML = "Elija subcategoria";
     s2.options.add(option1); // agrega nueva opcion al listao de opciones
 
     /*  bucle que agrega una opcion por cada elemento en el array optionArray  */

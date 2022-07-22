@@ -34,14 +34,14 @@ const productCreate = [
       }
       let extensiones = ['.svg','.png','.jpg','.jpeg']
       let imagenProducto = archivos[0]
-      let extension = extname(avatar.filename)
+      let extension = extname(imagenProducto.filename)
 
       if(!extensiones.includes(extension)){
           unlinkSync(resolve(__dirname, '/public/images','imagenProducto',imagenProducto.filename))
           throw new Error('La imagen no tiene una extension valida')
       }
 
-      if(avatar.size > 2097152){
+      if(imagenProducto.size > 2097152){
           unlinkSync(resolve(__dirname, '/public/images','imagenProducto',imagenProducto.filename))
           throw new Error('La imagen supera el peso de 2MB')
       }

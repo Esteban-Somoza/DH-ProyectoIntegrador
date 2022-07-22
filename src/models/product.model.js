@@ -101,10 +101,13 @@ module.exports = {
             information: {
                 colores: data.colores,
                 linea: data.linea,
+                modelo: data.modelo,
                 diseño: data.design,
                 configuracion: data.configuracion,
                 apto: data.apto,
                 tecnologia: data.tecnologia,
+                medidas: data.medidas,
+                capacidad: data.capacidad,
             },
             details: {
                 description: data.description,

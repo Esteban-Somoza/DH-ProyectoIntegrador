@@ -23,6 +23,11 @@
   font-size: 1.2em;
 }
 
+input {
+    opacity: 75%;
+}
+
+
 a {
   text-decoration: none;
   color: black;
@@ -115,7 +120,7 @@ textarea {
   padding: 5px 8px;
   outline: none;
   white-space: nowrap;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
   cursor: pointer;
 
   font-weight: 700;
@@ -136,7 +141,6 @@ textarea {
 
 .relleno {
   color: rgb(237 237 237);
-  ;
   display: flex;
   position: relative;
   left: 37px;
@@ -145,6 +149,6 @@ textarea {
 
 .formulario label {
   text-align: center;
-  margin-top: .5em;
-  margin-bottom: .05em;
+  margin-top: .7em;
+  margin-bottom: .2em;
 }
