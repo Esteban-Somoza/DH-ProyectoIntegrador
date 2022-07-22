@@ -376,25 +376,5 @@
     "details": {
       "description": " Lavatorio de FINECERAMIC® mural o sobre encimera"
     }
-  },
-  {
-    "id": 20,
-    "name": "ashdahsdh",
-    "price": 5,
-    "imagen": "imagenProducto-1658529777722-801249953.png",
-    "categoria": "",
-    "subCategoria": "",
-    "marca": "asdasd",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "modelo": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": "",
-      "medidas": "",
-      "capacidad": ""
-    },
-    "details": {}
   }
 ]
