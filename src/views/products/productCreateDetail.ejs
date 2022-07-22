@@ -20,13 +20,15 @@
             <section class="back">
                 <form action="/products/save" method="post" enctype="multipart/form-data">
                     <div class="formulario">
-                        <h2 id="detalle"><%= title %> </h2>
+                        <h2 id="detalle">
+                            <%= title %>
+                        </h2>
 
                         <!-- <h2> categorias</h2> -->
                         <label for="Categoria">Categoria</label>
                         <select id="categoria" name="categoria" class="formulario_relleno" onchange="populate()">
                             <option value=""></option>
-                            <option value="banio">baño</option>
+                            <option value="baño">baño</option>
                             <option value="cocina">cocina</option>
                             <option value="tanques">tanques</option>
                             <!--    <option value="calefaccion">calefacción</option>
@@ -39,7 +41,7 @@
                         <h2 class="titulo">Producto</h2>
                         <label for="nombre-producto">Nombres del producto</label>
                         <input class="formulario_relleno" type="text" name="nombreProducto" id="nombreProducto"
-                        value="<%= locals.oldData ? oldData.nombreProducto: null %>">
+                            value="<%= locals.oldData ? oldData.nombreProducto: null %>">
                         <% if ( locals.errors && errors.nombreProducto ) { %>
                             <p class="msg-error">
                                 <%= errors.nombreProducto.msg %>
@@ -84,21 +86,21 @@
                         <label class="infodenombres" for="Apto">Configuracion</label>
                         <input class="formulario_relleno" type="text" name="configuracion" min="1" />
 
-                        <!-- detalles -->
-                        <h2 class="titulo">Detalles</h2> <!--
+                                <!-- detalles -->
+                                <!-- <h2 class="titulo">Detalles</h2> -->
+                                <!--
                         <label for="nombre-apellido">Documento</label>
                         <input class="formulario_relleno" type="file" name="documento" />
                         <label class="infodenombres" for="grafico">Grafico</label>
                         <input class="formulario_relleno" type="file" name="grafico" min="1" />
                         <label class="infodenombres" for="esquema">Esquema</label>
                         <input class="formulario_relleno" type="file" name="esquema">  -->
-                        <label for="nombre-apellido">Medidas</label>
-                        <input class="formulario_relleno" type="text" name="medidas" min="1" />
-                        <div id="boton">
-                            <button type="" class="Cancelar"><a href="/"> Cancelar</a></button>
-                            <button type="submit" class="botonform">Enviar</button>
-                        </div>
+                                <div id="boton">
+                                    <button type="reset" class="Cancelar">Reiniciar</button>
+                                    <button type="submit" class="botonform">Crear</button>
+                                </div>
                     </div>
+                </form>
             </section>
 
 

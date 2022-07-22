@@ -10,21 +10,19 @@
     "information": {
       "colores": "Cromo, Rose Gold",
       "linea": "H3 Urbano",
-      "design": "Volante Cruz",
       "configuracion": "Bicomando",
       "apto": "Apto termotanque y calefón",
       "tecnologia": "Cierre cerámico"
     },
     "details": {
-      "description": "Griferia de baño moderna de linea H3",
-      "documento": ""
+      "description": "Griferia de baño moderna de linea H3"
     }
   },
   {
     "id": "2",
     "name": "49 Alesia - Juego para baño",
     "price": 50000,
-    "imagen": "esquema-1658181683640-845564304.png",
+    "imagen": "imagenProducto-1658498830737-653353038.jpg",
     "categoria": "baño      ",
     "subCategoria": "griferia",
     "marca": "FV",
@@ -36,8 +34,7 @@
       "tecnologia": "Cierre cerámico"
     },
     "details": {
-      "description": "Griferia de baño moderna de linea H3",
-      "documento": ""
+      "description": "Griferia de baño moderna de linea H3"
     }
   },
   {
@@ -85,38 +82,76 @@
   },
   {
     "id": 5,
-    "name": "Tromen",
-    "price": 1200,
-    "imagen": "imagenProducto-1657991059843-170237178.png",
-    "categoria": "Calefaccion",
-    "subCategoria": "Hogar",
-    "marca": "FV",
+    "name": "Griferia monocomando Cold Start",
+    "price": 21700,
+    "imagen": "imagenProducto-1658499224951-219769094.jpeg",
+    "categoria": "baño",
+    "subCategoria": "griferia",
+    "marca": "Roca",
     "information": {
-      "colores": "Azul",
-      "linea": "12",
-      "configuracion": "",
-      "apto": "Si"
+      "colores": "cromado",
+      "linea": "Cold Start",
+      "configuracion": "monocomando",
+      "apto": "",
+      "tecnologia": ""
     },
     "details": {
-      "documento": ""
+      "description": ""
     }
   },
   {
-    "id": 7,
-    "name": "Hogar Tromen",
-    "price": 149333,
-    "imagen": "imagenProducto-1657992721797-909225770.png",
-    "categoria": "Calefaccion",
-    "subCategoria": "Hogar",
-    "marca": "asd",
+    "id": 6,
+    "name": "Rociador de pared",
+    "price": 12900,
+    "imagen": "imagenProducto-1658499591244-941992503.jpeg",
+    "categoria": "baño",
+    "subCategoria": "ducha",
+    "marca": "",
     "information": {
-      "colores": "asd",
-      "linea": "asd",
-      "configuracion": "asd",
-      "apto": "asd"
+      "colores": "cromado",
+      "linea": "",
+      "diseño": "circular",
+      "configuracion": "pared o techo",
+      "apto": ""
+    },
+    "details": {}
+  },
+  {
+    "id": 7,
+    "name": "H3 Urbano - Juego para bañera y ducha",
+    "price": 27800,
+    "imagen": "imagenProducto-1658499783034-820531822.jpg",
+    "categoria": "baño",
+    "subCategoria": "ducha",
+    "marca": "FVSA",
+    "information": {
+      "colores": "Cromo y Rose Gold",
+      "linea": "H3 Urbano",
+      "diseño": "volante cruz",
+      "configuracion": "pared o techo",
+      "apto": "calefon y termotanque"
     },
     "details": {
-      "documento": "asd"
+      "description": "Juego para bañera y ducha, de dos llaves y transferencia, con ducha."
+    }
+  },
+  {
+    "id": 8,
+    "name": "Bidé de pie",
+    "price": 36299,
+    "imagen": "imagenProducto-1658500218537-653767791.jpeg",
+    "categoria": "baño",
+    "subCategoria": "bidet",
+    "marca": "Roca",
+    "information": {
+      "colores": "Blanco",
+      "linea": "",
+      "configuracion": "De pie",
+      "apto": "",
+      "tecnologia": ""
+    },
+    "details": {
+      "description": " Bidé de pie lluvia con 1 orificio"
     }
   }
   

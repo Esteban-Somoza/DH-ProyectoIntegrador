@@ -20,7 +20,7 @@
             <section class="back">
                 <form action="/products/editForm/<%= product.id %>?m=PUT " method="post" enctype="multipart/form-data">
                     <div class="formulario">
-                        <h2 id="detalle">Publicar un nuevo producto</h2>
+                        <h2 id="detalle">Editando un producto</h2>
                         <!-- <h2> categorias</h2> 
                         <label for="Categoria">Categoria</label>
                         <select id="categoria" name="categoria" class="formulario_relleno" onchange="populate()"
@@ -29,8 +29,8 @@
                             <option value="banio">baño</option>
                             <option value="cocina">cocina</option>
                             <option value="tanques">tanques</option>
-                                <option value="calefaccion">calefacción</option>
-                                <option value="instalaciones">instalaciones</option>  
+                            <option value="calefaccion">calefacción</option>
+                            <option value="instalaciones">instalaciones</option>  
                         </select>
                         <label for="subCategoria">SubCategoria</label>
                         <select id="subCategoria" name="subCategoria" class="formulario_relleno"></select>
@@ -41,6 +41,9 @@
                         <label for="nombre-producto">Nombres del producto</label>
                         <input class="formulario_relleno" type="text" name="nombreProducto" min="1"
                             value="<%= product.name%>">
+                        <label for="marca">Marca</label>
+                        <input class="formulario_relleno" type="text" name="marca" id="marca" min="1"
+                            value="<%= product.marca%>">
                         <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
                         <input class="formulario_relleno" type="file" name="imagenProducto" value="">
                         <label for="description">Descripcion</label>
@@ -52,14 +55,8 @@
 
                         <!-- informacion -->
                         <h2 class="titulo">Información</h2>
-                        <label for="tecnologia">Tecnologia</label>
-                        <input class="formulario_relleno" type="text" name="tecnologia" id="subCategoria" min="1"
-                            value="<%= product.information.tecnologia%>">
                         <!-- <label for="usuario">Código</label>
-                        <input class="formulario_relleno" type="text" name="Codigo" id="Codigo" min="1" value="" > -->
-                        <label for="marca">Marca</label>
-                        <input class="formulario_relleno" type="text" name="marca" id="marca" min="1"
-                            value="<%= product.marca%>">
+                            <input class="formulario_relleno" type="text" name="Codigo" id="Codigo" min="1" value="" > -->
                         <label class="infodenombres" for="Linea">Linea</label>
                         <input class="formulario_relleno" type="text" name="linea" min="1"
                             value="<%= product.information.linea%>">
@@ -72,25 +69,32 @@
                         <label class="infodenombres" for="Apto">Apto</label>
                         <input class="formulario_relleno" type="text" name="apto" min="1"
                             value="<%= product.information.apto%>">
+                        <label for="tecnologia">Tecnologia</label>
+                        <input class="formulario_relleno" type="text" name="tecnologia" id="subCategoria" min="1"
+                            value="<%= product.information.tecnologia%>">
                         <label class="infodenombres" for="Apto">Configuracion</label>
                         <input class="formulario_relleno" type="text" name="configuracion" min="1"
                             value="<%= product.information.configuracion %>">
+                        <label for="nombre-apellido" for="medidas">Medidas</label>
+                        <input class="formulario_relleno" type="text" name="medidas" min="1"
+                            value="<%= product.details.medidas %>">
+                        <label for="nombre-apellido" for="capacidad">Capacidad</label>
+                        <input class="formulario_relleno" type="text" name="capacidad" min="1"
+                            value="<%= product.information.capacidad %>">
 
                         <!-- detalles -->
-                        <h2 class="titulo">Detalles</h2><!--
+                        <!-- <h2 class="titulo">Detalles</h2> -->
+                        <!-- 
                         <label for="nombre-apellido">Documento</label>
                         <input class="formulario_relleno" type="text" name="documento" min="1"
                             value="<%= product.details.documento %>">
                         <label class="infodenombres" for="grafico">Grafico</label>
                         <input class="formulario_relleno" type="file" name="grafico" min="1" value="">
                         <label class="infodenombres" for="esquema">Esquema</label>
-                        <input class="formulario_relleno" type="file" name="esquema" value="">
-                       --> <label for="nombre-apellido">Medidas</label>
-                        <input class="formulario_relleno" type="text" name="medidas" min="1"
-                            value="<%= product.details.medidas %>">
+                        <input class="formulario_relleno" type="file" name="esquema" value="">-->
                         <div id="boton">
-                            <a href="/"> <button type="" class="Cancelar">Cancelar</button></a>
-                            <button type="submit" class="botonform">Enviar</button>
+                            <button type="" class="Cancelar"><a href="/">Cancelar</a></button>
+                            <button type="submit" class="botonform">Editar</button>
                         </div>
                     </div>
             </section>

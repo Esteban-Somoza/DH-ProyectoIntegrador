@@ -67,10 +67,13 @@ module.exports = {
             information: {
                 colores: data.colores,
                 linea: data.linea,
+                modelo: data.modelo,
                 diseño: data.design,
                 configuracion: data.configuracion,
                 apto: data.apto,
                 tecnologia: data.tecnologia,
+                medidas: data.medidas,
+                capacidad: data.capacidad,
             },
             details: {
                 description: data.descripcion,
@@ -112,8 +115,12 @@ module.exports = {
     },
 
     deleteImage: function (file) {
-        let route = resolve(__dirname, "../../public/images/productos/", file)
-        return unlinkSync(route)
+        try {
+            let route = resolve(__dirname, "../../public/images/productos/", file)
+            return unlinkSync(route)
+        } catch (error) {
+            console.log(error);
+        }
     }
     /* delate: function(delate) {
          let file = resolve(__dirname, '../data', 'products.json');
