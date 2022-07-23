@@ -254,26 +254,6 @@
     }
   },
   {
-    "id": 14,
-    "name": "Grifo de cocina monocomando Gourmet  10300",
-    "price": 25700,
-    "imagen": "imagenProducto-1658501223249-527293375.webp",
-    "categoria": "cocina",
-    "subCategoria": "griferiaCocina",
-    "marca": "Piazza",
-    "information": {
-      "colores": "Cromo, acero inoxidable y negro",
-      "linea": "Gourmet",
-      "diseño": "pico giratorio",
-      "configuracion": "monocomando",
-      "apto": ""
-    },
-    "details": {
-      "description": " Grifo de cocina monocomando Piazza Gourmet 10300 extensible cromo acabado cromado",
-      "medidas": "41 cm de altura"
-    }
-  },
-  {
     "id": 16,
     "name": "Tanque rotoplast ",
     "price": 27500,
