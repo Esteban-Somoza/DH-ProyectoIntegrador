@@ -41,6 +41,7 @@ main h2 {
     flex-grow: 1;
     margin-bottom: 0px;
     transition: all 0.3s ease;
+    height: 10em;
 }
 
 .productos a:hover img {

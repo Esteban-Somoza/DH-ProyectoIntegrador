@@ -36,7 +36,7 @@ a {
 }
 
 h2 {
-    font-size: 1em;  
+    font-size: 1.5em;  
     color: var(--color-font);
 }
 
@@ -47,12 +47,13 @@ h3 {
 }
 
 h4 {
-    font-size: 0.9em;
+    font-size: 1.5em;
     color: var(--color-font);
+    padding-bottom: 0.5em;
 }
 
 h5 {
-    font-size: 0.7em;
+    font-size: 1em;
 }
 
 h6 {
