@@ -4,7 +4,7 @@
     --color-hover: #24d6ed;
     --color-white: rgb(239, 245, 244);
     --color-grey: rgb(190, 185, 185);
-    --font-family: 'Ubuntu', sans-serif;
+    --font-family: 'Sarabun', sans-serif;
 }
 
 *{
@@ -36,18 +36,18 @@ a {
 }
 
 h2 {
-    font-size: 1.5em;  
+    font-size: 1.3em;  
     color: var(--color-font);
 }
 
 h3 {
-    font-size: 1em;
+    font-size: 1.3em;
     color: var(--color-font);  
     text-align: center;
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: var(--color-font);
     padding-bottom: 0.5em;
 }
