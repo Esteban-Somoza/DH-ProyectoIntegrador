@@ -1,5 +1,4 @@
-
-/* fondo    */        
+/*---------------FONDO -----------*/      
 #fondo{
     background-color: #EDEDED;
     border-radius: 3em;
@@ -10,12 +9,12 @@
    margin-top: 100px;
 
 }
-/*text*/
+
 #fondo h4 {
     text-align: center;
     padding: 10px;
 }
-/*botones */  
+/*---------------BOTONES -----------*/
 #boton {
     padding: 3em 0;
     display: flex;

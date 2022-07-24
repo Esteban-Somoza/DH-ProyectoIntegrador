@@ -1,8 +1,6 @@
 /*---------------LOGIN -----------*/
 
 #section {
-  /* display: flex; */
-  /* align-items: center; */
   padding: 30px;
   justify-content: center;
   margin: 1em auto 2em;
@@ -12,7 +10,6 @@
   box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
 
-/* login */
 
 #titulo {
   margin-top: 1em;
@@ -39,7 +36,7 @@
   color: white;
 }
 
-/* recordarme */
+/*---------------RECORDARME -----------*/
 
 #recordarme {
   display: flex;
@@ -55,7 +52,7 @@
   color: black;
 }
 
-/* login */
+/*---------------REGISTER -----------*/
 
 #registro {
   border-top: 1px #667 solid;

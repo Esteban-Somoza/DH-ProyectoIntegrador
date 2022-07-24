@@ -1,32 +1,43 @@
-
+/*-------------MAIN-------------*/
 main {
     padding-top: 7em
 }
 
+/*-------------DESPLEGABLE MEDIA QUERY-------------*/
 .fondo {
     background-color: #EDEDED;
     text-align: center;
     max-width: 300px;
     border-radius: 1em;
     margin: auto;
-    /* padding: 6em 1em; */
     height: 42vh;
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
-
+/*-------------DESPLEGABLE MEDIA QUERY-------------*/
 .opciones {
     width: 70%;
     box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
-
+    width: 70%;
+    background-color: white;
+    padding: .5em;
+    margin: .5em;
+    border-radius: .5em;
 }
 
+/*-------------NAMES-------------*/
+
+.nombres h2 {
+    margin-top: 1em
+}
 
 .nombres {
     width: 100%;
     margin: auto
 }
+
+/*-------------BOTONES-------------*/
 
 #boton {
     display: flex;
@@ -34,7 +45,6 @@ main {
     flex-wrap: nowrap;
     margin-top: 15px;
     justify-content: space-evenly;
-    /* border-radius: 5px; */
     width: 50%;
 }
 
@@ -46,17 +56,6 @@ main {
     transition: all 0.3s ease;
     font-weight: 700;
 }
-
-.cancelar {
-    background-color: #A5A1A7;
-    margin: 8px;
-    padding: 5px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    font-weight: 700;
-    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
-}
-
 .botonform {
     background-color: var(--color-footerNav);
     color: white;
@@ -69,14 +68,14 @@ main {
 
 }
 
-.opciones {
-    width: 70%;
-    background-color: white;
-    padding: .5em;
-    margin: .5em;
-    border-radius: .5em;
+/*-------------CANCEL-------------*/
+.cancelar {
+    background-color: #A5A1A7;
+    margin: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
 
-.nombres h2 {
-    margin-top: 1em
-}

@@ -1,13 +1,6 @@
-:root {
-    --primary-color: slategrey;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  
-  .carousel-container {
+
+  /*---------------CONTENEDOR PRINCIPAL -----------*/
+  #carousel-container {
     overflow: hidden;
     max-width: 100%;
     position: relative;
@@ -15,8 +8,8 @@
     margin: auto;
     z-index: 0;
   }
-  
-  /* Hide the images by default */
+  /*---------------IMAGEN HIDE DEFAULT -----------*/
+
   .mySlides {
     display: none;
   }
@@ -24,16 +17,8 @@
     display: block;
     width: 100%;
   }
-  
-  /* image gradient overlay [optional] */
-  /*  .mySlides::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-      background-image: linear-gradient(-45deg, rgba(110, 0, 255, .1), rgba(70, 0, 255, .2));
-  } */
-  
-  /* Next & previous buttons */
+
+  /*---------------FLECHAS LATERALES -----------*/
   .prev,
   .next {
     cursor: pointer;
@@ -58,33 +43,8 @@
     background-color: rgba(173, 216, 230, 0.3);
   }
   
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    background-color: rgba(10, 10, 20, 0.1);
-    backdrop-filter: blur(6px);
-    border-radius: 10px;
-    font-size: 20px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .number {
-    color: #f2f2f2;
-    font-size: 16px;
-    background-color: rgba(173, 216, 230, 0.15);
-    backdrop-filter: blur(6px);
-    border-radius: 10px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
+ /*---------------PUNTOS BOTTOM-----------*/
+
   .dots-container {
     position: absolute;
     bottom: 10px;
@@ -92,7 +52,7 @@
     transform: translate(-50%);
   }
   
-  /* The dots/bullets/indicators */
+
   .dots {
     cursor: pointer;
     height: 14px;
@@ -109,7 +69,8 @@
     background-color: rgba(173, 216, 230, 0.8);
   }
   
-  /* transition animation */
+  /*---------------DURACION ANIMACION-----------*/
+  
   .animate {
     -webkit-animation-name: animate;
     -webkit-animation-duration: 1s;

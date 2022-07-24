@@ -1,4 +1,5 @@
-/* fonts  */
+/*---------------MAIN-----------*/
+
 main h2 {
     font-size: 1.5em;
 
@@ -23,7 +24,7 @@ main h6 {
     display: flex;
     height: auto;
     background: white;
-    /* background: linear-gradient(225deg, rgb(124, 124, 125) 10%, rgb(210, 209, 209) 54%, rgba(85,85,85,1) 100%);  */
+   
 }
 
 li {
@@ -56,7 +57,7 @@ li {
 }
 
 .buscador__categoriaRadio:checked+ul {
-    /* background-color: yellow; */
+    
     display: block
 }
 
@@ -89,13 +90,11 @@ li {
     background-color: none;
     margin-top: 5px;
     display: none;
-    /* display: block; */
+   
 }
 
 
 .buscador__list a {
-    /* background-color: yellow; */
-    /* width: 100%; */
     display: block;
     margin: 5px 0;
     padding: 0 5px;
@@ -104,7 +103,6 @@ li {
 }
 
 .buscador__list a {
-    /* background-color: blue; */
     color: black;
     width: 100%;
     display: block;
@@ -142,7 +140,7 @@ li {
 }
 
 
-/* content */
+/*---------------CONTENT-----------*/
 
 .ruta__texto--resaltado {
     font-weight: bold;
@@ -161,7 +159,6 @@ li {
     display: block;
     margin-top: 1em;
     color: white;
-    /* margin-left: 1em; */
     width: 100%;
     height: 100%;
 }
@@ -186,8 +183,6 @@ li {
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     justify-items: center;
 
-    /* padding: 1em */
-    /* margin: 0 1em; */
 }
 
 
@@ -207,8 +202,7 @@ li {
     padding: 1em;
     border-radius: 1em;
     transition: all 200ms ease-in;
-    /* display: flex; */
-    /* margin: 1em 0; */
+
 }
 
 .productos__elemento:hover {
@@ -225,11 +219,6 @@ li {
     justify-content: space-between;
 }
 
-.imagen img {
-    /* border-radius: 1.5em; */
-    /* background-color: var(--color-grey); */
-    /* padding: 0.1em; */
-}
 
 .imagen {
     border: var(--color-grey) solid .1em;
@@ -251,9 +240,6 @@ img {
 }
 
 .productos__texto {
-    /* /* display: flex; */
-
-    /* /* flex-wrap: wrap; */
     justify-self: flex-end;
     align-items: space-between;
     position: relative
@@ -279,18 +265,17 @@ img {
 }
 
 .productos__elemento .descripcion {
-    /* visibility: hidden; */
+
     opacity: 0;
     transition: all 200ms ease-in;
 }
 
 .productos__elemento:hover .descripcion {
-    /* visibility: visible; */
+   
     opacity: 1;
 }
 
 .marca {
-    /* border-top: 1px solid var(--color-grey); */
     font-weight: 600;
 }
 

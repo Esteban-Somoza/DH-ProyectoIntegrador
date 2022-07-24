@@ -1,7 +1,6 @@
 @media (max-width: 480px) {
     #desplegable {
         display: none;
-        /* position: absolute; */
     }
 
     #buscador {
@@ -48,9 +47,7 @@
 }
 
 @media (min-width: 481px) {
-    /* .buscador {
-        display: none;
-    } */
+ 
 
     #buscador__navbarDesplegable {
         display: none;
@@ -62,7 +59,7 @@
     }
 
     .productos__elemento {
-        /* max-width: 45%; */
+       
         min-width: 280px;
         min-height: 40%;
         width: clamp(280px, 400px, 500px);
@@ -82,13 +79,8 @@
 @media (max-width: 390px) {
   
     .productos img {
-        /* background-color: var(--color-grey);
-        padding: .5em;
-        border-radius: 20%; */
         display: flex;
         margin-top: 4px;
-        /* width: 130px; */
-        *flex-grow: 1;
         margin-bottom: 0px;
         transition: all 0.3s ease;
     }
