@@ -16,9 +16,11 @@
         <main>
             <section id="fondo">
                 <h4> ¿ Seguro que quieres eliminar la publicación ? </h4>
-//// product image///
-
-        <form action="/delete/<%=product.id%>?m=delete" method="post" id="boton">
+                <picture id="foto">
+                   <img id:foto src="/images/productos/<%= product.imagen%> " ></picture>"
+                       <h2> <%= product.name %>
+                    </h2> 
+                <form action="/delete/<%=product.id%>?m=delete" method="post" id="boton">
 
                     <a href="/finder"><button type="" class="cancelar">No</button></a>
 
@@ -27,7 +29,6 @@
 
                 </form>
             </section>
-
         </main>
         <%- include ('../includes/footer.ejs') %>
 
