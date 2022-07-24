@@ -7,7 +7,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: .5em 2em;
-    /* background-color: var(--color-footerNav); */
     background: rgb(38, 68, 83);
     background: linear-gradient(145deg, rgba(38, 68, 83, 1) 0%, rgba(78, 138, 167, 1) 100%);
     gap: 1em;
@@ -30,7 +29,6 @@ header {
     display: flex;
     align-items: center;
 }
-
 
 
 /*-------------NAV CONTAINER-------------*/
@@ -80,17 +78,13 @@ header {
     aspect-ratio: 1/1;
     margin-right: -22px;
 }
-.create {
-    color : var(--color-white);
-}
+
 @media (max-width: 508px){
     .search-bar {
         display: none;
     }
     
 }
-
-
 
 #busqueda {
     display: flex;
@@ -106,7 +100,7 @@ header {
     flex-grow: 1.1;
     min-width: 100px;
     max-width: 320px;
-    /* max-width: max-content; */
+    
 }
 
 #busqueda form {
@@ -119,6 +113,17 @@ header {
 
 .search-bar i {
     color: var(--color-white);
+}
+.search-bar i:hover {
+    color: var(--color-hover);
+}
+
+/*-------------BOTON CREAR-------------*/
+.create {
+    color : var(--color-white);
+}
+.create:hover {
+    color: var(--color-hover);
 }
 
 /*-------------CARRO-------------*/
@@ -213,6 +218,8 @@ header a h2 {
     transition: all 0.3s ease;
 }
 
+/*-------------DESPLEGABLE MEDIA QUERY-------------*/
+
 
 @media (max-width: 580px) {
     .navbar__menu {
@@ -288,6 +295,7 @@ header a h2 {
     }
 }
 
+/*-------------CREAR HOVER-------------*/
 
 .carga i:hover {
     color: var(--color-hover);

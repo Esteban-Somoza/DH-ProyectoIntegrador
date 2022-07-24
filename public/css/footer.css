@@ -11,8 +11,6 @@ footer {
     justify-content: flex-start;
     background-color: var(--color-footerNav);
     padding: .5em;
-    *gap: 4em;
-    *position: relative;
     padding-left: 1em;
 }
 

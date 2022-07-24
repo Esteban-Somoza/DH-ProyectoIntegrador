@@ -15,6 +15,7 @@ main h2 {
     width: 100%;
     flex-grow: 1;
     margin-bottom: 0px;
+    max-height: 23em;
 }
 
 /*-------------PRODUCTOS-------------*/
@@ -41,6 +42,8 @@ main h2 {
     flex-grow: 1;
     margin-bottom: 0px;
     transition: all 0.3s ease;
+    height: 10em;
+    box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.47);
 }
 
 .productos a:hover img {
@@ -117,6 +120,7 @@ main h2 {
 .isla h2 {
     text-decoration: underline;
     padding: 0.5em;
+    padding-bottom: 1em;
 
 }
 
@@ -131,7 +135,7 @@ main h2 {
     gap: 2em;
     margin: 1em 0;
     padding: 1em;
-    align-items: center;
+    
 }
 
 .img__map {
@@ -142,9 +146,11 @@ main h2 {
 
 }
 
+
+
 #contacto {
     margin-right: 0.5em;
-    padding-top: 2em;
+    padding-top: 1em;
     max-width: 150px;
 }
 
@@ -153,7 +159,7 @@ main h2 {
 }
 
 #experiencia {
-    padding-top: 2em;
+    padding-top: 1em;
     margin-right: 0.5em;
     max-width: 150px;
 }

@@ -31,7 +31,9 @@
       "linea": "49 Alesia",
       "configuracion": "Bicomando",
       "apto": "Apto termotanque y calefón",
-      "tecnologia": "Cierre cerámico"
+      "tecnologia": "Cierre cerámico",
+      "medidas": "",
+      "capacidad": ""
     },
     "details": {
       "description": "Griferia de baño moderna de linea H3"
@@ -249,46 +251,6 @@
     "details": {
       "description": "Grifo de cocina monocomando Piazza Emblem 10016 negro acabado cromado",
       "medidas": ""
-    }
-  },
-  {
-    "id": 14,
-    "name": "Grifo de cocina monocomando Gourmet  10300",
-    "price": 25700,
-    "imagen": "imagenProducto-1658501223249-527293375.webp",
-    "categoria": "cocina",
-    "subCategoria": "griferiaCocina",
-    "marca": "Piazza",
-    "information": {
-      "colores": "Cromo, acero inoxidable y negro",
-      "linea": "Gourmet",
-      "diseño": "pico giratorio",
-      "configuracion": "monocomando",
-      "apto": ""
-    },
-    "details": {
-      "description": " Grifo de cocina monocomando Piazza Gourmet 10300 extensible cromo acabado cromado",
-      "medidas": "41 cm de altura"
-    }
-  },
-  {
-    "id": 15,
-    "name": "Tanque clasico tricapa 1000L",
-    "price": 26400,
-    "imagen": "imagenProducto-1658501435347-234126518.webp",
-    "categoria": "tanques",
-    "subCategoria": "tanquesDeAgua",
-    "marca": "Waterplast",
-    "information": {
-      "colores": "Veige",
-      "linea": "Clasico tricapa",
-      "configuracion": "vertical",
-      "apto": "exteriores",
-      "tecnologia": "",
-      "capacidad": "1000L"
-    },
-    "details": {
-      "description": " Tanque de agua Waterplast Clásico Tricapa vertical 1000L"
     }
   },
   {
