@@ -16,10 +16,12 @@
         <main>
             <section id="fondo">
                 <h4> ¿ Seguro que quieres eliminar la publicación ? </h4>
-                <picture id="foto">
-                   <img id:foto src="/images/productos/<%= product.imagen%> " ></picture>"
-                       <h2> <%= product.name %>
-                    </h2> 
+                <picture >
+                    <img src="/images/productos/<%= product.imagen%>" alt="">
+                </picture>"
+                <h4>
+                    <%= product.name %>
+                </h4>
                 <form action="/delete/<%=product.id%>?m=delete" method="post" id="boton">
 
                     <a href="/finder"><button type="" class="cancelar">No</button></a>
