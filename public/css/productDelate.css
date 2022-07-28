@@ -12,12 +12,16 @@
 
 #fondo h4 {
     text-align: center;
-    padding: 10px;
+    padding: 14px;
 }
 #fondo img {
-width: 50%;
-position: relative;
-left: 25%;
+    border: var(--color-grey) solid 0.1em;
+    border-radius: 1.5em;
+    height: 150px;
+    display: flex;
+    min-width: 150px;
+    background-color: white;
+    margin: 1em auto;
 }
 
 /*---------------BOTONES -----------*/
