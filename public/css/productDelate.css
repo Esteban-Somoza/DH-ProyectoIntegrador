@@ -12,12 +12,13 @@
 
 #fondo h4 {
     text-align: center;
-    padding: 14px;
+    padding: 25px;
+    font-size: 30px;
 }
 #fondo img {
     border: var(--color-grey) solid 0.1em;
     border-radius: 1.5em;
-    height: 150px;
+    height: 450px;
     display: flex;
     min-width: 150px;
     background-color: white;
@@ -32,21 +33,26 @@
 }
 .cancelar {
     background-color: #A5A1A7;
-    margin: 8px;
-    padding: 5px;
+    margin: 13px;
+    padding: 13px;
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: 700;
     box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
+    font-size: 20px;
+    width: 60px;
 }
 
 .borrar {
     background-color: var(--color-footerNav);
     color: white;
-    margin: 8px;
-    padding: 5px;
+    margin: 13px;
+    padding: 13px;
     border-radius: 5px;
     transition: all 0.3s ease;
     font-weight: 700;
     box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
+    font-size: 20px;
+    width: 60px;
+
 }
