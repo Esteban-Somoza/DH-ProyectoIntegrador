@@ -24,6 +24,7 @@ body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.'
   // if(!compareSync(value,user.password)){
   //   throw new Error("La contraseña es incorrecta")
   // }
+  
   if(user.password != password){
     throw new Error("La contraseña es incorrecta")
   }
