@@ -51,7 +51,6 @@ const productCreate = [
   })
   .bail(),
    body('categoria').custom(( value,{req})=>{
-    console.log(req.body.categoria);
     if (!req.body.categoria){
       throw new Error('Seleccionar Categoria')
 
@@ -61,7 +60,6 @@ const productCreate = [
   .bail(),
 
   body('subCategoria').custom(( value,{req})=>{
-    console.log(req.body.subCategoria);
     if (!req.body.subCategoria){
       throw new Error('Seleccionar subCategoria')
 
