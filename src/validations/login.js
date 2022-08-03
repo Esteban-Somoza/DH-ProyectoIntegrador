@@ -1,5 +1,5 @@
 const { body } = require('express-validator');
-const {index} = require('../model/users.model')
+const {index, find} = require('../models/users.model')
 const {compareSync} = require('bcryptjs')
 
 const login = [
@@ -14,15 +14,17 @@ body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().
 }),
 // Password
 body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.').bail().isLength({min : 4}).bail().custom((value,{req})=>{
-  let {email} = req.body
-  let users = index()
-  let user = users.find(u => u.email === email)
+  let {email, password} = req.body
+  let user = find(email)
 
   if(!user){
     throw new Error("Usuario no encontrado")
   }
 
-  if(!compareSync(value,user.password)){
+  // if(!compareSync(value,user.password)){
+  //   throw new Error("La contraseña es incorrecta")
+  // }
+  if(user.password != password){
     throw new Error("La contraseña es incorrecta")
   }
 

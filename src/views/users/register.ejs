@@ -17,7 +17,7 @@
         <!-- break  -->
         <main>
             <h2 id="title">Registro</h2>
-            <form action="/register" id="form" method="post">
+            <form action="/users/register" id="form" method="post">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" 
                     value="<%= locals.oldData ? oldData.nombre: null %>">

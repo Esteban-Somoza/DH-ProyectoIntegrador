@@ -5,7 +5,7 @@ const multer = require('multer');
 const storage = require('../modules/storage')
 const upload = multer({ storage: storage('productos') });
 const middlewareEdicion = require('../middlewares/edicion')
-const middlewares = require('../validation/productCreate')
+const middlewares = require('../middlewares/productCreate')
 
 router.get("/finder", finder)
 router.get("/products/create/details", productCreateDetail)

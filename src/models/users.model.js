@@ -1,16 +1,17 @@
 const {readFileSync, writeFileSync}= require('fs');
 const {resolve}= require('path');
+
 const model = {
   index:function(){
     let file = resolve(__dirname,'../data','users.json');
     let data = readFileSync(file);
     return JSON.parse(data);
   },
-  one:function(id){
+  find:function(email){
     let file = resolve(__dirname,'../data','users.json');
     let data = readFileSync(file);
     let users = JSON.parse(data);
-    return users.find(user => user.id === id)
+    return users.find(user => user.email === email)
   },
   create: function(data){
     let file = resolve(__dirname,'../data','users.json');

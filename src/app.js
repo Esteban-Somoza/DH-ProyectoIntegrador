@@ -1,9 +1,11 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const {resolve} = require('path');
-const {port, callback} = require("./modules/listen.js");
+const { resolve } = require('path');
+const { port, callback } = require("./modules/listen.js");
 const public = require('./modules/public.js');
+const session = require('express-session')
+const method = require('method-override');
 
 app.listen(port, callback(`Abriendo servidor en http://localhost:` + port))
 
@@ -15,11 +17,18 @@ app.use(public)
 
 // Req.query Req.body //
 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(require('method-override')('m'));
+app.use(method('m'));
+// app.use(require('method-override')('m'));
 
+app.use(session({
+    secret: 'nodejs',
+    saveUninitialized: true,
+    resave: true
+})) // req.session
 
+app.use(require('./middlewares/user'))
 app.use(require('./routes/main.routes'))
 app.use(require('./routes/product.routes'))
 app.use(require('./routes/users.routes'))

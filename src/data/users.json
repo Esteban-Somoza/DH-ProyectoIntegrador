@@ -1,11 +1,29 @@
 [
     {
-        "id": "",
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "password": "",
-        "domicilio": "",
-        "type" : " " 
-    }
+        "id": 1,
+        "nombre": "Esteban",
+        "apellido": "S",
+        "email": "estebans@nicuesa.com",
+        "password": "1234",
+        "image": "esteban.png",
+        "isAdmin": true
+      },
+    {
+        "id": 2,
+        "nombre": "Luciano",
+        "apellido": "G",
+        "email": "lucianog@nicuesa.com",
+        "password": "1234",
+        "image": "lucho.png",
+        "isAdmin": true
+      },
+    {
+        "id": 3,
+        "nombre": "Carlos",
+        "apellido": "P",
+        "email": "carlosp@nicuesa.com",
+        "password": "1234",
+        "image": "carlos.png",
+        "isAdmin": true
+      }
 ]
