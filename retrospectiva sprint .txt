@@ -31,6 +31,8 @@ Hacer menos: Hacer tareas que esten por fuera de los objetivos del sprint antes 
 
 Dejar de hacer: Dejar para ultimo momento
 
+
+
 Sprint 3
 ------------
 Comenzar a hacer: Laburar con mas tiempo,
@@ -46,3 +48,20 @@ Hacer menos: No chequear las fechas de entrega del sprint,
 
 
 Dejar de hacer: Dejar de agregar cosas externas
+
+
+Sprint 4
+------------
+Comenzar a hacer: Programar alguna tarea todos juntos.
+
+
+Hacer mas: Comunicarnos.
+
+
+Continuar haciendo: Ayudarnos mutuamente.
+
+
+Hacer menos: Trabajar solos.
+
+
+Dejar de hacer: Hacer push y pull mas seguido.
