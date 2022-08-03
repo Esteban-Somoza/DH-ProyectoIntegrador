@@ -16,6 +16,7 @@ main h2 {
     flex-grow: 1;
     margin-bottom: 0px;
     max-height: 23em;
+    object-fit: cover;
 }
 
 /*-------------PRODUCTOS-------------*/
@@ -34,8 +35,8 @@ main h2 {
 
 .productos img {
     background-color: var(--color-grey);
-    padding: .5em;
-    border-radius: 20%;
+    padding: .25em;
+    border-radius: 2em;
     display: flex;
     margin-top: 4px;
     width: 175px;

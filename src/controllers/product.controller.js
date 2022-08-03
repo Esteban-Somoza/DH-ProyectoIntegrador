@@ -40,13 +40,13 @@ module.exports = {
         productList = index()
       }
 
-      return res.render("./products/finder", {
+      return res.render("./products/productFinder", {
         title: "Detalle de producto",
         products: productList,
       });
     } catch (error) {
       console.log(error)
-      res.redirect("./products/finder")
+      res.redirect("./products/productFinder")
     }
   },
 
@@ -134,7 +134,7 @@ module.exports = {
   })
 },
  
-  destroid :(req,res) => {
+  destroy :(req,res) => {
     let product = find(parseInt(req.params.id))
     if (!product) {
       return res.redirect('/finder')
@@ -142,15 +142,8 @@ module.exports = {
     let products= index ()
     let productDelete = products.filter(p=> p.id !==product.id)
     write(productDelete)
-    return res.redirect("/finder");
-  
-
+    return res.redirect("/products/finder");
  },
-
-
-
- 
-  
 
   process: function (req, res) {
     let validaciones = validationResult(req)
@@ -168,7 +161,7 @@ module.exports = {
     let products = index();
     products.push(newProduct)
     write(products)
-    return res.redirect("/finder")}
+    return res.redirect("/products/finder")}
 
     }
 }
