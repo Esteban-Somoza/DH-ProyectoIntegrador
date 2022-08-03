@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <title><%= title %></title>
-    
+    <% if (styles && styles.length > 0) { %>
+        <% styles.forEach(css => { %>
+            <link rel="stylesheet" href="/css/<%= css %>.css">
+        <% }) %>
+    <% } %>    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link

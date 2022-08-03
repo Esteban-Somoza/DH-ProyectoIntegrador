@@ -6,12 +6,14 @@ const usersController = {
   login: (req, res) => {
     return res.render("./users/login", {
       title: "Login",
+      styles: ["style", "header", "footer", "login"],
     });
   },
 
   register: (req, res) => {
     return res.render("./users/register", {
       title: "Registro",
+      styles: ["style", "header", "footer", "register"],
 
     })
   },
@@ -21,7 +23,7 @@ const usersController = {
     if (errors && errors.length > 0) {
       return res.render('users/register', {
         title: "Registro",
-
+        styles: ["style", "header", "footer", "register"],
         oldData: req.body,
         errors: validaciones.mapped()
       });
@@ -34,7 +36,7 @@ const usersController = {
     if (errors && errors.length > 0) {
       return res.render('users/login', {
         title: "Login",
-        styles: ['forms'],
+        styles: ["style", "header", "footer", "login"],
         oldData: req.body,
         errors: validaciones.mapped()
       });
@@ -45,7 +47,6 @@ const usersController = {
     req.session.user = user
     return res.redirect('/')
   },
-
 
   logout: function (req, res) {
     delete req.session.user

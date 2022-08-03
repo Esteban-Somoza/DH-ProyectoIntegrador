@@ -3,6 +3,7 @@ module.exports = {
   home: (req, res) => {
     return res.render("index", {
       title: "Sanitarios Nicuesa",
+      styles: ["style", "header", "footer", "index", "carousel"]
     });
   }
  

@@ -6,11 +6,12 @@ module.exports = {
     let product = find(parseInt(req.params.id))
 
     if (!product) {
-      return res.redirect('/finder')
+      return res.redirect('/product/finder')
     }
 
     return res.render("./products/productDetail", {
       title: product.name,
+      styles: ["style", "header", "footer", "productDetail", "mediaQ-productDetail"],
       product: product,
       esquema: product.esquema,
       informacion: Object.getOwnPropertyNames(product.information),
@@ -42,6 +43,7 @@ module.exports = {
 
       return res.render("./products/productFinder", {
         title: "Detalle de producto",
+        styles: [],
         products: productList,
       });
     } catch (error) {
@@ -54,6 +56,7 @@ module.exports = {
   productCart: (req, res) => {
     return res.render("./products/productCart", {
       title: "Carrito de compras",
+      styles: ["style", "header", "footer", "productCart", "mediaQ-productCart"]
     })
   },
 
@@ -61,35 +64,38 @@ module.exports = {
   productCreateDetail: (req, res) => {
     return res.render("./products/productCreateDetail", {
       title: "Product Create Details",
+      styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"]
     })
   },
 
 
-  productSave: (req, res) => {
-    let id = req.params.id;
-    return res.render(`./products/${id}`, {
-      title: "Product Save",
-    })
-  },
+  // productSave: (req, res) => {
+  //   let id = req.params.id;
+  //   return res.render(`./products/${id}`, {
+  //     title: "Product Save",
+  //     styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"]
+  //   })
+  // },
 
 
-  save: (req, res) => {
-    req.body.imagenProducto = req.files[0]?.filename
-    let newProduct = create(req.body)
-    let products = index();
-    products.push(newProduct)
-    write(products)
-    return res.redirect('/finder')
-  },
+  // save: (req, res) => {
+  //   req.body.imagenProducto = req.files[0]?.filename
+  //   let newProduct = create(req.body)
+  //   let products = index();
+  //   products.push(newProduct)
+  //   write(products)
+  //   return res.redirect("/product/finder")
+  // },
 
 
   productEdit: (req, res) => {
     let product = find(parseInt(req.params.id))
     if (!product) {
-      return res.redirect('/finder')
+      return res.redirect("/product/finder")
     }
     return res.render('./products/productEdit', {
       title: `Edit ${product.name}`,
+      styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],
       product: product
     })
   },
@@ -113,11 +119,7 @@ module.exports = {
       }
       return p
     });
-
-   
-
     write(productModified)
-
     return res.redirect(`/products/${req.params.id}`)
   },
 
@@ -125,10 +127,11 @@ module.exports = {
   productDelete: (req, res) => {
   let product = find(parseInt(req.params.id))
   if (!product) {
-    return res.redirect('/finder')
+    return res.redirect("/product/finder")
   }
   return res.render('./products/productDelete', {
     title: `delete ${product.name}`,
+    styles: ["style", "header", "footer", "productDelete"],
     product: product
 
   })
@@ -137,7 +140,7 @@ module.exports = {
   destroy :(req,res) => {
     let product = find(parseInt(req.params.id))
     if (!product) {
-      return res.redirect('/finder')
+      return res.redirect("/product/finder")
     }
     let products= index ()
     let productDelete = products.filter(p=> p.id !==product.id)
@@ -152,7 +155,7 @@ module.exports = {
     if (errors && errors.length > 0) {
       return res.render('products/productCreateDetail', {
         title: "Publicar un nuevo producto",
-       
+        styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],
         oldData: req.body,
         errors: validaciones.mapped()
       });
