@@ -182,7 +182,7 @@ li.elegido {
 
 /*---------------ITEMS-----------*/
 
-.basura {
+#basura {
     display: flex;
     position: absolute;
     right: 28px;
@@ -198,7 +198,7 @@ li.elegido {
 
 }
 
-.edit {
+#edit {
 
     display: flex;
     position: absolute;

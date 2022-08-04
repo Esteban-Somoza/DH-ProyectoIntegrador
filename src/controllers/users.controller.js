@@ -1,5 +1,6 @@
 const { validationResult } = require('express-validator');
-const { index, create, write, find } = require("../models/users.model");
+const { index, create, write, find,  deleteImage } = require("../models/users.model");
+
 
 
 const usersController = {
@@ -21,6 +22,7 @@ const usersController = {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
     if (errors && errors.length > 0) {
+      deleteImage(req.files[0].filename)
       return res.render('users/register', {
         title: "Registro",
         styles: ["style", "header", "footer", "register"],
@@ -28,7 +30,7 @@ const usersController = {
         errors: validaciones.mapped()
       });
     } 
-    req.body.image = req.files[0].filename;
+    req.body.image =  req.files[0].filename;
     let newUser = create(req.body)
     let users = index();
     users.push(newUser)
@@ -48,6 +50,8 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
+
+    
 
     let user = find(req.body.email)
 
