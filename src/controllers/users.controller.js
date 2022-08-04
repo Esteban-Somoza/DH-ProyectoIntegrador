@@ -52,12 +52,14 @@ const usersController = {
     let user = find(req.body.email)
 
     req.session.user = user
+    
     return res.redirect('/')
   },
   
   login: function(req,res){
     return res.render('users/login',{
-      styles:['forms']
+      title: "Login",
+      styles:["style", "header", "footer", "login"]
     });
   },
 

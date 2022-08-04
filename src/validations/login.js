@@ -14,21 +14,17 @@ body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().
 }),
 // Password
 body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.').bail().isLength({min : 4}).bail().custom((value,{req})=>{
-  let {email, password} = req.body
+  let {email} = req.body
   let user = find(email)
 
   if(!user){
     throw new Error("Usuario no encontrado")
   }
 
-  // if(!compareSync(value,user.password)){
-  //   throw new Error("La contraseña es incorrecta")
-  // }
-  
-  if(user.password != password){
+  if(!compareSync(value,user.password)){
     throw new Error("La contraseña es incorrecta")
   }
-
+  
   return true
 
 })
