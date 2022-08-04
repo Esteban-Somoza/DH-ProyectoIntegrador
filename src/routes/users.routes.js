@@ -1,6 +1,6 @@
 const { Router } = require("express")
 const router = Router()
-const middlewareRegister = require("../middlewares/register.js");
+const middlewareRegister = require("../middlewares/register");
 const middlewareLogin = require("../middlewares/login.js");
 const isLogged = require('../middlewares/isLogged')
 

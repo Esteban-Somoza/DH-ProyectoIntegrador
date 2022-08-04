@@ -1,5 +1,6 @@
 const {readFileSync, writeFileSync}= require('fs');
 const {resolve}= require('path');
+const bcrypt = require('bcryptjs');
 
 const model = {
   index:function(){
@@ -23,7 +24,7 @@ const model = {
         nombre: data.nombre,
         apellido: data.apellido,
         email: data.email,
-        password: data.password,
+        password: bcrypt.hashSync(data.password,10),
         image: data.image
     })
   },
