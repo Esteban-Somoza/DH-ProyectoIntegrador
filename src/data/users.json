@@ -1,32 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Esteban",
-    "apellido": "S",
-    "email": "estebans@nicuesa.com",
-    "password": "1234",
-    "image": "esteban.png",
-    "isAdmin": true
-  },
-  {
-    "id": 2,
-    "nombre": "Luciano",
-    "apellido": "G",
-    "email": "lucianog@nicuesa.com",
-    "password": "1234",
-    "image": "lucho.png",
-    "isAdmin": true
-  },
-  {
-    "id": 3,
-    "nombre": "Carlos",
-    "apellido": "P",
-    "email": "carlosp@nicuesa.com",
-    "password": "1234",
-    "image": "carlos.png",
-    "isAdmin": true
-  },
-  {
     "id": 4,
     "nombre": "luciano",
     "apellido": "giuliani",
@@ -49,5 +22,29 @@
     "email": "ricar92@gmail.com",
     "password": "$2a$10$Wv2kVYFdvyoVPG154cvuZOd.Kog6aGFfseHg.cNcG8xRJTtg452C6",
     "image": "avatar-1659576222284-830909145.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Esteban",
+    "apellido": "s1",
+    "email": "estebans@nicuesa.com",
+    "password": "$2a$10$miq/ACYrfUFNMdV.pDxcMeZRvo1Vy7X9XwugcVhET2gLP9CVxmyby",
+    "image": "avatar-1659577034595-373868492.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Carlo",
+    "apellido": "pa",
+    "email": "carlosp@nicuesa.com",
+    "password": "$2a$10$sPY8aJv25QC.B1xXatEDn.zxl5v1s61CpgP9KGxIwpYoKj.oD7ymW",
+    "image": "avatar-1659577307192-672982377.png"
+  },
+  {
+    "id": 9,
+    "nombre": "luciano",
+    "apellido": "gi",
+    "email": "lucianog@nicuesa.com",
+    "password": "$2a$10$rw8dLWuKTXvBk5LounHEeuIR2yavC6nqgDWI2JXWFqVWraHUdT1fe",
+    "image": "avatar-1659577325458-110127457.png"
   }
 ]

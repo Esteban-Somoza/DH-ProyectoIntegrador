@@ -58,7 +58,8 @@ const usersController = {
   
   login: function(req,res){
     return res.render('users/login',{
-      styles:['forms']
+      title: "Login",
+      styles:["style", "header", "footer", "login"]
     });
   },
 
