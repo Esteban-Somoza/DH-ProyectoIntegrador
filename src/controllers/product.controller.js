@@ -43,7 +43,7 @@ module.exports = {
 
       return res.render("./products/productFinder", {
         title: "Detalle de producto",
-        styles: [],
+        styles: ["style", "header", "footer", "productSearch", "mediaQ-productSearch"],
         products: productList,
       });
     } catch (error) {
@@ -133,7 +133,6 @@ module.exports = {
     title: `delete ${product.name}`,
     styles: ["style", "header", "footer", "productDelete"],
     product: product
-
   })
 },
  
@@ -143,8 +142,9 @@ module.exports = {
       return res.redirect("/product/finder")
     }
     let products= index ()
-    let productDelete = products.filter(p=> p.id !==product.id)
-    write(productDelete)
+    let listWithoutDeletedProduct = products.filter(p=> p.id !==product.id)
+    deleteImage(product.imagen)
+    write(listWithoutDeletedProduct)
     return res.redirect("/products/finder");
  },
 
@@ -168,3 +168,4 @@ module.exports = {
 
     }
 }
+  
