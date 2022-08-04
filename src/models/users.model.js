@@ -1,4 +1,4 @@
-const {readFileSync, writeFileSync}= require('fs');
+const { readFileSync, writeFileSync, unlinkSync } = require('fs')
 const {resolve}= require('path');
 const bcrypt = require('bcryptjs');
 
@@ -33,6 +33,15 @@ const model = {
     let info = JSON.stringify(data,null,2);
     return writeFileSync(file, info);
   },
+  
+  deleteImage: function (file) {
+    try {
+        let route = resolve(__dirname, "../../public/images/avatars/", file)
+        return unlinkSync(route)
+    } catch (error) {
+        console.log(error);
+    }
+}
 }
 
 module.exports = model;

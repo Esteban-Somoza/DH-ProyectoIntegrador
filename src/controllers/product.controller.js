@@ -153,6 +153,7 @@ module.exports = {
     let { errors } = validaciones;
     console.log(validaciones);
     if (errors && errors.length > 0) {
+   //  deleteImage(req.files[0].filename)
       return res.render('products/productCreateDetail', {
         title: "Publicar un nuevo producto",
         styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],

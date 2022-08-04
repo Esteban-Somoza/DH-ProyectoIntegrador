@@ -118,9 +118,11 @@ module.exports = {
     },
 
     deleteImage: function (file) {
+       
         try {
             let route = resolve(__dirname, "../../public/images/productos/", file)
             return unlinkSync(route)
+           
         } catch (error) {
             console.log(error);
         }
