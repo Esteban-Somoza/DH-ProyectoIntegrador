@@ -27,9 +27,16 @@ const usersController = {
         oldData: req.body,
         errors: validaciones.mapped()
       });
-    } else { res.redirect("../") }
-
+    } 
+    req.body.image = req.files[0].filename;
+    let newUser = create(req.body)
+    let users = index();
+    users.push(newUser)
+    write(users)
+    return res.redirect('/')
   },
+    
+    
   access: function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones
@@ -47,6 +54,12 @@ const usersController = {
     req.session.user = user
     
     return res.redirect('/')
+  },
+  
+  login: function(req,res){
+    return res.render('users/login',{
+      styles:['forms']
+    });
   },
 
   logout: function (req, res) {

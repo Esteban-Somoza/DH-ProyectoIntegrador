@@ -12,9 +12,9 @@
         <!-- break  -->
         <main>
             <h2 id="title">Registro</h2>
-            <form action="/users/register" id="form" method="post">
+            <form action="/users/register" id="form" method="post" enctype="multipart/form-data">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" 
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre"
                     value="<%= locals.oldData ? oldData.nombre: null %>">
                 <% if ( locals.errors && errors.nombre ) { %>
                     <p class="msg-error">
@@ -48,14 +48,12 @@
                                             </p>
                                             <% } %>
 
-                                                <label for="contraseña-val">Confirmar contraseña</label>
-                                                <input type="password" name="password" id="contraseña-val" 
-                                                    value="<%= locals.oldData ? oldData.password: null %>">
-                                                <% if ( locals.errors && errors.password ) { %>
-                                                    <p class="msg-error">
-                                                        <%= errors.password.msg %>
-                                                    </p>
-                                                    <% } %>
+                                            <label for="avatar">Foto de perfil</label>              
+                                            <input type="file" 
+                                                name="avatar" id="avatar">
+                                                <% if (locals.errors && errors.avatar) { %>
+                                                    <p class="msg-error"> <%= errors.avatar.msg %> </p>
+                                                <% } %>
 
                                                         <div id="form__botonContainer">
                                                             <button type="reset" class="form__boton">Borrar</button>
