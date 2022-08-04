@@ -18,6 +18,8 @@ const usersController = {
 
     })
   },
+
+
   process: function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
@@ -31,14 +33,15 @@ const usersController = {
       });
     } 
     req.body.image =  req.files[0].filename;
+
     let newUser = create(req.body)
     let users = index();
     users.push(newUser)
     write(users)
     return res.redirect('/')
   },
-    
-    
+
+
   access: function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones
@@ -50,16 +53,11 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
-
-    
-
     let user = find(req.body.email)
-
     req.session.user = user
-    
     return res.redirect('/')
   },
-  
+
   login: function(req,res){
     return res.render('users/login',{
       title: "Login",
