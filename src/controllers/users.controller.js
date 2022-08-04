@@ -45,6 +45,7 @@ const usersController = {
     let user = find(req.body.email)
 
     req.session.user = user
+    
     return res.redirect('/')
   },
 

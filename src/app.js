@@ -1,7 +1,6 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const { resolve } = require('path');
 const { port, callback } = require("./modules/listen.js");
 const public = require('./modules/public.js');
 const session = require('express-session')
