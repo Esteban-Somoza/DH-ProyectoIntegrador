@@ -24,10 +24,10 @@ module.exports = {
   finder: (req, res) => {
     let productList = index()
     try {
-      if ( req.query?.categoria) {
+      if (req.query?.categoria) {
         productList = filter("categoria", req.query.categoria)
       }
-      
+
       if (req.query && req.query.subcategoria) {
         productList = filter("subCategoria", req.query.subcategoria)
       }
@@ -125,48 +125,49 @@ module.exports = {
 
 
   productDelete: (req, res) => {
-  let product = find(parseInt(req.params.id))
-  if (!product) {
-    return res.redirect("/product/finder")
-  }
-  return res.render('./products/productDelete', {
-    title: `delete ${product.name}`,
-    styles: ["style", "header", "footer", "productDelete"],
-    product: product
-  })
-},
- 
-  destroy :(req,res) => {
     let product = find(parseInt(req.params.id))
     if (!product) {
       return res.redirect("/product/finder")
     }
-    let products= index ()
-    let listWithoutDeletedProduct = products.filter(p=> p.id !==product.id)
+    return res.render('./products/productDelete', {
+      title: `delete ${product.name}`,
+      styles: ["style", "header", "footer", "productDelete"],
+      product: product
+    })
+  },
+
+  destroy: (req, res) => {
+    let product = find(parseInt(req.params.id))
+    if (!product) {
+      return res.redirect("/product/finder")
+    }
+    let products = index()
+    let listWithoutDeletedProduct = products.filter(p => p.id !== product.id)
     deleteImage(product.imagen)
     write(listWithoutDeletedProduct)
     return res.redirect("/products/finder");
- },
+  },
 
   process: function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
-    console.log(validaciones);
+    
     if (errors && errors.length > 0) {
-   //  deleteImage(req.files[0].filename)
+    deleteImage(req.files[0].filename) 
       return res.render('products/productCreateDetail', {
         title: "Publicar un nuevo producto",
         styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],
         oldData: req.body,
         errors: validaciones.mapped()
       });
-    }else  { req.body.imagenProducto = req.files[0]?.filename
-    let newProduct = create(req.body)
-    let products = index();
-    products.push(newProduct)
-    write(products)
-    return res.redirect("/products/finder")}
-
     }
+    else {
+      req.body.imagenProducto = req.files[0]?.filename
+      let newProduct = create(req.body)
+      let products = index();
+      products.push(newProduct)
+      write(products)
+      return res.redirect("/products/finder")
+    }
+  }
 }
-  
