@@ -15,5 +15,8 @@ router.post('/users/logout',[isLogged],logout)
 router.get("/users/register", register)
 router.post("/users/register", middlewareRegister, process)
 
+//condicion
+ router.get("/logout", [isLogged], logout)
+
 
 module.exports = router

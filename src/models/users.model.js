@@ -26,6 +26,7 @@ const model = {
         email: data.email,
         password: bcrypt.hashSync(data.password,10),
         image: data.image
+       
     })
   },
   write: function(data) {
