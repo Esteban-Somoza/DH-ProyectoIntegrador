@@ -46,5 +46,14 @@
     "email": "lucianog@nicuesa.com",
     "password": "$2a$10$rw8dLWuKTXvBk5LounHEeuIR2yavC6nqgDWI2JXWFqVWraHUdT1fe",
     "image": "avatar-1659577325458-110127457.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Prueba",
+    "apellido": "Registro",
+    "email": "email@nicuesa.com",
+    "password": "$2a$10$Bv56tIVYVBjv0xczZVPJQurVhcs1yUK8DmLJdcMLZLsu8nCahmPfG",
+    "image": "avatar-1659739139669-538534465.png",
+    "isAdmin": true
   }
 ]
