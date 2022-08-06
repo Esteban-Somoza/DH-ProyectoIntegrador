@@ -25,8 +25,8 @@ const model = {
         apellido: data.apellido,
         email: data.email,
         password: bcrypt.hashSync(data.password,10),
-        image: data.image
-       
+        image: data.image,
+        isAdmin: data.email.includes('@nicuesa.com')
     })
   },
   write: function(data) {

@@ -18,16 +18,25 @@
                     <li class="navbar__item">
                         <a href="/carrito" class="navbar__links">Carro</a>
                     </li>
-                    <li class="navbar__item">
-                        <% if (!user) { %>
-                         <% } else if ({user}) { %>
-                          
+
+
+                    <% if (!user) { %>
+
+                        <li class="navbar__item">
+
+                            <a href="/users/register" class="navbar__links">Registro</a>
+
+                        </li>
+                        <li class="navbar__item">
+
+
+                            <a href="/users/login" class="navbar__links">Login</a>
+                        </li>
                         <% } %>
-                        <a href="/users/register" class="navbar__links">Registro</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="/users/login" class="navbar__links">Login</a>
-                    </li>
+
+
+
+
                 </ul>
             </nav>
             <section>
@@ -44,18 +53,18 @@
             <figure id="cart">
                 <a class="cart__container" href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
             </figure>
-            <figure id="create">
-                <a class="create" href="/products/create/details"><i class="fa-solid fa-circle-plus"></i> </a>
-            </figure>
+            <% if (user && user.isAdmin) { %>
+                <figure id="create">
+                    <a class="create" href="/products/create/details"><i class="fa-solid fa-circle-plus"></i> </a>
+                </figure>
+                <% } %>
         </div>
     </section>
-
-    
     <% if (user) { %>
         <div id="userMenu">
             <i class="fa-solid fa-caret-down"></i>
             <p>
-                <%= user.nombre %>
+                <%=user.nombre %>
             </p>
             <figure id="userAvatar"><img src="/images/avatars/<%=user.image%>" alt=""></figure>
 
@@ -64,6 +73,6 @@
                     sesión</button>
             </form>
         </div>
-
         <% } %>
+
 </header>

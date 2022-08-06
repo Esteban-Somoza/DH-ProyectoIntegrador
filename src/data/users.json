@@ -55,12 +55,12 @@
   },
   {
     "id": 10,
-    "nombre": "carla",
-    "apellido": "hi",
-    "email": "carlahi@nicuesa.com",
-    "password": "$2a$10$igqqtUvG8Kgcf6sPaEpddOH8CjRFQdLDZg4DAsi1FgEH5H/7ma1dm",
-    "image": "avatar-1659656234686-106104119.jpg",
-    "IsAdmin": true
+    "nombre": "Prueba",
+    "apellido": "Registro",
+    "email": "email@nicuesa.com",
+    "password": "$2a$10$Bv56tIVYVBjv0xczZVPJQurVhcs1yUK8DmLJdcMLZLsu8nCahmPfG",
+    "image": "avatar-1659739139669-538534465.png",
+    "isAdmin": true
   },
   {
     "id": 11,
@@ -90,10 +90,11 @@
   },
   {
     "id": 14,
-    "nombre": "Alberto",
-    "apellido": "Fer",
-    "email": "albertof@gmail.com",
-    "password": "$2a$10$A5hDGbVFqi99VT/JfwRgRu3YfRupdMkR2PaQRr85LG14BUa4KbRoy",
-    "image": "avatar-1659739762439-580527473.jpg"
+    "nombre": "carlos",
+    "apellido": "baltaza",
+    "email": "carlosbal@nicuesa.com",
+    "password": "$2a$10$yb9jl0xh8Gp6i.0CWwXr9.sGC2eFDiIRdONKMDiI5X5QCoGn3wn8K",
+    "image": "avatar-1659796115167-239754419.jpg",
+    "isAdmin": true
   }
 ]
