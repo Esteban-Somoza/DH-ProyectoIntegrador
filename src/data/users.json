@@ -5,7 +5,8 @@
     "apellido": "giuliani",
     "email": "luciano.giuliani92@gmail.com",
     "password": "asd123",
-    "image": "avatar-1659575041038-718757780.png"
+    "image": "avatar-1659575041038-718757780.png",
+    "IsAdmin": false
   },
   {
     "id": 5,
@@ -13,7 +14,8 @@
     "apellido": "giuliani",
     "email": "asdaa@asd.com",
     "password": "asd123",
-    "image": "avatar-1659575348944-822800442.png"
+    "image": "avatar-1659575348944-822800442.png",
+    "IsAdmin": false
   },
   {
     "id": 6,
@@ -21,7 +23,8 @@
     "apellido": "giuliani",
     "email": "ricar92@gmail.com",
     "password": "$2a$10$Wv2kVYFdvyoVPG154cvuZOd.Kog6aGFfseHg.cNcG8xRJTtg452C6",
-    "image": "avatar-1659576222284-830909145.png"
+    "image": "avatar-1659576222284-830909145.png",
+    "IsAdmin": false
   },
   {
     "id": 7,
@@ -29,7 +32,8 @@
     "apellido": "s1",
     "email": "estebans@nicuesa.com",
     "password": "$2a$10$miq/ACYrfUFNMdV.pDxcMeZRvo1Vy7X9XwugcVhET2gLP9CVxmyby",
-    "image": "avatar-1659577034595-373868492.png"
+    "image": "avatar-1659577034595-373868492.png",
+    "IsAdmin": true
   },
   {
     "id": 8,
@@ -37,7 +41,8 @@
     "apellido": "pa",
     "email": "carlosp@nicuesa.com",
     "password": "$2a$10$sPY8aJv25QC.B1xXatEDn.zxl5v1s61CpgP9KGxIwpYoKj.oD7ymW",
-    "image": "avatar-1659577307192-672982377.png"
+    "image": "avatar-1659577307192-672982377.png",
+    "IsAdmin": true
   },
   {
     "id": 9,
@@ -45,7 +50,8 @@
     "apellido": "gi",
     "email": "lucianog@nicuesa.com",
     "password": "$2a$10$rw8dLWuKTXvBk5LounHEeuIR2yavC6nqgDWI2JXWFqVWraHUdT1fe",
-    "image": "avatar-1659577325458-110127457.png"
+    "image": "avatar-1659577325458-110127457.png",
+    "IsAdmin": true
   },
   {
     "id": 10,
@@ -58,11 +64,38 @@
   },
   {
     "id": 11,
+
     "nombre": "prueba2",
     "apellido": "registro",
     "email": "registro@nicuesa.com",
     "password": "$2a$10$5tNWzQpcWZIMRdvs7GZh0OIPa6MUgZ20Ip9TQO3f.ABIyQn5xnjrG",
     "image": "avatar-1659739406303-462021868.png",
+    "IsAdmin": true
+  },
+  {
+    "id": 12,
+    "nombre": "carlos ",
+    "apellido": "Giim",
+    "email": "carlosgim@gmail.com",
+    "password": "$2a$10$V6l.acHbJ5r6skI6Peqwh.kP6IolC3IFDZCMqPDOfMOPud.GeWiwi",
+    "image": "avatar-1659733145380-271511094.jpg",
+    "IsAdmin": false
+  },
+  {
+    "id": 13,
+    "nombre": "franco",
+    "apellido": "Pe",
+    "email": "FrancoP@nicuesa.com",
+    "password": "$2a$10$zoQHeJcFvNDERFnuEIix7OPQ.9m4mmjh58jbsS5xTRWQmz4vacR36",
+    "image": "avatar-1659736496109-525256047.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "carlos",
+    "apellido": "baltaza",
+    "email": "carlosbal@nicuesa.com",
+    "password": "$2a$10$yb9jl0xh8Gp6i.0CWwXr9.sGC2eFDiIRdONKMDiI5X5QCoGn3wn8K",
+    "image": "avatar-1659796115167-239754419.jpg",
     "isAdmin": true
   }
 ]

@@ -43,10 +43,11 @@
                         </h3>
                         
                     </div>
+                    <% if (user && user.isAdmin){ %>
+                        
                     <a href="/products/productDelete/<%= product.id %> "><i  id= "basura" class="fa-solid fa-trash basura"></i></a>
-
                     <a href="/products/edit/<%= product.id %> "><i id="edit" class="fa-solid fa-pen-to-square edit"></i> </a>
-
+                    <% } %>
                 </article>
             </section>
             <section id="detalles">

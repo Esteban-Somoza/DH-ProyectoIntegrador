@@ -7,6 +7,7 @@
 
 <body>
     <%- include ('../includes/header.ejs') %>
+    
         <main>
             <section id="fondo">
                 <h4> ¿ Seguro que quieres eliminar la publicación ? </h4>
@@ -18,7 +19,7 @@
                 </h4>
                 <form action="/delete/<%=product.id%>?m=delete" method="post" id="boton">
 
-                    <a href="/products/finder"><button type="" class="cancelar">No</button></a>
+                    <a href="/products/finder"><button type="reset" class="cancelar">No</button></a>
 
                     <button type="submit" class="borrar">Sí</button>
 

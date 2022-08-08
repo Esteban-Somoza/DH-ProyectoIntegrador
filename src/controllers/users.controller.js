@@ -55,6 +55,9 @@ const usersController = {
     }
     let user = find(req.body.email)
     req.session.user = user
+    if(req.body.recordame != undefined){
+    res.cookie("recordame", user.email/id, {maxAge:172800000})
+}
     return res.redirect('/')
   },
 
