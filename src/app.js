@@ -5,6 +5,8 @@ const { port, callback } = require("./modules/listen.js");
 const public = require('./modules/public.js');
 const session = require('express-session')
 const method = require('method-override');
+const cookieParser = require ("cookie-parser");
+const recordameMiddleware = require("./middlewares/recordameMiddleware")
 
 app.listen(port, callback(`Abriendo servidor en http://localhost:` + port))
 
@@ -31,6 +33,8 @@ app.use(require('./middlewares/user'))
 app.use(require('./routes/main.routes'))
 app.use(require('./routes/product.routes'))
 app.use(require('./routes/users.routes'))
+app.use(cookieParser())
+app.use(recordameMiddleware)
 
 
 
