@@ -49,14 +49,14 @@
     
     <% if (user) { %>
         <div id="userMenu">
-            <i class="fa-solid fa-caret-down"></i>
+            
             <p>
                 <%= user.nombre %>
             </p>
             <figure id="userAvatar"><img src="/images/avatars/<%=user.image%>" alt=""></figure>
 
             <form action="/users/logout" method="post" class="usuarioDesplegable">
-                <button type="submit">Cerrar
+                <button class="buttonLogout" type="submit">Cerrar
                     sesión</button>
             </form>
         </div>

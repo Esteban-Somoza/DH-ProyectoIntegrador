@@ -55,5 +55,14 @@
     "password": "$2a$10$Bv56tIVYVBjv0xczZVPJQurVhcs1yUK8DmLJdcMLZLsu8nCahmPfG",
     "image": "avatar-1659739139669-538534465.png",
     "isAdmin": true
+  },
+  {
+    "id": 11,
+    "nombre": "prueba2",
+    "apellido": "registro",
+    "email": "registro@nicuesa.com",
+    "password": "$2a$10$5tNWzQpcWZIMRdvs7GZh0OIPa6MUgZ20Ip9TQO3f.ABIyQn5xnjrG",
+    "image": "avatar-1659739406303-462021868.png",
+    "isAdmin": true
   }
 ]

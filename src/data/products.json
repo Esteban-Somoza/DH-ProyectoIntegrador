@@ -83,25 +83,6 @@
     }
   },
   {
-    "id": 5,
-    "name": "Griferia monocomando Cold Start",
-    "price": 21700,
-    "imagen": "imagenProducto-1658499224951-219769094.jpeg",
-    "categoria": "baño",
-    "subCategoria": "griferia",
-    "marca": "Roca",
-    "information": {
-      "colores": "cromado",
-      "linea": "Cold Start",
-      "configuracion": "monocomando",
-      "apto": "",
-      "tecnologia": ""
-    },
-    "details": {
-      "description": ""
-    }
-  },
-  {
     "id": 6,
     "name": "Rociador de pared",
     "price": 12900,
