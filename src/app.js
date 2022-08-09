@@ -33,6 +33,7 @@ app.use(require('./middlewares/user'))
 app.use(require('./routes/main.routes'))
 app.use(require('./routes/product.routes'))
 app.use(require('./routes/users.routes'))
+
 app.use(cookieParser())
 app.use(recordameMiddleware)
 

@@ -1,15 +1,15 @@
 const { validationResult } = require('express-validator');
-const { index, create, write, find,  deleteImage } = require("../models/users.model");
+const { index, create, write, find, deleteImage } = require("../models/users.model");
 
 
 
 const usersController = {
-  login: (req, res) => {
-    return res.render("./users/login", {
-      title: "Login",
-      styles: ["style", "header", "footer", "login"],
-    });
-  },
+  // login: (req, res) => {
+  //   return res.render("./users/login", {
+  //     title: "Login",
+  //     styles: ["style", "header", "footer", "login"],
+  //   });
+  // },
 
   register: (req, res) => {
     return res.render("./users/register", {
@@ -31,8 +31,8 @@ const usersController = {
         oldData: req.body,
         errors: validaciones.mapped()
       });
-    } 
-    req.body.image =  req.files[0].filename;
+    }
+    req.body.image = req.files[0].filename;
 
     let newUser = create(req.body)
     let users = index();
@@ -55,16 +55,16 @@ const usersController = {
     }
     let user = find(req.body.email)
     req.session.user = user
-    if(req.body.recordame != undefined){
-    res.cookie("recordame", user.email/id, {maxAge:172800000})
-}
+    if (req.body.recordame != undefined) {
+      res.cookie("recordame", user.email / id, { maxAge: 172800000 })
+    }
     return res.redirect('/')
   },
 
-  login: function(req,res){
-    return res.render('users/login',{
+  login: function (req, res) {
+    return res.render('users/login', {
       title: "Login",
-      styles:["style", "header", "footer", "login"]
+      styles: ["style", "header", "footer", "login"]
     });
   },
 

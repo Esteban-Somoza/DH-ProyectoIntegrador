@@ -1,6 +1,6 @@
 [
   {
-    "id": 4,
+    "id": 1,
     "nombre": "luciano",
     "apellido": "giuliani",
     "email": "luciano.giuliani92@gmail.com",
@@ -9,7 +9,7 @@
     "IsAdmin": false
   },
   {
-    "id": 5,
+    "id": 2,
     "nombre": "luciano",
     "apellido": "giuliani",
     "email": "asdaa@asd.com",
@@ -18,7 +18,7 @@
     "IsAdmin": false
   },
   {
-    "id": 6,
+    "id": 3,
     "nombre": "Ricardo",
     "apellido": "giuliani",
     "email": "ricar92@gmail.com",
@@ -27,7 +27,7 @@
     "IsAdmin": false
   },
   {
-    "id": 7,
+    "id": 4,
     "nombre": "Esteban",
     "apellido": "s1",
     "email": "estebans@nicuesa.com",
@@ -36,7 +36,7 @@
     "IsAdmin": true
   },
   {
-    "id": 8,
+    "id": 5,
     "nombre": "Carlo",
     "apellido": "pa",
     "email": "carlosp@nicuesa.com",
@@ -45,57 +45,12 @@
     "IsAdmin": true
   },
   {
-    "id": 9,
+    "id": 6,
     "nombre": "luciano",
     "apellido": "gi",
     "email": "lucianog@nicuesa.com",
     "password": "$2a$10$rw8dLWuKTXvBk5LounHEeuIR2yavC6nqgDWI2JXWFqVWraHUdT1fe",
     "image": "avatar-1659577325458-110127457.png",
     "IsAdmin": true
-  },
-  {
-    "id": 10,
-    "nombre": "Prueba",
-    "apellido": "Registro",
-    "email": "email@nicuesa.com",
-    "password": "$2a$10$Bv56tIVYVBjv0xczZVPJQurVhcs1yUK8DmLJdcMLZLsu8nCahmPfG",
-    "image": "avatar-1659739139669-538534465.png",
-    "isAdmin": true
-  },
-  {
-    "id": 11,
-
-    "nombre": "prueba2",
-    "apellido": "registro",
-    "email": "registro@nicuesa.com",
-    "password": "$2a$10$5tNWzQpcWZIMRdvs7GZh0OIPa6MUgZ20Ip9TQO3f.ABIyQn5xnjrG",
-    "image": "avatar-1659739406303-462021868.png",
-    "IsAdmin": true
-  },
-  {
-    "id": 12,
-    "nombre": "carlos ",
-    "apellido": "Giim",
-    "email": "carlosgim@gmail.com",
-    "password": "$2a$10$V6l.acHbJ5r6skI6Peqwh.kP6IolC3IFDZCMqPDOfMOPud.GeWiwi",
-    "image": "avatar-1659733145380-271511094.jpg",
-    "IsAdmin": false
-  },
-  {
-    "id": 13,
-    "nombre": "franco",
-    "apellido": "Pe",
-    "email": "FrancoP@nicuesa.com",
-    "password": "$2a$10$zoQHeJcFvNDERFnuEIix7OPQ.9m4mmjh58jbsS5xTRWQmz4vacR36",
-    "image": "avatar-1659736496109-525256047.jpg"
-  },
-  {
-    "id": 14,
-    "nombre": "carlos",
-    "apellido": "baltaza",
-    "email": "carlosbal@nicuesa.com",
-    "password": "$2a$10$yb9jl0xh8Gp6i.0CWwXr9.sGC2eFDiIRdONKMDiI5X5QCoGn3wn8K",
-    "image": "avatar-1659796115167-239754419.jpg",
-    "isAdmin": true
   }
 ]
