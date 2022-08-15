@@ -23,4 +23,5 @@ router.post('/users/logout',[isAdmin],logout)
 router.get("/users/register", register)
 router.post("/users/register", middlewareRegister, process)
 
+
 module.exports = router
