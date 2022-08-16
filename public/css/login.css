@@ -26,7 +26,7 @@
 }
 
 #login__boton {
-  padding: 1em;
+  padding: 4px;
   background-color: #3a687e;
   border-radius: 1em;
   margin: 1em 0;
@@ -72,7 +72,7 @@
 
 #registro__textoBoton {
   display: block;
-  padding: 1em;
+  padding: 8px;
   background-color: #667;
   color: white;
   border-radius: 1em;
