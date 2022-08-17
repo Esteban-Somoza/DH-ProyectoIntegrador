@@ -266,14 +266,14 @@
     "information": {
       "colores": "blanco",
       "linea": "AP 80",
-      "diseño": "",
       "configuracion": "vertical de interiores, para apoyar, conexion de agua superior",
       "apto": "multi gas",
+      "tecnologia": "",
+      "medidas": "108cm x 41cm de diamtro",
       "capacidad": "80L"
     },
     "details": {
-      "description": " Termotanque multigas Heineken ADN AP-80 blanco 80L",
-      "medidas": "108cm x 41cm de diamtro"
+      "description": " Termotanque multigas Heineken ADN AP-80 blanco 80L"
     }
   },
   {
