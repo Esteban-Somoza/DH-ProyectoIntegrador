@@ -7,7 +7,7 @@ const isLogged = require('../middlewares/isLogged');
 const isAdmin = require('../middlewares/isAdmin')
 
 
-const { login, register, process, access, logout } = require('../controllers/users.controller');
+const { login, register, process, access, logout,userEdit } = require  = require('../controllers/users.controller');
 
 // login
 router.get("/users/login", login)
@@ -22,6 +22,7 @@ router.post('/users/logout',[isAdmin],logout)
 // register
 router.get("/users/register", register)
 router.post("/users/register", middlewareRegister, process)
-
+//edit
+router.get("/users/userEdit", userEdit)
 
 module.exports = router

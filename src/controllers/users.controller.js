@@ -71,7 +71,12 @@ const usersController = {
   logout: function (req, res) {
     delete req.session.user
     return res.redirect('/')
-  }
+  },
+  userEdit: function (req, res) {
+    return res.render('users/userEdit',{
+      title: "Edit",
+      styles: ["style", "header", "footer", "userEdit"]
+    })
 }
-
+}
 module.exports = usersController

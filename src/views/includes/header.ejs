@@ -47,11 +47,16 @@
 
                     <a href="/users/login" class="navbar__links">Login</a>
                 </li>
-                <% } %>
-                    <% if (user && user.isAdmin) { %>
+                <% } %>  <li>
+                <% if (user) { %>
+                        <a href="/users/userEdit"><i class="fa-solid fa-user-pen"id ="user_Edit" ></i></a> 
+                <% } %></li>
+
+                    <%  if (user && user.isAdmin) { %>
                         <figure id="create">
                             <a class="create" href="/products/create/details"><i class="fa-solid fa-circle-plus"></i>
                             </a>
+                         
                         </figure>
                         <% } %>
         </div>

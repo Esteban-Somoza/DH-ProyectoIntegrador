@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../includes/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include ('../includes/header.ejs') %>
+
+        <main>
+
+
+
+
+            <h2>Edición de usuario </h2>
+            <h4> datos del usuario</h4>
+
+            /// icono //
+            <form action="/users/userEdit" id="form" method="put" enctype="multipart/form-data">
+                <label for="nombre  y apellido ">nombre y apellido</label>
+                <input type="text" name="nombre y apellido" value="<%= %> " placeholder="nombre y apellido">
+                <label for="nombre-user">Tel/cel</label>
+                <input type="number" name="" placeholder="Tel/cel">
+                <label for="nombre-user">ciudad /prov</label>
+                <input type="text" name="ciudad/prov" min="1">
+                <label for="imagen de perfil">imagen de perfil</label>
+                <input type="file" name="avatar">
+            </form>
+        </main>
+
+        <%- include ('../includes/footer.ejs') %>
+</body>
+
+</html>
