@@ -4,13 +4,6 @@ const { index, create, write, find, deleteImage } = require("../models/users.mod
 
 
 const usersController = {
-  // login: (req, res) => {
-  //   return res.render("./users/login", {
-  //     title: "Login",
-  //     styles: ["style", "header", "footer", "login"],
-  //   });
-  // },
-
   register: (req, res) => {
     return res.render("./users/register", {
       title: "Registro",
