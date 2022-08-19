@@ -16,15 +16,16 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.TEXT
         },
-        categorieId: {
+        category: {
             type: DataTypes.TEXT
         },
-        brandId: {
+        information: {
             type: DataTypes.TEXT
         },
-        informationID: {
+        information: {
             type: DataTypes.TEXT
         },
+
     };
     let config = {
         timestamps:false,
