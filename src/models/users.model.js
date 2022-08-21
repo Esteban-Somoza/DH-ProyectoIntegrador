@@ -23,7 +23,7 @@ const model = {
         id: users.length == 0 ? 1 : last.id + 1,
         nombre: data.nombre,
         apellido: data.apellido,
-        email: data.email,
+        email: data.email.toLowerCase(),
         password: bcrypt.hashSync(data.password,10),
         image: data.image,
         isAdmin: data.email.includes('@nicuesa.com')

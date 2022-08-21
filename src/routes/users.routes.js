@@ -7,7 +7,7 @@ const isLogged = require('../middlewares/isLogged');
 const isAdmin = require('../middlewares/isAdmin')
 
 
-const { login, register, process, access, logout } = require('../controllers/users.controller');
+const {perfil, login, register, process, access, logout } = require('../controllers/users.controller');
 
 // login
 router.get("/users/login", login)
@@ -17,6 +17,8 @@ router.post('/users/logout',logout)
 
 router.post('/users/logout',[isLogged],logout)
 router.post('/users/logout',[isAdmin],logout)
+
+router.get('/users/perfil',perfil )
 
 
 // register

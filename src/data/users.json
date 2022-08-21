@@ -52,5 +52,23 @@
     "password": "$2a$10$rw8dLWuKTXvBk5LounHEeuIR2yavC6nqgDWI2JXWFqVWraHUdT1fe",
     "image": "avatar-1659577325458-110127457.png",
     "IsAdmin": true
+  },
+  {
+    "id": 7,
+    "nombre": "Perfil",
+    "apellido": "Perfil",
+    "email": "perfil@nicuesa.com",
+    "password": "$2a$10$9k.WnHXt9g73jiNCyoUpFOzycLZIZ4RfEOHUFeEMopQF1RLsUfaZS",
+    "image": "avatar-1660676467819-430459493.png",
+    "isAdmin": true
+  },
+  {
+    "id": 8,
+    "nombre": "NuevoPerfil",
+    "apellido": "Giu",
+    "email": "nuevoperfil@nicuesa.com",
+    "password": "$2a$10$y/hT9yAxX4VH3dPuxI.cye1R/Xs0lrqb6RqoeioIc84/NBzQcb7L2",
+    "image": "avatar-1661094444218-309338481.png",
+    "isAdmin": true
   }
 ]

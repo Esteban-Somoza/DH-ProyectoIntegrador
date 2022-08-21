@@ -1,6 +1,10 @@
 const { validationResult } = require('express-validator');
 const { index, create, write, find, deleteImage } = require("../models/users.model");
 
+const {resolve}= require('path');
+const { readFileSync, writeFileSync, unlinkSync } = require('fs');
+const isLogged = require('../middlewares/isLogged');
+
 
 
 const usersController = {
@@ -66,6 +70,17 @@ const usersController = {
       title: "Login",
       styles: ["style", "header", "footer", "login"]
     });
+  },
+
+  perfil: function (req, res) {
+    let file = resolve(__dirname,'../data','users.json');
+    let data = readFileSync(file);
+    let users = JSON.parse(data);
+    return res.render('users/perfil', {
+      users: users,
+      title: "Perfil",
+      styles: ["style", "header", "footer", "perfil"]
+    })
   },
 
   logout: function (req, res) {
