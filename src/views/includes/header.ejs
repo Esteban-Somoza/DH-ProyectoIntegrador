@@ -63,9 +63,10 @@
     </section>
     <% if (user) { %>
         <div id="userMenu">
-
-            <p>
+             <p>
+                 <a href="/users/perfil" class="perfil_link">
                 <%=user.nombre %>
+                </a>
             </p>
             <figure id="userAvatar"><img src="/images/avatars/<%=user.image%>" alt=""></figure>
 

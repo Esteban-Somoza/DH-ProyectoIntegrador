@@ -20,13 +20,14 @@ const model = {
     let users = JSON.parse(info);
     let last = users[users.length - 1];
     return Object({
-      id: users.length == 0 ? 1 : last.id + 1,
-      nombre: data.nombre,
-      apellido: data.apellido,
-      email: data.email,
-      password: bcrypt.hashSync(data.password, 10),
-      image: data.image,
-      isAdmin: data.email.includes('@nicuesa.com')
+
+        id: users.length == 0 ? 1 : last.id + 1,
+        nombre: data.nombre,
+        apellido: data.apellido,
+        email:data.email.toLowerCase(),
+        password: bcrypt.hashSync(data.password,10),
+        image: data.image,
+        isAdmin: data.email.includes('@nicuesa.com')
     })
   },
   write: function (data) {

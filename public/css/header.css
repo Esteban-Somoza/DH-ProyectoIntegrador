@@ -177,8 +177,16 @@ header {
 @media (max-width: 617px) {
     #cart {
         display: none;
+    
     }
 }
+/*-------------perfil-------------*/
+
+.perfil_link {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
 
 /*-------------logo-------------*/
 .logo img {
@@ -224,7 +232,7 @@ header a h2 {
 
 .navbar__item {
     height: 56px;
-    width: 100%;
+    *width: 100%;
 }
 
 .navbar__links {

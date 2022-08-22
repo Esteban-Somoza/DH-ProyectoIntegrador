@@ -7,7 +7,7 @@ const login = [
 body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().isEmail().withMessage('El formato de email no es válido.').bail().custom(value => {
   let users = index()
   users = users.map(u => u.email)
-  if(!users.includes(value)){
+  if(!users.includes(value.toLowerCase())){
       throw new Error('El email no esta registrado')
   }
   return true
@@ -15,7 +15,7 @@ body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().
 // Password
 body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.').bail().isLength({min : 4}).bail().custom((value,{req})=>{
   let {email} = req.body
-  let user = find(email)
+  let user = find(email.toLowerCase())
 
   if(!user){
     throw new Error("Usuario no encontrado")

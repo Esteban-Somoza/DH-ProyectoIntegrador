@@ -1,6 +1,10 @@
 const { validationResult } = require('express-validator');
 const { index, create, write, find, deleteImage, edit } = require("../models/users.model");
 
+const {resolve}= require('path');
+const { readFileSync, writeFileSync, unlinkSync } = require('fs');
+const isLogged = require('../middlewares/isLogged');
+
 
 
 const usersController = {
@@ -46,7 +50,7 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
-    let user = find(req.body.email)
+    let user = find(req.body.email.toLowerCase())
     req.session.user = user
     if (req.body.recordame != undefined) {
       res.cookie("recordame", user.email / id, { maxAge: 172800000 })
@@ -59,6 +63,17 @@ const usersController = {
       title: "Login",
       styles: ["style", "header", "footer", "login"]
     });
+  },
+
+  perfil: function (req, res) {
+    let file = resolve(__dirname,'../data','users.json');
+    let data = readFileSync(file);
+    let users = JSON.parse(data);
+    return res.render('users/perfil', {
+      users: users,
+      title: "Perfil",
+      styles: ["style", "header", "footer", "perfil"]
+    })
   },
 
   logout: function (req, res) {

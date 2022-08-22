@@ -46,12 +46,11 @@
   },
   {
     "id": 7,
-    "nombre": "prueba",
-    "apellido": "nicuesa",
-    "email": "prueba@nicuesa.com",
-    "password": "$2a$10$e2jSPgg6.OXKMSZGVYOuP.dR6K3Ny6blTfVgNBJmoi9jsO4kGRP3q",
-    "image": "avatar-1660608433735-229090447.jpg",
-    "isAdmin": true
+    "nombre": "Perfil",
+    "apellido": "Perfil",
+    "email": "perfil@nicuesa.com",
+    "password": "$2a$10$9k.WnHXt9g73jiNCyoUpFOzycLZIZ4RfEOHUFeEMopQF1RLsUfaZS",
+    "image": "avatar-1660676467819-430459493.png"
   },
   {
     "id": 8,
@@ -64,11 +63,20 @@
   },
   {
     "id": 9,
-    "nombre": "carlos ",
-    "apellido": "bata",
-    "email": "carlosbata@nicuesa.com",
-    "password": "$2a$10$dno2Ir8w/8EMB.U9lG1C0.5Nm0xGk0K8huaHC3BTqwjE4n6kxI/fK",
-    "image": "avatar-1660839579127-169022497.jpg",
+    "nombre": "NuevoPerfil",
+    "apellido": "Nuevo",
+    "email": "nuevoperfil@nicuesa.com",
+    "password": "$2a$10$3XNhFc6emY/3mi0jCpZL9.86oztW1AtKfYq8Tc/1WrOpNjB7wIIDW",
+    "image": "avatar-1661123717230-398796674.png",
     "isAdmin": true
+  },
+  {
+    "id": 10,
+    "nombre": "Luciano",
+    "apellido": "Giu",
+    "email": "pruebam@gmail.com",
+    "password": "$2a$10$SC8YbzIezGZhWqjs62qQT.UbgJU3c76VEI/NC7PE54NICbGoj9j/q",
+    "image": "avatar-1661123983767-163789702.png",
+    "isAdmin": false
   }
 ]

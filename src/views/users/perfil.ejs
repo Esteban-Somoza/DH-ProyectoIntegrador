@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../includes/head.ejs') %>
+</head>
+
+<body>
+
+    <%- include ('../includes/header.ejs') %>
+
+        <main>
+            
+          <%
+             if (user ) {
+                
+             %>
+
+            <article class="perfil_container">
+
+                <h2>Perfil de Usuario</h2>
+                <picture class="perfil_imagen">
+                    <img src="/images/avatars/<%= user.image%>" alt="">
+                </picture>
+
+                <h4><%= user.nombre %></h4>
+
+                <section class="perfil_datos">
+                    <p> <i class="fa-solid fa-envelope"></i><%= user.email%></p>
+                    <p> <i class="fa-solid fa-phone"></i>113948573</p>
+                    <p><i class="fa-solid fa-house"></i>San Fernando,Buenos Aires</p>
+                    <p> <i class="fa-solid fa-cart-shopping"></i><a href="/carrito">Mi carrito</a>
+                        
+                </section>
+            </article>
+            <% } %>
+        </main>
+
+        <%- include ('../includes/footer.ejs') %>
+        <script src="../../scripts/menu.js"></script>
+</body>
+
+</html>
