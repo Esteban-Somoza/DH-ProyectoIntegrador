@@ -9,7 +9,7 @@
     "sq-i": "sequelize init",
     "sq-ms": "sequelize init:migrations && sequelize init:seeders",
     "sq-mg": "sequelize migration:generate --name SubCategory",
-    "sq-sg": "sequelize seed:generate --name imagesProducts",
+    "sq-sg": "sequelize seed:generate --name Information",
     "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate"
   },
   "keywords": [],
