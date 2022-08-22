@@ -61,5 +61,14 @@
     "password": "$2a$10$mF55ScN4mC7iztMpTzdXOeLxANUSMGddsI3yr5WY9Xzwl76xuS/BK",
     "image": "avatar-1660608683387-585334370.jpeg",
     "isAdmin": true
+  },
+  {
+    "id": 9,
+    "nombre": "carlos ",
+    "apellido": "bata",
+    "email": "carlosbata@nicuesa.com",
+    "password": "$2a$10$dno2Ir8w/8EMB.U9lG1C0.5Nm0xGk0K8huaHC3BTqwjE4n6kxI/fK",
+    "image": "avatar-1660839579127-169022497.jpg",
+    "isAdmin": true
   }
 ]

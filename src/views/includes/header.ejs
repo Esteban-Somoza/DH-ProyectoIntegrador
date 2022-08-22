@@ -48,7 +48,7 @@
                     <a href="/users/login" class="navbar__links">Login</a>
                 </li>
                 <% } %>  <li>
-                <% if (user) { %>
+                <% if (user && user.isAdmin) { %>
                         <a href="/users/userEdit"><i class="fa-solid fa-user-pen"id ="user_Edit" ></i></a> 
                 <% } %></li>
 

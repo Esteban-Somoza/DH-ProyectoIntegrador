@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { index, create, write, find, deleteImage } = require("../models/users.model");
+const { index, create, write, find, deleteImage, edit } = require("../models/users.model");
 
 
 
@@ -64,12 +64,34 @@ const usersController = {
   logout: function (req, res) {
     delete req.session.user
     return res.redirect('/')
-  },
-  userEdit: function (req, res) {
-    return res.render('users/userEdit',{
-      title: "Edit",
-      styles: ["style", "header", "footer", "userEdit"]
-    })
-}
-}
+  }
+
+
+ /* userEdit: function (req, res) {
+let userToEdit = user.map(req.body.id) (p =>{
+if (p.id==userToEdit.id)
+
+  p=edited }
+
+  return p 
+
+
+
+
+}); */
+
+  
+
+
+
+
+
+
+
+
+
+  }
+
+
+
 module.exports = usersController
