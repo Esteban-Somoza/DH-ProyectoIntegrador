@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'line';
+    let alias = 'linea';
     let cols = {
         id: {
             allowNull: false,
@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        name: {
+        nombre: {
             type: DataTypes.STRING
         }
     };
@@ -15,17 +15,14 @@ module.exports = (sequelize, DataTypes) => {
         timestamps:false,
         deletedAt:false
     };
-    const Brand = sequelize.define(alias,cols,config)
+    const Line = sequelize.define(alias,cols,config)
 
     Line.associate = function(models) {
-        Line.hasMany(models.Information,{
-            as: "information",
-            foreignKey:'lineId'
-        })
-        Line.hasMany(models.Brand,{
-            through:'imagesProducts',
-            foreignKey:'product'
+        Line.hasMany(models.Product,{
+            through:'producto',
+            foreignKey:'lineaId'
         })
     }
+    
     return Line
 }

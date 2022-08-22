@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "user";
+    let alias = "usuarios";
     let cols = {
         id: {
             allowNull: false,
@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: DataTypes.TEXT
         },
-        image: {
+        imagenId: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -45,8 +45,8 @@ module.exports = (sequelize, DataTypes) => {
 
     User.associate = function (models) {
         User.belongsTo(models.Image, {
-            as: "avatar",
-            foreignKey: 'avatarId',
+            as: "imagen",
+            foreignKey: 'imagenId',
             allowNull: false
         })
     }

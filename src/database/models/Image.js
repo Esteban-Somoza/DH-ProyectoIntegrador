@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'image';
+    let alias = 'imagen';
     let cols = {
         id: {
             allowNull: false,
@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        path:{
+        nombre:{
             type: DataTypes.STRING
         }
     } 
@@ -20,13 +20,15 @@ module.exports = (sequelize, DataTypes) => {
     
     Image.associate = function(models){
         Image.hasMany(models.User, {
-            as: 'users',
-            foreignKey: 'avatarId'
+            as: 'usuarios',
+            foreignKey: 'imagenId',
+            allowNull: false
         }),
         
         Image.belongsTo(models.Product,{
-            as: 'products',
-            foreignKey:'productId',
+            as: 'producto',
+            foreignKey:'imagenId',
+            allowNull: false
         })
     }
     return Image

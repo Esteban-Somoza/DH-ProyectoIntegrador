@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'product';
+    let alias = 'producto';
     let cols = {
         id: {
             allowNull: false,
@@ -7,25 +7,31 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        name: {
+        nombre: {
             type: DataTypes.STRING
         },
-        price: {
+        precio: {
             type: DataTypes.FLOAT
         },
-        imagen: {
+        imagenId: {
             type: DataTypes.INTEGER
         },
-        categoria: {
+        categoriaId: {
             type: DataTypes.INTEGER
         },
-        information: {
+        subcategoriaId: {
             type: DataTypes.INTEGER
         },
-        marca: {
+        informationId: {
             type: DataTypes.INTEGER
         },
-        description: {
+        marcaId: {
+            type: DataTypes.INTEGER
+        },
+        lineaId: {
+            type: DataTypes.INTEGER
+        },
+        descripcion: {
             type: DataTypes.TEXT
         }
 
@@ -37,29 +43,41 @@ module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define(alias,cols,config)
 
     Product.associate = function(models) {
-        Product.hasMany(models.Image,{
-            as: "images",
-            foreignKey:'productId',
+        Product.belongsTo(models.Image,{
+            as: "imagen",
+            foreignKey:'imagenId',
             allowNull: false
         }),
 
         Product.belongsTo(models.Category,{
-            as: "categories",
-            foreignKey:'categoryId',
+            as: "categoria",
+            foreignKey:'categoriaId',
             allowNull: false
         }),
 
         Product.belongsTo(models.Brand,{
-            as: "brands",
-            foreignKey:'brandId',
-            allowNull: false
+            as: "marca",
+            foreignKey:'marcaId',
         }),
         
-        Product.hasMany(models.Information,{
-            as: "information",
-            foreignKey:'productId',
+        Product.belongsTo(models.Information,{
+            as: "informacion",
+            foreignKey:'informacionId',
             allowNull: false
+        }),
+
+        Product.belongsTo(models.Line,{
+            as: "linea",
+            foreignKey:'lineaId',
+            allowNull: false
+        }),
+
+        Product.belongsTo(models.SubCategory,{
+            as: "subcategoria",
+            foreignKey:'subcategoriaId',
         })
+
     }
+
     return Product
 }
