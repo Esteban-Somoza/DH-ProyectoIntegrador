@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt:false
     };
     const Brand = sequelize.define(alias,cols,config)
+    console.log(Brand);
 
     Brand.associate = function(models) {
         Brand.hasMany(models.Product,{
