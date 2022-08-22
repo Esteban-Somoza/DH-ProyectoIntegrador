@@ -16,14 +16,20 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.TEXT
         },
+        image: {
+            type: DataTypes.INTEGER
+        },
         category: {
-            type: DataTypes.TEXT
+            type: DataTypes.INTEGER
         },
         information: {
-            type: DataTypes.TEXT
+            type: DataTypes.INTEGER
         },
         information: {
-            type: DataTypes.TEXT
+            type: DataTypes.INTEGER
+        },
+        brand: {
+            type: DataTypes.INTEGER
         },
 
     };
