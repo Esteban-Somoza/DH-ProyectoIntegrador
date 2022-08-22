@@ -2,82 +2,56 @@
   {
     "id": 1,
     "nombre": "luciano",
-    "apellido": "giuliani",
-    "email": "luciano.giuliani92@gmail.com",
-    "password": "asd123",
-    "image": "avatar-1659575041038-718757780.png",
-    "IsAdmin": false
-  },
-  {
-    "id": 2,
-    "nombre": "luciano",
-    "apellido": "giuliani",
-    "email": "asdaa@asd.com",
-    "password": "asd123",
-    "image": "avatar-1659575348944-822800442.png",
-    "IsAdmin": false
-  },
-  {
-    "id": 3,
-    "nombre": "Ricardo",
-    "apellido": "giuliani",
-    "email": "ricar92@gmail.com",
-    "password": "$2a$10$Wv2kVYFdvyoVPG154cvuZOd.Kog6aGFfseHg.cNcG8xRJTtg452C6",
-    "image": "avatar-1659576222284-830909145.png",
-    "IsAdmin": false
-  },
-  {
-    "id": 5,
-    "nombre": "Carlo",
-    "apellido": "pa",
-    "email": "carlosp@nicuesa.com",
-    "password": "$2a$10$sPY8aJv25QC.B1xXatEDn.zxl5v1s61CpgP9KGxIwpYoKj.oD7ymW",
-    "image": "avatar-1659577307192-672982377.png",
-    "IsAdmin": true
-  },
-  {
-    "id": 6,
-    "nombre": "luciano",
     "apellido": "gi",
     "email": "lucianog@nicuesa.com",
     "password": "$2a$10$rw8dLWuKTXvBk5LounHEeuIR2yavC6nqgDWI2JXWFqVWraHUdT1fe",
-    "image": "avatar-1659577325458-110127457.png",
-    "IsAdmin": true
+    "imagenId": "avatar-1659577325458-110127457.png",
+    "IsAdmin": true,
+    "telefono": 1234,
+    "ubicacion": "Buenos Aires, Tigre"
   },
   {
-    "id": 7,
+    "id": 2,
     "nombre": "Perfil",
     "apellido": "Perfil",
     "email": "perfil@nicuesa.com",
     "password": "$2a$10$9k.WnHXt9g73jiNCyoUpFOzycLZIZ4RfEOHUFeEMopQF1RLsUfaZS",
-    "image": "avatar-1660676467819-430459493.png",
-    "isAdmin": false
+    "imagenId": "avatar-1660676467819-430459493.png",
+    "isAdmin": false,
+    "telefono": 1234,
+    "ubicacion": "Buenos Aires, Tigre"
   },
   {
-    "id": 8,
+    "id": 3,
     "nombre": "Esteban",
     "apellido": "Somoza",
     "email": "esteban@nicuesa.com",
     "password": "$2a$10$mF55ScN4mC7iztMpTzdXOeLxANUSMGddsI3yr5WY9Xzwl76xuS/BK",
-    "image": "avatar-1660608683387-585334370.jpeg",
-    "isAdmin": true
+    "imagenId": "avatar-1660608683387-585334370.jpeg",
+    "isAdmin": true,
+    "telefono": 1234,
+    "ubicacion": "Buenos Aires, Tigre"
   },
   {
-    "id": 9,
+    "id": 4,
     "nombre": "NuevoPerfil",
     "apellido": "Nuevo",
     "email": "nuevoperfil@nicuesa.com",
     "password": "$2a$10$3XNhFc6emY/3mi0jCpZL9.86oztW1AtKfYq8Tc/1WrOpNjB7wIIDW",
-    "image": "avatar-1661123717230-398796674.png",
-    "isAdmin": true
+    "imagenId": "avatar-1661123717230-398796674.png",
+    "isAdmin": true,
+    "telefono": 1234,
+    "ubicacion": "Buenos Aires, Tigre"
   },
   {
-    "id": 10,
+    "id": 5,
     "nombre": "Luciano",
     "apellido": "Giu",
     "email": "pruebam@gmail.com",
     "password": "$2a$10$SC8YbzIezGZhWqjs62qQT.UbgJU3c76VEI/NC7PE54NICbGoj9j/q",
-    "image": "avatar-1661123983767-163789702.png",
-    "isAdmin": false
+    "imagenId": "avatar-1661123983767-163789702.png",
+    "isAdmin": false,
+    "telefono": 1234,
+    "ubicacion": "Buenos Aires, Tigre"
   }
 ]
