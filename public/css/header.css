@@ -95,7 +95,15 @@ header {
     aspect-ratio: 1/1;
     margin-right: -22px;
 }
-
+#user_Edit{
+    right: 2em;
+    border-radius: 50%;
+    margin: 2px;
+    padding: 0.5rem;
+    display: flex;
+    width: 2.5em;
+    color: white;
+}
 @media (max-width: 508px) {
     .search-bar {
         display: none;

@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator');
-const { index, create, write, find, deleteImage } = require("../models/users.model");
+const { index, create, write, find, deleteImage, edit } = require("../models/users.model");
 
-const {resolve}= require('path');
+const { resolve } = require('path');
 const { readFileSync, writeFileSync, unlinkSync } = require('fs');
 const isLogged = require('../middlewares/isLogged');
 
@@ -66,7 +66,7 @@ const usersController = {
   },
 
   perfil: function (req, res) {
-    let file = resolve(__dirname,'../data','users.json');
+    let file = resolve(__dirname, '../data', 'users.json');
     let data = readFileSync(file);
     let users = JSON.parse(data);
     return res.render('users/perfil', {
@@ -78,6 +78,37 @@ const usersController = {
 
   logout: function (req, res) {
     delete req.session.user
+    return res.redirect('/')
+  },
+
+
+  userEdit: function (req, res) {
+    return res.render('users/userEdit', {
+      title: "Editar tu Usuario",
+      styles: ["style", "header", "footer", "userEdit"]
+    });
+  },
+
+  processEdit: function (req, res) {
+    let userToEdit = find(req.session.user.email)
+    let users = index();
+
+    req.body.image = userToEdit.image
+    console.log(req.files);
+    if (req.files[0] != undefined) {
+      deleteImage(userToEdit.image)
+      req.body.image = req.files[0].filename
+    }
+    
+    let edited = edit(req.body, productToEdit)
+
+    let editUser = users.map(user => {
+      if (user.email == userToEdit.email)
+        user = edited
+      return user
+    });
+
+    write(editUser)
     return res.redirect('/')
   }
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../includes/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include ('../includes/header.ejs') %>
+
+        <main>
+
+            <% if (user) { %>
+                <section class="formulario_relleno">
+                    <form action="/users/editConfirm?m=PUT"  id="form" method="post" enctype="multipart/form-data">
+                        <div class="formulario_contenido"> 
+    
+                        <h5> Edición de usuario</h5>
+    
+                        <p> datos del perfil </p>
+                        <picture >
+                            <img src="/images/avatars/<%=user.image%>" alt="">
+                        </picture>
+    
+                            <label for="nombre  y apellido ">nombre y apellido</label>
+                            <input type="text" name="nombre y apellido" id="relleno" value="<%= %>"  placeholder=" nombre y
+                                apellido">
+                            <label for="nombre-user">Telefono/celular</label>
+    
+                            <input type="number" name="" id="relleno" placeholder="Telefono/celular" value="">
+    
+                            <label for="nombre-user">ciudad /prov</label>
+    
+                            <input type="text" name="ciudad/prov" id="relleno" min="1" value="">
+    
+                            <label for="imagen-de-perfil">imagen de perfil</label>
+    
+                            <input type="file" id="relleno" name="avatar">
+     
+                            <button type="" class="resete"><a href="/">Cancelar</a></button>       
+                            <button type="submit" class="editar">Editar</button>
+                        </div>
+                </section>
+            <% } %>
+
+            
+        </main>
+
+        <%- include ('../includes/footer.ejs') %>
+</body>
+
+</html>

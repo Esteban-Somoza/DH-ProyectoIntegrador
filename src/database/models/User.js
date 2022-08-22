@@ -7,10 +7,10 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        name: {
+        nombre: {
             type: DataTypes.STRING
         },
-        lastName: {
+        apellido: {
             type: DataTypes.STRING
         },
         email: {
@@ -21,14 +21,20 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: DataTypes.TEXT
         },
-        // avatar: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // },
+        image: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         isAdmin: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
-        }
+        },
+        telefono: {
+            type: DataTypes.TEXT
+        },
+        ubicacion: {
+            type: DataTypes.TEXT
+        },
     };
     let config = {
         timestamps: false,
