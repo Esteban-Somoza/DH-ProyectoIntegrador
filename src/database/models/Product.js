@@ -16,15 +16,22 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.TEXT
         },
-        categorieId: {
-            type: DataTypes.TEXT
+        image: {
+            type: DataTypes.INTEGER
         },
-        brandId: {
-            type: DataTypes.TEXT
+        category: {
+            type: DataTypes.INTEGER
         },
-        informationID: {
-            type: DataTypes.TEXT
+        information: {
+            type: DataTypes.INTEGER
         },
+        information: {
+            type: DataTypes.INTEGER
+        },
+        brand: {
+            type: DataTypes.INTEGER
+        },
+
     };
     let config = {
         timestamps:false,

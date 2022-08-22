@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         }
     };
+    
     let config = {
         timestamps:false,
         deletedAt:false
