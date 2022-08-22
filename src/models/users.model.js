@@ -28,8 +28,10 @@ const model = {
       apellido: data.apellido,
       email: data.email.toLowerCase(),
       password: bcrypt.hashSync(data.password, 10),
-      image: data.image,
-      isAdmin: data.email.includes('@nicuesa.com')
+      imagen: data.image,
+      isAdmin: data.email.includes('@nicuesa.com'),
+      telefono: data.telefono,
+      ubicacion: data.ubicacion
     })
   },
 
@@ -53,19 +55,19 @@ const model = {
     return {
       id: userOriginal.id,
 
-      nombre: data.id,
+      nombre: data.nombre,
 
-      apellido: data.id,
+      apellido: data.apellido,
 
-      email: userOriginal.id,
+      email: userOriginal.email,
 
-      password: data.id,
+      password: data.password,
 
-      image: data.id,
+      imagen: data.imagen,
 
-      telefono: data.id,
+      telefono: data.telefono,
 
-      ciudad: data.id,
+      ubicacion: data.ubicacion,
     }
 
   }

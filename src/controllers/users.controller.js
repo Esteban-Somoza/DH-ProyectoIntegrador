@@ -29,7 +29,7 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
-    req.body.image = req.files[0].filename;
+    req.body.imagen = req.files[0].filename;
 
     let newUser = create(req.body)
     let users = index();
