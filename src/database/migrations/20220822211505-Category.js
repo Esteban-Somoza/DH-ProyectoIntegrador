@@ -3,18 +3,15 @@
 module.exports = {
   async up(queryInterface, DataTypes) {
     try {
-      await queryInterface.createTable('Category', {
+      await queryInterface.createTable('categoria', {
         id: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: DataTypes.INTEGER
       },
-      name: {
+      nombre: {
           type: DataTypes.STRING
-      },
-      subCategory: {
-          type: DataTypes.INTEGER
       }
       });
 
@@ -24,6 +21,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Category');
+    await queryInterface.dropTable('categoria');
   }
 };
