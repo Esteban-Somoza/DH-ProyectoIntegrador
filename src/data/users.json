@@ -41,7 +41,8 @@
     "apellido": "Perfil",
     "email": "perfil@nicuesa.com",
     "password": "$2a$10$9k.WnHXt9g73jiNCyoUpFOzycLZIZ4RfEOHUFeEMopQF1RLsUfaZS",
-    "image": "avatar-1660676467819-430459493.png"
+    "image": "avatar-1660676467819-430459493.png",
+    "isAdmin": false
   },
   {
     "id": 8,

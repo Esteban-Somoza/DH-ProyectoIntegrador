@@ -23,7 +23,7 @@ vmodule.exports = (sequelize, DataTypes) => {
     };
     const product = sequelize.define(alias,cols,config)
 
-    product.associate = function(models) => {
+    product.associate = function(models) {
         product.belongsToMany(image,{
             through:'imagesProducts',
             foreignKey:'product'

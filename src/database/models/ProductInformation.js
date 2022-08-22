@@ -13,21 +13,24 @@ module.exports = (sequelize, DataTypes) => {
         price: {
             type: DataTypes.FLOAT
         },
-        imagen: {
+        description: {
+            type: DataTypes.TEXT
+        },
+        image: {
             type: DataTypes.INTEGER
         },
-        categoria: {
+        category: {
             type: DataTypes.INTEGER
         },
         information: {
             type: DataTypes.INTEGER
         },
-        marca: {
+        information: {
             type: DataTypes.INTEGER
         },
-        description: {
-            type: DataTypes.TEXT
-        }
+        brand: {
+            type: DataTypes.INTEGER
+        },
 
     };
     let config = {

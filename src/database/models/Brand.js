@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'product';
+    let alias = 'brands';
     let cols = {
         id: {
             allowNull: false,
@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt:false
     };
     const Brand = sequelize.define(alias,cols,config)
+    console.log(Brand);
 
     Brand.associate = function(models) {
         Brand.hasMany(models.Product,{
