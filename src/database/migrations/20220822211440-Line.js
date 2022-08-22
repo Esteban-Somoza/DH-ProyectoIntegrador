@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, DataTypes) {
     try {
-      await queryInterface.createTable('line', {
+      await queryInterface.createTable('linea', {
         id: {
           allowNull: false,
           autoIncrement: true,
@@ -21,6 +21,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('products');
+    await queryInterface.dropTable('linea');
   }
 };
