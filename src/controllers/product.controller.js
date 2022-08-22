@@ -113,12 +113,14 @@ module.exports = {
     }
 
     let edited = edit(req.body, productToEdit)
-    let productModified = products.map(p => {
-      if (p.id == edited.id) {
-        p = edited
+
+    let productModified = products.map(product => {
+      if (product.id == edited.id) {
+        product = edited
       }
-      return p
+      return product
     });
+    
     write(productModified)
     return res.redirect(`/products/${req.params.id}`)
   },

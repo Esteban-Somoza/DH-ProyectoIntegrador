@@ -319,25 +319,5 @@
     "details": {
       "description": " Lavatorio de FINECERAMIC® mural o sobre encimera"
     }
-  },
-  {
-    "id": 20,
-    "name": "asdf",
-    "price": 123,
-    "imagen": "imagenProducto-1660003500774-639942641.jpg",
-    "categoria": "cocina",
-    "subCategoria": "horno",
-    "marca": "asdf",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "modelo": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": "",
-      "medidas": "",
-      "capacidad": ""
-    },
-    "details": {}
   }
 ]
