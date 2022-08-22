@@ -9,10 +9,10 @@ module.exports = {
           autoIncrement: true,
           primaryKey: true,
           type: DataTypes.INTEGER
-        },
-        name: {
+      },
+      nombre: {
           type: DataTypes.STRING
-        }
+      }
       });
 
     } catch (error) {

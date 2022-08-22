@@ -3,14 +3,14 @@
 module.exports = {
   async up(queryInterface, DataTypes) {
     try {
-      await queryInterface.createTable('Colors', {
+      await queryInterface.createTable('colores', {
         id: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: DataTypes.INTEGER
       },
-      name: {
+      nombre: {
           type: DataTypes.INTEGER
       }
       });

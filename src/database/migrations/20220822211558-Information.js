@@ -3,32 +3,29 @@
 module.exports = {
   async up(queryInterface, DataTypes) {
     try {
-      await queryInterface.createTable('Information', {
+      await queryInterface.createTable('informacion', {
         id: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: DataTypes.INTEGER
       },
-      colors: {
+      coloresId: {
           type: DataTypes.INTEGER
       },
-      line: {
-          type: DataTypes.INTEGER
-      },
-      configuration: {
+      configuracion: {
           type: DataTypes.TEXT
       },
-      apt: {
+      apto: {
           type: DataTypes.TEXT
       },
-      tecnology: {
+      tecnologia: {
           type: DataTypes.TEXT
       },
-      dimentions: {
+      medidas: {
           type: DataTypes.TEXT
       },
-      capacity: {
+      capacidad: {
           type: DataTypes.TEXT
       },
       });
@@ -39,6 +36,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Information');
+    await queryInterface.dropTable('informacion');
   }
 };
