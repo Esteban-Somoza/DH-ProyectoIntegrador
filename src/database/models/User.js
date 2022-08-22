@@ -43,11 +43,11 @@ module.exports = (sequelize, DataTypes) => {
 
     const User = sequelize.define(alias, cols, config);
 
-    User.associate = function(models){
+    User.associate = function (models) {
         User.belongsTo(models.Image, {
             as: "avatar",
             foreignKey: 'avatarId',
-            allowNull: false    
+            allowNull: false
         })
     }
 

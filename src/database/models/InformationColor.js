@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'product';
+    let alias = 'informationColor';
     let cols = {
         id: {
             allowNull: false,
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     };
     const product = sequelize.define(alias,cols,config)
 
-    product.associate = function(models) => {
+    product.associate = function(models) {
         product.belongsToMany(image,{
             through:'imagesProducts',
             foreignKey:'product'
