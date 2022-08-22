@@ -27,15 +27,6 @@
     "IsAdmin": false
   },
   {
-    "id": 5,
-    "nombre": "Carlo",
-    "apellido": "pa",
-    "email": "carlosp@nicuesa.com",
-    "password": "$2a$10$sPY8aJv25QC.B1xXatEDn.zxl5v1s61CpgP9KGxIwpYoKj.oD7ymW",
-    "image": "avatar-1659577307192-672982377.png",
-    "IsAdmin": true
-  },
-  {
     "id": 6,
     "nombre": "luciano",
     "apellido": "gi",
@@ -78,5 +69,14 @@
     "password": "$2a$10$SC8YbzIezGZhWqjs62qQT.UbgJU3c76VEI/NC7PE54NICbGoj9j/q",
     "image": "avatar-1661123983767-163789702.png",
     "isAdmin": false
+  },
+  {
+    "id": 11,
+    "nombre": "carlos ",
+    "apellido": "palla",
+    "email": "carlosp@nicuesa.com",
+    "password": "$2a$10$p7QabDIZJXNb9FVAWRhgreUJz19Zg7XDPnhJkn2BDrzuY3HTn4VEu",
+    "image": "avatar-1661200902692-558090641.jpg",
+    "isAdmin": true
   }
 ]
