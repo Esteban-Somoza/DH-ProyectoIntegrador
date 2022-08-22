@@ -8,13 +8,6 @@ const isLogged = require('../middlewares/isLogged');
 
 
 const usersController = {
-  // login: (req, res) => {
-  //   return res.render("./users/login", {
-  //     title: "Login",
-  //     styles: ["style", "header", "footer", "login"],
-  //   });
-  // },
-
   register: (req, res) => {
     return res.render("./users/register", {
       title: "Registro",
@@ -57,7 +50,7 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
-    let user = find(req.body.email)
+    let user = find(req.body.email.toLowerCase())
     req.session.user = user
     if (req.body.recordame != undefined) {
       res.cookie("recordame", user.email / id, { maxAge: 172800000 })

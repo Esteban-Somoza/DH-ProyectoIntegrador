@@ -18,12 +18,14 @@ router.post('/users/logout',logout)
 router.post('/users/logout',[isLogged],logout)
 router.post('/users/logout',[isAdmin],logout)
 
+
 router.get('/users/perfil',perfil )
+
+
 
 
 // register
 router.get("/users/register", register)
 router.post("/users/register", middlewareRegister, process)
-
 
 module.exports = router

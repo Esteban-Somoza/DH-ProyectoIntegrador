@@ -4,7 +4,13 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "nodemon src/app.js -e json,js,mjs,ejs"
+    "test": "nodemon src/app.js -e json,js,mjs,ejs",
+    "start": "node source/app.js",
+    "sq-i": "sequelize init",
+    "sq-ms": "sequelize init:migrations && sequelize init:seeders",
+    "sq-mg": "sequelize migration:generate --name imagesProducts",
+    "sq-sg": "sequelize seed:generate --name imagesProducts",
+    "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +23,10 @@
     "express-session": "^1.17.3",
     "express-validator": "^6.14.2",
     "method-override": "^3.0.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3",
+    "sequelize-cli": "^6.4.1"
   },
   "repository": {
     "type": "git",
