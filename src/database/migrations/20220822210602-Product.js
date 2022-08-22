@@ -3,32 +3,38 @@
 module.exports = {
   async up(queryInterface, DataTypes) {
     try {
-      await queryInterface.createTable('product', {
+      await queryInterface.createTable('producto', {
         id: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: DataTypes.INTEGER
         },
-        name: {
+        nombre: {
           type: DataTypes.STRING
         },
-        price: {
+        precio: {
           type: DataTypes.FLOAT
         },
-        imagen: {
+        imagenId: {
           type: DataTypes.INTEGER
         },
-        categoria: {
+        categoriaId: {
           type: DataTypes.INTEGER
         },
-        information: {
+        subcategoriaId: {
           type: DataTypes.INTEGER
         },
-        marca: {
+        informationId: {
           type: DataTypes.INTEGER
         },
-        description: {
+        marcaId: {
+          type: DataTypes.INTEGER
+        },
+        lineaId: {
+          type: DataTypes.INTEGER
+        },
+        descripcion: {
           type: DataTypes.TEXT
         }
       });
@@ -39,6 +45,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('products');
+    await queryInterface.dropTable('producto');
   }
 };
