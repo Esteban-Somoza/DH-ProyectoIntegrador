@@ -9,13 +9,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         name: {
             type: DataTypes.STRING
-        },
-        price: {
-            type: DataTypes.INTEGER
-        },
-        description: {
-            type: DataTypes.TEXT
-        },
+        }
+        
     };
     let config = {
         timestamps:false,

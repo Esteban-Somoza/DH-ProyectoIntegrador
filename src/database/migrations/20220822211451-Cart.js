@@ -3,22 +3,22 @@
 module.exports = {
   async up(queryInterface, DataTypes) {
     try {
-      await queryInterface.createTable('Cart', {
+      await queryInterface.createTable('cart', {
         id: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: DataTypes.INTEGER
-      },
-      name: {
+        },
+        name: {
           type: DataTypes.STRING
-      },
-      price: {
+        },
+        price: {
           type: DataTypes.INTEGER
-      },
-      description: {
+        },
+        description: {
           type: DataTypes.TEXT
-      },
+        },
       });
 
     } catch (error) {
