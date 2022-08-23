@@ -3,16 +3,22 @@
 module.exports = {
   async up(queryInterface, DataTypes) {
     try {
-      await queryInterface.createTable('marca', {
+      await queryInterface.createTable('cart', {
         id: {
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
           type: DataTypes.INTEGER
-      },
-      nombre: {
+        },
+        name: {
           type: DataTypes.STRING
-      }
+        },
+        price: {
+          type: DataTypes.INTEGER
+        },
+        description: {
+          type: DataTypes.TEXT
+        },
       });
 
     } catch (error) {
@@ -21,6 +27,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('marca');
+    await queryInterface.dropTable('Cart');
   }
 };

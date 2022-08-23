@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'information';
+    let alias = 'informacion';
     let cols = {
         id: {
             allowNull: false,
@@ -7,53 +7,43 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        colors: {
+        coloresId: {
             type: DataTypes.INTEGER
         },
-        line: {
-            type: DataTypes.INTEGER
-        },
-        configuration: {
+        configuracion: {
             type: DataTypes.TEXT
         },
-        apt: {
+        apto: {
             type: DataTypes.TEXT
         },
-        tecnology: {
+        tecnologia: {
             type: DataTypes.TEXT
         },
-        dimentions: {
+        medidas: {
             type: DataTypes.TEXT
         },
-        capacity: {
+        capacidad: {
             type: DataTypes.TEXT
         },
     };
+
     let config = {
         timestamps:false,
         deletedAt:false
     };
+    
     const Information = sequelize.define(alias,cols,config)
 
     Information.associate = function(models) {
         Information.belongsTo(models.Product,{
-            as: "products",
-            foreignKey:'productId',
+            as: "producto",
+            foreignKey:'informacionId',
             allowNull: false
         }),
 
-        Information.belongsToMany(models.Color,{
-            as: "colors",
-            through: "informationColor",
-            foreignKey:'informationId',
-            otherKey:'colorId',
-            allowNull: false
-        }),
-        
-        Information.belongsTo(models.Line,{
-            as: "lines",
-            foreignKey:'lineId',
-            allowNull: false
+        Information.hasMany(models.Color,{
+            as: "colores",
+            foreignKey:'coloresId',
         })
     }
     return Information

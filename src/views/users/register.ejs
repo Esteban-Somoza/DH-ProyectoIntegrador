@@ -47,6 +47,22 @@
                                                 <%= errors.password.msg %>
                                             </p>
                                             <% } %>
+                                        <label for="telefono">Telefono</label>
+                                        <input type="text" name="telefono" id="telefono" 
+                                            value="<%= locals.oldData ? oldData.telefono: null %>">
+                                        <% if ( locals.errors && errors.telefono ) { %>
+                                            <p class="msg-error">
+                                                <%= errors.telefono.msg %>
+                                            </p>
+                                            <% } %>
+                                        <label for="ubicacion">Ubicación</label>
+                                        <input type="text" name="ubicacion" id="ubicacion" 
+                                            value="<%= locals.oldData ? oldData.ubicacion: null %>">
+                                        <% if ( locals.errors && errors.ubicacion ) { %>
+                                            <p class="msg-error">
+                                                <%= errors.ubicacion.msg %>
+                                            </p>
+                                            <% } %>
 
                                             <label for="avatar">Foto de perfil</label>              
                                             <input type="file" 

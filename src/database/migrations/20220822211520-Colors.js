@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, DataTypes) {
     try {
-      await queryInterface.createTable('marca', {
+      await queryInterface.createTable('colores', {
         id: {
           allowNull: false,
           autoIncrement: true,
@@ -11,7 +11,7 @@ module.exports = {
           type: DataTypes.INTEGER
       },
       nombre: {
-          type: DataTypes.STRING
+          type: DataTypes.INTEGER
       }
       });
 
@@ -21,6 +21,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('marca');
+    await queryInterface.dropTable('Colors');
   }
 };

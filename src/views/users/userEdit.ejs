@@ -12,16 +12,17 @@
         <main>
 
             <% if (user) { %>
-                <section class="formulario_relleno">
 
-                    <div class="formulario_contenido">
 
-                        <h5> Edición de usuario</h5>
+                <article class="formulario_contenido">
 
-                        <p> datos del perfil </p>
-                        <picture>
-                            <img src="/images/avatars/<%=user.image%>" alt="" id="img">
-                        </picture>
+                    <h5> Edición de usuario</h5>
+
+                    <p> datos del perfil</p>
+                    <picture  id="imagen_cotenido">
+                        <img src="/images/avatars/<%=user.image%>" alt="" id="img">
+                    </picture>
+                    <section>
                         <form action="/users/editConfirm?m=PUT" id="form" method="post" enctype="multipart/form-data">
                             <label for="nombre  y apellido ">nombre y apellido</label>
                             <input type="text" name="nombre y apellido" id="relleno" value="<%= %>" placeholder=" nombre y
@@ -41,8 +42,9 @@
                                 <button type="" class="resete"><a href="/">Cancelar</a></button>
                                 <button type="submit" class="editar">Editar</button>
                             </nav>
-                    </div>
-                </section>
+                    </section>
+                </article>
+
                 <% } %>
 
 

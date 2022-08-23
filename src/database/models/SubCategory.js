@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'linea';
+    let alias = 'subcategoria';
     let cols = {
         id: {
             allowNull: false,
@@ -11,18 +11,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         }
     };
+    
     let config = {
         timestamps:false,
         deletedAt:false
     };
-    const Line = sequelize.define(alias,cols,config)
+    
+    const SubCategory = sequelize.define(alias,cols,config)
 
-    Line.associate = function(models) {
-        Line.hasMany(models.Product,{
-            through:'producto',
-            foreignKey:'lineaId'
+    SubCategory.associate = function(models) {
+        SubCategory.hasMany(models.Product,{
+            as:'producto',
+            foreignKey:'subcategoriaId',
         })
     }
-    
-    return Line
+    return SubCategory
 }
