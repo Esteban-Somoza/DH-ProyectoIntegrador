@@ -1,21 +1,22 @@
-// 'use strict';
+'use strict';
 
-// const productIndex = require('../../models/product.model')
+const productIndex = require('../../models/product.model')
 
-// module.exports = {
-//   async up(queryInterface, Sequelize) {
-//     productIndex.index().map(product => {
-//       let linea = {
-//         name: product.information.linea
-//       }
-//     })
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    let lineas = productIndex.index().map((product, indice) => {
+      let linea = {
+        id: indice+= 1,
+        nombre: product.information.linea
+      }
+      return linea
+    })
 
-//     console.log(allImages);
-//     await queryInterface.bulkInsert('informacion', allImages, {});
-//   },
+    await queryInterface.bulkInsert('linea', lineas, {});
+  },
 
-//   async down(queryInterface, Sequelize) {
-//     await queryInterface.bulkDelete('usuarios', null, {});
-//   }
-// };
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('linea', null, {});
+  }
+};
 

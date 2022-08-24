@@ -1,3 +1,4 @@
+// let categories = require("../../src/data/categorias")
 let categories = {
     baño: ["ducha", "inodoro", "bidet", "griferia", "lavatorio"],
     cocina: ["bacha", "horno", "griferiaCocina"],
