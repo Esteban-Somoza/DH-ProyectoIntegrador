@@ -3,8 +3,7 @@
     max-width: 450px;
     border-radius: 1em;
     margin: auto;
-    height: 42vh;
-    width: 429px;
+    height: 49vh;
     flex-wrap: wrap;
     box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
     margin-top: 2em;
@@ -12,10 +11,11 @@
 }
 
 #form{
-    display: flex;
+
     flex-direction: column; 
        align-items: flex-start;
        width: 80%;
+       padding: 10px;
 
 }
 #relleno {
@@ -50,5 +50,19 @@ font-size: 20px;
     font-weight: 700;
     box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
     cursor: pointer;
+} 
+/* img */
+#imagen_cotenido {
+    display: flex;
+    justify-content: space-evenly;
+}
+#img {
+    width: 50%;
+    text-align: center;
 }
 
+
+#btn{display:flex; 
+    justify-content: space-around;
+    margin-top: 10px;
+} 
