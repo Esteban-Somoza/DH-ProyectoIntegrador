@@ -1,24 +1,21 @@
-'use strict';
+// 'use strict';
 
-module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
-  },
+// const productIndex = require('../../models/product.model')
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-  }
-};
+// module.exports = {
+//   async up(queryInterface, Sequelize) {
+//     productIndex.index().map(product => {
+//       let linea = {
+//         name: product.information.linea
+//       }
+//     })
+
+//     console.log(allImages);
+//     await queryInterface.bulkInsert('informacion', allImages, {});
+//   },
+
+//   async down(queryInterface, Sequelize) {
+//     await queryInterface.bulkDelete('usuarios', null, {});
+//   }
+// };
+

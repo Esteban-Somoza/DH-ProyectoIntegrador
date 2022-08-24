@@ -9,6 +9,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         nombre: {
             type: DataTypes.STRING
+        },
+        subcategoriaId: {
+            type: DataTypes.STRING
         }
     };
     
@@ -22,6 +25,10 @@ module.exports = (sequelize, DataTypes) => {
         Category.hasMany(models.Product,{
             as:'producto',
             foreignKey:'categoriaId',
+        }),
+        Category.belongsTo(models.Category,{
+            as: "categoria",
+            foreignKey:'subcategoriaId',
         })
     }
     return Category

@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        nombre: {
+        nombre: { 
             type: DataTypes.STRING
         },
         precio: {
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         subcategoriaId: {
             type: DataTypes.INTEGER
         },
-        informationId: {
+        informacionId: {
             type: DataTypes.INTEGER
         },
         marcaId: {

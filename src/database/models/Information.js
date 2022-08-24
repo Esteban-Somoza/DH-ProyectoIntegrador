@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         coloresId: {
-            type: DataTypes.INTEGER
+            type: DataTypes.TEXT
         },
         configuracion: {
             type: DataTypes.TEXT
