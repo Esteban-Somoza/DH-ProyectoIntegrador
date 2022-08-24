@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        coloresId: {
+        colores: {
             type: DataTypes.TEXT
         },
         configuracion: {
@@ -39,12 +39,12 @@ module.exports = (sequelize, DataTypes) => {
             as: "producto",
             foreignKey:'informacionId',
             allowNull: false
-        }),
-
-        Information.hasMany(models.Color,{
-            as: "colores",
-            foreignKey:'coloresId',
         })
+
+        // Information.hasMany(models.Color,{
+        //     as: "colores",
+        //     foreignKey:'coloresId',
+        // })
     }
     return Information
 }

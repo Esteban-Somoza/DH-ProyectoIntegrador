@@ -10,8 +10,8 @@ module.exports = {
           primaryKey: true,
           type: DataTypes.INTEGER
       },
-      coloresId: {
-          type: DataTypes.INTEGER
+      colores: {
+          type: DataTypes.TEXT
       },
       configuracion: {
           type: DataTypes.TEXT
