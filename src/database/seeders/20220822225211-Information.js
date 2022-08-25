@@ -1,24 +1,28 @@
 'use strict';
+const { index } = require('../../models/product.model')
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+  async up(queryInterface, Sequelize) {
+    
+    let informacion = index().map(product => {
+      let productInformation = {
+        coloresId: product.information.colores,
+        configuracion: 1,
+        apto: 1,
+        tecnologia: 1,
+        medidas: 1,
+        capacidad: 1,
+      }
+      return productInformation
+    })
+
+    await queryInterface.bulkInsert('informacion', informacion, {});
+
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('usuarios', null, {});
+
   }
 };
+

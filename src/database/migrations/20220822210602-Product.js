@@ -25,7 +25,7 @@ module.exports = {
         subcategoriaId: {
           type: DataTypes.INTEGER
         },
-        informationId: {
+        informacionId: {
           type: DataTypes.INTEGER
         },
         marcaId: {

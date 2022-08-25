@@ -4,14 +4,13 @@ const { index } = require('../../models/users.model')
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    let imageId = 1
-    let users = index().map(user => {
+    let users = index().map((user,indice) => {
       let userMap = {
         nombre: user.nombre,
         apellido: user.apellido,
         email: user.email,
         password: user.password,
-        imagenId: imageId++,
+        imagenId: indice+=1,
         isAdmin: user.isAdmin,
         telefono: user.telefono,
         ubicacion: user.ubicacion
