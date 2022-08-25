@@ -24,16 +24,18 @@
                     </picture>
                     <section>
                         <form action="/users/editConfirm?m=PUT" id="form" method="post" enctype="multipart/form-data">
-                            <label for="nombre  y apellido ">nombre y apellido</label>
-                            <input type="text" name="nombre y apellido" id="relleno" value="<%= %>" placeholder=" nombre y
-                                apellido">
+                            <label for="email_user">email</label>
+
+                            <input type="text" name="" id="relleno" placeholder="" value="<%= user.email%>" >
+
+
                             <label for="nombre-user">Telefono/celular</label>
 
-                            <input type="number" name="" id="relleno" placeholder="Telefono/celular" value="">
+                            <input type="number" name="" id="relleno" placeholder="Telefono/celular" value="<%= user.telefono%>" >
 
                             <label for="nombre-user">ciudad /prov</label>
 
-                            <input type="text" name="ciudad/prov" id="relleno" min="1" value="">
+                            <input type="text" name="ciudad/prov" id="relleno" value="<%= user.ubicacion %> ">
 
                             <label for="imagen-de-perfil">imagen de perfil</label>
 

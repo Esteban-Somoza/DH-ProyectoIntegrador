@@ -84,7 +84,7 @@ const usersController = {
 
   userEdit: function (req, res) {
     return res.render('users/userEdit', {
-      title: "Editar tu Usuario",
+      title: "Edita tu Usuario",
       styles: ["style", "header", "footer", "userEdit"]
     });
   },
@@ -94,17 +94,18 @@ const usersController = {
     let users = index();
 
     req.body.image = userToEdit.image
+
     console.log(req.files);
     if (req.files[0] != undefined) {
       deleteImage(userToEdit.image)
       req.body.image = req.files[0].filename
     }
     
-    let edited = edit(req.body, productToEdit)
+    let edited = edit(req.body, userToEdit)
 
     let editUser = users.map(user => {
       if (user.email == userToEdit.email)
-        user = edited
+        user=edited
       return user
     });
 

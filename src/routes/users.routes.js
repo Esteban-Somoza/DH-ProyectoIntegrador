@@ -13,9 +13,10 @@ const { login, register, process, access, logout,userEdit } = require  = require
 const {perfil, login, register, process, access, logout, userEdit, processEdit } = require('../controllers/users.controller');
 // login
 router.get("/users/login", login)
+
 router.get("/users/userEdit", userEdit)
 
-router.get("/users/editConfirm", processEdit)
+router.put("/users/editConfirm",processEdit)
 
 router.post('/users/access', middlewareLogin, access)
 
