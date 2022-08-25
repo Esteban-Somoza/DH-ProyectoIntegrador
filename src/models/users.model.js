@@ -28,7 +28,7 @@ const model = {
       apellido: data.apellido,
       email: data.email.toLowerCase(),
       password: bcrypt.hashSync(data.password, 10),
-      imagen: data.image,
+      imagen: data.imagen,
       isAdmin: data.email.includes('@nicuesa.com'),
       telefono: data.telefono,
       ubicacion: data.ubicacion
@@ -63,7 +63,7 @@ const model = {
 
       password: data.password,
 
-      imagen: data.imagen,
+      imagenId: data.imagenId,
 
       telefono: data.telefono,
 

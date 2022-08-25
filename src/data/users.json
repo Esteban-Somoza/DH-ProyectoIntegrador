@@ -100,13 +100,7 @@
   },
   {
     "id": 7,
-    "nombre": "carlos",
-    "apellido": "palla",
-    "email": "carlospalla@nicuesa.com",
-    "password": "$2a$10$Qo9aTQaGrLEkDqPISWnjwu0aB66eaykHFBQgW5BBImQxwLvyJb5qa",
-    "isAdmin": true,
-    "telefono": "11456786423",
-    "ubicacion": "puerto rico"
+    "email": "carlospalla@nicuesa.com"
   },
   {
     "id": 8,
@@ -117,5 +111,16 @@
     "isAdmin": true,
     "telefono": "1222234",
     "ubicacion": "caba"
+  },
+  {
+    "id": 9,
+    "nombre": "carlos",
+    "apellido": "oasdoas",
+    "email": "carlosfsdfs@nicuesa.com",
+    "password": "$2a$10$Ng40iwH14ioiRNF9BcFgDeoFtn6qSZodWDKJ2ofwszLBybaqDLqc2",
+    "imagenId": "avatar-1661461097801-699903538.jpg",
+    "isAdmin": true,
+    "telefono": "",
+    "ubicacion": ""
   }
 ]

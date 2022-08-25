@@ -21,7 +21,7 @@ const usersController = {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
     if (errors && errors.length > 0) {
-      deleteImage(req.files[0].filename)
+      /* deleteImage(req.files[0].filename) */
       return res.render('users/register', {
         title: "Registro",
         styles: ["style", "header", "footer", "register"],
@@ -83,29 +83,36 @@ const usersController = {
 
 
   userEdit: function (req, res) {
+    let users = index()
+    let user = users.find(user => user.email == req.session.user.email)
     return res.render('users/userEdit', {
-      title: "Edita tu Usuario",
-      styles: ["style", "header", "footer", "userEdit"]
+
+      title: "Editar tu Usuario",
+      styles: ["style", "header", "footer", "userEdit"],
+      user: user
     });
   },
 
   processEdit: function (req, res) {
     let userToEdit = find(req.session.user.email)
     let users = index();
+     console.log(req.body);
 
-    req.body.image = userToEdit.image
 
-    console.log(req.files);
-    if (req.files[0] != undefined) {
-      deleteImage(userToEdit.image)
-      req.body.image = req.files[0].filename
+     
+    req.body.imagenId = userToEdit.imagenId
+
+
+    if (req.files && req.files.length > 0) {
+      deleteImage(userToEdit.imagenId)
+      req.body.imagenId = req.files[0].filename
     }
-    
+
     let edited = edit(req.body, userToEdit)
 
     let editUser = users.map(user => {
-      if (user.email == userToEdit.email)
-        user=edited
+      if (user.email == edited.email)
+        user = edited
       return user
     });
 

@@ -16,8 +16,8 @@ router.get("/users/login", login)
 
 router.get("/users/userEdit", userEdit)
 
-router.put("/users/editConfirm",processEdit)
-
+router.put("/users/editConfirm",[isLogged],processEdit)
+   
 router.post('/users/access', middlewareLogin, access)
 
 router.post('/users/logout',[isLogged], logout)

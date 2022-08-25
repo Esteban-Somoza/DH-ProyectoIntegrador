@@ -11,43 +11,52 @@
 
         <main>
 
-            <% if (user) { %>
 
 
-                <article class="formulario_contenido">
 
-                    <h5> Edición de usuario</h5>
+            <article class="formulario_contenido">
 
-                    <p> datos del perfil</p>
-                    <picture  id="imagen_cotenido">
-                        <img src="/images/avatars/<%=user.image%>" alt="" id="img">
-                    </picture>
-                    <section>
-                        <form action="/users/editConfirm?m=PUT" id="form" method="post" enctype="multipart/form-data">
-                            <label for="email_user">email</label>
+                <h5> Edición de usuario</h5>
 
-                            <input type="text" name="" id="relleno" placeholder="" value="<%= user.email%>" >
+                <p> datos del perfil</p>
+                <picture id="imagen_cotenido">
+                    <img src="/images/avatars/<%= user.imagen %>" alt="" id="img">
+                </picture>
+
+                <form action="/users/editConfirm?m=PUT" id="form" method="post" enctype="multipart/form-data">
 
 
-                            <label for="nombre-user">Telefono/celular</label>
+                    <label for="nombre">nombre</label>
 
-                            <input type="number" name="" id="relleno" placeholder="Telefono/celular" value="<%= user.telefono%>" >
+                    <input type="text" name="nombre" id="relleno" placeholder="nombre" value="<%= user.nombre%>">
 
-                            <label for="nombre-user">ciudad /prov</label>
 
-                            <input type="text" name="ciudad/prov" id="relleno" value="<%= user.ubicacion %> ">
+                    <label for="telefono">Telefono/celular</label>
 
-                            <label for="imagen-de-perfil">imagen de perfil</label>
+                    <input type="number" name="telefono" id="relleno" placeholder="Telefono/celular"
+                        value="<%= user.telefono%>">
 
-                            <input type="file" id="relleno" name="avatar">
-                            <nav id="btn">
-                                <button type="" class="resete"><a href="/">Cancelar</a></button>
-                                <button type="submit" class="editar">Editar</button>
-                            </nav>
-                    </section>
-                </article>
+                    <label for="ciudad">ciudad /prov</label>
 
-                <% } %>
+                    <input type="text" name="ciudad" id="relleno" value="<%= user.ubicacion %> ">
+
+                    <label for="imagenId">imagen de perfil</label>
+
+                    <input type="file" id="relleno" name="imagenId">
+                <!---<nav id="btn">
+                        <button type="" class="resete"><a href="/">Cancelar</a></button>
+                        <button type="submit" class="editar">Editar</button>
+                    </nav>---> 
+                    <div id="boton">
+                        <button type="" class="Cancelar"><a href="/">Cancelar</a></button>
+                        <button type="submit" class="botonform">Editar</button>
+                    </div>
+                </form>
+
+
+            </article>
+
+
 
 
         </main>
