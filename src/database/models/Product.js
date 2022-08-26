@@ -25,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
         informacionId: {
             type: DataTypes.INTEGER
         },
-        marcaId: {
-            type: DataTypes.INTEGER
+        marca: {
+            type: DataTypes.TEXT
         },
         lineaId: {
             type: DataTypes.INTEGER
@@ -55,10 +55,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }),
 
-        Product.belongsTo(models.Brand,{
-            as: "marca",
-            foreignKey:'marcaId',
-        }),
+        
         
         Product.belongsTo(models.Information,{
             as: "informacion",

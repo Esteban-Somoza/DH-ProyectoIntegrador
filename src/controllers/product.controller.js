@@ -1,5 +1,8 @@
 const { validationResult } = require('express-validator');
 const { write, create, index, find, filter, edit, deleteImage } = require("../models/product.model");
+//const {product, image ,information,line,category} = require("../database/models/index")
+
+
 module.exports = {
 
   productDetail: (req, res) => {
