@@ -43,13 +43,13 @@ module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define(alias,cols,config)
 
     Product.associate = function(models) {
-        Product.belongsTo(models.Image,{
+        Product.belongsTo(models.imagen,{
             as: "imagen",
             foreignKey:'imagenId',
             allowNull: false
         }),
 
-        Product.belongsTo(models.Category,{
+        Product.belongsTo(models.categoria,{
             as: "categoria",
             foreignKey:'categoriaId',
             allowNull: false
@@ -57,23 +57,23 @@ module.exports = (sequelize, DataTypes) => {
 
         
         
-        Product.belongsTo(models.Information,{
+        Product.belongsTo(models.informacion,{
             as: "informacion",
             foreignKey:'informacionId',
             allowNull: false
         }),
 
-        Product.belongsTo(models.Line,{
+        Product.hasMany(models.linea,{
             as: "linea",
             foreignKey:'lineaId',
             allowNull: false
-        }),
+        })
 
-        Product.belongsTo(models.SubCategory,{
+       /* Product.belongsTo(models.subcategoria,{
             as: "subcategoria",
             foreignKey:'subcategoriaId',
         })
-
+        */
     }
 
     return Product
