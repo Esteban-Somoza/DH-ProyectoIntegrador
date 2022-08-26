@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     const Line = sequelize.define(alias,cols,config)
 
     Line.associate = function(models) {
-        Line.hasMany(models.Product,{
+        Line.belongsTo(models.producto,{
             through:'producto',
             foreignKey:'lineaId'
         })

@@ -35,16 +35,13 @@ module.exports = (sequelize, DataTypes) => {
     const Information = sequelize.define(alias,cols,config)
 
     Information.associate = function(models) {
-        Information.belongsTo(models.Product,{
+        Information.belongsTo(models.producto,{
             as: "producto",
             foreignKey:'informacionId',
             allowNull: false
         })
 
-        // Information.hasMany(models.Color,{
-        //     as: "colores",
-        //     foreignKey:'coloresId',
-        // })
+     
     }
     return Information
 }
