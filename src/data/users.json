@@ -87,5 +87,40 @@
     "password": "$2a$10$SC8YbzIezGZhWqjs62qQT.UbgJU3c76VEI/NC7PE54NICbGoj9j/q",
     "imagenId": "avatar-1661123983767-163789702.png",
     "isAdmin": false
+  },
+  {
+    "id": 6,
+    "nombre": "carlos ",
+    "apellido": "pall",
+    "email": "carlospa@nicuesa.com",
+    "password": "$2a$10$IcKshmRClXar8G6oayDTbOZcjbx26/xJ.Wjvs5pTknEEIEt1fZ6y6",
+    "isAdmin": true,
+    "telefono": "11334567",
+    "ubicacion": "puerto rico"
+  },
+  {
+    "id": 7,
+    "email": "carlospalla@nicuesa.com"
+  },
+  {
+    "id": 8,
+    "nombre": "carloseze",
+    "apellido": "torres",
+    "email": "carloseze@nicuesa.com",
+    "password": "$2a$10$Mo01O6lAFY3iucQCzhU9JusbkDHFPitm2MQ2FQwwyPTZlSdA51WXa",
+    "isAdmin": true,
+    "telefono": "1222234",
+    "ubicacion": "caba"
+  },
+  {
+    "id": 9,
+    "nombre": "carlos",
+    "apellido": "oasdoas",
+    "email": "carlosfsdfs@nicuesa.com",
+    "password": "$2a$10$Ng40iwH14ioiRNF9BcFgDeoFtn6qSZodWDKJ2ofwszLBybaqDLqc2",
+    "imagenId": "avatar-1661461097801-699903538.jpg",
+    "isAdmin": true,
+    "telefono": "",
+    "ubicacion": ""
   }
 ]
