@@ -8,7 +8,8 @@ const isLogged = require('../middlewares/isLogged');
 
 
 const usersController = {
-  register: (req, res) => {
+
+  register: async (req, res) => {
     return res.render("./users/register", {
       title: "Registro",
       styles: ["style", "header", "footer", "register"],
@@ -17,7 +18,7 @@ const usersController = {
   },
 
 
-  process: function (req, res) {
+  process: async function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
     if (errors && errors.length > 0) {
@@ -39,7 +40,7 @@ const usersController = {
   },
 
 
-  access: function (req, res) {
+  access: async function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones
     if (errors && errors.length > 0) {
@@ -58,14 +59,14 @@ const usersController = {
     return res.redirect('/')
   },
 
-  login: function (req, res) {
+  login: async function (req, res) {
     return res.render('users/login', {
       title: "Login",
       styles: ["style", "header", "footer", "login"]
     });
   },
 
-  perfil: function (req, res) {
+  perfil: async function (req, res) {
     let file = resolve(__dirname, '../data', 'users.json');
     let data = readFileSync(file);
     let users = JSON.parse(data);
@@ -76,13 +77,13 @@ const usersController = {
     })
   },
 
-  logout: function (req, res) {
+  logout: async function (req, res) {
     delete req.session.user
     return res.redirect('/')
   },
 
 
-  userEdit: function (req, res) {
+  userEdit: async function (req, res) {
     let users = index()
     let user = users.find(user => user.email == req.session.user.email)
     return res.render('users/userEdit', {
@@ -93,7 +94,7 @@ const usersController = {
     });
   },
 
-  processEdit: function (req, res) {
+  processEdit: async function (req, res) {
     let userToEdit = find(req.session.user.email)
     let users = index();
      console.log(req.body);

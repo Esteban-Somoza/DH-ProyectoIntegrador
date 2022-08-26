@@ -1,24 +1,28 @@
 const { validationResult } = require('express-validator');
 const { write, create, index, find, filter, edit, deleteImage } = require("../models/product.model");
-const {product, image ,information,line,category} = require("../database/models/index")
+const {producto, image ,information,line,category} = require("../database/models/index")
 
 
 module.exports = {
 
-  productDetail: (req, res) => {
-    let product = find(parseInt(req.params.id))
-
-    if (!product) {
+  productDetail: async(req, res) => {
+  //  let product = find(parseInt(req.params.id))
+  let products = await producto.findAll({include:{all:true}})
+console.log(producto);
+ /*   if (!product) {
       return res.redirect('/product/finder')
+    }*/
+    if(req.query && req.query.name){
+      products = producto.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
     }
 
     return res.render("./products/productDetail", {
-      title: product.name,
+      title: producto.name,
       styles: ["style", "header", "footer", "productDetail", "mediaQ-productDetail"],
-      product: product,
-      esquema: product.esquema,
-      informacion: Object.getOwnPropertyNames(product.information),
-      details: Object.getOwnPropertyNames(product.details),
+      product: producto,
+      esquema: producto.esquema,
+      informacion: Object.getOwnPropertyNames(producto.information),
+      details: Object.getOwnPropertyNames(producto.details),
       // styles: [""]
     });
   },

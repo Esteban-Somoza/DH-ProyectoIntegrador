@@ -6,7 +6,7 @@ module.exports = {
     
     let informacion = index().map(product => {
       let productInformation = {
-        coloresId: product.information.colores,
+        colores: product.information.colores,
         configuracion: 1,
         apto: 1,
         tecnologia: 1,
