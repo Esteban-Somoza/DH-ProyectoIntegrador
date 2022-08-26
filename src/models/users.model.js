@@ -61,13 +61,15 @@ const model = {
 
       email: userOriginal.email,
 
-      password: data.password,
+      password: userOriginal.password,
 
       imagenId: data.imagenId,
 
       telefono: data.telefono,
 
       ubicacion: data.ubicacion,
+
+    isAdmin:userOriginal.isAdmin
     }
 
   }

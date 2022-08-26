@@ -2,7 +2,7 @@ const { Router } = require("express")
 const router = Router()
 const middlewareRegister = require("../middlewares/register");
 const middlewareLogin = require("../middlewares/login.js");
-
+  const middlewaresEditUser = require("../middlewares/register") 
 const isLogged = require('../middlewares/isLogged');
 const isAdmin = require('../middlewares/isAdmin')
 
@@ -16,7 +16,7 @@ router.get("/users/login", login)
 
 router.get("/users/userEdit", userEdit)
 
-router.put("/users/editConfirm",[isLogged],processEdit)
+router.put("/users/editConfirm", middlewaresEditUser,processEdit )
    
 router.post('/users/access', middlewareLogin, access)
 

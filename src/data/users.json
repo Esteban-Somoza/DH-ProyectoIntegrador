@@ -114,13 +114,12 @@
   },
   {
     "id": 9,
-    "nombre": "carlos",
-    "apellido": "oasdoas",
+    "nombre": "carla",
     "email": "carlosfsdfs@nicuesa.com",
     "password": "$2a$10$Ng40iwH14ioiRNF9BcFgDeoFtn6qSZodWDKJ2ofwszLBybaqDLqc2",
-    "imagenId": "avatar-1661461097801-699903538.jpg",
-    "isAdmin": true,
+    "imagenId": "imagenId-1661554685140-826974963.jpg",
     "telefono": "",
-    "ubicacion": ""
+    "ubicacion": " ",
+    "isAdmin": true
   }
 ]

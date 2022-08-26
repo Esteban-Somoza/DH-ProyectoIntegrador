@@ -20,7 +20,7 @@
 
                 <p> datos del perfil</p>
                 <picture id="imagen_cotenido">
-                    <img src="/images/avatars/<%= user.imagen %>" alt="" id="img">
+                    <img src="/images/avatars/<%= user.imagenId %>" alt="" id="img">
                 </picture>
 
                 <form action="/users/editConfirm?m=PUT" id="form" method="post" enctype="multipart/form-data">
@@ -36,9 +36,9 @@
                     <input type="number" name="telefono" id="relleno" placeholder="Telefono/celular"
                         value="<%= user.telefono%>">
 
-                    <label for="ciudad">ciudad /prov</label>
+                    <label for="ubicacion">ciudad de residencia</label>
 
-                    <input type="text" name="ciudad" id="relleno" value="<%= user.ubicacion %> ">
+                    <input type="text" name="ubicacion" id="relleno" value="<%= user.ubicacion %> ">
 
                     <label for="imagenId">imagen de perfil</label>
 
@@ -50,6 +50,7 @@
                     <div id="boton">
                         <button type="" class="Cancelar"><a href="/">Cancelar</a></button>
                         <button type="submit" class="botonform">Editar</button>
+                    //// agregar apellido 
                     </div>
                 </form>
 
