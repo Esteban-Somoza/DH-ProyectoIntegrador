@@ -1,35 +1,39 @@
 const { validationResult } = require('express-validator');
 const { write, create, index, find, filter, edit, deleteImage } = require("../models/product.model");
-const {producto, image ,information,line,category} = require("../database/models/index")
+const { producto, image, information, line, category } = require("../database/models/index")
 
 
 module.exports = {
 
-  productDetail: async(req, res) => {
-  //  let product = find(parseInt(req.params.id))
-  let products = await producto.findAll({include:{all:true}})
-console.log(producto);
- /*   if (!product) {
-      return res.redirect('/product/finder')
-    }*/
-    if(req.query && req.query.name){
-      products = producto.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
-    }
-
+  productDetail: async (req, res) => {
+    //  let product = find(parseInt(req.params.id))
+    let productoPorId = await producto.findByPk(req.params.id, { include: { all: true } })
+    // return res.send(productoPorId)
+    // let prod = JSON.parse(productoPorId)
+    // console.log("producto: " + productoPorId.producto);
+    // let informacion = Object.getOwnPropertyNames(productoPorId.informacion)
+    // console.log(informacion);
+    /*   if (!product) {
+         return res.redirect('/product/finder')
+        }*/
+    console.log("ok hasta ahora")
     return res.render("./products/productDetail", {
-      title: producto.name,
+      title: productoPorId.nombre,
       styles: ["style", "header", "footer", "productDetail", "mediaQ-productDetail"],
-      product: producto,
-      esquema: producto.esquema,
-      informacion: Object.getOwnPropertyNames(producto.information),
-      details: Object.getOwnPropertyNames(producto.details),
-      // styles: [""]
+      product: productoPorId,
+      esquema: productoPorId.esquema,
+      // informacion: Object.getOwnPropertyNames(productoPorId.informacion),
+      // details: Object.getOwnPropertyNames(productoPorId.details),
     });
   },
 
 
-  finder: (req, res) => {
-    let productList = index()
+  finder: async (req, res) => {
+    let products = await producto.findAll({ include: { all: true } })
+    // if (req.query && req.query.name) {
+    //   producto = producto.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
+    // }
+    // let productList = index()
     try {
       if (req.query?.categoria) {
         productList = filter("categoria", req.query.categoria)
@@ -127,7 +131,7 @@ console.log(producto);
       }
       return product
     });
-    
+
     write(productModified)
     return res.redirect(`/products/${req.params.id}`)
   },
@@ -160,9 +164,9 @@ console.log(producto);
   process: function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
-    
+
     if (errors && errors.length > 0) {
-    deleteImage(req.files[0].filename) 
+      deleteImage(req.files[0].filename)
       return res.render('products/productCreateDetail', {
         title: "Publicar un nuevo producto",
         styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],

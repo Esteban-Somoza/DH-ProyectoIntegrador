@@ -13,14 +13,15 @@ module.exports = (sequelize, DataTypes) => {
     };
     let config = {
         timestamps:false,
-        deletedAt:false
+        deletedAt:false,
+        tableName: "linea"
     };
     const Line = sequelize.define(alias,cols,config)
 
     Line.associate = function(models) {
         Line.belongsTo(models.producto,{
             through:'producto',
-            foreignKey:'lineaId'
+            foreignKey:'id'
         })
     }
     

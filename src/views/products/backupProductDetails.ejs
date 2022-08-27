@@ -12,12 +12,12 @@
           <!--    <div id="ruta">
                 <h6 class="texto">productos - baño - griferia -</h6>
                 <h6 class="ruta__texto ruta__texto--resaltado">
-                    <% console.log(product) %>
+                    <%= product.name %>
                 </h6> -->
             </div>
             <section id="producto">
                 <picture id="producto__imagen">
-                    <img src="/images/productos/<%= product.producto%> " alt="">
+                    <img src="/images/productos/<%= product.imagen%> " alt="">
                 </picture>
                 <article id="producto__informacion">
                     <h2 id="producto__titulo">
@@ -25,7 +25,17 @@
                     </h2>
                     <ul id="producto__tabla">
                         <!-- generador -->
-                       
+                        <% for( let i=0; i < informacion.length; i++ ) { let item=informacion[i] 
+                        if(product.information[item]=="" ){ continue } %>
+                            <li class="producto__tablaItem">
+                                <h3 class="producto__itemsTabla">
+                                    <%= informacion[i] %>
+                                </h3>
+                                <h3 class="producto__infoTabla">
+                                    <%= product.information[item] %>
+                                </h3>
+                            </li>
+                            <% } %>
                     </ul>
                     <div id="producto__compra">
                         <h5>Valor Final:</h5>
@@ -43,6 +53,12 @@
             <section id="detalles">
                 <h3>Detalles del producto</h3>
                 <ul id="detalles__navegacion">
+                    <% for( let i=0; i < details.length; i++ ) { let item=details[i] 
+                        if(product.details[item]=="" ){ continue }%>
+                        <li>
+                            <%= details[i] %>
+                        </li>
+                        <% } %>
                 </ul>
                 <article id="detalles__infoDetalle">
                     <picture class="imagen">

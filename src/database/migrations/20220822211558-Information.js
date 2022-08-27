@@ -28,6 +28,9 @@ module.exports = {
       capacidad: {
           type: DataTypes.TEXT
       },
+      disenio: {
+          type: DataTypes.TEXT
+      },
       });
 
     } catch (error) {

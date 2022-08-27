@@ -1,0 +1,1 @@
+module.exports = ["Negro", "Beige", "Blanco", "Azul", "Marrón", "Naranja", "Verde", "Gris", "Morado", "Violeta"]

@@ -13,7 +13,8 @@ module.exports = (sequelize, DataTypes) => {
     } 
     let config = {
         timestamps: false,
-        deleteAt: false
+        deleteAt: false,
+        tableName: "imagen"
     };
 
     const Image = sequelize.define(alias, cols, config);
@@ -21,13 +22,13 @@ module.exports = (sequelize, DataTypes) => {
     Image.associate = function(models){
         Image.hasMany(models.usuarios, {
             as: 'usuarios',
-            foreignKey: 'imagenId',
+            foreignKey: 'nombre',
             allowNull: false
         }),
         
         Image.belongsTo(models.producto,{
             as: 'producto',
-            foreignKey:'imagenId',
+            foreignKey:'id',
             allowNull: false
         })
     }

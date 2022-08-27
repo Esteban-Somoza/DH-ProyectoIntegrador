@@ -25,11 +25,15 @@ module.exports = (sequelize, DataTypes) => {
         capacidad: {
             type: DataTypes.TEXT
         },
+        disenio: {
+            type: DataTypes.TEXT
+        },
     };
 
     let config = {
         timestamps:false,
-        deletedAt:false
+        deletedAt:false,
+        tableName: "informacion"
     };
     
     const Information = sequelize.define(alias,cols,config)
@@ -37,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
     Information.associate = function(models) {
         Information.belongsTo(models.producto,{
             as: "producto",
-            foreignKey:'informacionId',
+            foreignKey:'id',
             allowNull: false
         })
 

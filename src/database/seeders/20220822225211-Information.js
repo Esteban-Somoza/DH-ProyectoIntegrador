@@ -7,11 +7,12 @@ module.exports = {
     let informacion = index().map(product => {
       let productInformation = {
         colores: product.information.colores,
-        configuracion: 1,
-        apto: 1,
-        tecnologia: 1,
-        medidas: 1,
-        capacidad: 1,
+        configuracion: product.information.configuracion,
+        apto: product.information.apto,
+        tecnologia: product.information.tecnologia,
+        medidas: product.information.medidas,
+        capacidad: product.information.capacidad,
+        disenio: product.information.disenio,
       }
       return productInformation
     })

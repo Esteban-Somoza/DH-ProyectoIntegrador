@@ -7,7 +7,9 @@ const usuarios = require('../../models/users.model')
 module.exports = {
   async up(queryInterface, Sequelize) {
 
-    let cantidadUsuarios = usuarios.index().length
+    let cantidadUsuarios = usuarios.index().length+1
+    // let categoriaId = 
+    // let subcategoriaId = 
 
     console.log(cantidadUsuarios);
     let products = index().map((product, index) => {
@@ -18,8 +20,8 @@ module.exports = {
         categoriaId: product.categoria,
         subcategoriaId: product.subCategoria,
         informacionId: index+=1,
-        marcaId: 1,
-        lineaId: 1,
+        marca: product.marca,
+        lineaId: index+=1,
         descripcion: product.details.description
       }
       return productMap

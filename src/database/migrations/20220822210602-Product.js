@@ -28,7 +28,7 @@ module.exports = {
         informacionId: {
           type: DataTypes.INTEGER
         },
-        marcaId: {
+        marca: {
           type: DataTypes.INTEGER
         },
         lineaId: {
