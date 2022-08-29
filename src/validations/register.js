@@ -24,9 +24,15 @@ const register = [
     .isEmail()
     .withMessage("No corresponde a un email")
     .bail()
-    .custom((value) => {
-      let users = index();
-      users = users.map((u) => u.email);
+    .custom(async(value) => {
+      let users = await usuarios.findAll({
+        include: {
+          all: true
+        }
+      })
+      users = users.map(u => u.email)
+      // let users = index();
+      // users = users.map((u) => u.email);
       if (users.includes(value)) {
         throw new Error("El email ya esta en uso");
       }

@@ -1,22 +1,40 @@
 const { body } = require('express-validator');
 const {index, find} = require('../models/users.model')
 const {compareSync} = require('bcryptjs')
+const { usuarios, imagen } = require('../database/models/index');
+
 
 const login = [
 // Email
-body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().isEmail().withMessage('El formato de email no es válido.').bail().custom(value => {
-  let users = index()
+body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().isEmail().withMessage('El formato de email no es válido.').bail().custom(async value => {
+  let users = await usuarios.findAll({
+    include: {
+      all: true
+    }
+  })
+
+  // let userDB = users.find(u =>u.email == req.body.email)
   users = users.map(u => u.email)
+  // console.log(users);
+
   if(!users.includes(value.toLowerCase())){
       throw new Error('El email no esta registrado')
   }
   return true
 }),
 // Password
-body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.').bail().isLength({min : 4}).bail().custom((value,{req})=>{
+body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.').bail().isLength({min : 4}).bail().custom(async(value,{req})=>{
   let {email} = req.body
-  let user = find(email.toLowerCase())
+  let users = await usuarios.findAll({
+    include: {
+      all: true
+    }
+  })
 
+  // let userDB = users.find(u =>u.email == req.body.email)
+  let user = users.find(u => u.email == email)
+
+  console.log(user);
   if(!user){
     throw new Error("Usuario no encontrado")
   }
