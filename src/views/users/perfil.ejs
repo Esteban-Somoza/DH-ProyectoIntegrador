@@ -20,15 +20,15 @@
 
                 <h2>Perfil de Usuario</h2>
                 <picture class="perfil_imagen">
-                    <img src="/images/avatars/<%= user.image %>" alt="">
+                    <img src="/images/avatars/<%= user.imagen %>" alt="">
                 </picture>
 
                 <h4><%= user.nombre %></h4>
 
                 <section class="perfil_datos">
                     <p> <i class="fa-solid fa-envelope"></i><%= user.email%></p>
-                    <p> <i class="fa-solid fa-phone"></i>113948573</p>
-                    <p><i class="fa-solid fa-house"></i>San Fernando,Buenos Aires</p>
+                    <p> <i class="fa-solid fa-phone"></i><%= user.telefono%></p>
+                    <p><i class="fa-solid fa-house"></i><%= user.ubicacion %></p>
                     <p> <i class="fa-solid fa-cart-shopping"></i><a href="/carrito">Mi carrito</a>
                         
                 </section>

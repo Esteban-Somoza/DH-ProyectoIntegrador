@@ -67,11 +67,11 @@ const usersController = {
   },
 
   perfil: async function (req, res) {
-    let file = resolve(__dirname, '../data', 'users.json');
-    let data = readFileSync(file);
-    let users = JSON.parse(data);
+    // let file = resolve(__dirname, '../data', 'users.json');
+    // let data = readFileSync(file);
+    // let users = JSON.parse(data);
     return res.render('users/perfil', {
-      users: users,
+      // users: users,
       title: "Perfil",
       styles: ["style", "header", "footer", "perfil"]
     })
