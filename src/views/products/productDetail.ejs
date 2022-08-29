@@ -3,6 +3,7 @@
 
 <head>
     <%- include ('../includes/head.ejs') %>
+    <script  defer src="../../scripts/menu.js"></script>
 </head>
 
 <body>
@@ -12,31 +13,41 @@
           <!--    <div id="ruta">
                 <h6 class="texto">productos - baño - griferia -</h6>
                 <h6 class="ruta__texto ruta__texto--resaltado">
-                    <% console.log(product) %>
+                   // 
                 </h6> -->
             </div>
             <section id="producto">
                 <picture id="producto__imagen">
-                    <img src="/images/productos/<%= product.producto%> " alt="">
+                    <img src="/images/productos/<%= producto.imagen.nombre%> " alt="">
                 </picture>
                 <article id="producto__informacion">
                     <h2 id="producto__titulo">
-                        <%= product.name %>
+                        <%= producto.nombre %>
                     </h2>
                     <ul id="producto__tabla">
                         <!-- generador -->
-                       
+                        <% for( let i=0; i < informacion.length; i++ ) { let item=informacion[i] 
+                        if(producto.informacion[item]=="" ){ continue } %>
+                            <li class="producto__tablaItem">
+                                <h3 class="producto__itemsTabla">
+                                    <%= informacion[i] %>
+                                </h3>
+                                <h3 class="producto__infoTabla">
+                                    <%= producto.informacion[item] %>
+                                </h3>
+                            </li>
+                            <% } %>
                     </ul>
                     <div id="producto__compra">
                         <h5>Valor Final:</h5>
-                        <h3> $ <%= product.price %>
+                        <h3> $ <%= producto.precio %>
                         </h3>
                         
                     </div>
                     <% if (user && user.isAdmin){ %>
                         
-                    <a href="/products/productDelete/<%= product.id %> "><i  id= "basura" class="fa-solid fa-trash basura"></i></a>
-                    <a href="/products/edit/<%= product.id %> "><i id="edit" class="fa-solid fa-pen-to-square edit"></i> </a>
+                    <a href="/products/productDelete/<%= producto.id %> "><i  id= "basura" class="fa-solid fa-trash basura"></i></a>
+                    <a href="/products/edit/<%= producto.id %> "><i id="edit" class="fa-solid fa-pen-to-square edit"></i> </a>
                     <% } %>
                 </article>
             </section>
@@ -46,7 +57,7 @@
                 </ul>
                 <article id="detalles__infoDetalle">
                     <picture class="imagen">
-                        <img src="<%= product.details %> " alt="">
+                        <img src="<%= producto.detalles %> " alt="">
                     </picture>
                 </article>
             </section>
@@ -55,6 +66,6 @@
 
         <%- include ('../includes/footer.ejs') %>
 
-        <script src="../../scripts/menu.js"></script>
+       
 
 </html>
