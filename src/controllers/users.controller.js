@@ -1,9 +1,10 @@
 const { validationResult } = require('express-validator');
 const { index, create, write, find, deleteImage, edit } = require("../models/users.model");
-
+const { hashSync } = require('bcryptjs');
 const { resolve } = require('path');
 const { readFileSync, writeFileSync, unlinkSync } = require('fs');
 const isLogged = require('../middlewares/isLogged');
+const { usuarios,imagen } = require('../database/models/index');
 
 
 
@@ -30,7 +31,22 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
+
+    req.body.password = hashSync(req.body.password, 10);
+    req.body.isAdmin = String(req.body.username).toLocaleLowerCase().includes('@nicuesa.com'); 
     req.body.imagen = req.files[0].filename;
+
+    if(req.files && req.files.length > 0){
+
+      let avatar = await imagen.create({
+        nombre: req.files[0].filename
+      })
+
+      console.log(avatar);
+      
+      req.body.imagen = avatar.id;
+
+    }
 
     let newUser = create(req.body)
     let users = index();
@@ -51,10 +67,22 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
-    let user = find(req.body.email.toLowerCase())
-    req.session.user = user
+    let users = await usuarios.findAll({
+      include: {
+        all: true
+      }})
+     console.log(req.body);
+      
+      let userDB = users.find(u => 
+        
+        u.email == req.body.email)
+
+      req.session.user = userDB
+
+      console.log(userDB);
+     //return res.redirect(`/?msg=Bienvenido! ${userDB.isAdmin? 'Administador':userDB.username.split('@')[0]}`)
     if (req.body.recordame != undefined) {
-      res.cookie("recordame", user.email / id, { maxAge: 172800000 })
+      res.cookie("recordame", userDB.email / id, { maxAge: 172800000 })
     }
     return res.redirect('/')
   },

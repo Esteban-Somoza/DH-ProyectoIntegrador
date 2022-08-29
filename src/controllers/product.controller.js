@@ -8,11 +8,11 @@ module.exports = {
   productDetail: async (req, res) => {
     //  let product = find(parseInt(req.params.id))
     let productoPorId = await producto.findByPk(req.params.id, { include: { all: true } })
-    // return res.send(productoPorId)
+   //return res.send(productoPorId)
     // let prod = JSON.parse(productoPorId)
     // console.log("producto: " + productoPorId.producto);
-    // let informacion = Object.getOwnPropertyNames(productoPorId.informacion)
-    // console.log(informacion);
+     let informacion = Object.getOwnPropertyNames(productoPorId.informacion.dataValues)
+    //console.log(informacion);
     /*   if (!product) {
          return res.redirect('/product/finder')
         }*/
@@ -20,10 +20,10 @@ module.exports = {
     return res.render("./products/productDetail", {
       title: productoPorId.nombre,
       styles: ["style", "header", "footer", "productDetail", "mediaQ-productDetail"],
-      product: productoPorId,
+      producto: productoPorId,  
       esquema: productoPorId.esquema,
-      // informacion: Object.getOwnPropertyNames(productoPorId.informacion),
-      // details: Object.getOwnPropertyNames(productoPorId.details),
+      informacion: informacion,
+     //details: Object.getOwnPropertyNames(productoPorId.details),
     });
   },
 
