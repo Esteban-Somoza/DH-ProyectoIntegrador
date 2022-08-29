@@ -67,7 +67,7 @@ const usersController = {
     })
 
     let userDB = users.find(u =>u.email == req.body.email)
-    
+
     req.session.user = userDB
 
     if (req.body.recordame != undefined) {
@@ -101,12 +101,17 @@ const usersController = {
 
 
   userEdit: async function (req, res) {
-    let users = index()
-    let user = users.find(user => user.email == req.session.user.email)
+    let users = await usuarios.findAll({
+      include: {
+        all: true
+      }
+    })
+
+    let userDB = users.find(u => u.email == req.session.user.email)
     return res.render('users/userEdit', {
       title: "Editar tu Usuario",
       styles: ["style", "header", "footer", "userEdit"],
-      user: user
+      user: userDB
     });
   },
 

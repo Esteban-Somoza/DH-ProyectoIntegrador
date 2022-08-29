@@ -30,7 +30,6 @@ body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.'
       all: true
     }
   })
-
   // let userDB = users.find(u =>u.email == req.body.email)
   let user = users.find(u => u.email == email)
 

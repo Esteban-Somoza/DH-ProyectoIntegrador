@@ -2,6 +2,8 @@ const { body } = require("express-validator");
 const { extname, resolve } = require("path");
 const { unlinkSync } = require("fs");
 const { index } = require("../models/users.model");
+const { usuarios } = require('../database/models/index');
+
 const register = [
   body("nombre")
     .notEmpty()

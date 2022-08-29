@@ -20,7 +20,7 @@
 
                 <p> datos del perfil</p>
                 <picture id="imagen_cotenido">
-                    <img src="/images/avatars/<%= user.imagenId %>" alt="" id="img">
+                    <img src="/images/avatars/<%= user.imagen.nombre %>" alt="" id="img">
                 </picture>
 
                 <form action="/users/editConfirm?m=PUT" id="form" method="post" enctype="multipart/form-data">
