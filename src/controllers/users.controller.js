@@ -137,7 +137,15 @@ const usersController = {
       ubicacion: req.body.ubicacion,
       imagenId: idUserImage
     })
-    req.session.user = userDB
+
+    let updatedUser = await usuarios.findAll({
+      include: {
+        all: true
+      }
+    })
+    let updatedSessionUser = updatedUser.find(u => u.email == req.session.user.email)
+    
+    req.session.user = updatedSessionUser
     return res.redirect('/')
   }
 }
