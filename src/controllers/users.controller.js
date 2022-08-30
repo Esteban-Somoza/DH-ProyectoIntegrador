@@ -3,7 +3,6 @@ const { index, create, write, find, deleteImage, edit } = require("../models/use
 const { hashSync } = require('bcryptjs');
 const { resolve } = require('path');
 const { readFileSync, writeFileSync, unlinkSync } = require('fs');
-const isLogged = require('../middlewares/isLogged');
 const { usuarios, imagen } = require('../database/models/index');
 
 
@@ -14,7 +13,6 @@ const usersController = {
     return res.render("./users/register", {
       title: "Registro",
       styles: ["style", "header", "footer", "register"],
-
     })
   },
 
@@ -22,9 +20,14 @@ const usersController = {
   process: async function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
+    let imagenes = await imagen.findAll()
+    let imagenDefault = imagenes.find(i => i.dataValues.nombre == "avatar-default.png")
+    let idImagenUsuarioDefault = imagenDefault.id
 
     if (errors && errors.length > 0) {
-      /* deleteImage(req.files[0].filename) */
+      if (req.files && req.files.length > 0) {
+        deleteImage(req.files[0].filename)
+      }
       return res.render('users/register', {
         title: "Registro",
         styles: ["style", "header", "footer", "register"],
@@ -35,15 +38,16 @@ const usersController = {
 
     req.body.password = hashSync(req.body.password, 10);
     req.body.isAdmin = String(req.body.email).toLocaleLowerCase().includes('@nicuesa.com');
-    req.body.imagen = req.files[0].filename;
 
     if (req.files && req.files.length > 0) {
-
       let imagenUsuario = await imagen.create({
         nombre: req.files[0].filename
       })
-      req.body.imagenId = imagenUsuario.id;
+      idImagenUsuarioDefault = imagenUsuario.id;
     }
+
+    req.body.imagenId = idImagenUsuarioDefault
+
     await usuarios.create(req.body)
     return res.redirect('/')
   },
@@ -66,12 +70,10 @@ const usersController = {
       }
     })
 
-    let userDB = users.find(u =>u.email == req.body.email)
-
+    let userDB = users.find(u => u.email == req.body.email)
     req.session.user = userDB
-
     if (req.body.recordame != undefined) {
-      res.cookie("recordame", userDB.email / id, { maxAge: 172800000 })
+      res.cookie("recordame", userDB, { maxAge: 172800000 })
     }
     return res.redirect('/')
   },
@@ -84,11 +86,7 @@ const usersController = {
   },
 
   perfil: async function (req, res) {
-    // let file = resolve(__dirname, '../data', 'users.json');
-    // let data = readFileSync(file);
-    // let users = JSON.parse(data);
     return res.render('users/perfil', {
-      // users: users,
       title: "Perfil",
       styles: ["style", "header", "footer", "perfil"]
     })
@@ -116,29 +114,30 @@ const usersController = {
   },
 
   processEdit: async function (req, res) {
-    let userToEdit = find(req.session.user.email)
-    let users = index();
-    console.log(req.body);
-
-
-
-    req.body.imagenId = userToEdit.imagenId
-
+    let users = await usuarios.findAll({
+      include: {
+        all: true
+      }
+    })
+    let userDB = users.find(u => u.email == req.session.user.email)
+    let idOldImage = userDB.dataValues.imagen.dataValues.id
+    let idUserImage = idOldImage
 
     if (req.files && req.files.length > 0) {
-      deleteImage(userToEdit.imagenId)
-      req.body.imagenId = req.files[0].filename
+      deleteImage(userDB.imagen.nombre)
+      let newUserImage = await imagen.create({
+        nombre: req.files[0].filename
+      })
+      idUserImage = newUserImage.id;
     }
 
-    let edited = edit(req.body, userToEdit)
-
-    let editUser = users.map(user => {
-      if (user.email == edited.email)
-        user = edited
-      return user
-    });
-
-    write(editUser)
+    await userDB.update({
+      nombre: req.body.nombre,
+      telefono: req.body.telefono,
+      ubicacion: req.body.ubicacion,
+      imagenId: idUserImage
+    })
+    req.session.user = userDB
     return res.redirect('/')
   }
 }

@@ -51,9 +51,11 @@ const register = [
     .bail(),
     
      body('avatar').custom((value,{req}) =>{
-      let archivos =req.files
+      let archivos = req.files
+
       if(!archivos || archivos.length == 0){
-          throw new Error('No se subio ninguna imagen')
+        return true
+          // throw new Error('No se subio ninguna imagen')
       }
       let extensiones = ['.svg','.png','.jpg','.jpeg']
       let avatar = archivos[0]

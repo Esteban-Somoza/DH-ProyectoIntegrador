@@ -1,23 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "luciano",
-    "apellido": "giuliani",
-    "email": "luciano.giuliani92@gmail.com",
-    "password": "asd123",
-    "imagenId": "avatar-1659575041038-718757780.png",
-    "IsAdmin": false
-  },
-  {
-    "id": 2,
-    "nombre": "luciano",
-    "apellido": "giuliani",
-    "email": "asdaa@asd.com",
-    "password": "asd123",
-    "imagenId": "avatar-1659575348944-822800442.png",
-    "IsAdmin": false
-  },
-  {
     "id": 3,
     "nombre": "Ricardo",
     "apellido": "giuliani",
