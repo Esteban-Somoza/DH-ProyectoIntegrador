@@ -108,7 +108,7 @@
     "apellido": "asd",
     "email": "prueba@nicuesa.com",
     "password": "$2a$10$Hxmfag8mrd48uqNbTXnwbOQ5d.cI4SfGfBClCOud2TmhHAyhLyEpm",
-    "imagen": "avatar-1661808728550-468828703.png",
+    "imagenId": "avatar-1661808728550-468828703.png",
     "isAdmin": true,
     "telefono": "",
     "ubicacion": ""
@@ -119,7 +119,7 @@
     "apellido": "giuliani",
     "email": "prueba2@nicuesa.com",
     "password": "$2a$10$zNkZ6k7PWIoDx7DU0nT4pecbV.GFqNPz7Kqq19Vepb8Jc7pcBiKNG",
-    "imagen": "avatar-1661811092891-193319443.png",
+    "imagenId": "avatar-1661811092891-193319443.png",
     "isAdmin": true,
     "telefono": "4343434343",
     "ubicacion": "San fernando"
@@ -130,20 +130,9 @@
     "apellido": "giuliani",
     "email": "prueba2@gmail.com",
     "password": "$2a$10$EovYmfiItlNBQ6ARfxXFqOjXWtXbiX/MV.RlBEiIshgjH0.vHberW",
-    "imagen": "avatar-1661811399625-64064028.png",
+    "imagenId": "avatar-1661811399625-64064028.png",
     "isAdmin": false,
     "telefono": "",
-    "ubicacion": ""
-  },
-  {
-    "id": 13,
-    "nombre": "Lucho",
-    "apellido": "asd",
-    "email": "lucho@nicuesa.com",
-    "password": "$2a$10$NziOWaVhk0ZxcKnIkUub7ubKaK/OXQtIVImUcx7tah0ZaGiEAxa2i",
-    "imagen": 31,
-    "isAdmin": true,
-    "telefono": "15342233",
     "ubicacion": ""
   }
 ]

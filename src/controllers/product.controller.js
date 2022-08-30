@@ -8,7 +8,7 @@ module.exports = {
   productDetail: async (req, res) => {
     //  let product = find(parseInt(req.params.id))
     let productoPorId = await producto.findByPk(req.params.id, { include: { all: true } })
-   //return res.send(productoPorId)
+  //  return res.send(productoPorId)
     // let prod = JSON.parse(productoPorId)
     // console.log("producto: " + productoPorId.producto);
      let informacion = Object.getOwnPropertyNames(productoPorId.informacion.dataValues)
@@ -16,6 +16,7 @@ module.exports = {
     /*   if (!product) {
          return res.redirect('/product/finder')
         }*/
+        return res.send(productoPorId)
     console.log("ok hasta ahora")
     return res.render("./products/productDetail", {
       title: productoPorId.nombre,
@@ -25,37 +26,39 @@ module.exports = {
       informacion: informacion,
      //details: Object.getOwnPropertyNames(productoPorId.details),
     });
-  },
+  },  
 
 
   finder: async (req, res) => {
     let products = await producto.findAll({ include: { all: true } })
+    // console.log(products.length);
     // if (req.query && req.query.name) {
     //   producto = producto.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
     // }
     // let productList = index()
+
     try {
-      if (req.query?.categoria) {
-        productList = filter("categoria", req.query.categoria)
-      }
+    //   if (req.query?.categoria) {
+    //     productList = filter("categoria", req.query.categoria)
+    //   }
 
-      if (req.query && req.query.subcategoria) {
-        productList = filter("subCategoria", req.query.subcategoria)
-      }
+    //   if (req.query && req.query.subcategoria) {
+    //     productList = filter("subCategoria", req.query.subcategoria)
+    //   }
 
-      if (req.query && req.query.search) {
-        productList = filter("search", req.query.search.toLowerCase())
-        // productList = filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
-      }
-      // console.log(productList.length);
-      if (productList.length < 1) {
-        productList = index()
-      }
+    //   if (req.query && req.query.search) {
+    //     productList = filter("search", req.query.search.toLowerCase())
+    //     // productList = filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
+    //   }
+    //   // console.log(productList.length);
+    //   if (productList.length < 1) {
+    //     productList = index()
+    //   }
 
       return res.render("./products/productFinder", {
         title: "Detalle de producto",
         styles: ["style", "header", "footer", "productSearch", "mediaQ-productSearch"],
-        products: productList,
+        products: products,
       });
     } catch (error) {
       console.log(error)

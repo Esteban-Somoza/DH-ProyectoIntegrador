@@ -29,7 +29,7 @@ module.exports = {
           type: DataTypes.INTEGER
         },
         marca: {
-          type: DataTypes.INTEGER
+          type: DataTypes.TEXT
         },
         lineaId: {
           type: DataTypes.INTEGER

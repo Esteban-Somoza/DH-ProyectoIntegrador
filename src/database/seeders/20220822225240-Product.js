@@ -7,7 +7,7 @@ const usuarios = require('../../models/users.model')
 module.exports = {
   async up(queryInterface, Sequelize) {
 
-    let cantidadUsuarios = usuarios.index().length+1
+    let cantidadUsuarios = usuarios.index().length+2 //+2 por el desfazaje de lógica y por la default image de usuario
     // let categoriaId = 
     // let subcategoriaId = 
 

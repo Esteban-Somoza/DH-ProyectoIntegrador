@@ -158,23 +158,23 @@
                         <% products.forEach(element=> { %>
                             <article class="productos__elemento"><a class="link" href="/products/<%= element.id %> ">
                                     <h3>
-                                        <%= element.name %>
+                                        <%= element.nombre %>
                                     </h3>
                                     <div class="productos__informacion">
-                                        <picture class="imagen"><img src="/images/productos/<%= element.imagen %>"
+                                        <picture class="imagen"><img src="/images/productos/<%= element.imagen.nombre %>"
                                                 alt=""></picture>
                                         <div class="productos__texto">
                                             <h4 class="descripcion">
-                                                <%= element.details.description %>
+                                                <%= element.descripcion %>
                                             </h4>
                                             <h4 class="marca">
                                                 <%= element.marca %>
                                             </h4>
                                             <h5 class="linea">
-                                                <%= element.information.linea %>
+                                                <%= element.linea[0].nombre %>
                                             </h5>
                                             <h4 class="precio">
-                                                $<%= element.price %>
+                                                $<%= element.precio %>
                                             </h4>
                                         </div>
                                     </div>

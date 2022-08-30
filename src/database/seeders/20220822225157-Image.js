@@ -23,7 +23,6 @@ module.exports = {
       return allImages.push(imagesP)
     })
     
-    console.log(allImages);
     await queryInterface.bulkInsert('imagen', allImages, {});
   },
 

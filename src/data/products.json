@@ -46,7 +46,7 @@
     "imagen": "inodoro1.jpeg",
     "categoria": "baño",
     "subCategoria": "inodoro",
-    "marca": "Roca",
+    "marca": "Roca", 
     "information": {
       "colores": "Blanco",
       "mochila": "Con mochila",
@@ -182,7 +182,7 @@
     "imagen": "imagenProducto-1658500647323-916381904.webp",
     "categoria": "cocina",
     "subCategoria": "bacha",
-    "marca": "Johnson ",
+    "marca": "Johnson",
     "information": {
       "colores": "acero cepillado",
       "linea": "ZZ 52/18",
