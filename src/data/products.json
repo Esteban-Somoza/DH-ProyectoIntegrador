@@ -319,65 +319,6 @@
     "details": {
       "description": " Lavatorio de FINECERAMIC® mural o sobre encimera"
     }
-  },
-  {
-    "id": 20,
-    "name": "asdasd",
-    "price": 123123,
-    "imagen": "imagenProducto-1661978754213-518543086.png",
-    "categoria": "baño",
-    "subCategoria": "inodoro",
-    "marca": "asdasd",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "modelo": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": "",
-      "medidas": "",
-      "capacidad": ""
-    },
-    "details": {}
-  },
-  {
-    "id": 21,
-    "name": "asd",
-    "price": 123123,
-    "imagen": "imagenProducto-1661978856105-533633718.png",
-    "categoria": "cocina",
-    "subCategoria": "bacha",
-    "marca": "asdasd",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "modelo": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": "",
-      "medidas": "",
-      "capacidad": ""
-    },
-    "details": {}
-  },
-  {
-    "id": 22,
-    "name": "asdasd",
-    "price": 123123,
-    "imagen": "imagenProducto-1661979464992-571444011.png",
-    "categoria": "cocina",
-    "subCategoria": "griferiaCocina",
-    "marca": "asdasd",
-    "information": {
-      "colores": "",
-      "linea": "",
-      "modelo": "",
-      "diseño": "",
-      "configuracion": "",
-      "apto": "",
-      "medidas": "",
-      "capacidad": ""
-    },
-    "details": {}
   }
+
 ]

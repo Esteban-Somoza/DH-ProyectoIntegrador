@@ -4,7 +4,7 @@ const { unlinkSync } = require("fs");
 const { index, deleteImage } = require("../models/product.model");
 
 const productCreate = [
-  body("nombreProducto")
+  body("nombre")
     .notEmpty()
     .withMessage("Complete los campos")
     .bail()
@@ -59,8 +59,8 @@ const productCreate = [
   })
   .bail(),
 
-  body('subCategoria').custom(( value,{req})=>{
-    if (!req.body.subCategoria){
+  body('subcategoria').custom(( value,{req})=>{
+    if (!req.body.subcategoria){
       throw new Error('Seleccionar subCategoria')
 
     }

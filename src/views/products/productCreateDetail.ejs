@@ -33,21 +33,21 @@
                             </p>
                             <% } %>
                         <label for="subCategoria">SubCategoria</label>
-                        <select id="subCategoria" name="subCategoria" class="formulario_relleno"></select>
-                        <% if ( locals.errors && errors.subCategoria ) { %>
+                        <select id="subCategoria" name="subcategoria" class="formulario_relleno"></select>
+                        <% if ( locals.errors && errors.subcategoria ) { %>
                             <p class="msg-error">
-                                <%= errors.subCategoria.msg %>
+                                <%= errors.subcategoria.msg %>
                             </p>
                             <% } %>
 
                         <!-- producto -->
                         <h2 class="titulo">Producto</h2>
                         <label for="nombre-producto">* Nombre del producto</label>
-                        <input class="formulario_relleno" type="text" name="nombreProducto" id="nombreProducto"
-                            value="<%= locals.oldData ? oldData.nombreProducto: null %>">
-                        <% if ( locals.errors && errors.nombreProducto ) { %>
+                        <input class="formulario_relleno" type="text" name="nombre" id="nombreProducto"
+                            value="<%= locals.oldData ? oldData.nombre: null %>">
+                        <% if ( locals.errors && errors.nombre ) { %>
                             <p class="msg-error">
-                                <%= errors.nombreProducto.msg %>
+                                <%= errors.nombre.msg %>
                             </p>
                             <% } %>
                             <label for="marca">* Marca</label>
@@ -77,7 +77,7 @@
                         <!-- informacion -->
                         <h2 class="titulo">Información</h2>
                         <label for="tecnologia">Tecnologia</label>
-                        <input class="formulario_relleno" type="text" name="Tecnologia" id="subCategoria" min="1" />
+                        <input class="formulario_relleno" type="text" name="tecnologia" id="subCategoria" min="1" />
                         <label class="infodenombres" for="Linea">Linea</label>
                         <input class="formulario_relleno" type="text" name="linea" min="1" />
                         <label class="infodenombres" for="Modelo">Modelo</label>
@@ -85,7 +85,7 @@
                         <label class="infodenombres" for="Colores">Colores</label>
                         <input class="formulario_relleno" type="text" name="colores" min="1" />
                         <label class="infodenombres" for="Diseño">Diseño</label>
-                        <input class="formulario_relleno" type="text" name="design" min="1" />
+                        <input class="formulario_relleno" type="text" name="disenio" min="1" />
                         <label class="infodenombres" for="Apto">Apto</label>
                         <input class="formulario_relleno" type="text" name="apto" min="1" />
                         <label class="infodenombres" for="Apto">Configuracion</label>

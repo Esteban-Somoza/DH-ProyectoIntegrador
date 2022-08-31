@@ -55,7 +55,7 @@ module.exports = {
         products: products,
       });
     } catch (error) {
-      console.log(error)
+    console.log(error)
       res.redirect("./products/productFinder")
     }
   },
@@ -98,7 +98,7 @@ module.exports = {
     // req.body.imagenProducto = productDB.imagen.nombre
 
     if (req.files && req.files.length > 0) {
-      deleteImage(productDB.imagen.nombre)
+      deleteImage(productDB.dataValues.imagen.dataValues.nombre)
 
       await imagenId.update({ 
         nombre: req.files[0].filename
@@ -149,7 +149,8 @@ module.exports = {
     if (!productDB) {
       return res.redirect("/product/finder")
     }
-    deleteImage(productDB.imagen) // destruye la imagen del public
+    deleteImage(productDB.dataValues.imagen.dataValues.nombre)
+    //destruye la imagen del public
 
     await productDB.destroy()
     await imagenId.destroy()
@@ -157,7 +158,7 @@ module.exports = {
     return res.redirect("/products/finder");
   },
 
-  process: async function (req, res) {
+  process: async function (req, res) {  
     let validaciones = validationResult(req)
     let { errors } = validaciones;
 
@@ -170,12 +171,67 @@ module.exports = {
         errors: validaciones.mapped()
       });
     }
-    else {
-      req.body.imagenProducto = req.files[0]?.filename
-      let newProduct = create(req.body)
-      let products = index();
-      products.push(newProduct)
-      write(products)
+
+    
+    else  { 
+
+      let imagenId 
+  
+
+      if (req.files && req.files.length > 0) {
+  
+        let nuevaImagen = await imagen.create({ 
+         nombre: req.files[0].filename
+        })
+        imagenId = nuevaImagen.id
+      }
+      
+      
+      let nuevaInformacion = await informacion.create({
+        colores: req.body.colores,
+        configuracion: req.body.configuracion,
+        apto: req.body.apto,
+        tecnologia: req.body.tecnologia,
+        medidas: req.body.medidas,
+        capacidad: req.body.capacidad,
+        disenio: req.body.disenio,
+      }) // actualizacion tabla INFORMACION segun Id
+  
+  
+      await producto.create({
+
+        nombre: req.body.nombre,
+        precio: req.body.price,
+        imagenId: imagenId,
+        categoria: req.body.categoria,
+        subCategoria: req.body.subcategoria,
+        informacionId: nuevaInformacion.id,
+        marca: req.body.marca,
+        linea: req.body.linea,
+        descripcion: req.body.description,
+
+      }) // actualizacion tabla PRODUCTO segun Id
+
+     /* let nuevoProducto = await product.create(req.body)
+
+      let images = await Promise.all(req.files.map( file => {
+        return image.create({
+          nombre: file.filename
+        })
+      }))
+
+      let addProductImages = await Promise.all(images.map(image => {
+        return imagesProducts.create({
+          product: nuevoProducto.id,
+          image: image.id
+        })
+      }))*/
+
+    //  req.body.imagenProducto = req.files[0]?.filename
+    //  let newProduct = create(req.body)
+   //   let products = index();
+   //   products.push(newProduct)
+   //   write(products)
       return res.redirect("/products/finder")
     }
   }

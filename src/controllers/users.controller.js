@@ -54,7 +54,7 @@ const usersController = {
       })
       idImagenUsuarioDefault = imagenUsuario.id;
     }
-
+     
     req.body.imagenId = idImagenUsuarioDefault
 
     await usuarios.create(req.body)
@@ -117,7 +117,7 @@ const usersController = {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenId = await imagen.findByPk(req.session.user.id)
     if (req.files && req.files.length > 0) {
-      deleteImage(userDB.imagen.nombre)
+      deleteImage(userDB.dataValues.imagen.dataValues.nombre)
       await imagenId.update({
         nombre: req.files[0].filename
       })// actualizacion tabal IMAGEN segun Id
