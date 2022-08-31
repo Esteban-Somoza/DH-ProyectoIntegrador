@@ -8,6 +8,15 @@ const { usuarios, imagen } = require('../database/models/index');
 
 
 const usersController = {
+  saveSessionUser: async function(emailUser) {
+    let users = await usuarios.findAll({
+      include: {
+        all: true
+      }
+    })
+
+    return users.find(u => u.email == emailUser)
+  },
 
   register: async (req, res) => {
     return res.render("./users/register", {
@@ -20,9 +29,9 @@ const usersController = {
   process: async function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
+
     let imagenes = await imagen.findAll()
-    let imagenDefault = imagenes.find(i => i.dataValues.nombre == "avatar-default.png")
-    let idImagenUsuarioDefault = imagenDefault.id
+    let idImagenUsuarioDefault = imagenes.find(i => i.dataValues.nombre == "avatar-default.png")
 
     if (errors && errors.length > 0) {
       if (req.files && req.files.length > 0) {
@@ -64,17 +73,13 @@ const usersController = {
         errors: validaciones.mapped()
       });
     }
-    let users = await usuarios.findAll({
-      include: {
-        all: true
-      }
-    })
 
-    let userDB = users.find(u => u.email == req.body.email)
-    req.session.user = userDB
+    req.session.user = await usersController.saveSessionUser(req.body.email)
+
     if (req.body.recordame != undefined) {
       res.cookie("recordame", userDB, { maxAge: 172800000 })
     }
+
     return res.redirect('/')
   },
 
@@ -99,13 +104,8 @@ const usersController = {
 
 
   userEdit: async function (req, res) {
-    let users = await usuarios.findAll({
-      include: {
-        all: true
-      }
-    })
-
-    let userDB = users.find(u => u.email == req.session.user.email)
+    let userDB = await usersController.saveSessionUser(req.session.user.email)
+    
     return res.render('users/userEdit', {
       title: "Editar tu Usuario",
       styles: ["style", "header", "footer", "userEdit"],
@@ -114,38 +114,29 @@ const usersController = {
   },
 
   processEdit: async function (req, res) {
-    let users = await usuarios.findAll({
-      include: {
-        all: true
-      }
-    })
-    let userDB = users.find(u => u.email == req.session.user.email)
-    let idOldImage = userDB.dataValues.imagen.dataValues.id
-    let idUserImage = idOldImage
+    let userDB = await usersController.saveSessionUser(req.session.user.email)
 
     if (req.files && req.files.length > 0) {
       deleteImage(userDB.imagen.nombre)
       let newUserImage = await imagen.create({
         nombre: req.files[0].filename
       })
-      idUserImage = newUserImage.id;
+      await userDB.update({
+        imagenId: newUserImage.id
+      })
     }
 
     await userDB.update({
       nombre: req.body.nombre,
       telefono: req.body.telefono,
       ubicacion: req.body.ubicacion,
-      imagenId: idUserImage
     })
 
-    let updatedUser = await usuarios.findAll({
-      include: {
-        all: true
-      }
-    })
-    let updatedSessionUser = updatedUser.find(u => u.email == req.session.user.email)
-    
-    req.session.user = updatedSessionUser
+    req.session.user = await usersController.saveSessionUser(req.session.user.email)
+    // req.session.user = updatedSessionUser
+    // let updatedSessionUser = await usersController.saveSessionUser(req.session.user.email)
+    // req.session.user = updatedSessionUser
+
     return res.redirect('/')
   }
 }
