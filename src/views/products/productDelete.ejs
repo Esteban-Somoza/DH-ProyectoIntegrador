@@ -12,10 +12,10 @@
             <section id="fondo">
                 <h4> ¿ Seguro que quieres eliminar la publicación ? </h4>
                 <picture >
-                    <img src="/images/productos/<%= product.imagen%>" alt="">
+                    <img src="/images/productos/<%= product.imagen.nombre%>" alt="">
                 </picture>
                 <h4>
-                    <%= product.name %>
+                    <%= product.nombre %>
                 </h4>
                 <form action="/delete/<%=product.id%>?m=delete" method="post" id="boton">
 

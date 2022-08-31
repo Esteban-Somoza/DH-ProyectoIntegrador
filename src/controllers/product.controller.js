@@ -204,7 +204,7 @@ module.exports = {
         precio: req.body.price,
         imagenId: imagenId,
         categoria: req.body.categoria,
-        subCategoria: req.body.subcategoria,
+        subcategoria: req.body.subcategoria,
         informacionId: nuevaInformacion.id,
         marca: req.body.marca,
         linea: req.body.linea,
