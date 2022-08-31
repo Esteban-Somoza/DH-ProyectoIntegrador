@@ -297,28 +297,6 @@
     "details": {
       "description": " SOFT - Lavatorio de FINECERAMIC® de sobre encimera"
     }
-  },
-  {
-    "id": 19,
-    "name": "Lavatorio de FINECERAMIC",
-    "price": 54600,
-    "imagen": "imagenProducto-1658505620349-157315177.jpg",
-    "categoria": "baño",
-    "subCategoria": "lavatorio",
-    "marca": "Roca",
-    "information": {
-      "colores": "blanco ceramica",
-      "linea": "Fineceramic",
-      "modelo": "",
-      "disenio": "Cuadrado elegante",
-      "configuracion": "sobre mueble y suspendido",
-      "apto": "",
-      "medidas": "1000 x 490 x 120 mm",
-      "capacidad": "14L"
-    },
-    "details": {
-      "description": " Lavatorio de FINECERAMIC® mural o sobre encimera"
-    }
   }
 
 ]
