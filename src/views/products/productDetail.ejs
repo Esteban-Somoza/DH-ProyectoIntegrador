@@ -26,8 +26,9 @@
                     </h2>
                     <ul id="producto__tabla">
                         <!-- generador -->
-                        <% for( let i=0; i < informacion.length; i++ ) { let item=informacion[i] 
-                        if(producto.informacion[item]=="" ){ continue } %>
+                        <% for( let i=0; i < informacion.length; i++ ) { let item=informacion[i]
+                        if(informacion[i] == "id"){ continue }
+                        if(producto.informacion[item] == "" || producto.informacion[item] == null ){ continue } %>
                             <li class="producto__tablaItem">
                                 <h3 class="producto__itemsTabla">
                                     <%= informacion[i] %>
@@ -52,10 +53,11 @@
                 </article>
             </section>
             <section id="detalles">
-                <h3>Detalles del producto</h3>
+                <h3>Descripción del producto</h3>
                 <ul id="detalles__navegacion">
                 </ul>
                 <article id="detalles__infoDetalle">
+                    <div><%= producto.descripcion %></div>
                     <picture class="imagen">
                         <img src="<%= producto.detalles %> " alt="">
                     </picture>
