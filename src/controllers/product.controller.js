@@ -12,15 +12,13 @@ module.exports = {
     }
 
     let informacion = Object.getOwnPropertyNames(productDB.informacion.dataValues)
-    // return res.send(productDB)
-    console.log("ok hasta ahora")
+    
     return res.render("./products/productDetail", {
       title: productDB.nombre,
       styles: ["style", "header", "footer", "productDetail", "mediaQ-productDetail"],
       producto: productDB,  
       esquema: productDB.esquema,
       informacion: informacion,
-     //details: Object.getOwnPropertyNames(productDB.details),
     });
   },  
 
@@ -97,13 +95,14 @@ module.exports = {
     let imagenId = await imagen.findByPk(productDB.dataValues.imagenId)
     let informacionId = await informacion.findByPk(productDB.dataValues.informacionId)
 
-    req.body.imagenProducto = productDB.imagen.nombre
+    // req.body.imagenProducto = productDB.imagen.nombre
 
     if (req.files && req.files.length > 0) {
       deleteImage(productDB.imagen.nombre)
+
       await imagenId.update({ 
         nombre: req.files[0].filename
-      })// actualizacion tabal IMAGEN segun Id
+      })// actualizacion tabla IMAGEN segun Id
     }
 
     await informacionId.update({
@@ -114,7 +113,7 @@ module.exports = {
       medidas: req.body.medidas,
       capacidad: req.body.capacidad,
       disenio: req.body.disenio,
-    }) // actualizacion tabal INFORMACION segun Id
+    }) // actualizacion tabla INFORMACION segun Id
 
 
     await productDB.update({
@@ -123,7 +122,7 @@ module.exports = {
       marca: req.body.marca,
       linea: req.body.linea,
       descripcion: req.body.description,
-    }) // actualizacion tabal PRODUCTO segun Id
+    }) // actualizacion tabla PRODUCTO segun Id
 
     return res.redirect(`/products/${req.params.id}`)
   },
@@ -176,22 +175,4 @@ module.exports = {
     }
   }
 
-  
-  // productSave: (req, res) => {
-  //   let id = req.params.id;
-  //   return res.render(`./products/${id}`, {
-  //     title: "Product Save",
-  //     styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"]
-  //   })
-  // },
-
-
-  // save: (req, res) => {
-  //   req.body.imagenProducto = req.files[0]?.filename
-  //   let newProduct = create(req.body)
-  //   let products = index();
-  //   products.push(newProduct)
-  //   write(products)
-  //   return res.redirect("/product/finder")
-  // },
 }

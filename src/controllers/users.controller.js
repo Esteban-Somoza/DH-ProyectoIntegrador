@@ -112,7 +112,7 @@ const usersController = {
       user: userDB
     });
   },
-
+  
   processEdit: async function (req, res) {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenId = await imagen.findByPk(req.session.user.id)
@@ -122,7 +122,7 @@ const usersController = {
         nombre: req.files[0].filename
       })// actualizacion tabal IMAGEN segun Id
     }
- 
+    
     await userDB.update({
       nombre: req.body.nombre,
       telefono: req.body.telefono,
