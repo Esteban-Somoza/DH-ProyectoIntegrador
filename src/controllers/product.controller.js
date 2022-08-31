@@ -128,31 +128,36 @@ module.exports = {
   },
 
 
-  productDelete: (req, res) => {
-    let product = find(parseInt(req.params.id))
-    if (!product) {
+  productDelete:  async (req, res) => {
+    let productDB = await producto.findByPk(req.params.id, { include: { all: true } })
+    if (!productDB) {
       return res.redirect("/product/finder")
     }
+   
     return res.render('./products/productDelete', {
-      title: `delete ${product.name}`,
+      title: `delete ${productDB.nombre}`,
       styles: ["style", "header", "footer", "productDelete"],
-      product: product
+      product: productDB
     })
   },
 
-  destroy: (req, res) => {
-    let product = find(parseInt(req.params.id))
-    if (!product) {
+  destroy: async (req, res) => {
+    let productDB =  await producto.findByPk(req.params.id, { include: { all: true } })
+    let imagenId = await imagen.findByPk(productDB.dataValues.imagenId)
+    let informacionId = await informacion.findByPk(productDB.dataValues.informacionId)
+
+    if (!productDB) {
       return res.redirect("/product/finder")
     }
-    let products = index()
-    let listWithoutDeletedProduct = products.filter(p => p.id !== product.id)
-    deleteImage(product.imagen)
-    write(listWithoutDeletedProduct)
+    deleteImage(productDB.imagen) // destruye la imagen del public
+
+    await productDB.destroy()
+    await imagenId.destroy()
+    await informacionId.destroy()
     return res.redirect("/products/finder");
   },
 
-  process: function (req, res) {
+  process: async function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
 
