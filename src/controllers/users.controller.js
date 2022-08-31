@@ -8,7 +8,7 @@ const { usuarios, imagen } = require('../database/models/index');
 
 
 const usersController = {
-  saveSessionUser: async function(emailUser) {
+  findUserDB: async function(emailUser) {
     let users = await usuarios.findAll({
       include: {
         all: true
@@ -74,7 +74,7 @@ const usersController = {
       });
     }
 
-    req.session.user = await usersController.saveSessionUser(req.body.email)
+    req.session.user = await usersController.findUserDB(req.body.email)
 
     if (req.body.recordame != undefined) {
       res.cookie("recordame", userDB, { maxAge: 172800000 })
@@ -104,7 +104,7 @@ const usersController = {
 
 
   userEdit: async function (req, res) {
-    let userDB = await usersController.saveSessionUser(req.session.user.email)
+    let userDB = await usersController.findUserDB(req.session.user.email)
     
     return res.render('users/userEdit', {
       title: "Editar tu Usuario",
@@ -114,29 +114,22 @@ const usersController = {
   },
 
   processEdit: async function (req, res) {
-    let userDB = await usersController.saveSessionUser(req.session.user.email)
-
+    let userDB = await usersController.findUserDB(req.session.user.email)
+    let imagenId = await imagen.findByPk(req.session.user.id)
     if (req.files && req.files.length > 0) {
       deleteImage(userDB.imagen.nombre)
-      let newUserImage = await imagen.create({
+      await imagenId.update({
         nombre: req.files[0].filename
-      })
-      await userDB.update({
-        imagenId: newUserImage.id
-      })
+      })// actualizacion tabal IMAGEN segun Id
     }
-
+ 
     await userDB.update({
       nombre: req.body.nombre,
       telefono: req.body.telefono,
       ubicacion: req.body.ubicacion,
     })
 
-    req.session.user = await usersController.saveSessionUser(req.session.user.email)
-    // req.session.user = updatedSessionUser
-    // let updatedSessionUser = await usersController.saveSessionUser(req.session.user.email)
-    // req.session.user = updatedSessionUser
-
+    req.session.user = await usersController.findUserDB(req.session.user.email)
     return res.redirect('/')
   }
 }

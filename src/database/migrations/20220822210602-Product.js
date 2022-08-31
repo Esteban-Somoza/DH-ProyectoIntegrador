@@ -19,11 +19,11 @@ module.exports = {
         imagenId: {
           type: DataTypes.INTEGER
         },
-        categoriaId: {
-          type: DataTypes.INTEGER
+        categoria: {
+          type: DataTypes.STRING
         },
-        subcategoriaId: {
-          type: DataTypes.INTEGER
+        subcategoria: {
+          type: DataTypes.STRING
         },
         informacionId: {
           type: DataTypes.INTEGER
@@ -31,8 +31,8 @@ module.exports = {
         marca: {
           type: DataTypes.TEXT
         },
-        lineaId: {
-          type: DataTypes.INTEGER
+        linea: {
+          type: DataTypes.STRING
         },
         descripcion: {
           type: DataTypes.TEXT

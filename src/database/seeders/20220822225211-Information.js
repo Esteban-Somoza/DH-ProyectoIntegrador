@@ -12,7 +12,7 @@ module.exports = {
         tecnologia: product.information.tecnologia,
         medidas: product.information.medidas,
         capacidad: product.information.capacidad,
-        disenio: product.information.disenio,
+        disenio: product.information.disenio, 
       }
       return productInformation
     })

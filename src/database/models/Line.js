@@ -18,12 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     };
     const Line = sequelize.define(alias,cols,config)
 
-    Line.associate = function(models) {
-        Line.belongsTo(models.producto,{
-            through:'producto',
-            foreignKey:'id'
-        })
-    }
+    // Line.associate = function(models) {
+    //     Line.belongsTo(models.producto,{
+    //         through:'producto',
+    //         foreignKey:'id'
+    //     })
+    // }
     
     return Line
 }

@@ -1,30 +1,26 @@
 const { validationResult } = require('express-validator');
 const { write, create, index, find, filter, edit, deleteImage } = require("../models/product.model");
-const { producto, image, information, line, category } = require("../database/models/index")
+const { producto, imagen, informacion, linea } = require("../database/models/index")
 
 
 module.exports = {
-
   productDetail: async (req, res) => {
-    //  let product = find(parseInt(req.params.id))
-    let productoPorId = await producto.findByPk(req.params.id, { include: { all: true } })
-  //  return res.send(productoPorId)
-    // let prod = JSON.parse(productoPorId)
-    // console.log("producto: " + productoPorId.producto);
-     let informacion = Object.getOwnPropertyNames(productoPorId.informacion.dataValues)
-    //console.log(informacion);
-    /*   if (!product) {
-         return res.redirect('/product/finder')
-        }*/
-        return res.send(productoPorId)
+    let productDB = await producto.findByPk(req.params.id, { include: { all: true } })
+
+    if (!productDB) {
+      return res.redirect('/products/finder')
+    }
+
+    let informacion = Object.getOwnPropertyNames(productDB.informacion.dataValues)
+    // return res.send(productDB)
     console.log("ok hasta ahora")
     return res.render("./products/productDetail", {
-      title: productoPorId.nombre,
+      title: productDB.nombre,
       styles: ["style", "header", "footer", "productDetail", "mediaQ-productDetail"],
-      producto: productoPorId,  
-      esquema: productoPorId.esquema,
+      producto: productDB,  
+      esquema: productDB.esquema,
       informacion: informacion,
-     //details: Object.getOwnPropertyNames(productoPorId.details),
+     //details: Object.getOwnPropertyNames(productDB.details),
     });
   },  
 
@@ -82,60 +78,53 @@ module.exports = {
     })
   },
 
+  productEdit: async (req, res) => {
+    let productDB = await producto.findByPk(req.params.id, { include: { all: true } })
 
-  // productSave: (req, res) => {
-  //   let id = req.params.id;
-  //   return res.render(`./products/${id}`, {
-  //     title: "Product Save",
-  //     styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"]
-  //   })
-  // },
-
-
-  // save: (req, res) => {
-  //   req.body.imagenProducto = req.files[0]?.filename
-  //   let newProduct = create(req.body)
-  //   let products = index();
-  //   products.push(newProduct)
-  //   write(products)
-  //   return res.redirect("/product/finder")
-  // },
-
-
-  productEdit: (req, res) => {
-    let product = find(parseInt(req.params.id))
-    if (!product) {
+    if (!productDB) {
       return res.redirect("/product/finder")
     }
     return res.render('./products/productEdit', {
-      title: `Edit ${product.name}`,
+      title: `Edit ${productDB.nombre}`,
       styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],
-      product: product
+      product: productDB
     })
   },
 
 
-  edit: (req, res) => {
-    let productToEdit = find(parseInt(req.params.id))
-    let products = index();
+  edit: async (req, res) => {
+    let productDB = await producto.findByPk(req.params.id, { include: { all: true } })
+    let imagenId = await imagen.findByPk(productDB.dataValues.imagenId)
+    let informacionId = await informacion.findByPk(productDB.dataValues.informacionId)
 
-    req.body.imagenProducto = productToEdit.imagen
+    req.body.imagenProducto = productDB.imagen.nombre
 
-    if (req.files[0] != undefined) {
-      deleteImage(productToEdit.imagen)
-      req.body.imagenProducto = req.files[0].filename
+    if (req.files && req.files.length > 0) {
+      deleteImage(productDB.imagen.nombre)
+      await imagenId.update({ 
+        nombre: req.files[0].filename
+      })// actualizacion tabal IMAGEN segun Id
     }
 
-    let edited = edit(req.body, productToEdit)
+    await informacionId.update({
+      colores: req.body.colores,
+      configuracion: req.body.configuracion,
+      apto: req.body.apto,
+      tecnologia: req.body.tecnologia,
+      medidas: req.body.medidas,
+      capacidad: req.body.capacidad,
+      disenio: req.body.disenio,
+    }) // actualizacion tabal INFORMACION segun Id
 
-    let productModified = products.map(product => {
-      if (product.id == edited.id) {
-        product = edited
-      }
-      return product
-    });
 
-    write(productModified)
+    await productDB.update({
+      nombre: req.body.nombre,
+      precio: req.body.price,
+      marca: req.body.marca,
+      linea: req.body.linea,
+      descripcion: req.body.description,
+    }) // actualizacion tabal PRODUCTO segun Id
+
     return res.redirect(`/products/${req.params.id}`)
   },
 
@@ -186,4 +175,23 @@ module.exports = {
       return res.redirect("/products/finder")
     }
   }
+
+  
+  // productSave: (req, res) => {
+  //   let id = req.params.id;
+  //   return res.render(`./products/${id}`, {
+  //     title: "Product Save",
+  //     styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"]
+  //   })
+  // },
+
+
+  // save: (req, res) => {
+  //   req.body.imagenProducto = req.files[0]?.filename
+  //   let newProduct = create(req.body)
+  //   let products = index();
+  //   products.push(newProduct)
+  //   write(products)
+  //   return res.redirect("/product/finder")
+  // },
 }

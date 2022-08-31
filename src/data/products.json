@@ -93,7 +93,7 @@
     "information": {
       "colores": "cromado",
       "linea": "",
-      "diseño": "circular",
+      "disenio": "circular",
       "configuracion": "pared o techo",
       "apto": ""
     },
@@ -110,7 +110,7 @@
     "information": {
       "colores": "Cromo y Rose Gold",
       "linea": "H3 Urbano",
-      "diseño": "volante cruz",
+      "disenio": "volante cruz",
       "configuracion": "pared o techo",
       "apto": "calefon y termotanque"
     },
@@ -148,7 +148,7 @@
     "information": {
       "colores": "Blanco",
       "linea": "Smart",
-      "diseño": "Cuadrado elegante",
+      "disenio": "Cuadrado elegante",
       "configuracion": "de pie, salida dual",
       "apto": ""
     },
@@ -167,7 +167,7 @@
     "information": {
       "colores": "pulido standard",
       "linea": "Quadra Q76 A",
-      "diseño": "",
+      "disenio": "",
       "configuracion": "bacha doble",
       "apto": "sobre mesada"
     },
@@ -205,7 +205,7 @@
     "information": {
       "colores": "Blanco y negro",
       "linea": "Candor",
-      "diseño": "",
+      "disenio": "",
       "configuracion": "con chispero electrico",
       "apto": "gas envasado"
     },
@@ -225,7 +225,7 @@
     "information": {
       "colores": "cromado, negro, blanco, azul, dorado, rosa",
       "linea": "Emblem 10016",
-      "diseño": "flexible ",
+      "disenio": "flexible ",
       "configuracion": "monocomando",
       "apto": ""
     },
@@ -245,7 +245,7 @@
     "information": {
       "colores": "veige",
       "linea": "Cuatricapa",
-      "diseño": "",
+      "disenio": "",
       "configuracion": "vertical",
       "apto": "",
       "capacidad": "600L"
@@ -288,7 +288,7 @@
       "colores": "blanco",
       "linea": "SOFT",
       "modelo": "",
-      "diseño": "",
+      "disenio": "",
       "configuracion": "sobre encimera",
       "apto": "",
       "medidas": "500 x 370 x 140 mm",
@@ -310,7 +310,7 @@
       "colores": "blanco ceramica",
       "linea": "Fineceramic",
       "modelo": "",
-      "diseño": "Cuadrado elegante",
+      "disenio": "Cuadrado elegante",
       "configuracion": "sobre mueble y suspendido",
       "apto": "",
       "medidas": "1000 x 490 x 120 mm",

@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
         imagenId: {
             type: DataTypes.INTEGER
         },
-        categoriaId: {
-            type: DataTypes.INTEGER
+        categoria: {
+            type: DataTypes.STRING
         },
-        subcategoriaId: {
-            type: DataTypes.INTEGER
+        subcategoria: {
+            type: DataTypes.STRING
         },
         informacionId: {
             type: DataTypes.INTEGER
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         marca: {
             type: DataTypes.TEXT
         },
-        lineaId: {
+        linea: {
             type: DataTypes.INTEGER
         },
         descripcion: {
@@ -50,23 +50,23 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }),
 
-        Product.belongsTo(models.categoria,{
-            as: "categoria",
-            foreignKey:'categoriaId',
-            allowNull: false
-        }),
+        // Product.belongsTo(models.categoria,{
+        //     as: "categoria",
+        //     foreignKey:'categoriaId',
+        //     allowNull: false
+        // }),
 
         Product.belongsTo(models.informacion,{
             as: "informacion",
             foreignKey:'informacionId',
             allowNull: false
-        }),
-
-        Product.hasMany(models.linea,{
-            as: "linea",
-            foreignKey:'id',
-            allowNull: false
         })
+
+        // Product.hasMany(models.linea,{
+        //     as: "linea",
+        //     foreignKey:'id',
+        //     allowNull: false
+        // })
 
        /* Product.belongsTo(models.subcategoria,{
             as: "subcategoria",

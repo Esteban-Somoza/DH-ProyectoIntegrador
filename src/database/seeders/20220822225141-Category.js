@@ -32,6 +32,30 @@ module.exports = {
         nombre: "griferia",
         subcategoriaId: 1,
       },
+      {
+        nombre: "lavatorio",
+        subcategoriaId: 1,
+      },
+      {
+        nombre: "bacha",
+        subcategoriaId: 2,
+      },
+      {
+        nombre: "horno",
+        subcategoriaId: 2,
+      },
+      {
+        nombre: "griferia",
+        subcategoriaId: 2,
+      },
+      {
+        nombre: "termotanques",
+        subcategoriaId: 3,
+      },
+      {
+        nombre: "tanquesDeAgua",
+        subcategoriaId: 3,
+      },
     ], {});
 
   },
