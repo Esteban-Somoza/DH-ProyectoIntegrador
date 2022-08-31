@@ -1,5 +1,5 @@
 const { readFileSync, writeFileSync, unlinkSync, unlink } = require('fs')
-const { resolve,  } = require('path')
+const { resolve, } = require('path')
 
 module.exports = {
 
@@ -18,28 +18,21 @@ module.exports = {
     },
 
 
-    filter: function (filterType, value) {
-        let file = resolve(__dirname, '../data', 'products.json')
-        let data = readFileSync(file)
-        let products = JSON.parse(data);
+    filter: function (filterType, value, dataBase) {
         let filteredList
-        // console.log(filterType + " " + value)
 
-        // let filter = products.filter(product => product.name.toLowerCase().indexOf(subcategoria.toLowerCase()) > -1)
-        
         if (filterType == "categoria") {
-            filteredList = products.filter(product => product.categoria == value)
+            filteredList = dataBase.filter(product => product.categoria == value)
         }
 
-        if (filterType == "subCategoria") {
-            filteredList = products.filter(product => product.subCategoria == value)
+        if (filterType == "subcategoria") {
+            filteredList = dataBase.filter(product => product.subcategoria == value)
         }
-        
+
         else if (filterType == "search") {
-            filteredList = products.filter(product => product.name.toLowerCase().includes(value) || product.marca.toLowerCase().includes(value))
-            if (value == "" || null) { filteredList = [] }
+            filteredList = dataBase.filter(product => product.nombre.toLowerCase().includes(value) || product.marca.toLowerCase().includes(value))
+            if (value == "" || null) { return filteredList = [] }
         }
-
         return filteredList
     },
 
@@ -117,13 +110,13 @@ module.exports = {
     },
 
     deleteImage: function (file) {
-       
+
         try {
             let route = resolve(__dirname, "../../public/images/productos/", file)
             return unlinkSync(route)
-           
+
         } catch (error) {
             console.log(error);
         }
     }
- }
+}

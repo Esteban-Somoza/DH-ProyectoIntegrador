@@ -12,51 +12,46 @@ module.exports = {
     }
 
     let informacion = Object.getOwnPropertyNames(productDB.informacion.dataValues)
-    
+
     return res.render("./products/productDetail", {
       title: productDB.nombre,
       styles: ["style", "header", "footer", "productDetail", "mediaQ-productDetail"],
-      producto: productDB,  
+      producto: productDB,
       esquema: productDB.esquema,
       informacion: informacion,
     });
-  },  
+  },
 
 
   finder: async (req, res) => {
-    let products = await producto.findAll({ include: { all: true } })
-    // console.log(products.length);
-    // if (req.query && req.query.name) {
-    //   producto = producto.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
-    // }
-    // let productList = index()
-
     try {
-    //   if (req.query?.categoria) {
-    //     productList = filter("categoria", req.query.categoria)
-    //   }
+      let productsDB = await producto.findAll({ include: { all: true } })
+      let productList
 
-    //   if (req.query && req.query.subcategoria) {
-    //     productList = filter("subCategoria", req.query.subcategoria)
-    //   }
+      if (req.query?.categoria) {
+        productList = filter("categoria", req.query.categoria, productsDB)
+      }
 
-    //   if (req.query && req.query.search) {
-    //     productList = filter("search", req.query.search.toLowerCase())
-    //     // productList = filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
-    //   }
-    //   // console.log(productList.length);
-    //   if (productList.length < 1) {
-    //     productList = index()
-    //   }
+      if (req.query && req.query.subcategoria) {
+        productList = filter("subcategoria", req.query.subcategoria, productsDB)
+      }
 
+      if (req.query && req.query.search) {
+        productList = filter("search", req.query.search.toLowerCase(), productsDB)
+      }
+
+      if (productList.length == 0) {
+        productList = productsDB
+      }
+      
       return res.render("./products/productFinder", {
         title: "Detalle de producto",
         styles: ["style", "header", "footer", "productSearch", "mediaQ-productSearch"],
-        products: products,
+        products: productList,
       });
     } catch (error) {
-    console.log(error)
-      res.redirect("./products/productFinder")
+      console.log(error)
+      return res.redirect("/products/finder")
     }
   },
 
@@ -100,7 +95,7 @@ module.exports = {
     if (req.files && req.files.length > 0) {
       deleteImage(productDB.dataValues.imagen.dataValues.nombre)
 
-      await imagenId.update({ 
+      await imagenId.update({
         nombre: req.files[0].filename
       })// actualizacion tabla IMAGEN segun Id
     }
@@ -128,12 +123,12 @@ module.exports = {
   },
 
 
-  productDelete:  async (req, res) => {
+  productDelete: async (req, res) => {
     let productDB = await producto.findByPk(req.params.id, { include: { all: true } })
     if (!productDB) {
       return res.redirect("/product/finder")
     }
-   
+
     return res.render('./products/productDelete', {
       title: `delete ${productDB.nombre}`,
       styles: ["style", "header", "footer", "productDelete"],
@@ -142,7 +137,7 @@ module.exports = {
   },
 
   destroy: async (req, res) => {
-    let productDB =  await producto.findByPk(req.params.id, { include: { all: true } })
+    let productDB = await producto.findByPk(req.params.id, { include: { all: true } })
     let imagenId = await imagen.findByPk(productDB.dataValues.imagenId)
     let informacionId = await informacion.findByPk(productDB.dataValues.informacionId)
 
@@ -158,7 +153,7 @@ module.exports = {
     return res.redirect("/products/finder");
   },
 
-  process: async function (req, res) {  
+  process: async function (req, res) {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
 
@@ -172,21 +167,21 @@ module.exports = {
       });
     }
 
-    
-    else  { 
 
-      let imagenId 
-  
+    else {
+
+      let imagenId
+
 
       if (req.files && req.files.length > 0) {
-  
-        let nuevaImagen = await imagen.create({ 
-         nombre: req.files[0].filename
+
+        let nuevaImagen = await imagen.create({
+          nombre: req.files[0].filename
         })
         imagenId = nuevaImagen.id
       }
-      
-      
+
+
       let nuevaInformacion = await informacion.create({
         colores: req.body.colores,
         configuracion: req.body.configuracion,
@@ -196,8 +191,8 @@ module.exports = {
         capacidad: req.body.capacidad,
         disenio: req.body.disenio,
       }) // actualizacion tabla INFORMACION segun Id
-  
-  
+
+
       await producto.create({
 
         nombre: req.body.nombre,
@@ -212,26 +207,26 @@ module.exports = {
 
       }) // actualizacion tabla PRODUCTO segun Id
 
-     /* let nuevoProducto = await product.create(req.body)
+      /* let nuevoProducto = await product.create(req.body)
+ 
+       let images = await Promise.all(req.files.map( file => {
+         return image.create({
+           nombre: file.filename
+         })
+       }))
+ 
+       let addProductImages = await Promise.all(images.map(image => {
+         return imagesProducts.create({
+           product: nuevoProducto.id,
+           image: image.id
+         })
+       }))*/
 
-      let images = await Promise.all(req.files.map( file => {
-        return image.create({
-          nombre: file.filename
-        })
-      }))
-
-      let addProductImages = await Promise.all(images.map(image => {
-        return imagesProducts.create({
-          product: nuevoProducto.id,
-          image: image.id
-        })
-      }))*/
-
-    //  req.body.imagenProducto = req.files[0]?.filename
-    //  let newProduct = create(req.body)
-   //   let products = index();
-   //   products.push(newProduct)
-   //   write(products)
+      //  req.body.imagenProducto = req.files[0]?.filename
+      //  let newProduct = create(req.body)
+      //   let products = index();
+      //   products.push(newProduct)
+      //   write(products)
       return res.redirect("/products/finder")
     }
   }
