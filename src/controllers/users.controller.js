@@ -8,7 +8,7 @@ const { usuarios, imagen } = require('../database/models/index');
 
 
 const usersController = {
-  findUserDB: async function(emailUser) {
+  findUserDB: async function (emailUser) {
     let users = await usuarios.findAll({
       include: {
         all: true
@@ -30,8 +30,6 @@ const usersController = {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
 
-    let imagenes = await imagen.findAll()
-    let idImagenUsuarioDefault = imagenes.find(i => i.dataValues.nombre == "avatar-default.png")
 
     if (errors && errors.length > 0) {
       if (req.files && req.files.length > 0) {
@@ -45,6 +43,10 @@ const usersController = {
       });
     }
 
+    let imagenes = await imagen.findAll() // levanta base de datos de imagenes
+    let imagenDefault = imagenes.find(i => i.nombre == "default-avatar.png") // busca la imagen que se llama como la default
+    let idImagenUsuario = imagenDefault.id // creo variable idImagenUsuario y le asigno el ID del default
+
     req.body.password = hashSync(req.body.password, 10);
     req.body.isAdmin = String(req.body.email).toLocaleLowerCase().includes('@nicuesa.com');
 
@@ -52,17 +54,12 @@ const usersController = {
       let imagenUsuario = await imagen.create({
         nombre: req.files[0].filename
       })
-      idImagenUsuarioDefault = imagenUsuario.id;
+      idImagenUsuario = imagenUsuario.id; // si entra al if (osea que se subió un archivo), le asigna el ID de la nueva imagen
     }
 
-    if(req.files && req.files.length == 0) {
-      return  idImagenUsuarioDefault 
+    req.body.imagenId = idImagenUsuario // le asigno le valor del idImagenUsuario al req.body.imagenId
 
-    }
-     
-    req.body.imagenId = idImagenUsuarioDefault
-
-    await usuarios.create(req.body)
+    await usuarios.create(req.body) // se crea el producto, incluyendo el req.body.imagenId
     return res.redirect('/')
   },
 
@@ -92,7 +89,7 @@ const usersController = {
     return res.render('users/login', {
       title: "Login",
       styles: ["style", "header", "footer", "login"],
-      
+
     });
   },
 
@@ -111,15 +108,15 @@ const usersController = {
 
   userEdit: async function (req, res) {
     let userDB = await usersController.findUserDB(req.session.user.email)
-    
-    
+
+
     return res.render('users/userEdit', {
       title: "Editar tu Usuario",
       styles: ["style", "header", "footer", "userEdit"],
       user: userDB
     });
   },
-  
+
   processEdit: async function (req, res) {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenId = await imagen.findByPk(req.session.user.id)
@@ -129,7 +126,7 @@ const usersController = {
         nombre: req.files[0].filename
       })// actualizacion tabal IMAGEN segun Id
     }
-    
+
     await userDB.update({
       nombre: req.body.nombre,
       telefono: req.body.telefono,

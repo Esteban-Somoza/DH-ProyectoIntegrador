@@ -6,7 +6,7 @@ const productIndex = require('../../models/product.model')
 module.exports = {
   async up(queryInterface, Sequelize) {
     let allImages = []
-    let defaultImage = {nombre:"avatar-default.png" }
+    let defaultImage = {nombre:"default-avatar.png" }
     allImages.push(defaultImage)
 
     userIndex.index().map(user => {
