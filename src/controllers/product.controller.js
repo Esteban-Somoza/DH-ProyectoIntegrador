@@ -26,7 +26,7 @@ module.exports = {
   finder: async (req, res) => {
     try {
       let productsDB = await producto.findAll({ include: { all: true } })
-      let productList
+      let productList = []
 
       if (req.query?.categoria) {
         productList = filter("categoria", req.query.categoria, productsDB)
