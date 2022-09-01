@@ -30,7 +30,6 @@ const usersController = {
     let validaciones = validationResult(req)
     let { errors } = validaciones;
 
-
     if (errors && errors.length > 0) {
       if (req.files && req.files.length > 0) {
         deleteImage(req.files[0].filename)
@@ -44,8 +43,9 @@ const usersController = {
     }
 
     let imagenes = await imagen.findAll() // levanta base de datos de imagenes
-    let imagenDefault = imagenes.find(i => i.nombre == "default-avatar.png") // busca la imagen que se llama como la default
-    let idImagenUsuario = imagenDefault.id // creo variable idImagenUsuario y le asigno el ID del default
+    let nombreImagenDefault = "default-avatar.png"
+    let imagenDefaultDB = imagenes.find(i => i.nombre == nombreImagenDefault) // busca la imagen que se llama como la default
+    let idImagenUsuario = imagenDefaultDB.id // creo variable idImagenUsuario y le asigno el ID del default
 
     req.body.password = hashSync(req.body.password, 10);
     req.body.isAdmin = String(req.body.email).toLocaleLowerCase().includes('@nicuesa.com');
