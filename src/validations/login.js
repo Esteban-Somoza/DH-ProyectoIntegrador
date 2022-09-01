@@ -13,9 +13,7 @@ body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().
     }
   })
 
-  // let userDB = users.find(u =>u.email == req.body.email)
   users = users.map(u => u.email)
-  // console.log(users);
 
   if(!users.includes(value.toLowerCase())){
       throw new Error('El email no esta registrado')
@@ -30,10 +28,8 @@ body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.'
       all: true
     }
   })
-  // let userDB = users.find(u =>u.email == req.body.email)
   let user = users.find(u => u.email == email)
 
-  console.log(user);
   if(!user){
     throw new Error("Usuario no encontrado")
   }

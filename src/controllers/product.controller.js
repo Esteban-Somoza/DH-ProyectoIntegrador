@@ -43,7 +43,7 @@ module.exports = {
       if (productList.length == 0) {
         productList = productsDB
       }
-      
+
       return res.render("./products/productFinder", {
         title: "Detalle de producto",
         styles: ["style", "header", "footer", "productSearch", "mediaQ-productSearch"],
@@ -87,10 +87,27 @@ module.exports = {
 
   edit: async (req, res) => {
     let productDB = await producto.findByPk(req.params.id, { include: { all: true } })
+    let validaciones = validationResult(req)
+    let { errors } = validaciones;
+
+    if (errors && errors.length > 0) {
+      console.log(errors);
+      if (req.files && req.files.length > 0) {
+        deleteImage(req.files[0].filename)
+      }
+      return res.render('./products/productEdit', {
+        title: `Edit ${productDB.nombre}`,
+        styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],
+        product: productDB,
+        oldData: req.body,
+        errors: validaciones.mapped()
+      });
+    }
+
     let imagenId = await imagen.findByPk(productDB.dataValues.imagenId)
     let informacionId = await informacion.findByPk(productDB.dataValues.informacionId)
 
-    // req.body.imagenProducto = productDB.imagen.nombre
+    req.body.imagenProducto = productDB.imagen.nombre
 
     if (req.files && req.files.length > 0) {
       deleteImage(productDB.dataValues.imagen.dataValues.nombre)
@@ -167,12 +184,8 @@ module.exports = {
       });
     }
 
-
     else {
-
       let imagenId
-
-
       if (req.files && req.files.length > 0) {
 
         let nuevaImagen = await imagen.create({
@@ -180,7 +193,6 @@ module.exports = {
         })
         imagenId = nuevaImagen.id
       }
-
 
       let nuevaInformacion = await informacion.create({
         colores: req.body.colores,
@@ -192,9 +204,7 @@ module.exports = {
         disenio: req.body.disenio,
       }) // actualizacion tabla INFORMACION segun Id
 
-
       await producto.create({
-
         nombre: req.body.nombre,
         precio: req.body.price,
         imagenId: imagenId,
@@ -207,26 +217,6 @@ module.exports = {
 
       }) // actualizacion tabla PRODUCTO segun Id
 
-      /* let nuevoProducto = await product.create(req.body)
- 
-       let images = await Promise.all(req.files.map( file => {
-         return image.create({
-           nombre: file.filename
-         })
-       }))
- 
-       let addProductImages = await Promise.all(images.map(image => {
-         return imagesProducts.create({
-           product: nuevoProducto.id,
-           image: image.id
-         })
-       }))*/
-
-      //  req.body.imagenProducto = req.files[0]?.filename
-      //  let newProduct = create(req.body)
-      //   let products = index();
-      //   products.push(newProduct)
-      //   write(products)
       return res.redirect("/products/finder")
     }
   }

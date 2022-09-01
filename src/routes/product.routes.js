@@ -6,17 +6,24 @@ const middlewareProductCreate = require('../middlewares/productCreate')
 const isLogged = require('../middlewares/isLogged')
 const isAdmin = require('../middlewares/isAdmin')
 
-
+// finder
 router.get("/products/finder", finder)
+
+// product create
 router.get("/products/create/details",productCreateDetail)
-router.post('/products/save',[middlewareProductCreate],process) //ok
+router.post('/products/save',[middlewareProductCreate],process) 
 
-router.get("/carrito",[isLogged],productCart)
+// carrito
+router.get("/carrito",[isLogged],productCart) 
 
-
-router.put('/products/editForm/:id',[middlewareEdicion],edit)
+// product edit
 router.get("/products/edit/:id",[isAdmin], productEdit)
+router.put('/products/editForm/:id',[middlewareEdicion],edit)
+
+// product detail
 router.get("/products/:id", productDetail)
+
+//product delete
 router.get('/products/productDelete/:id',[isAdmin], productDelete) 
 router.delete('/delete/:id',[isAdmin],destroy) 
 

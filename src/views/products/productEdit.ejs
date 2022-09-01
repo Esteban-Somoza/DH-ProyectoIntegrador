@@ -4,6 +4,8 @@
 <head>
     <%- include ('../includes/head.ejs') %>
         <script defer src="/scripts/menuCrear.js"></script>
+        <script defer src="../../scripts/menu.js"></script>
+
 </head>
 
 <body>
@@ -32,19 +34,37 @@
                         <!-- producto -->
                         <h2 class="titulo">Producto</h2>
                         <label for="nombre-producto">Nombres del producto</label>
-                        <input class="formulario_relleno" type="text" name="nombreProducto" min="1"
-                            value="<%= product.nombre%>">
+                        <input class="formulario_relleno" type="text" name="nombre" min="1"
+                        value="<%= locals.oldData ? oldData.nombre: product.nombre %>">
+                        <% if ( locals.errors && errors.nombre ) { %>
+                            <p class="msg-error">
+                                <%= errors.nombre.msg %>
+                            </p>
+                            <% } %>
                         <label for="marca">Marca</label>
                         <input class="formulario_relleno" type="text" name="marca" id="marca" min="1"
-                            value="<%= product.marca%>">
+                            value="<%= locals.oldData ? oldData.marca: product.marca %>">
+                            <% if ( locals.errors && errors.marca ) { %>
+                                <p class="msg-error">
+                                    <%= errors.marca.msg %>
+                                </p>
+                                <% } %> 
                         <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
                         <input class="formulario_relleno" type="file" name="imagenProducto" value="">
+                        <% if (locals.errors && errors.imagenProducto) { %>
+                            <p class="msg-error"> <%= errors.imagenProducto.msg %> </p>
+                        <% } %>
                         <label for="description">Descripcion</label>
                         <textarea class="descripcion" type="textarea"
                             name="description"><%= product.descripcion %></textarea>
                         <label for="price">Precio</label>
-                        <input class="formulario_relleno" type="text" name="price" id="price" min="1"
-                            value="<%= product.precio%>">
+                        <input class="formulario_relleno" type="text" name="precio" id="price" min="1"
+                            value="<%= locals.oldData ? oldData.precio: product.precio %>">
+                            <% if ( locals.errors && errors.price ) { %>
+                                <p class="msg-error">
+                                    <%= errors.price.msg %>
+                                </p>
+                            <% } %>
 
                         <!-- informacion -->
                         <h2 class="titulo">Información</h2>
@@ -52,28 +72,28 @@
                             <input class="formulario_relleno" type="text" name="Codigo" id="Codigo" min="1" value="" > -->
                         <label class="infodenombres" for="Linea">Linea</label>
                         <input class="formulario_relleno" type="text" name="linea" min="1"
-                            value="<%= product.linea%>">
+                            value="<%= locals.oldData ? oldData.linea: product.linea%>">
                         <label class="infodenombres" for="Colores">Colores</label>
                         <input class="formulario_relleno" type="text" name="colores" min="1"
-                            value="<%= product.informacion.colores%>">
+                            value="<%= locals.oldData ? oldData.colores: product.informacion.colores%>">
                         <label class="infodenombres" for="Disenio">Diseño</label>
                         <input class="formulario_relleno" type="text" name="disenio" min="1"
-                            value="<%= product.informacion.disenio%>">
+                            value="<%= locals.oldData ? oldData.disenio: product.informacion.disenio%>">
                         <label class="infodenombres" for="Apto">Apto</label>
                         <input class="formulario_relleno" type="text" name="apto" min="1"
-                            value="<%= product.informacion.apto%>">
+                            value="<%= locals.oldData ? oldData.apto: product.informacion.apto%>">
                         <label for="tecnologia">Tecnologia</label>
-                        <input class="formulario_relleno" type="text" name="tecnologia" id="subCategoria" min="1"
-                            value="<%= product.informacion.tecnologia%>">
+                        <input class="formulario_relleno" type="text" name="tecnologia"  min="1"
+                            value="<%= locals.oldData ? oldData.tecnologia: product.informacion.tecnologia%>">
                         <label class="infodenombres" for="Apto">Configuracion</label>
                         <input class="formulario_relleno" type="text" name="configuracion" min="1"
-                            value="<%= product.informacion.configuracion %>">
+                            value="<%=locals.oldData ? oldData.configuracion:  product.informacion.configuracion %>">
                         <label for="nombre-apellido" for="medidas">Medidas</label>
                         <input class="formulario_relleno" type="text" name="medidas" min="1"
-                            value="<%= product.informacion.medidas %>">
+                            value="<%= locals.oldData ? oldData.medidas: product.informacion.medidas %>">
                         <label for="nombre-apellido" for="capacidad">Capacidad</label>
                         <input class="formulario_relleno" type="text" name="capacidad" min="1"
-                            value="<%= product.informacion.capacidad %>">
+                            value="<%= locals.oldData ? oldData.capacidad: product.informacion.capacidad %>">
 
                         <!-- detalles -->
                         <!-- <h2 class="titulo">Detalles</h2> -->
@@ -95,5 +115,4 @@
 
         </main>
         <%- include ('../includes/footer.ejs') %>
-            <script src="../../scripts/menu.js"></script>
 </body>
