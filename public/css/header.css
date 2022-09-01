@@ -104,6 +104,10 @@ header {
     width: 2.5em;
     color: white;
 }
+
+#user_Edit:hover{
+    color: var(--color-hover);
+}
 @media (max-width: 508px) {
     .search-bar {
         display: none;

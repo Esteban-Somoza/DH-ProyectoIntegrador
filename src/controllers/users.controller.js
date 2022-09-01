@@ -54,6 +54,11 @@ const usersController = {
       })
       idImagenUsuarioDefault = imagenUsuario.id;
     }
+
+    if(req.files && req.files.length == 0) {
+      return  idImagenUsuarioDefault 
+
+    }
      
     req.body.imagenId = idImagenUsuarioDefault
 
