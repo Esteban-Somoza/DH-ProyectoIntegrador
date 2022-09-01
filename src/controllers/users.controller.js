@@ -86,7 +86,8 @@ const usersController = {
   login: async function (req, res) {
     return res.render('users/login', {
       title: "Login",
-      styles: ["style", "header", "footer", "login"]
+      styles: ["style", "header", "footer", "login"],
+      
     });
   },
 
@@ -105,6 +106,7 @@ const usersController = {
 
   userEdit: async function (req, res) {
     let userDB = await usersController.findUserDB(req.session.user.email)
+    
     
     return res.render('users/userEdit', {
       title: "Editar tu Usuario",

@@ -318,7 +318,7 @@ header a h2 {
     }
 
     #mobile-menu.is-active #bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
     }
 
     #mobile-menu.is-active #bar:nth-child(2) {
@@ -326,7 +326,7 @@ header a h2 {
     }
 
     #mobile-menu.is-active #bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg);
     }
 }
 
@@ -358,6 +358,10 @@ header a h2 {
 
 #userAvatar img {
     width: 100%;
+    border-radius: 20%;
+    max-width: 30px;
+    max-height: 30px;
+
 }
 
 
@@ -397,4 +401,6 @@ header a h2 {
 .buttonLogout{
     color: var(--color-white);
     background-color: var(--color-footerNav);
+    top: 1px;
+    position: relative;
 }

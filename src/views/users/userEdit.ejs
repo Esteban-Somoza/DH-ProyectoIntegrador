@@ -12,13 +12,13 @@
         <main>
 
 
-
+           
 
             <article class="formulario_contenido">
 
                 <h5> Edición de usuario</h5>
 
-                <p> datos del perfil</p>
+
                 <picture id="imagen_cotenido">
                     <img src="/images/avatars/<%= user.imagen.nombre %>" alt="" id="img">
                 </picture>
@@ -26,9 +26,12 @@
                 <form action="/users/editConfirm?m=PUT" id="form" method="post" enctype="multipart/form-data">
 
 
-                    <label for="nombre">nombre</label>
+                    <label for="nombre">Nombre</label>
 
                     <input type="text" name="nombre" id="relleno" placeholder="nombre" value="<%= user.nombre%>">
+                    <label for="nombre">Apellido</label>
+
+                    <input type="text" name="apellido" id="relleno" placeholder="apellido" value="<%= user.apellido%>">
 
 
                     <label for="telefono">Telefono/celular</label>
@@ -36,26 +39,23 @@
                     <input type="number" name="telefono" id="relleno" placeholder="Telefono/celular"
                         value="<%= user.telefono%>">
 
-                    <label for="ubicacion">ciudad de residencia</label>
+                    <label for="ubicacion">Ciudad de residencia</label>
 
                     <input type="text" name="ubicacion" id="relleno" value="<%= user.ubicacion %> ">
 
-                    <label for="imagenId">imagen de perfil</label>
+                    <label for="imagenPerfil">Imagen de perfil</label>
 
-                    <input type="file" id="relleno" name="imagenId">
-                <!---<nav id="btn">
-                        <button type="" class="resete"><a href="/">Cancelar</a></button>
-                        <button type="submit" class="editar">Editar</button>
-                    </nav>---> 
+                    <input type="file" id="ImagenPerfil" name="imagenId">
+                    
                     <div id="boton">
-                        <button type="" class="Cancelar"><a href="/">Cancelar</a></button>
+                        <button type="" class="reset"><a href="/">Cancelar</a></button>
                         <button type="submit" class="botonform">Editar</button>
-                    //// agregar apellido 
                     </div>
                 </form>
 
 
             </article>
+
 
 
 

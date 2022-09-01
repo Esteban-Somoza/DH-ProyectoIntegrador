@@ -37,6 +37,7 @@
 }
 
 .perfil_imagen img {
-    width: 100%;
-    max-width:15em;
+        min-width: 12em;
+        border-radius: 1em;
+        padding-top: 12px ;
 }
