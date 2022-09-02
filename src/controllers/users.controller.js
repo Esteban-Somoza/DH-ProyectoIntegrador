@@ -6,6 +6,7 @@ const { readFileSync, writeFileSync, unlinkSync } = require('fs');
 const { usuarios, imagen } = require('../database/models/index');
 
 
+let nombreImagenDefault = "default-avatar.png"
 
 const usersController = {
   findUserDB: async function (emailUser) {
@@ -43,7 +44,7 @@ const usersController = {
     }
 
     let imagenes = await imagen.findAll() // levanta base de datos de imagenes
-    let nombreImagenDefault = "default-avatar.png"
+    
     let imagenDefaultDB = imagenes.find(i => i.nombre == nombreImagenDefault) // busca la imagen que se llama como la default
     let idImagenUsuario = imagenDefaultDB.id // creo variable idImagenUsuario y le asigno el ID del default
 
@@ -121,7 +122,10 @@ const usersController = {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenId = await imagen.findByPk(req.session.user.id)
     if (req.files && req.files.length > 0) {
-      deleteImage(userDB.dataValues.imagen.dataValues.nombre)
+
+      if(userDB.dataValues.imagen.dataValues.nombre != nombreImagenDefault ){
+        deleteImage(userDB.dataValues.imagen.dataValues.nombre)
+      }
       await imagenId.update({
         nombre: req.files[0].filename
       })// actualizacion tabal IMAGEN segun Id
@@ -144,12 +148,17 @@ const usersController = {
     if (!userDB) {
       return res.redirect("/")
     }
-    deleteImage(userDB.dataValues.imagen.dataValues.nombre)
+    if(userDB.dataValues.imagen.dataValues.nombre != nombreImagenDefault ){
+      deleteImage(userDB.dataValues.imagen.dataValues.nombre)
+      await imagenId.destroy()
+
+    }
+
+
     //destruye la imagen del public
 
     await userDB.destroy()
-    await imagenId.destroy()
-    
+    delete req.session.user
     return res.redirect("/");
   },
 }
