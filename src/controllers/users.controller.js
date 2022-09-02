@@ -135,7 +135,23 @@ const usersController = {
 
     req.session.user = await usersController.findUserDB(req.session.user.email)
     return res.redirect('/')
-  }
+  },
+  destroyUser: async (req, res) => {
+    let userDB = await usersController.findUserDB(req.session.user.email)
+    let imagenId = await imagen.findByPk(req.session.user.id)
+    
+
+    if (!userDB) {
+      return res.redirect("/")
+    }
+    deleteImage(userDB.dataValues.imagen.dataValues.nombre)
+    //destruye la imagen del public
+
+    await userDB.destroy()
+    await imagenId.destroy()
+    
+    return res.redirect("/");
+  },
 }
 
 module.exports = usersController
