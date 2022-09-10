@@ -9,7 +9,7 @@ const register = [
     .notEmpty()
     .withMessage("Complete los campos")
     .bail()
-    .isLength({ min: 2, max: 16 })
+    .isLength({ min: 2 })
     .withMessage("El nombre debe contener minimo dos caracteres")
     .bail(),
   body("apellido")
@@ -44,10 +44,9 @@ const register = [
   body("password")
     .notEmpty()
     .withMessage("Complete los campos")
-
     .bail()
-    .isLength({ min: 2, max: 16 })
-    .withMessage("El nombre debe contener minimo dos caracteres")
+    .isLength({ min: 8, max: 16 })
+    .withMessage("La contraseña debe tener al menos 8 caracteres")
     .bail(),
 
   body('avatar').custom((value, { req }) => {

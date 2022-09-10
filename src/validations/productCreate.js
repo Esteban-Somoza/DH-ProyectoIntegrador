@@ -7,12 +7,13 @@ const productCreate = [
     .notEmpty()
     .withMessage("Complete los campos")
     .bail()
-    .isLength({ min: 2 })
+    .isLength({ min: 5 })
     .withMessage("El nombre debe contener minimo dos caracteres")
     .bail()
     .isLength({ max: 50 })
     .withMessage("El nombre debe contener maximo 50 caracteres")
     .bail(),
+    
   body("price") //solucionar problema numeros
     .notEmpty()
     .withMessage("Complete los campos")
