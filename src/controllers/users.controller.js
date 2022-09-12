@@ -104,7 +104,6 @@ const usersController = {
     return res.redirect('/')
   },
 
-
   userEdit: async function (req, res) {
     let userDB = await usersController.findUserDB(req.session.user.email)
 
@@ -142,7 +141,6 @@ const usersController = {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenId = await imagen.findByPk(req.session.user.id)
 
-
     if (!userDB) {
       return res.redirect("/")
     }
@@ -154,7 +152,7 @@ const usersController = {
     await userDB.destroy()
     delete req.session.user
     return res.redirect("/");
-  },
+  }
 }
 
 module.exports = usersController
