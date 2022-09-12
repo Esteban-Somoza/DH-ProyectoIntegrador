@@ -24,6 +24,12 @@ const usersController = {
       styles: ["style", "header", "footer", "register"],
     })
   },
+  register2: async (req, res) => {
+    return res.render("./users/register2", {
+      title: "Registro",
+      styles: ["style", "header", "footer", "registerEdu"],
+    })
+  },
 
 
   process: async function (req, res) {
