@@ -15,7 +15,6 @@ const usersController = {
         all: true
       }
     })
-
     return users.find(u => u.email == emailUser)
   },
 
@@ -88,8 +87,8 @@ const usersController = {
   login: async function (req, res) {
     return res.render('users/login', {
       title: "Login",
-      styles: ["style", "header", "footer", "login"],
-
+      styles: ["style", "header", "footer", "login", "frontValidations"],
+      saludo: "hola"
     });
   },
 
