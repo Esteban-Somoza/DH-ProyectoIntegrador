@@ -1,0 +1,47 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.field {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    gap: .5rem;
+    padding: .25rem;
+}
+.field input {
+    flex-grow: 1;
+}
+.feed{
+    flex-basis: 100%;
+    padding: .5rem .25rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: .5rem;
+}
+.field.invalid{
+    background-color: crimson;
+}
+.field.invalid .feed, .field.invalid label{
+    color: snow;
+}
+.field.invalid .feed {
+    display: block;
+}
+.field.valid{
+    background-color: turquoise;
+}
+.field.valid .feed , .field.valid label{
+    color: snow;
+}
+.field.valid .feed{
+    display: block;
+}
