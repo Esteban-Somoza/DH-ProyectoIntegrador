@@ -8,17 +8,17 @@
     /* transition: background-color 0.3s ease; */
     animation-name: error;
     animation-duration: 2s;
+    animation-timing-function: ease-in-out;
     margin: 2em;
 
     /* transition: background-color blue 2s ease; */
 }
 
-h2:hover {
-    transition: color red 0.5s ease;
-}
-
 @keyframes error {
     from {
+        background-color: white;
+    }
+    12% {
         background-color: pink;
     }
 
