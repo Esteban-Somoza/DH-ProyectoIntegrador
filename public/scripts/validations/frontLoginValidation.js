@@ -1,7 +1,9 @@
 let form = document.forms.login__form
-let imputs = form.elements
+let inputs = form.elements
 
-imputs.email.addEventListener('input', function (e) {
+
+
+inputs.email.addEventListener('input', function (e) {
     let field = e.target.parentElement
     let value = e.target.value
     let feed = field.querySelector(".feed")
@@ -23,7 +25,7 @@ imputs.email.addEventListener('input', function (e) {
         feed.innerText = "El campo es correcto"
     }
 })
-imputs.password.addEventListener('input', function (e) {
+inputs.password.addEventListener('input', function (e) {
     let field = e.target.parentElement
     let value = e.target.value
     let feed = field.querySelector(".feed")

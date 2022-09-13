@@ -6,6 +6,8 @@ const middlewaresEditUser = require("../middlewares/register")
 const isLogged = require('../middlewares/isLogged');
 const isAdmin = require('../middlewares/isAdmin')
 const {  destroyUser,perfil, login, register,register2, process, access, logout, userEdit, processEdit } = require('../controllers/users.controller');
+const { allUsers } = require("../controllers/apis/userApi")
+
 
 // login
 router.get("/users/login", login)
@@ -30,5 +32,7 @@ router.put("/users/editConfirm", middlewaresEditUser, processEdit)
 router.get("/users/deleteConfirm", [isLogged],destroyUser)
 router.delete("/users/deleteConfirm", middlewaresEditUser, destroyUser)
 
+// Api
+router.get("/api/allUsers", allUsers)
 
 module.exports = router 
