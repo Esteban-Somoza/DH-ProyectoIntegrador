@@ -33,6 +33,7 @@ body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.'
   if(!user){
     throw new Error("Usuario no encontrado")
   }
+  
 
   if(!compareSync(value,user.password)){
     throw new Error("La contraseña es incorrecta")

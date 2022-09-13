@@ -75,7 +75,7 @@ const usersController = {
     if (errors && errors.length > 0) {
       return res.render('users/login', {
         title: "Login",
-        styles: ["style", "header", "footer", "login"],
+        styles: ["style", "header", "footer", "login", "frontValidations"],
         oldData: req.body,
         errors: validaciones.mapped()
       });
