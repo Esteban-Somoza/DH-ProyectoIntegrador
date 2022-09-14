@@ -9,6 +9,8 @@ let botonSubmit = document.querySelector('.form__boton');
 
 form.addEventListener('submit', function(e) {  
     e.preventDefault();
+    
+  
 
     let errors = false
     if (email.value.length <= 0) {
@@ -22,6 +24,7 @@ form.addEventListener('submit', function(e) {
       
     }
         else if(email.value ==!validator.isEmail(email.value)){
+            
              errors = true
            alert('no es un email valido')
        
@@ -34,6 +37,7 @@ form.addEventListener('submit', function(e) {
       
      }
      else if (!nombre.value.length < 2){
+        
         
      }
      if (apellido.value.length < 2) {
@@ -49,9 +53,17 @@ form.addEventListener('submit', function(e) {
        errors = true
        alert('La contraseña debe contener al menos 8 caracteres');
         contrasenia.style.backgroundColor = 'tomato'
-        let pass = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
-        if (!contrasenia.value == pass) {
-            alert('La contraseña debe contener al menos 1 numero y una mayuscula')
+        let config = {
+            minLength: 8,
+            minLowercase:1,
+            minUppercase:1,
+            minNumber:1,
+            minSymbols:1
+        }
+       
+        if (!validator.isStrongPassword(value,config)) {
+            
+            alert('La contraseña debe contener al menos 1 numero y una mayuscula y un simbolo')
        
         }
     }
@@ -84,10 +96,9 @@ form.addEventListener('submit', function(e) {
             .then(()=>{  
             }) 
         } 
-       
-       
-    
+        
     })
+   
     
   
        
