@@ -1,0 +1,20 @@
+.feed{
+    flex-basis: 100%;
+    padding: 0.25;
+    text-align: center;
+}
+
+.feed.invalid{
+    background-color: red;
+    display: block;
+}
+.feed.valid{
+    background-color: green;
+    display: block;
+}
+.section.invalid.feed {
+    background-color: red ;
+}
+.section.valid.feed {
+    background-color: green;
+}
