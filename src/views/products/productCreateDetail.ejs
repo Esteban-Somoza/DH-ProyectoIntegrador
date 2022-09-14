@@ -4,6 +4,8 @@
 <head>
     <%- include ('../includes/head.ejs') %>
         <script defer src="/scripts/menuCrear.js"></script>
+        <script defer src="/scripts/productCreate.js"></script>
+
 </head>
 
 <body>
@@ -11,102 +13,133 @@
 
         <main>
             <section class="back">
-                <form action="/products/save" method="post" enctype="multipart/form-data">
-                    <div class="formulario">
-                        <h2 id="detalle">
-                            Crear un nuevo producto
-                        </h2>
+                <form action="/products/save" method="post" class="formulario" enctype="multipart/form-data">
+                    <h2 id="detalle">
+                        Crear un nuevo producto
+                    </h2>
 
-                        <!-- <h2> categorias</h2> -->
-                        <label for="Categoria">Categoria</label>
-                        <select id="categoria" name="categoria" class="formulario_relleno" onchange="populate()" >
-                 
-                            <option value=""></option>
-                            <option value="baño">baño</option>
-                            <option value="cocina">cocina</option>
-                            <option value="tanques">tanques</option>
-                            <!--    <option value="calefaccion">calefacción</option>
+                    <!-- <h2> categorias</h2> -->
+                    <label for="Categoria">Categoria</label>
+                    <select id="categoria" name="categoria" class="formulario_relleno" onchange="populate()">
+
+                        <option value=""></option>
+                        <option value="baño">baño</option>
+                        <option value="cocina">cocina</option>
+                        <option value="tanques">tanques</option>
+                        <!--    <option value="calefaccion">calefacción</option>
                                 <option value="instalaciones">instalaciones</option>  -->
-                        </select>  <% if ( locals.errors && errors.categoria ) { %>
-                            <p class="msg-error">
-                                <%= errors.categoria.msg %>
-                            </p>
-                            <% } %>
-                        <label for="subCategoria">SubCategoria</label>
-                        <select id="subCategoria" name="subcategoria" class="formulario_relleno"></select>
-                        <% if ( locals.errors && errors.subcategoria ) { %>
-                            <p class="msg-error">
-                                <%= errors.subcategoria.msg %>
-                            </p>
-                            <% } %>
 
-                        <!-- producto -->
-                        <h2 class="titulo">Producto</h2>
-                        <label for="nombre-producto">* Nombre del producto</label>
-                        <input class="formulario_relleno" type="text" name="nombre" id="nombreProducto"
-                            value="<%= locals.oldData ? oldData.nombre: null %>">
-                        <% if ( locals.errors && errors.nombre ) { %>
-                            <p class="msg-error">
-                                <%= errors.nombre.msg %>
-                            </p>
-                            <% } %>
-                            <label for="marca">* Marca</label>
-                            <input class="formulario_relleno" type="text" name="marca" id="marca" min="1" 
-                            value="<%= locals.oldData ? oldData.marca: null %>">
-                            <% if ( locals.errors && errors.marca ) { %>
-                                <p class="msg-error">
-                                    <%= errors.marca.msg %>
-                                </p>
-                                <% } %> 
-                        <label class="infodenombres" for="imagenProducto">* Imagen del producto</label>
-                        <input class="formulario_relleno" type="file" name="imagenProducto"
-                        <% if (locals.errors && errors.imagenProducto) { %>
-                            <p class="msg-error"> <%= errors.imagenProducto.msg %> </p>
+                    </select>
+                    <% if ( locals.errors && errors.categoria ) { %>
+                        <p class="msg-error">
+                            <%= errors.categoria.msg %>
+                        </p>
                         <% } %>
-                        <label for="descripcion">Descripcion</label>
-                        <textarea class="descripcion" name="description" > </textarea>
-                        <label for="price">* Precio</label>
-                        <input class="formulario_relleno" type="number" name="price" id="price" min="1" 
-                        value="<%= locals.oldData ? oldData.price: null %>">
-                        <% if ( locals.errors && errors.price ) { %>
-                            <p class="msg-error">
-                                <%= errors.price.msg %>
-                            </p>
-                            <% } %>
+                            <label for="subCategoria">SubCategoria</label>
+                            <select id="subCategoria" name="subcategoria" class="formulario_relleno"></select>
+                            <% if ( locals.errors && errors.subcategoria ) { %>
+                                <p class="msg-error">
+                                    <%= errors.subcategoria.msg %>
+                                </p>
+                                <% } %>
 
-                        <!-- informacion -->
-                        <h2 class="titulo">Información</h2>
-                        <label class="infodenombres" for="Colores">Colores</label>
-                        <input class="formulario_relleno" type="text" name="colores" min="1" 
-                        value="<%= locals.oldData ? oldData.colores: null%>">
-                        <label class="infodenombres" for="Linea">Linea</label>
-                        <input class="formulario_relleno" type="text" name="linea" min="1" 
-                        value="<%= locals.oldData ? oldData.linea: null%>">
-                        <label class="infodenombres" for="Modelo">Modelo</label>
-                        <input class="formulario_relleno" type="text" name="modelo" min="1" >
-                        <label for="tecnologia">Tecnologia</label>
-                        <input class="formulario_relleno" type="text" name="tecnologia" id="subCategoria" min="1" 
-                            value="<%= locals.oldData ? oldData.tecnologia: null%>">
-                        <label class="infodenombres" for="Diseño">Diseño</label>
-                        <input class="formulario_relleno" type="text" name="disenio" min="1" 
-                            value="<%= locals.oldData ? oldData.disenio: null%>">
-                        <label class="infodenombres" for="Apto">Apto</label>
-                        <input class="formulario_relleno" type="text" name="apto" min="1" 
-                            value="<%= locals.oldData ? oldData.apto: null%>">
-                        <label class="infodenombres" for="Apto">Configuracion</label>
-                        <input class="formulario_relleno" type="text" name="configuracion" min="1" 
-                            value="<%=locals.oldData ? oldData.configuracion:  null%>">
-                        <label for="nombre-apellido" for="medidas">Medidas</label>
-                        <input class="formulario_relleno" type="text" name="medidas" min="1" 
-                            value="<%= locals.oldData ? oldData.medidas: null%>">
-                        <label for="nombre-apellido" for="capacidad">Capacidad</label>
-                        <input class="formulario_relleno" type="text" name="capacidad" min="1"
-                        value="<%= locals.oldData ? oldData.capacidad: null %>">
-                        <div id="boton">
-                            <button type="reset" class="Cancelar">Reiniciar</button>
-                            <button type="submit" class="botonform">Crear</button>
-                        </div>
-                    </div>
+
+                                    <!-- producto -->
+                                    <h2 class="titulo">Producto</h2>
+                                    <label for="nombre-producto">* Nombre del producto</label>
+                                    <input class="formulario_relleno" type="text" name="nombre" id="nombreProducto"
+                                        value="<%= locals.oldData ? oldData.nombre: null %>">
+                                    <p id="nombreError" class="msg-error errors"></p>
+
+                                    <% if ( locals.errors && errors.nombre ) { %>
+                                        <p class="msg-error">
+                                            <%= errors.nombre.msg %>
+                                        </p>
+                                        <% } %>
+                                            <label for="marca">* Marca</label>
+                                            <input class="formulario_relleno" type="text" name="marca" id="marca"
+                                                min="1" value="<%= locals.oldData ? oldData.marca: null %>">
+                                            <% if ( locals.errors && errors.marca ) { %>
+                                                <p class="msg-error">
+                                                    <%= errors.marca.msg %>
+                                                </p>
+                                                <% } %>
+                                                    <label class="infodenombres" for="imagenProducto">* Imagen del
+                                                        producto</label>
+                                                    <input class="formulario_relleno" type="file" name="imagenProducto">
+                                                    <p id="imagenError" class="msg-error errors"></p>
+
+                                                    <% if (locals.errors && errors.imagenProducto) { %>>
+                                                        <p class="msg-error">
+                                                            <%= errors.imagenProducto.msg %>
+                                                        </p>
+                                                        <% } %>
+                                                            <label for="descripcion">Descripcion</label>
+                                                            <textarea class="descripcion"
+                                                                name="description"> </textarea>
+                                                                <p id="descripcionError" class="msg-error errors"></p>
+
+                                                            <label for="price">* Precio</label>
+                                                            <input class="formulario_relleno" type="number" name="price"
+                                                                id="price" min="1"
+                                                                value="<%= locals.oldData ? oldData.price: null %>"> 
+                                                            <% if ( locals.errors && errors.price ) { %>
+                                                                <p class="msg-error">
+                                                                    <%= errors.price.msg %>
+                                                                </p>
+                                                                <p class="feed"></p>// nuevo
+                                                                <% } %>
+                                                                    <p class="feed"></p>
+                                                                    <!-- informacion -->
+                                                                    <h2 class="titulo">Información</h2>
+                                                                    <label class="infodenombres"
+                                                                        for="Colores">Colores</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="colores" min="1"
+                                                                        value="<%= locals.oldData ? oldData.colores: null%>">
+                                                                    <label class="infodenombres"
+                                                                        for="Linea">Linea</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="linea" min="1"
+                                                                        value="<%= locals.oldData ? oldData.linea: null%>">
+                                                                    <label class="infodenombres"
+                                                                        for="Modelo">Modelo</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="modelo" min="1">
+                                                                    <label for="tecnologia">Tecnologia</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="tecnologia" id="subCategoria" min="1"
+                                                                        value="<%= locals.oldData ? oldData.tecnologia: null%>">
+                                                                    <label class="infodenombres"
+                                                                        for="Diseño">Diseño</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="disenio" min="1"
+                                                                        value="<%= locals.oldData ? oldData.disenio: null%>">
+                                                                    <label class="infodenombres" for="Apto">Apto</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="apto" min="1"
+                                                                        value="<%= locals.oldData ? oldData.apto: null%>">
+                                                                    <label class="infodenombres"
+                                                                        for="Apto">Configuracion</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="configuracion" min="1"
+                                                                        value="<%=locals.oldData ? oldData.configuracion:  null%>">
+                                                                    <label for="nombre-apellido"
+                                                                        for="medidas">Medidas</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="medidas" min="1"
+                                                                        value="<%= locals.oldData ? oldData.medidas: null%>">
+                                                                    <label for="nombre-apellido"
+                                                                        for="capacidad">Capacidad</label>
+                                                                    <input class="formulario_relleno" type="text"
+                                                                        name="capacidad" min="1"
+                                                                        value="<%= locals.oldData ? oldData.capacidad: null %>">
+                                                                    <div id="boton">
+                                                                        <button type="reset"
+                                                                            class="Cancelar">Reiniciar</button>
+                                                                        <button type="submit"
+                                                                            class="botonform">Crear</button>
+                                                                    </div>
                 </form>
             </section>
 

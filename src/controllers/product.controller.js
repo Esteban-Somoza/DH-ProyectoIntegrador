@@ -67,7 +67,7 @@ module.exports = {
   productCreateDetail: (req, res) => {
     return res.render("./products/productCreateDetail", {
       title: "Product Create Details",
-      styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"]
+      styles: ["style", "header", "footer", "productDetail",  "productofinal","frontValidations"]
     })
   },
 
@@ -79,7 +79,7 @@ module.exports = {
     }
     return res.render('./products/productEdit', {
       title: `Edit ${productDB.nombre}`,
-      styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],
+      styles: ["style", "header", "footer", "productDetail",  "productofinal"],
       product: productDB
     })
   },
