@@ -1,10 +1,12 @@
- let forms = document.forms.back
+ let forms = document.querySelector('.formulario')
+ console.log(forms)
  let inputs = forms.elements;
 
 
 inputs.nombre.addEventListener('input', function (e) {
 
 let section = e.target.parentElement; //class
+console.log(section);
 let value = e.target.value;
 let feed = section.querySelector('.feed')
 let msg = null;
@@ -22,10 +24,10 @@ feed.classList.add('valid'),
 feed.innerText = 'campo correcto'
 } 
 })
-inputs.avatar.addEventListener('change', function (e) {
+inputs.imagenProducto.addEventListener('change', function (e) {
 
  
 
 
 
-
+})

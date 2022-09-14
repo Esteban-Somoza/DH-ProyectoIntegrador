@@ -1,0 +1,32 @@
+.errors {
+    display: none;
+}
+
+.invalid {
+    display: none;
+}
+
+.inv {
+    /* background-color: blue; */
+    /* background-color: rgb(255, 152, 152); */
+    /* transition: background-color 0.3s ease; */
+    animation-name: error;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    margin: 2em;
+
+    /* transition: background-color blue 2s ease; */
+}
+
+@keyframes error {
+    from {
+        background-color: white;
+    }
+    12% {
+        background-color: pink;
+    }
+
+    to {
+        background-color: white;
+    }
+}

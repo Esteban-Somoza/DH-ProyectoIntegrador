@@ -5,6 +5,7 @@
     <%- include ('../includes/head.ejs') %>
         <script defer src="/scripts/menuCrear.js"></script>
         <script defer src="/scripts/productCreate.js"></script>
+
 </head>
 
 <body>
@@ -12,59 +13,63 @@
 
         <main>
             <section class="back">
-                <form action="/products/save" method="post" enctype="multipart/form-data">
-                    <div class="formulario">
-                        <h2 id="detalle">
-                            Crear un nuevo producto
-                        </h2>
+                <form action="/products/save" method="post" class="formulario" enctype="multipart/form-data">
+                    <h2 id="detalle">
+                        Crear un nuevo producto
+                    </h2>
 
-                        <!-- <h2> categorias</h2> -->
-                        <label for="Categoria">Categoria</label>
-                        <select id="categoria" name="categoria" class="formulario_relleno" onchange="populate()">
+                    <!-- <h2> categorias</h2> -->
+                    <label for="Categoria">Categoria</label>
+                    <select id="categoria" name="categoria" class="formulario_relleno" onchange="populate()">
 
-                            <option value=""></option>
-                            <option value="baño">baño</option>
-                            <option value="cocina">cocina</option>
-                            <option value="tanques">tanques</option>
-                            <!--    <option value="calefaccion">calefacción</option>
+                        <option value=""></option>
+                        <option value="baño">baño</option>
+                        <option value="cocina">cocina</option>
+                        <option value="tanques">tanques</option>
+                        <!--    <option value="calefaccion">calefacción</option>
                                 <option value="instalaciones">instalaciones</option>  -->
-                        </select>
-                        <% if ( locals.errors && errors.categoria ) { %>
-                            <p class="msg-error">
-                                <%= errors.categoria.msg %>
-                            </p>
-                            <% } %>
-                                <label for="subCategoria">SubCategoria</label>
-                                <select id="subCategoria" name="subcategoria" class="formulario_relleno"></select>
-                                <% if ( locals.errors && errors.subcategoria ) { %>
-                                    <p class="msg-error">
-                                        <%= errors.subcategoria.msg %>
-                                    </p>
-                                    <% } %>
 
-                                        <!-- producto -->
-                                        <h2 class="titulo">Producto</h2>
-                                        <label for="nombre-producto">* Nombre del producto</label>
-                                        <input class="formulario_relleno" type="text" name="nombre" id="nombreProducto"
-                                            value="<%= locals.oldData ? oldData.nombre: null %>">
-                                        <% if ( locals.errors && errors.nombre ) { %>
-                                            <p class="msg-error">
-                                                <%= errors.nombre.msg %>
-                                            </p>
-                                            <% } %>
-                                                <label for="marca">* Marca</label>
-                                                <input class="formulario_relleno" type="text" name="marca" id="marca"
-                                                    min="1" value="<%= locals.oldData ? oldData.marca: null %>">
-                                                <% if ( locals.errors && errors.marca ) { %>
-                                                    <p class="msg-error">
-                                                        <%= errors.marca.msg %>
-                                                    </p>
-                                                    <% } %>
-                                                        <label class="infodenombres" for="imagenProducto">* Imagen del
-                                                            producto</label>
-                                                        <input class="formulario_relleno" type="file"
-                                                            name="imagenProducto" <% if (locals.errors &&
-                                                            errors.imagenProducto) { %>
+                    </select>
+                    <% if ( locals.errors && errors.categoria ) { %>
+                        <p class="msg-error">
+                            <%= errors.categoria.msg %>
+                        </p>
+                        <% } %>
+                            <label for="subCategoria">SubCategoria</label>
+                            <select id="subCategoria" name="subcategoria" class="formulario_relleno"></select>
+                            <% if ( locals.errors && errors.subcategoria ) { %>
+                                <p class="msg-error">
+                                    <%= errors.subcategoria.msg %>
+                                </p>
+                                <% } %>
+
+
+                                    <!-- producto -->
+                                    <h2 class="titulo">Producto</h2>
+                                    <label for="nombre-producto">* Nombre del producto</label>
+                                    <input class="formulario_relleno" type="text" name="nombre" id="nombreProducto"
+                                        value="<%= locals.oldData ? oldData.nombre: null %>">
+                                    <p id="nombreError" class="msg-error errors"></p>
+
+                                    <% if ( locals.errors && errors.nombre ) { %>
+                                        <p class="msg-error">
+                                            <%= errors.nombre.msg %>
+                                        </p>
+                                        <% } %>
+                                            <label for="marca">* Marca</label>
+                                            <input class="formulario_relleno" type="text" name="marca" id="marca"
+                                                min="1" value="<%= locals.oldData ? oldData.marca: null %>">
+                                            <% if ( locals.errors && errors.marca ) { %>
+                                                <p class="msg-error">
+                                                    <%= errors.marca.msg %>
+                                                </p>
+                                                <% } %>
+                                                    <label class="infodenombres" for="imagenProducto">* Imagen del
+                                                        producto</label>
+                                                    <input class="formulario_relleno" type="file" name="imagenProducto">
+                                                    <p id="imagenError" class="msg-error errors"></p>
+
+                                                    <% if (locals.errors && errors.imagenProducto) { %>>
                                                         <p class="msg-error">
                                                             <%= errors.imagenProducto.msg %>
                                                         </p>
@@ -72,15 +77,17 @@
                                                             <label for="descripcion">Descripcion</label>
                                                             <textarea class="descripcion"
                                                                 name="description"> </textarea>
+                                                                <p id="descripcionError" class="msg-error errors"></p>
+
                                                             <label for="price">* Precio</label>
                                                             <input class="formulario_relleno" type="number" name="price"
                                                                 id="price" min="1"
-                                                                value="<%= locals.oldData ? oldData.price: null %>">
+                                                                value="<%= locals.oldData ? oldData.price: null %>"> 
                                                             <% if ( locals.errors && errors.price ) { %>
                                                                 <p class="msg-error">
                                                                     <%= errors.price.msg %>
                                                                 </p>
-                                                                <p class="feed"></p>
+                                                                <p class="feed"></p>// nuevo
                                                                 <% } %>
                                                                     <p class="feed"></p>
                                                                     <!-- informacion -->
@@ -133,7 +140,6 @@
                                                                         <button type="submit"
                                                                             class="botonform">Crear</button>
                                                                     </div>
-                    </div>
                 </form>
             </section>
 

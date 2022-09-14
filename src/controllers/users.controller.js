@@ -15,7 +15,6 @@ const usersController = {
         all: true
       }
     })
-
     return users.find(u => u.email == emailUser)
   },
 
@@ -76,7 +75,7 @@ const usersController = {
     if (errors && errors.length > 0) {
       return res.render('users/login', {
         title: "Login",
-        styles: ["style", "header", "footer", "login"],
+        styles: ["style", "header", "footer", "login", "frontValidations"],
         oldData: req.body,
         errors: validaciones.mapped()
       });
@@ -94,8 +93,8 @@ const usersController = {
   login: async function (req, res) {
     return res.render('users/login', {
       title: "Login",
-      styles: ["style", "header", "footer", "login"],
-
+      styles: ["style", "header", "footer", "login", "frontValidations"],
+      saludo: "hola"
     });
   },
 
@@ -110,7 +109,6 @@ const usersController = {
     delete req.session.user
     return res.redirect('/')
   },
-
 
   userEdit: async function (req, res) {
     let userDB = await usersController.findUserDB(req.session.user.email)
@@ -149,7 +147,6 @@ const usersController = {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenId = await imagen.findByPk(req.session.user.id)
 
-
     if (!userDB) {
       return res.redirect("/")
     }
@@ -161,7 +158,7 @@ const usersController = {
     await userDB.destroy()
     delete req.session.user
     return res.redirect("/");
-  },
+  }
 }
 
 module.exports = usersController
