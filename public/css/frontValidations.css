@@ -2,6 +2,10 @@
     display: none;
 }
 
+.invalid {
+    display: none;
+}
+
 .inv {
     /* background-color: blue; */
     /* background-color: rgb(255, 152, 152); */
