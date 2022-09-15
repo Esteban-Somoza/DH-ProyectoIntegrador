@@ -1,4 +1,4 @@
-let forms = document.querySelector('.formulario')
+let forms = document.forms('.formulario')
 console.log(forms)
 let inputs = forms.elements;
 
