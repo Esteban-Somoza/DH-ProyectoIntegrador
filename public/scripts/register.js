@@ -9,6 +9,8 @@ let botonSubmit = document.querySelector('.form__boton');
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
+    
+  
 
     let errors = false
     if (email.value.length <= 0) {
@@ -20,21 +22,24 @@ form.addEventListener('submit', function (e) {
         errors = true
         alert('no tiene suficiente caracteres')
     }
-    
-    else if (email.value == !validator.isEmail(email.value)) {
-        errors = true
-        alert('no es un email valido')
-    }
-
-    if (nombre.value.length < 2) {
+        else if(email.value ==!validator.isEmail(email.value)){
+            
+             errors = true
+           alert('no es un email valido')
+       
+     }
+     
+     if (nombre.value.length < 2) {
         errors = true
         alert('El nombre debe contener al menos 2 letras');
-        nombre.style.backgroundColor = 'tomato'
-    }
-    else if (!nombre.value.length < 2) {
-
-    }
-    if (apellido.value.length < 2) {
+         nombre.style.backgroundColor = 'tomato'
+      
+     }
+     else if (!nombre.value.length < 2){
+        
+        
+     }
+     if (apellido.value.length < 2) {
         errors = true
         alert('El apellido debe contener al menos 2 letras');
         apellido.style.backgroundColor = 'tomato'
@@ -46,9 +51,18 @@ form.addEventListener('submit', function (e) {
         errors = true
         alert('La contraseña debe contener al menos 8 caracteres');
         contrasenia.style.backgroundColor = 'tomato'
-        let pass = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
-        if (!contrasenia.value == pass) {
-            alert('La contraseña debe contener al menos 1 numero y una mayuscula')
+        let config = {
+            minLength: 8,
+            minLowercase:1,
+            minUppercase:1,
+            minNumber:1,
+            minSymbols:1
+        }
+       
+        if (!validator.isStrongPassword(value,config)) {
+            
+            alert('La contraseña debe contener al menos 1 numero y una mayuscula y un simbolo')
+       
         }
     }
     if (errors == false) {
@@ -62,33 +76,38 @@ form.addEventListener('submit', function (e) {
             .then(() => {
                 setTimeout(() => {
                     e.target.submit()
-
+                    
                 }, 500);
-            })
-    }
-    if (errors == true) {
-        Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: 'Complete los campos',
-            showConfirmButton: false,
-            timer: 1500
-        })
-            .then(() => {
-            })
-    }
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
+            })  
+      
+        }
+        if (errors == true) {
+         
+            
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'Complete los campos',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            .then(()=>{  
+            }) 
+        } 
+        
+    })
+   
+    
+  
+       
+        
+            
+        
+       
+      
+    
+       
+    
+      
+  
 
