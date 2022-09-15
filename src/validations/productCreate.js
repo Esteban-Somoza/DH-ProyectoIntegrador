@@ -8,7 +8,7 @@ const productCreate = [
     .withMessage("Complete los campos")
     .bail()
     .isLength({ min: 5 })
-    .withMessage("El nombre debe contener minimo dos caracteres")
+    .withMessage("El nombre debe contener minimo cinco caracteres")
     .bail()
     .isLength({ max: 50 })
     .withMessage("El nombre debe contener maximo 50 caracteres")
