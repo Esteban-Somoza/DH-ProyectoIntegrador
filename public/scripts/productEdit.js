@@ -1,11 +1,10 @@
-let forms = document.forms('.formulario')
-console.log(forms)
+let forms = document.querySelector('.formulario')
 let inputs = forms.elements;
 
 
 inputs.nombre.addEventListener('input', function (e) {
 
-  let section = e.target.parentElement; //class
+  let section = e.target.parentElement;
   let value = this.value;
   let feed = section.querySelector('#nombreError')
   let msg = null;
@@ -15,12 +14,12 @@ inputs.nombre.addEventListener('input', function (e) {
   }
   if (msg) {
     feed.classList.remove('valid')
-      feed.classList.add('invalid')
-      this.classList.remove("inv")
-      this.classList.remove("fieldValid")
-      this.classList.add("fieldInvalid")
+    feed.classList.add('invalid')
+    this.classList.remove("inv")
+    this.classList.remove("fieldValid")
+    this.classList.add("fieldInvalid")
 
-      feed.innerText = msg;
+    feed.innerText = msg;
   }
   else {
     feed.classList.remove('invalid'),
@@ -30,58 +29,59 @@ inputs.nombre.addEventListener('input', function (e) {
 })
 
 inputs.description.addEventListener('input', function (e) {
-  let section= e.target.parentElement
-  let value= this.value;
+  alert('algo esta mal')
+  let section = e.target.parentElement
+  let value = this.value;
   let feed = section.querySelector('#descripcionError');
   let msg = null;
-  
-  if (!validator.isLength(value, {min:20})){
+
+  if (!validator.isLength(value, { min: 20 })) {
     msg = 'no tiene suficientes caracteres'
   }
   if (msg) {
     feed.classList.remove('valid')
-      feed.classList.add('invalid')
-      this.classList.remove("inv")
-      this.classList.remove("fieldValid")
-      this.classList.add("fieldInvalid")
-
-      feed.innerText = msg;
-  }
-  else {
-    feed.classList.remove('invalid'),
-      feed.classList.add('valid'),
-      feed.innerText = 'campo correcto'
-  }
-  
-}  )
-
-
-
-inputs.imagenProducto.addEventListener('change', function (e) {
-  let section = e.target.parentElement; //selector 
-  let files = this.files
-let feed = section.querySelector('.imagenError')
-let msg = null;
-if (files.length == 0){
-  msg ="tenes que subir un archivo"
-}
-else if (!validator.isMineType(files[0].size > 2097152)){
-  msg ="no es un archivo valido"
-}
-if (msg) {
-  feed.classList.remove('valid')
     feed.classList.add('invalid')
     this.classList.remove("inv")
     this.classList.remove("fieldValid")
     this.classList.add("fieldInvalid")
 
     feed.innerText = msg;
-}
-else {
-  feed.classList.remove('invalid'),
-    feed.classList.add('valid'),
-    feed.innerText = 'campo correcto'
-}
+  }
+  else {
+    feed.classList.remove('invalid'),
+      feed.classList.add('valid'),
+      feed.innerText = 'campo correcto'
+  }
+
+})
+
+
+
+inputs.imagenProducto.addEventListener('change', function (e) {
+  let section = e.target.parentElement; //selector 
+  let files = this.files
+  let feed = section.querySelector('#imagenError')
+  let msg = null;
+  if (files.length == 0) {
+    msg = "tenes que subir un archivo"
+  }
+  else if (!validator.isMineType(files[0].size > 2097152)) {
+    msg = "no es un archivo valido"
+  }
+  if (msg) {
+    feed.classList.remove('valid')
+    feed.classList.add('invalid')
+    this.classList.remove("inv")
+    this.classList.remove("fieldValid")
+    this.classList.add("fieldInvalid")
+
+    feed.innerText = msg;
+  }
+  else {
+    feed.classList.remove('invalid'),
+      feed.classList.add('valid'),
+      feed.innerText = 'campo correcto'
+  }
 
 
 
