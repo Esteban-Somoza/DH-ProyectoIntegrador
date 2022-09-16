@@ -82,11 +82,12 @@ else {
     feed.classList.add('valid'),
     feed.innerText = 'campo correcto'
 }
+})
 
 
 
 
-  form.addEventListener("submit", function (e) {
+  forms.addEventListener("submit", function (e) {
     e.preventDefault()
 
     let invalids = document.querySelectorAll(".invalid")
@@ -110,5 +111,5 @@ else {
       }
     }
   })
-})
+
 

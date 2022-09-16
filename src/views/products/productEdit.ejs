@@ -6,7 +6,7 @@
         <script defer src="/scripts/menuCrear.js"></script>
         <script defer src="../../scripts/menu.js"></script>
         <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
-        <script src="/scripts/productEdit.js"></script>
+        <script defer src="/scripts/productEdit.js"></script>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
                                     <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
                                     <input class="formulario_relleno" type="file" name="imagenProducto" value="">
                                     <% if (locals.errors && errors.imagenProducto) { %>
-                                        <p id="imagenError" class="msg-error errors"></p>
+                                        <p id="imagenError" class="msg-error errors">
                                         <%= errors.imagenProducto.msg %>
                                             </p>
                                             <% } %>
@@ -67,9 +67,9 @@
                                                 <label for="price">Precio</label>
                                                 <input class="formulario_relleno" type="text" name="precio" id="price"
                                                     min="1"
-                                                    value="<%= locals.oldData ? oldData.precio: product.precio %>">
+                                                    value="<%= locals.oldData ? oldData.precio: product.precio %>"
 
-                                                <% if ( locals.errors && errors.price ) { %>
+                                                <% if ( locals.errors && errors.price ) { %>>
                                                     <p class="msg-error">
                                                         <%= errors.price.msg %>
                                                     </p>
@@ -126,6 +126,7 @@
                                                                     href="/">Cancelar</a></button>
                                                             <button type="submit" class="botonform">Editar</button>
                                                         </div>
+                </form>
             </section>
 
 

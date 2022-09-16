@@ -67,7 +67,7 @@ module.exports = {
   productCreateDetail: (req, res) => {
     return res.render("./products/productCreateDetail", {
       title: "Product Create Details",
-      styles: ["style", "header", "footer", "productDetail",  "productofinal","frontValidations"]
+      styles: ["style", "header", "footer", "productDetail", "productofinal", "frontValidations"]
     })
   },
 
@@ -79,7 +79,7 @@ module.exports = {
     }
     return res.render('./products/productEdit', {
       title: `Edit ${productDB.nombre}`,
-      styles: ["style", "header", "footer", "productDetail",  "productofinal"],
+      styles: ["style", "header", "footer", "productDetail", "productofinal", "frontValidations"],
       product: productDB
     })
   },
@@ -97,7 +97,7 @@ module.exports = {
       }
       return res.render('./products/productEdit', {
         title: `Edit ${productDB.nombre}`,
-        styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],
+        styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal", "frontValidations"],
         product: productDB,
         oldData: req.body,
         errors: validaciones.mapped()
@@ -175,7 +175,7 @@ module.exports = {
     let { errors } = validaciones;
 
     if (errors && errors.length > 0) {
-      deleteImage(req.files[0].filename)
+      deleteImage(req.files[0]?.filename )
       return res.render('products/productCreateDetail', {
         title: "Publicar un nuevo producto",
         styles: ["style", "header", "footer", "productDetail", "mediaQ-newproduct", "productofinal"],
