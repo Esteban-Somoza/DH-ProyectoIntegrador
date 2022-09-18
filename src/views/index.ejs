@@ -3,6 +3,7 @@
 
 <head>
     <%- include ('./includes/head.ejs') %>
+    <script defer src="/scripts/scroll.js"></script>
 </head>
 
 <body>
@@ -79,12 +80,12 @@
                 <h2>Nuestras Marcas</h3>
                     <ul>
 
-                        <li><a href="/products/finder"><img src="./images/marca-rotoplast.png" alt=""></a></li>
-                        <li><a href="/products/finder"><img src="./images/marca-roca.png" alt=""></a></li>
-                        <li><a href="/products/finder"><img src="./images/marca-waterplast.png" alt=""></a></li>
-                        <li><a href="/products/finder"><img src="./images/marca-rowa.png" alt=""></a></li>
-                        <li><a href="/products/finder"><img src="./images/marca-volcan.png" alt=""></a></li>
-                        <li><a href="/products/finder"><img src="./images/marca-pluvius.png" alt=""></a></li>
+                        <li><a href="/products/finder"><img class="marca hidden" src="./images/marca-rotoplast.png" alt=""></a></li>
+                        <li><a href="/products/finder"><img class="marca hidden" src="./images/marca-roca.png" alt=""></a></li>
+                        <li><a href="/products/finder"><img class="marca hidden" src="./images/marca-waterplast.png" alt=""></a></li>
+                        <li><a href="/products/finder"><img class="marca hidden"  src="./images/marca-rowa.png" alt=""></a></li>
+                        <li><a href="/products/finder"><img class="marca hidden" src="./images/marca-volcan.png" alt=""></a></li>
+                        <li><a href="/products/finder"><img class="marca hidden" src="./images/marca-pluvius.png" alt=""></a></li>
                     </ul>
             </section>
             <section id="mapa">
@@ -94,13 +95,13 @@
                         <img src="/images/map.png" alt="map">
                     </a>
                 </figure>
-                <text id="contacto">
+                <text id="contacto" class="hidden">
                     <h4>Contacto</h4>
                     <h5>Av. Italia 1562, Tigre,
                         Provincia de Buenos Aires, Argentina</h5>
                     <h5>Tel: +54 11 56478371 </h5>
                 </text>
-                <text id="experiencia">
+                <text id="experiencia" class="hidden">
                     <h4>Experiencia</h4>
                     <h5>Más de 30 años de experiencia en el rubro respaldan nuestras operaciones</h5>
                 </text>

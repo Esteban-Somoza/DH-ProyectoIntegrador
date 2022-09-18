@@ -63,12 +63,12 @@
     </section>
     <% if (user) { %>
         <div id="userMenu">
+            <figure id="userAvatar"><img src="/images/avatars/<%=user.imagen.nombre%>" alt=""></figure>
              <p>
                  <a href="/users/perfil" class="perfil_link">
                 <%=user.nombre %>
                 </a>
             </p>
-            <figure id="userAvatar"><img src="/images/avatars/<%=user.imagen.nombre%>" alt=""></figure>
 
             <form action="/users/logout" method="post" class="usuarioDesplegable">
                 <button class="buttonLogout" type="submit">Cerrar

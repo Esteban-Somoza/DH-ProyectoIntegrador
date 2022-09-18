@@ -344,14 +344,15 @@ header a h2 {
 /*-------------menu de usuario logeado-------------*/
 #userMenu {
     display: flex;
-    gap: .5em;
+    *gap: .5em;
     color: white;
     align-items: center;
     position: relative;
-    flex-wrap: wrap;
-    width: 125px;
+    *flex-wrap: wrap;
+    width: 135px;
     height: 2em;
     transition: all 2s ease;
+    flex-direction: column;
 }
 
 #userAvatar {

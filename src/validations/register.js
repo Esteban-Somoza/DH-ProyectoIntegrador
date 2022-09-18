@@ -7,21 +7,21 @@ const { usuarios } = require('../database/models/index');
 const register = [
   body("nombre")
     .notEmpty()
-    .withMessage("Complete los campos")
+    .withMessage("El nombre debe contener minimo dos caracteres")
     .bail()
     .isLength({ min: 2 })
     .withMessage("El nombre debe contener minimo dos caracteres")
     .bail(),
   body("apellido")
     .notEmpty()
-    .withMessage("Complete los campos")
+    .withMessage("El apellido debe contener minimo dos caracteres")
     .bail()
     .isLength({ min: 2, max: 16 })
     .withMessage("El nombre debe contener minimo dos caracteres")
     .bail(),
   body("email")
     .notEmpty()
-    .withMessage("Complete los campos")
+    .withMessage("El e-mail debe ser valido.")
     .bail()
     .isEmail()
     .withMessage("No corresponde a un email")
@@ -43,7 +43,7 @@ const register = [
     .bail(),
   body("password")
     .notEmpty()
-    .withMessage("Complete los campos")
+    .withMessage("La contraseña debe tener al menos 8 caracteres")
     .bail()
     .isLength({ min: 8, max: 16 })
     .withMessage("La contraseña debe tener al menos 8 caracteres")
