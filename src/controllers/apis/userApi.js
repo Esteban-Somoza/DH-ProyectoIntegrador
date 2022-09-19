@@ -10,6 +10,7 @@ const userApi = {
                 }
             })
             let exists = users.map(user => user.email).includes(req.params.email)
+            
             return res.send({exists}).status(200)
         } catch (error) {
             return res.status(500).json(error)

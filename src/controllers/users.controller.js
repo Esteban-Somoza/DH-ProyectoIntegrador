@@ -18,7 +18,6 @@ const usersController = {
   imagenDefault: async function () {
     let imagenes = await imagen.findAll()
     let imagenDefault = imagenes.find(i => i.nombre == nombreImagenDefault)
-    console.log(imagenDefault);
     return imagenDefault
   },
 
@@ -52,9 +51,8 @@ const usersController = {
       });
     }
 
-    let imagenes = await imagen.findAll() // levanta base de datos de imagenes
-    let imagenDefaultDB = imagenes.find(i => i.nombre == nombreImagenDefault) // busca la imagen que se llama como la default
-    let idImagenUsuario = imagenDefaultDB.id // creo variable idImagenUsuario y le asigno el ID del default
+    let imagenDefault = await usersController.imagenDefault()
+    let idImagenUsuario = imagenDefault.id // creo variable idImagenUsuario y le asigno el ID del default
 
     req.body.password = hashSync(req.body.password, 10);
     req.body.isAdmin = String(req.body.email).toLocaleLowerCase().includes('@nicuesa.com');
@@ -65,7 +63,7 @@ const usersController = {
       })
       idImagenUsuario = imagenUsuario.id; // si entra al if (osea que se subió un archivo), le asigna el ID de la nueva imagen
     }
-    // console.log(idImagenUsuario);
+    
     req.body.imagenId = idImagenUsuario // le asigno le valor del idImagenUsuario al req.body.imagenId
 
     await usuarios.create(req.body) // se crea el producto, incluyendo el req.body.imagenId
@@ -87,7 +85,7 @@ const usersController = {
     }
 
     req.session.user = await usersController.findUserDB(req.body.email)
-    // console.log(req.session.user);
+    
     if (req.body.recordame != undefined) {
       res.cookie("recordame", userDB, { maxAge: 172800000 })
     }
@@ -149,7 +147,6 @@ const usersController = {
     }
 
     if (req.body.eliminarImagen == "true" && !hasDefaultImage) {
-      console.log("elimnando imagen");
       deleteImage(userDB.dataValues.imagen.dataValues.nombre)
       imagenId = imagenDefault.id
     }
