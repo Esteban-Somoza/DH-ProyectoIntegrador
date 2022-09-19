@@ -130,7 +130,7 @@ module.exports = {
 
     await productDB.update({
       nombre: req.body.nombre,
-      precio: req.body.price,
+      precio: req.body.precio,
       marca: req.body.marca,
       linea: req.body.linea,
       descripcion: req.body.description,
@@ -206,7 +206,7 @@ module.exports = {
 
       await producto.create({
         nombre: req.body.nombre,
-        precio: req.body.price,
+        precio: req.body.precio,
         imagenId: imagenId,
         categoria: req.body.categoria,
         subcategoria: req.body.subcategoria,

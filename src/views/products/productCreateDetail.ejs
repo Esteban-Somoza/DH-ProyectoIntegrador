@@ -83,13 +83,13 @@
                                                                     name="description"> </textarea>
                                                                 <p id="descripcionError" class="msg-error errors"></p>
 
-                                                                <label for="price">* Precio</label>
+                                                                <label for="precio">* Precio</label>
                                                                 <input class="formulario_relleno" type="number"
-                                                                    name="price" id="price" min="1"
-                                                                    value="<%= locals.oldData ? oldData.price: null %>">
-                                                                <% if ( locals.errors && errors.price ) { %>
+                                                                    name="precio" id="precio" min="1"
+                                                                    value="<%= locals.oldData ? oldData.precio: null %>">
+                                                                <% if ( locals.errors && errors.precio ) { %>
                                                                     <p class="msg-error">
-                                                                        <%= errors.price.msg %>
+                                                                        <%= errors.precio.msg %>
                                                                     </p>
                                                                     <% } %>
                                                                         <!-- informacion -->

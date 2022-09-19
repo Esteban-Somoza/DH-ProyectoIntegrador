@@ -14,7 +14,7 @@ const productCreate = [
     .withMessage("El nombre debe contener maximo 50 caracteres")
     .bail(),
     
-  body("price") //solucionar problema numeros
+  body("precio") //solucionar problema numeros
     .notEmpty()
     .withMessage("Complete los campos")
     .bail(),
