@@ -9,26 +9,26 @@ let botonSubmit = document.querySelector('.form__boton');
 inputs = form.elements
 
 
-let userExists = async function (email) {
-    let exists = await axios.post(`/api/userExists/${email}`)
-    return exists
-}
+// let userExists = async function (email) {
+//     let exists = await axios.post(`/api/userExists/${email}`)
+//     return exists
+// }
 
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
     let errors = false
-    let exists = await userExists(email.value)
 
+    // let exists = await userExists(email.value)
+    // if (exists) {
+    //     errors = true
+    // }
+    
     if (email.value.length <= 0) {
-        errors = 1
+        errors = true
         email.style.backgroundColor = 'tomato'
-
-    }
-
-
-    if (exists) {
         
     }
+    
 
     if (email.value.length == !validator.isLength(email.value, {
             min: 7
