@@ -15,6 +15,13 @@ const usersController = {
     return users.find(u => u.email == emailUser)
   },
 
+  imagenDefault: async function () {
+    let imagenes = await imagen.findAll()
+    let imagenDefault = imagenes.find(i => i.nombre == nombreImagenDefault)
+    console.log(imagenDefault);
+    return imagenDefault
+  },
+
   register: async (req, res) => {
     return res.render("./users/register", {
       title: "Registro",
@@ -121,6 +128,7 @@ const usersController = {
   processEdit: async function (req, res) {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenUsuario = await imagen.findByPk(req.session.user.imagenId)
+    let imagenDefault = await usersController.imagenDefault()
     let hasDefaultImage = userDB.imagen.nombre == nombreImagenDefault
     let imagenId = imagenUsuario.id
 
@@ -140,6 +148,12 @@ const usersController = {
       }
     }
 
+    if (req.body.eliminarImagen == "true" && !hasDefaultImage) {
+      console.log("elimnando imagen");
+      deleteImage(userDB.dataValues.imagen.dataValues.nombre)
+      imagenId = imagenDefault.id
+    }
+
     await userDB.update({
       nombre: req.body.nombre,
       telefono: req.body.telefono,
@@ -155,7 +169,7 @@ const usersController = {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenId = await imagen.findByPk(req.session.user.id)
     let hasDefaultImage = userDB.imagen.nombre == nombreImagenDefault
-    
+
     if (!userDB) {
       return res.redirect("/")
     }
