@@ -19,6 +19,8 @@ inputs.email.addEventListener('input', function () {
         msg = "No es un email válido"
     }
     if (msg) {
+        this.style.color = "maroon"
+        this.style.outlineColor = "maroon"
         feedback.classList.remove("valid")
         feedback.classList.add("invalid")
         this.classList.remove("inv")
@@ -27,6 +29,8 @@ inputs.email.addEventListener('input', function () {
         feedback.innerText = msg
     }
     else {
+        this.style.color = "black"
+        this.style.outlineColor = "black"
         feedback.classList.remove("invalid")
         feedback.classList.add("valid")
         this.classList.remove("inv")
@@ -67,19 +71,27 @@ inputs.password.addEventListener('input', function () {
     let feedback = document.querySelector("#passwordError")
     let msg = null
 
-    if (!validator.isLength(value, { min: 7 })) {
-        msg = "la contraseña tiene menos 8 digitos"
+    if (value.length < 8){
+    } else {
     }
-
+    
+    if (!validator.isLength(value, { min: 7 })) {
+        msg = "la contraseña tiene al menos 8 digitos"
+    }
+    
     if (msg) {
+        this.style.color = "maroon"
+        this.style.outlineColor = "maroon"
         feedback.classList.add("invalid")
         this.classList.remove("inv")
         this.classList.remove("fieldValid")
         this.classList.add("fieldInvalid")
         feedback.innerText = msg
     }
-
+    
     else {
+        this.style.color = "black"
+        this.style.outlineColor = "black"
         this.classList.remove("inv")
         this.classList.add("fieldInvalid")
         feedback.classList.remove("invalid")
