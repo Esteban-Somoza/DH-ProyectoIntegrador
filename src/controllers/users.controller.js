@@ -1,8 +1,6 @@
 const { validationResult } = require('express-validator');
 const { index, create, write, find, deleteImage, edit } = require("../models/users.model");
 const { hashSync } = require('bcryptjs');
-const { resolve } = require('path');
-const { readFileSync, writeFileSync, unlinkSync } = require('fs');
 const { usuarios, imagen } = require('../database/models/index');
 
 let nombreImagenDefault = "default-avatar.png"
@@ -15,11 +13,6 @@ const usersController = {
       }
     })
     return users.find(u => u.email == emailUser)
-  },
-
-  findImages: async function (nombre) {
-    let imagenes = await imagen.findAll() // levanta base de datos de imagenes
-    return imagenes.find(i => i.nombre == nombre) // busca la imagen que se llama como la default
   },
 
   register: async (req, res) => {
@@ -55,8 +48,6 @@ const usersController = {
     let imagenes = await imagen.findAll() // levanta base de datos de imagenes
     let imagenDefaultDB = imagenes.find(i => i.nombre == nombreImagenDefault) // busca la imagen que se llama como la default
     let idImagenUsuario = imagenDefaultDB.id // creo variable idImagenUsuario y le asigno el ID del default
-    // let idImagenUsuario = usersController.findImages(nombreImagenDefault).id
-    // console.log(idImagenUsuario);
 
     req.body.password = hashSync(req.body.password, 10);
     req.body.isAdmin = String(req.body.email).toLocaleLowerCase().includes('@nicuesa.com');
@@ -130,7 +121,7 @@ const usersController = {
   processEdit: async function (req, res) {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenUsuario = await imagen.findByPk(req.session.user.imagenId)
-    let hasDefaultImage = userDB.dataValues.imagen.dataValues.nombre == nombreImagenDefault
+    let hasDefaultImage = userDB.imagen.nombre == nombreImagenDefault
     let imagenId = imagenUsuario.id
 
     if (req.files && req.files.length > 0) {
@@ -163,11 +154,12 @@ const usersController = {
   destroyUser: async (req, res) => {
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenId = await imagen.findByPk(req.session.user.id)
-
+    let hasDefaultImage = userDB.imagen.nombre == nombreImagenDefault
+    
     if (!userDB) {
       return res.redirect("/")
     }
-    if (userDB.dataValues.imagen.dataValues.nombre != nombreImagenDefault) {
+    if (!hasDefaultImage) {
       deleteImage(userDB.dataValues.imagen.dataValues.nombre)
       await imagenId.destroy()
     }
