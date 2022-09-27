@@ -1,6 +1,5 @@
 const { usuarios, imagen } = require("../../database/models/index");
 const { Op } = require("sequelize");
-//const {hashSync} = require('bcryptjs')
 
 /* 
 
@@ -27,25 +26,14 @@ const usuarioId = {
       data.email = usersId.email
       data.telefono = usersId.telefono;
       data.ubicacion = usersId.ubicacion;
-      
 
-      data.imagen = "http://localhost:3000/images/avatars/"  + usersId.imagen.nombre
-      
+      data.imagen = "http://localhost:3000/images/avatars/" + usersId.imagen.nombre
 
-
-      return res.send({ data }).status(200)
+      return res.send( data ).status(200)
     } catch (error) {
       return res.status(500).json(error);
     }
-  },
-  imagenId: async (req, res) => {
-    try {
-      let imageId = await imagen.findByPk(req.params.id);
-      return res.send({ imageId }).status(200);
-    } catch (error) {
-      return res.status(500).json(error);
-    }
-  },
+  }
 };
 
 module.exports = usuarioId;
