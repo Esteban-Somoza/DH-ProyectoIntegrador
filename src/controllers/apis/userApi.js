@@ -1,5 +1,4 @@
 const { usuarios, imagen } = require('../../database/models/index');
-const { Op } = require("sequelize")
 
 const userApi = {
     userExists: async (req, res) => {
