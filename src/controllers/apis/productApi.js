@@ -20,7 +20,7 @@ const productApi = {
                     id: product.id,
                     nombre: product.nombre,
                     descripcion: product.descripcion,
-                    detail: `http://localhost:3000/images/productos/${product.imagen.nombre}`,
+                    detail: `http://localhost:3000/products/${product.id}`,
                     categoria: product.categoria,
                     subcategoria: product.subcategoria
                 }
