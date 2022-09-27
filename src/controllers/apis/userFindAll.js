@@ -10,7 +10,8 @@ const userFindAll ={
         let users = await usuarios.findAll
         ({ include: 
             { 
-                all: true 
+                nombre: true,
+                 
             } 
         });
 return res.send(users).json(users);
