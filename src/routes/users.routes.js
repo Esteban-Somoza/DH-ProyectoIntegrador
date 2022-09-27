@@ -35,7 +35,6 @@ router.delete("/users/deleteConfirm", middlewaresEditUser, destroyUser)
 
 // Api
 router.post("/api/userExists/:email", userExists)
-
 router.get("/api/userFindAll", findAll)
 
 module.exports = router 
