@@ -7,6 +7,7 @@ const isLogged = require('../middlewares/isLogged');
 const isAdmin = require('../middlewares/isAdmin')
 const {  destroyUser,perfil, login, register,register2, process, access, logout, userEdit, processEdit } = require('../controllers/users.controller');
 const { userExists } = require("../controllers/apis/userApi")
+const { findAll } = require("../controllers/apis/userFindAll")
 
 
 // login
@@ -34,5 +35,7 @@ router.delete("/users/deleteConfirm", middlewaresEditUser, destroyUser)
 
 // Api
 router.post("/api/userExists/:email", userExists)
+
+router.get("/api/userFindAll", findAll)
 
 module.exports = router 

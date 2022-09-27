@@ -37,5 +37,3 @@ app.use(require('./routes/users.routes'))
 app.use(cookieParser())
 app.use(recordameMiddleware)
 
-
-
