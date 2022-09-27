@@ -6,7 +6,7 @@ const { usuarios, imagen } = require('../database/models/index');
 
 const login = [
 // Email
-body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().isEmail().withMessage('El formato de email no es válido.').bail().custom(async value => {
+body('email').notEmpty().withMessage('El email no puede quedar vacio.').bail().isEmail().withMessage('El formato de email no es válido.').bail().custom(async value => {
   let users = await usuarios.findAll({
     include: {
       all: true
@@ -21,7 +21,7 @@ body('email').notEmpty().withMessage('El email no puede quedar vacío.').bail().
   return true
 }),
 // Password
-body('password').notEmpty().withMessage('La contraseña no puede quedar vacía.').bail().isLength({min : 4}).bail().custom(async(value,{req})=>{
+body('password').notEmpty().withMessage('La contraseña no puede quedar vacia.').bail().isLength({min : 4}).bail().custom(async(value,{req})=>{
   let {email} = req.body
   let users = await usuarios.findAll({
     include: {
