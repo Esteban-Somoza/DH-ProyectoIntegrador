@@ -31,6 +31,6 @@ router.delete('/delete/:id',[isAdmin],destroy)
 
 // api
 router.get("/api/productFindAll", findAll)
-router.get("/api/productFindAll/:id", findId)
+router.get("/api/productfindId/:id", findId)
 
 module.exports = router
