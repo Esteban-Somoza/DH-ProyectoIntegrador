@@ -1,0 +1,48 @@
+.sideBar {
+    background-color: #3A687E;
+    color: white;
+    width: 300px;
+    height: 100vh;
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.sideBar figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile{
+    max-height: 5em;
+
+    /* width: 100%; */
+    /* margin: auto; */
+}
+
+.sideBar h3 {
+    display: block;
+    height: auto;
+    width: auto;
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
+    align-self: flex-end;
+}
+
+
+.sideBar h1 {
+    display: block;
+    height: auto;
+    width: auto;
+}

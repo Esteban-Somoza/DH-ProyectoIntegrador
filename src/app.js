@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const cors = require("cors")
 const app = express();
 const { port, callback } = require("./modules/listen.js");
 const public = require('./modules/public.js');
@@ -13,7 +14,7 @@ app.listen(port, callback(`Abriendo servidor en http://localhost:` + port))
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
-
+app.use(cors())
 app.use(public)
 
 // Req.query Req.body //
