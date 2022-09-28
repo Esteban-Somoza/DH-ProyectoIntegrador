@@ -62,7 +62,30 @@ const productApi = {
         catch (error) {
             return res.status(500).json(error);
         }
-    }
+    },
+    findId: async (req, res) => {
+        try {
+            let product = await producto.findByPk(req.params.id,{
+                include:{ 
+                    all: true
+                }
+            })
+            let prod = {}
+                prod.id=product.id,
+               prod.nombre=product.nombre,
+               prod.precio=product.precio,
+               prod.marca=product.marca,
+               prod.iformation=product.iformation,
+               prod.descripcion=product.descripcion,
+               prod.categoria=product.categoria,
+               prod.subcategoria=product.subcategoria
+            
+            return res.send (prod).status(200)
+        }
+        catch (error) {
+            return res.status(500).json(error);
+            }
+}
 }
 
 module.exports = productApi;
