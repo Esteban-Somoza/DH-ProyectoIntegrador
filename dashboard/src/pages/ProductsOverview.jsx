@@ -2,7 +2,6 @@ import { useState, useContext, useEffect } from 'react'
 import { useParams, Link } from "react-router-dom";
 import SideBar from "../includes/SideBar.jsx";
 import "./ProductsOverview.css";
-import axios from "axios"
 import { productFindAll } from "../services/productsApi";
 let categories = ["baño", "cocina", "tanques"]
 
@@ -32,11 +31,14 @@ export default function ProductsOverview(props) {
         <div className='pageBody'>
             <SideBar />
             <section className='panel'>
+                <h1>{category}</h1>
                 <section className='products'>
                     {products &&
                         // <article>{products[0].nombre}</article>
-                        // list.map((item, index) => <li key={index}><Link to={`/character/${item.id}`}>{item.name}</Link></li>)
-                        products.map((prod, index) => <article key={index}>{prod.nombre}</article> )
+                        products.map((product, index) => <article key={index} className="articuloProducto">
+                        <h4>{product.nombre}</h4>
+                        <img src={product.imagen} alt="" />
+                        </article>)
                     }
                 </section>
                 <div className='categories'>
