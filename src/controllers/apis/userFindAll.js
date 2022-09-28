@@ -7,14 +7,22 @@ const {Op} = require("sequelize");
 const userFindAll ={
     findAll:  async (req, res) => {
     try {
-        let users = await usuarios.findAll
+        let usersDb = await usuarios.findAll
         ({ include: 
             { 
-                nombre: true,
-                 
+                all: true 
             } 
         });
-return res.send(users).json(users);
+        let users =usersDb.map(users=>{
+            let usuario ={
+                id:users.id,
+                nombre:users.nombre,
+                email:users.email,
+            }
+            return usuario;
+        })
+        let count = users.length
+return res.send({count,users}).status(200);
     }
     catch (error) {
         return res.status(500).json(error);

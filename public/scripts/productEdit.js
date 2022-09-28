@@ -13,13 +13,14 @@ inputs.nombre.addEventListener('input', function (e) {
     msg = 'no tiene suficientes caracteres'
   }
   if (msg) {
-    feed.classList.remove('valid')
+   /* feed.classList.remove('valid')*/
     feed.classList.add('invalid')
+    feed.innerText = msg
+    /*
     this.classList.remove("inv")
     this.classList.remove("fieldValid")
-    this.classList.add("fieldInvalid")
+    this.classList.add("fieldInvalid")*/
 
-    feed.innerText = msg;
   }
   else {
     feed.classList.remove('invalid'),

@@ -6,6 +6,7 @@ const middlewareProductCreate = require('../middlewares/productCreate')
 const isLogged = require('../middlewares/isLogged')
 const isAdmin = require('../middlewares/isAdmin')
 const { findAll } = require("../controllers/apis/productApi")
+const {findId}=require("../controllers/apis/productApi")
 
 // finder
 router.get("/products/finder", finder)
@@ -30,5 +31,6 @@ router.delete('/delete/:id',[isAdmin],destroy)
 
 // api
 router.get("/api/productFindAll", findAll)
+router.get("/api/productFindAll/:id", findId)
 
 module.exports = router
