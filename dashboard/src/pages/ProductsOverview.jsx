@@ -35,8 +35,7 @@ export default function ProductsOverview(props) {
                 <section className='products'>
                     {products &&
                         // <article>{products[0].nombre}</article>
-                        // list.map((item, index) => <li key={index}><Link to={`/character/${item.id}`}>{item.name}</Link></li>)
-                        products.map((prod, index) => <article key={index}>{prod.nombre}</article> )
+                        products.map((prod, index) => <article key={index}>{prod.nombre}</article>)
                     }
                 </section>
                 <div className='categories'>
