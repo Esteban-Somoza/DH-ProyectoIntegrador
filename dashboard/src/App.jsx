@@ -1,32 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState , useContext } from 'react'
+import Home from "./pages/Home";
+// import Character from "./pages/Character";
+import Error from "./pages/Error";
+import PublicLogin from "./pages/PublicLogin";
+import { Routes, Route, Link } from "react-router-dom";
+import { userContext } from "./context/UserContext";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+  const {user, userSet} = useContext(userContext)
+  console.log(user);
+  let loggedIn = user
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <Link to="/">Home</Link> */}
+      <Routes>
+        <Route path="/" element={<PublicLogin />}></Route>
+        <Route exact path="/" element={loggedIn ? <PublicLogin /> : <Home />}/>
+        <Route path="*" element={<Error />}></Route>
+      </Routes>
     </div>
   )
 }
