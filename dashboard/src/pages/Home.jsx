@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <SideBar/>
-      
+      <h1>hola</h1>
     </div>
 
   )

@@ -1,6 +1,5 @@
 const { Router } = require("express")
 const { producto, imagen } = require("../../database/models/index")
-const urlDetail = ""
 const { Op } = require("sequelize");
 
 
