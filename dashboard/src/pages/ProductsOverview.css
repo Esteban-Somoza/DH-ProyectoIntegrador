@@ -1,6 +1,11 @@
 .panel {
     background-color: red;
     width: 100%;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 2em;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .products {
@@ -11,10 +16,39 @@
     grid-row-gap: 7px;
 }
 
+.articuloProducto {
+    text-align: center;
+}
+
 .articuloProducto img {
- width: 100%;
+    height: 95%;
+    max-width: 100%;
+    margin: auto;
+    display: inline-block;
+    border-radius: 1.5em;
+    align-self: center;
+    
+}
+
+.articuloProducto figure {
+    border: var(--color-grey) solid 0.1em;
+    border-radius: 1.5em;
+    height: 150px;
+    display: flex;
+    max-width: 150px;
+    background-color: white;
+    margin: 1em auto;   
 }
 
 .pageBody {
     display: flex;
 }
+
+/* categories */
+
+.categories{
+    align-self: flex-end;
+    height: 200px;
+    border-top: 2px solid black;
+    width: 100%
+};

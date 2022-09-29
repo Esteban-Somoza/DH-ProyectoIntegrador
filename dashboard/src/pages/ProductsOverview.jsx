@@ -5,7 +5,7 @@ import "./ProductsOverview.css";
 import { productFindAll } from "../services/productsApi";
 let categories = ["baño", "cocina", "tanques"]
 
-export default function ProductsOverview(props) {
+export default function ProductsOverview() {
     const { category } = useParams()
     let [products, setProducts] = useState([])
     let [otherCategories, setOtherCategories] = useState([])
@@ -35,10 +35,15 @@ export default function ProductsOverview(props) {
                 <section className='products'>
                     {products &&
                         // <article>{products[0].nombre}</article>
-                        products.map((product, index) => <article key={index} className="articuloProducto">
-                        <h4>{product.nombre}</h4>
-                        <img src={product.imagen} alt="" />
-                        </article>)
+                        products.map((product, index) =>
+                            <Link key={index} to={`/products/${product.id}`}>
+                                <article className="articuloProducto">
+                                    <figure>
+                                        <img src={product.imagen} alt="" />
+                                    </figure>
+                                    <h4>{product.nombre}</h4>
+                                </article>
+                            </Link>)
                     }
                 </section>
                 <div className='categories'>
