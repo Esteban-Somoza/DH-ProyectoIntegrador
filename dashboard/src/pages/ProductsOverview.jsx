@@ -3,9 +3,15 @@ import { useParams, Link } from "react-router-dom";
 import SideBar from "../includes/SideBar.jsx";
 import "./ProductsOverview.css";
 import { productFindAll } from "../services/productsApi";
+
 let categories = ["baño", "cocina", "tanques"]
 
-export default function ProductsOverview(props) {
+function capitalizeFirstLetter(str) {
+    const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
+    return capitalized;
+}
+
+export default function ProductsOverview() {
     const { category } = useParams()
     let [products, setProducts] = useState([])
     let [otherCategories, setOtherCategories] = useState([])
@@ -31,14 +37,19 @@ export default function ProductsOverview(props) {
         <div className='pageBody'>
             <SideBar />
             <section className='panel'>
-                <h1>{category}</h1>
+                <h1>Categoria: {capitalizeFirstLetter(category)}</h1>
                 <section className='products'>
                     {products &&
                         // <article>{products[0].nombre}</article>
-                        products.map((product, index) => <article key={index} className="articuloProducto">
-                        <h4>{product.nombre}</h4>
-                        <img src={product.imagen} alt="" />
-                        </article>)
+                        products.map((product, index) =>
+                            <Link key={index} to={`/products/${product.id}`}>
+                                <article className="articuloProducto">
+                                    <figure>
+                                        <img src={product.imagen} alt="" />
+                                    </figure>
+                                    <h5>{product.nombre}</h5>
+                                </article>
+                            </Link>)
                     }
                 </section>
                 <div className='categories'>
