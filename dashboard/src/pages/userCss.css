@@ -1,5 +1,5 @@
 .bloque {
-    background-color: aqua;
+    background-color: rgb(165, 174, 174);
     width: 100%;
     border-radius: 3%;
     border: 1px salmon solid;
@@ -29,4 +29,13 @@
     gap: 2rem;
     
 }
-
+.rightSide img {
+    width: 50px;
+}
+.adminContainer div {
+    padding-top:2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+}

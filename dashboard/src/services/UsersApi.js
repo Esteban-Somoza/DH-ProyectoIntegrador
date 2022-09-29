@@ -11,3 +11,15 @@ export async function usersFindAll () {
     }
     console.log(url);
 }
+export async function getOne(id) {
+    try {
+        let url = `${baseUrl}/user${id}`
+        let query = await fetch (url)
+        let data = await query.json()
+        return data
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+}

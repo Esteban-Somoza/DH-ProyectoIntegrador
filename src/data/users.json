@@ -14,7 +14,7 @@
     "apellido": "pa",
     "email": "carlosp@nicuesa.com",
     "password": "$2a$10$sPY8aJv25QC.B1xXatEDn.zxl5v1s61CpgP9KGxIwpYoKj.oD7ymW",
-    "imagenId": "avatar-1659577307192-672982377.png",
+    "imagenId": "avatar-1659576222284-830909145.png",
     "IsAdmin": true
   },
   {
@@ -34,7 +34,7 @@
     "apellido": "Perfil",
     "email": "perfil@nicuesa.com",
     "password": "$2a$10$9k.WnHXt9g73jiNCyoUpFOzycLZIZ4RfEOHUFeEMopQF1RLsUfaZS",
-    "imagenId": "avatar-1660676467819-430459493.png",
+    "imagenId": "avatar-1659576222284-830909145.png",
     "isAdmin": false,
     "telefono": 1234,
     "ubicacion": "Buenos Aires, Tigre"
