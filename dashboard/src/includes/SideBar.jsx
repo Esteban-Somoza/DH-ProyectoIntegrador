@@ -16,7 +16,7 @@ export default function SideBar() {
 
     return (
         <div className='sideBar'>
-            <img src={logo} alt="" className='logo' />
+            <img src="/logoNicuesa.svg" alt="" className='logo' />
             <h1>nombre</h1>
             {/* <h1>{user.nombre}</h1> */}
             <figure>
