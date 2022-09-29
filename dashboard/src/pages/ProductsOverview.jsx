@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import SideBar from "../includes/SideBar.jsx";
 import "./ProductsOverview.css";
 import { productFindAll } from "../services/productsApi";
+
 let categories = ["baño", "cocina", "tanques"]
 
 function capitalizeFirstLetter(str) {

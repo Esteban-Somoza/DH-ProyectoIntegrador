@@ -1,0 +1,32 @@
+.bloque {
+    background-color: aqua;
+    width: 100%;
+    border-radius: 3%;
+    border: 1px salmon solid;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    margin: 2rem;
+}
+.users__container{
+    display: flex;
+    width: 100%;
+}
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.leftSide__container img {
+    width: 200px;
+    border-radius: 20%;
+}
+.leftSide__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
