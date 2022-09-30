@@ -1,0 +1,40 @@
+.categoriaImagen {
+    width: 100px;
+}
+
+.categorias {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.cadaCategoria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--color-grey) solid 0.1em;
+    border-radius: 1.5em;
+    height: 100px;
+    width: 200px;
+    background-color: white;
+    margin: .5em auto;
+}
+
+
+.cadaCategoria img {
+    height: 95%;
+    max-width: 100%;
+    margin: auto;
+    display: inline-block;
+    border-radius: 1.5em;
+    align-self: center;
+}
+
+.cadaCategoria figure {
+    border-radius: 1.5em;
+    height: 90%;
+    display: flex;
+    width: 100px;
+    background-color: white;
+    /* margin: 1em auto; */
+}
