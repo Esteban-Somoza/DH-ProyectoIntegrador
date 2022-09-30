@@ -5,6 +5,7 @@ import ProductsOverview from "./pages/ProductsOverview";
 import Error from "./pages/Error";
 import PublicLogin from "./pages/PublicLogin";
 import User from "./pages/User";
+import ProductDetail from "./pages/ProductDetail"
 
 import { Routes, Route, Link } from "react-router-dom";
 import { userContext } from "./context/UserContext";
@@ -27,7 +28,9 @@ function App() {
         <Route path="/usuarios" element={ <User/> } />
         {/* <Route exact path="/" element={<Home />}/> */}
         <Route path="*" element={<Error />}></Route>
+        <Route exact path="/products/detail/:id" element={<ProductDetail />}/>
       </Routes>
+      
     </div>
   )
 }
