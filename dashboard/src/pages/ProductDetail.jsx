@@ -14,20 +14,18 @@ export default function ProductDetail() {
         ,[id])
     console.log(product)
 
-
-
-
-
-
-
-
-
     return (
         <>
             <div className="pageContainer">
-                <h1>hola</h1>
                 <SideBar />
-
+            {
+                product && 
+                <h1>
+                    {
+                        product.nombre
+                    }
+                </h1>
+            }
 
 
             </div>
