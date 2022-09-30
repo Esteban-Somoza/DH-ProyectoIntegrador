@@ -31,7 +31,7 @@ export default function ProductsOverview() {
             return setProducts(filtederByCategory)
         }
         fetchData()
-    }, [category])
+    }, [category]) 
 
     return (
         <div className='pageBody'>
