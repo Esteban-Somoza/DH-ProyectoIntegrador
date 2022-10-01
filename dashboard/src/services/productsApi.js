@@ -5,7 +5,7 @@ export async function productFindAll () {
     try {
         let endpoint = `${baseUrl}/productFindAll`
         let products = await axios.get(endpoint)
-        return products.data.data
+        return products.data
     } catch (error) {
         console.log(error);
     }

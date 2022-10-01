@@ -26,7 +26,7 @@ export default function ProductsOverview() {
     useEffect(() => {
         async function fetchData() {
             const products = await productFindAll()
-            let filtederByCategory = products.filter(product => product.categoria === category)
+            let filtederByCategory = products.data.filter(product => product.categoria === category)
             return setProducts(filtederByCategory)
         }
         fetchData()
@@ -43,7 +43,7 @@ export default function ProductsOverview() {
                             <Link key={index} to={`/products/${product.id}`}>
                                 <article className="articuloProducto">
                                     <figure>
-                                        <img src={product.imagen} alt="" />
+                                        <img src={product.imagen} alt="" className='imagenProducto'/>
                                     </figure>
                                     <h5>{product.nombre}</h5>
                                 </article>

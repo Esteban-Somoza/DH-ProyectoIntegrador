@@ -3,6 +3,7 @@ import "./Categories.css";
 import { Link } from "react-router-dom";
 
 export default function Categories({ categories }) {
+  console.log(categories);
   return (
     <>
       <div className='categorias'>
