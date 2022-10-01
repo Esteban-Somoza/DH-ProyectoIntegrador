@@ -3,33 +3,29 @@ import { useState, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import SideBar from "../includes/SideBar.jsx";
-
-
+import Users from "../includes/Users.jsx";
 
 import bidet from "../../../public/images/productos/bidet1.jpeg";
 import { usersFindAll, findUserId } from "../services/UsersApi";
 import "./userCss.css";
 
-export default function User() {
+export default function UserPanel() {
   let [users, setUsers] = useState();
   let [userId, setUserId] = useState();
   let userAdmin = users && users.filter((user) => user.isAdmin === true);
-  let {id}= useParams();
+  let { id } = useParams();
   let regularUser =
     users && users.filter((user) => user.isAdmin === false || null);
-  
-
 
   useEffect(() => {
     async function fetchData() {
       const users = await usersFindAll();
-      let otherUsers= users.filter((user) => user.id != id)
+      let otherUsers = users.filter((user) => user.id != id);
       console.log(id);
       return setUsers(otherUsers);
     }
     fetchData();
   }, []);
-
 
   useEffect(() => {
     async function fetchData() {
@@ -47,11 +43,7 @@ export default function User() {
         <div className="bloque">
           <div className="leftSide">
             <div className="leftSide__container">
-              <h2> {userId &&
-                  userId.nombre}
-                 
-
-              </h2>
+              <h2> {userId && userId.nombre}</h2>
 
               <p>Email</p>
             </div>
@@ -61,22 +53,11 @@ export default function User() {
           </div>
           <div className="rightSide">
             <h5>Administradores</h5>
-
-            <div className="adminContainer">
-              <div>
-                {userAdmin &&
-                  userAdmin.map((user, index) => <img key={index} src={user.imagen} />)}
-              </div>
-            </div>
+            <Users users={userAdmin} />
             <h5>Usuarios</h5>
-            <div className="adminContainer">
-              <div>
-                {regularUser &&
-                  regularUser.map((user, index) => (
-                    <img key={index} src={user.imagen} />
-                  ))}
-              </div>
-            </div>
+            
+              <Users users={regularUser} />
+            
           </div>
         </div>
       </div>
