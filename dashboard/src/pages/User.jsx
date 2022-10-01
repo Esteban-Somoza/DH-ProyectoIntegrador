@@ -3,11 +3,13 @@ import { useState, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import SideBar from "../includes/SideBar.jsx";
 import bidet from "../../../public/images/productos/bidet1.jpeg";
-import { usersFindAll } from "../services/UsersApi";
+import { usersFindAll, getOne } from "../services/UsersApi";
 import "./userCss.css";
+
 
 export default function User() {
   let [users, setUsers] = useState();
+  let [userId, setUserId] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -17,6 +19,8 @@ export default function User() {
     }
     fetchData();
   }, []);
+  
+  console.log(userId);
   console.log(users);
   return (
     <>
@@ -24,8 +28,6 @@ export default function User() {
         <SideBar />
         <div className="bloque">
           <div className="leftSide">
-           
-
             <div className="leftSide__container">
               <h2>Bidet</h2>
               <img src={bidet} alt="" />
@@ -37,12 +39,13 @@ export default function User() {
             <p>Caracteristica 1</p>
           </div>
           <div className="rightSide">
-            <div className="adminContainer">
               <h5>Administradores</h5>
+            <div className="adminContainer">
               <div>
               {users &&
-                users.map((user, index) => <h5 key={index}>{user.imagen} </h5>)}
+                users.map((user, index) =><img src={user.imagen} />)}
             </div>
+            
             
               <div className="adminGrid"></div>
             </div>
