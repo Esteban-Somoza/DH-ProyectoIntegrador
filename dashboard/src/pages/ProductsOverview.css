@@ -34,12 +34,12 @@ h5 {
 
 .products {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     grid-column-gap: 7px;
     grid-row-gap: 7px;
     overflow: scroll;
-    height: 80%;
+    *height: 80%;
     overflow-x: hidden;
     padding: .5em;
 }

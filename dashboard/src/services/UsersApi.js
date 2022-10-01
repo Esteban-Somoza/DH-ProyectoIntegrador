@@ -9,14 +9,17 @@ export async function usersFindAll () {
     } catch (error) {
         console.log(error);
     }
-    console.log(url);
+ 
 }
-export async function getOne(id) {
+export async function findUserId(id) {
     try {
-        let url = `${baseUrl}/user${id}`
-        let query = await fetch (url)
-        let data = await query.json()
-        return data
+        let url = `${baseUrl}/user/${id}`
+        let users = await axios.get(url)
+        
+        return users.data
+
+    
+        
         
     } catch (error) {
         console.log(error);

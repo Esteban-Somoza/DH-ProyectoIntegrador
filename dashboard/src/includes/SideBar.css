@@ -1,5 +1,5 @@
 .sideBar {
-    background-color: #00A99D;
+    background-color: #3A687E;
     color: white;
     width: 300px;
     height: 100vh;
@@ -40,7 +40,10 @@
     right: 2em;
     align-self: flex-end;
 }
-
+.sideBar h3:hover {
+    color: white;
+    cursor: pointer;
+}
 
 .sideBar h1 {
     display: block;

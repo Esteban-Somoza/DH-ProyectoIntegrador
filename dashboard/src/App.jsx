@@ -26,6 +26,7 @@ function App() {
         <Route exact path="/products/:category" element={<ProductsOverview />}/>
         {/* <Route path="/" element={<PublicLogin />}></Route> */}
         <Route path="/usuarios" element={ <User/> } />
+        <Route path="/usuarios/:id" element={ <User/> } />
         {/* <Route exact path="/" element={<Home />}/> */}
         <Route path="*" element={<Error />}></Route>
         <Route exact path="/products/detail/:id" element={<ProductDetail />}/>
