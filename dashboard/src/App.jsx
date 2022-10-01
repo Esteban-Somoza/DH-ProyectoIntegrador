@@ -22,11 +22,11 @@ function App() {
       {/* <Link to="/">Home</Link> */}
       <Routes>
         {/* <Route exact path="/" element={<PublicLogin />}/> */}
-        <Route exact path="/" element={!loggedIn ? <PublicLogin /> : <Home />}/>
+        {/* <Route exact path="/" element={!loggedIn ? <PublicLogin /> : <Home />}/> */}
+        <Route exact path="/" element={<Home />}/>
         <Route exact path="/products/:category" element={<ProductsOverview />}/>
         {/* <Route path="/" element={<PublicLogin />}></Route> */}
         <Route path="/usuarios" element={ <User/> } />
-        {/* <Route exact path="/" element={<Home />}/> */}
         <Route path="*" element={<Error />}></Route>
         <Route exact path="/products/detail/:id" element={<ProductDetail />}/>
       </Routes>

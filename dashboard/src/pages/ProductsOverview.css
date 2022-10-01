@@ -1,6 +1,6 @@
 .panel {
     background-color: #e6e6e6;
-    width: 100%;
+    /* width: 100%; */
     margin: 2em;
     padding: 2em;
     border-radius: 2em;
@@ -34,8 +34,6 @@ h5 {
     scrollbar-width: thin;
     scrollbar-gutter: stable;
 }
-
-
 
 .products {
     display: grid;
