@@ -44,12 +44,15 @@ export default function UserPanel() {
           <div className="leftSide">
             <div className="leftSide__container">
               <h2> {userId && userId.nombre}</h2>
-
+              <img src={userId && userId.imagen} alt="" />
               <p>Email</p>
+              <p>{userId && userId.email}</p>
+              <p>Telefono</p>
+              <p>{userId && userId.telefono}</p>
+              <p>Ubicacion</p>
+              <p>{userId && userId.ubicacion}</p>
+    
             </div>
-            <p>Ubicacion</p>
-            <p>Caracteristica</p>
-            <p>Telefono</p>
           </div>
           <div className="rightSide">
             <h5>Administradores</h5>
