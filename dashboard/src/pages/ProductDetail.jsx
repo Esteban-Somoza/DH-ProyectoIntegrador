@@ -8,24 +8,26 @@ import "./ProductDetail.css";
 export default function ProductDetail() {
     const { id } = useParams()
     const [product, setProduct] = useState({})
-    useEffect(() => { 
+    useEffect(() => {
         findId(id)
-        .then((product) => setProduct(product)) }
-        ,[id])
+            .then((product) => setProduct(product))
+    }
+        , [id])
     console.log(product)
 
     return (
         <>
-            <div className="pageContainer">
+            <div className="contenedor">
                 <SideBar />
-            {
-                product && 
-                <h1>
-                    {
-                        product.nombre
-                    }
-                </h1>
-            }
+                {
+                    product &&
+                    <h1>
+                        {product.nombre}
+                    </h1>
+                }
+                <h1>{product.descripcion}</h1>
+                <h1> {product.marca}</h1>
+
 
 
             </div>
