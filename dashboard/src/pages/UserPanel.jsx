@@ -12,16 +12,15 @@ import "./userCss.css";
 export default function UserPanel() {
   let [users, setUsers] = useState();
   let [userId, setUserId] = useState();
-  let userAdmin = users && users.filter((user) => user.isAdmin === true);
   let { id } = useParams();
-  let regularUser =
-    users && users.filter((user) => user.isAdmin === false || null);
+
+  let userAdmin = users && users.filter((user) => user.isAdmin === true);
+  let regularUser = users && users.filter((user) => user.isAdmin === false || null);
 
   useEffect(() => {
     async function fetchData() {
       const users = await usersFindAll();
-      let otherUsers = users.filter((user) => user.id != id);
-      console.log(id);
+      let otherUsers = users.users.filter((user) => user.id != id);
       return setUsers(otherUsers);
     }
     fetchData();
@@ -29,13 +28,14 @@ export default function UserPanel() {
 
   useEffect(() => {
     async function fetchData() {
+      // acá te falta definir qué hacemos ni bien se ingresa 
+      //al panel y no hay un usuario por el parámetro de la URL
       const usersId = await findUserId(id);
       return setUserId(usersId);
     }
     fetchData();
   }, [id]);
 
-  console.log(userId);
   return (
     <>
       <div className="users__container">
@@ -55,9 +55,9 @@ export default function UserPanel() {
             <h5>Administradores</h5>
             <Users users={userAdmin} />
             <h5>Usuarios</h5>
-            
-              <Users users={regularUser} />
-            
+
+            <Users users={regularUser} />
+
           </div>
         </div>
       </div>

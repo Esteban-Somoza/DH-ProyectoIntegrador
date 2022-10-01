@@ -6,7 +6,8 @@
     --color-grey: rgb(190, 185, 185);
     --font-family: 'Sarabun', sans-serif;
 }
-*{
+
+* {
     font-family: var(--font-family);
     text-align: center;
 }
@@ -15,7 +16,7 @@
 
 
 .bloque {
-    background-color:var(--color-white);
+    background-color: var(--color-white);
     width: 100%;
     border-radius: 3%;
     display: flex;
@@ -25,35 +26,43 @@
     justify-content: space-between;
     gap: 1rem;
 }
-.users__container{
+
+.users__container {
     display: flex;
     width: 100%;
-    height: auto;;
+    height: auto;
+    ;
 }
+
 .leftSide {
     display: flex;
     flex-direction: column;
     border-right: 1px solid gray;
     width: 50%;
 }
+
 .leftSide__container img {
     width: 200px;
     border-radius: 20%;
 }
+
 .leftSide__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    
+
 }
+
 .rightSide img {
     width: 50px;
 }
+
 .rightSide {
     width: 50%;
 }
+
 .adminContainer {
     padding: 1rem;
 }
@@ -61,8 +70,8 @@
 
 .adminContainer div {
     display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  grid-auto-rows: minmax(100px, auto);
-  justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: center;
 }
