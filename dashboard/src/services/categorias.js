@@ -1,4 +1,4 @@
-let baseImageLocation = "../../public/images"
+let baseImageLocation = "/images"
 
 let categories = [
     {

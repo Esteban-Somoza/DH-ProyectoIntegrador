@@ -19,7 +19,6 @@ export default function ProductsOverview() {
 
     useEffect(() => {
         let otherCategories = categories.filter(cat => cat.nombre !== category)
-        console.log(categories, category, otherCategories);
         return setOtherCategories(otherCategories)
     }, [category])
 

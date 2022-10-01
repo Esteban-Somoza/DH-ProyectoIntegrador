@@ -16,6 +16,8 @@
     width: 33%;
     margin: 2em;
     align-items: flex-start;
+    border-radius: 1em;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
 
 .sideBar figure {
@@ -26,9 +28,13 @@
 
 .profile{
     max-height: 5em;
-
+    
     /* width: 100%; */
     /* margin: auto; */
+}
+
+.icon{
+    margin-right: .5em;
 }
 
 .sideBar h3 {
@@ -39,6 +45,14 @@
     bottom: 1em;
     right: 2em;
     align-self: flex-end;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    width: auto;
+    padding: .6em;
+    border-radius: 1em;
+    font-weight: 200;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
 .sideBar h3:hover {
     color: white;
@@ -49,4 +63,19 @@
     display: block;
     height: auto;
     width: auto;
+}
+
+.links {
+    margin: 2em 5em;
+}
+
+.links a{
+    display: block;
+    margin: 1em;
+    color: black;
+    background-color: white;
+    width: auto;
+    padding: .5em;
+    border-radius: 1em;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
