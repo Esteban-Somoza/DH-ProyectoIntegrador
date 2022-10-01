@@ -16,6 +16,8 @@
     width: 33%;
     margin: 2em;
     align-items: flex-start;
+    border-radius: 1em;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
 }
 
 .sideBar figure {
