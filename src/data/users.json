@@ -14,7 +14,7 @@
     "apellido": "pa",
     "email": "carlosp@nicuesa.com",
     "password": "$2a$10$sPY8aJv25QC.B1xXatEDn.zxl5v1s61CpgP9KGxIwpYoKj.oD7ymW",
-    "imagenId": "avatar-1659577307192-672982377.png",
+    "imagenId": "avatar-1659576222284-830909145.png",
     "IsAdmin": true
   },
   {
@@ -34,7 +34,7 @@
     "apellido": "Perfil",
     "email": "perfil@nicuesa.com",
     "password": "$2a$10$9k.WnHXt9g73jiNCyoUpFOzycLZIZ4RfEOHUFeEMopQF1RLsUfaZS",
-    "imagenId": "avatar-1660676467819-430459493.png",
+    "imagenId": "avatar-1659576222284-830909145.png",
     "isAdmin": false,
     "telefono": 1234,
     "ubicacion": "Buenos Aires, Tigre"
@@ -88,7 +88,7 @@
     "email": "carloseze@nicuesa.com",
     "password": "$2a$10$Mo01O6lAFY3iucQCzhU9JusbkDHFPitm2MQ2FQwwyPTZlSdA51WXa",
     "isAdmin": true,
-    "imagenId": "avatar-1661123983767-163789702.png",
+    "imagenId": "avatar-1660608683387-585334370.jpeg",
     "telefono": "1222234",
     "ubicacion": "caba"
   },
@@ -97,7 +97,7 @@
     "nombre": "carla",
     "email": "carlosfsdfs@nicuesa.com",
     "password": "$2a$10$Ng40iwH14ioiRNF9BcFgDeoFtn6qSZodWDKJ2ofwszLBybaqDLqc2",
-    "imagenId": "imagenId-1661554685140-826974963.jpg",
+    "imagenId": "avatar-1660608683387-585334370.jpeg",
     "telefono": "",
     "ubicacion": " ",
     "isAdmin": true
@@ -108,7 +108,7 @@
     "apellido": "asd",
     "email": "prueba@nicuesa.com",
     "password": "$2a$10$Hxmfag8mrd48uqNbTXnwbOQ5d.cI4SfGfBClCOud2TmhHAyhLyEpm",
-    "imagenId": "avatar-1661808728550-468828703.png",
+    "imagenId": "avatar-1659576222284-830909145.png",
     "isAdmin": true,
     "telefono": "",
     "ubicacion": ""
@@ -130,7 +130,7 @@
     "apellido": "giuliani",
     "email": "prueba2@gmail.com",
     "password": "$2a$10$EovYmfiItlNBQ6ARfxXFqOjXWtXbiX/MV.RlBEiIshgjH0.vHberW",
-    "imagenId": "avatar-1661811399625-64064028.png",
+    "imagenId": "avatar-1660608683387-585334370.jpeg",
     "isAdmin": false,
     "telefono": "",
     "ubicacion": ""
