@@ -1,0 +1,18 @@
+.ultimoRegistro {
+    /* width: 100px; */
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.ultimoRegistro figure {
+    width: 100px;
+    margin: auto;
+}
+
+.ultimoRegistro img {
+    width: 100%;
+}
+
+.ultimo {
+    /* margin: 1em; */
+}
