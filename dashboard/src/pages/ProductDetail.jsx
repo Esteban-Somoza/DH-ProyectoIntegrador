@@ -13,34 +13,43 @@ export default function ProductDetail() {
             .then((product) => setProduct(product))
     }
         , [id])
-    console.log(product)
+        if (product ){
+            console.log(product.informacion.colores)
+        }
+
 
     return (
-        <>
+
+
+        <div className="container">   
+        
+           <SideBar />
             <div className="panel">
-                <SideBar />
-                <section className="contenedor">
+            
+               <section className="contenedor">
+               
                     <figure className="img">
-                        <img id="data" src={product.imagen} alt="" />
+                      <img id="data" src={product.imagen} alt="" /> 
                     </figure>
                     <article className="contenedorDatos">
                         <h1>
-                            Nombre : {product.nombre}
+                            Nombre : {product.informacion}
                         </h1>
                         <h1> Precio ${product.precio}</h1>
                         <h1> Marca : {product.marca}</h1>
                     </article>
+                   
                 </section>          
-                    <h1>{product.descripcion}</h1>
+                    <h1>{product.descripcion}</h1>  
 
 
-                
-            </div>
+               
+            </div> 
 
 
 
 
-        </>)
+        </div>)
 
 }
 

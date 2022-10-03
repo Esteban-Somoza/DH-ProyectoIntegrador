@@ -23,8 +23,13 @@
 }
 .img {
     margin: auto;
+    width: 200px;
 }
 #data {
     width : 
-    70%
+    100%
 }
+.container {
+    display: flex;
+}
+
