@@ -80,6 +80,10 @@
     margin: 0 auto;
 }
 
+.adminContainer img {
+    border-radius: 50%;
+}
+
 
 .adminContainer div {
     display: grid;

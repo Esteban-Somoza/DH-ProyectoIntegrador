@@ -12,11 +12,15 @@ import "./userCss.css";
 export default function UserPanel() {
   let [users, setUsers] = useState();
   let [userId, setUserId] = useState();
+  let [userAdmin, setUserAdmin] = useState();
+  let [regularUser, setRegularUser] = useState();
+
   let { id } = useParams();
 
-  let userAdmin = users && users.filter((user) => user.isAdmin === true);
-  let regularUser = users && users.filter((user) => user.isAdmin === false || null);
-
+  // let userAdmin
+  // let regularUser
+  console.log(userAdmin, regularUser);
+  
   useEffect(() => {
     async function fetchData() {
       const users = await usersFindAll();
@@ -24,17 +28,19 @@ export default function UserPanel() {
       return setUsers(otherUsers);
     }
     fetchData();
-  }, []);
-
+  }, [id]);
+  
   useEffect(() => {
     async function fetchData() {
-      // acá te falta definir qué hacemos ni bien se ingresa 
-      //al panel y no hay un usuario por el parámetro de la URL
       const usersId = await findUserId(id);
+      let userAdmin = users && users.filter((user) => user.isAdmin === true);
+      let regularUser = users && users.filter((user) => user.isAdmin === false || user.isAdmin === null);
+      setUserAdmin(userAdmin)
+      setRegularUser(regularUser)
       return setUserId(usersId);
     }
     fetchData();
-  }, [id]);
+  }, [users]);
 
   return (
     <>

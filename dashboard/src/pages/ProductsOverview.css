@@ -44,10 +44,10 @@ h5 {
     grid-row-gap: 7px;
     overflow: auto;
     min-width: 150px;
-  
+    
     padding: .5em;
     width: 100%;
-    max-height: 80%;
+    max-height: 70%;
     border-bottom: 1px solid rgb(154, 154, 154);
 }
 
@@ -87,6 +87,10 @@ h5 {
     width: 100%;
     text-align: left;
     flex-grow: 5;
+}
+
+.data .categorias {
+    width: 50%;
 }
 
 .titulo {

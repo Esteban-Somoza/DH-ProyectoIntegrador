@@ -40,7 +40,7 @@ export default function ProductsOverview() {
                 <section className='products'>
                     {products &&
                         products.map((product, index) =>
-                            <Link key={index} to={`/products/${product.id}`}>
+                            <Link key={index} to={`/products/detail/${product.id}`}>
                                 <article className="articuloProducto">
                                     <figure>
                                         <img src={product.imagen} alt="" className='imagenProducto'/>

@@ -44,12 +44,12 @@ export default function Home() {
       {cats &&
         <div className="data">
           <DataPanel title="Productos">
-            <Statistics data={productStats} title="Products" />
+            <Statistics data={productStats} title="producto" />
             <Categories categories={cats} />
           </DataPanel>
           <DataPanel title="Usuarios">
-            <Statistics data={userStats} />
-            <Users users={users.users} title="Users" />
+            <Statistics data={userStats} title="usuario" />
+            <Users users={users.users}  />
           </DataPanel>
         </div>
       }
