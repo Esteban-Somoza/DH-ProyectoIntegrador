@@ -27,7 +27,7 @@ export default function SideBar() {
             <h3 onClick={logout}><FontAwesomeIcon icon={faRightFromBracket} className="icon"/>logout</h3>
             <ul className='links'>
                 <Link to={`/`}> Home </Link>
-                <Link to={`/usuarios`}> Users </Link>
+                <Link to={`/usuarios/1`}> Users </Link>
                 <Link to={`/products/baño`}> Products </Link>
             </ul>
         </div>
