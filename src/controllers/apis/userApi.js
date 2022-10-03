@@ -55,6 +55,7 @@ const userApi = {
           nombre: users.nombre,
           email: users.email,
           imagen: `http://localhost:3000/images/avatars/${users.imagen.nombre}`,
+          isAdmin: users.isAdmin
         
         };
         return usuario;
