@@ -73,6 +73,11 @@
 
 .adminContainer {
     padding: 1rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 50%;
+    align-items: stretch;
+    margin: 0 auto;
 }
 
 

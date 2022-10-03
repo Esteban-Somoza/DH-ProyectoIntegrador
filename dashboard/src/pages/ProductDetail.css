@@ -1,0 +1,30 @@
+.panel{ background-color: white;
+    display: flex;
+    width: 100%;
+}
+
+.contenedor{
+    background-color: #e6e6e6;
+    width: 50%;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100%;
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+}
+.contenedor h1 {
+    padding: 5px;
+    font-size:  18px;
+}
+.contenedorDatos  {
+    font-size: 16px;
+}
+.img {
+    margin: auto;
+}
+#data {
+    width : 
+    70%
+}

@@ -4,8 +4,10 @@
 
 .categorias {
     display: flex;
-    margin: auto;
+    flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: space-around;
+    width: 50%;
 }
 
 .cadaCategoria {
@@ -15,10 +17,12 @@
     border: var(--color-grey) solid 0.1em;
     border-radius: 1.5em;
     height: 100px;
-    width: 200px;
+    width: 150px;
     background-color: white;
     margin: .5em auto;
+    flex-wrap: wrap;
 }
+
 
 
 .cadaCategoria img {

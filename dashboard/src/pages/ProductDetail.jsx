@@ -8,27 +8,36 @@ import "./ProductDetail.css";
 export default function ProductDetail() {
     const { id } = useParams()
     const [product, setProduct] = useState({})
-    useEffect(() => { 
+    useEffect(() => {
         findId(id)
-        .then((product) => setProduct(product)) }
-        ,[id])
+            .then((product) => setProduct(product))
+    }
+        , [id])
     console.log(product)
 
     return (
         <>
-            <div className="pageContainer">
+            <div className="panel">
                 <SideBar />
-            {
-                product && 
-                <h1>
-                    {
-                        product.nombre
-                    }
-                </h1>
-            }
+                <section className="contenedor">
+                    <figure className="img">
+                        <img id="data" src={product.imagen} alt="" />
+                    </figure>
+                    <article className="contenedorDatos">
+                        <h1>
+                            Nombre : {product.nombre}
+                        </h1>
+                        <h1> Precio ${product.precio}</h1>
+                        <h1> Marca : {product.marca}</h1>
+                    </article>
+                </section>          
+                    <h1>{product.descripcion}</h1>
 
 
+                
             </div>
+
+
 
 
         </>)
