@@ -72,15 +72,15 @@ const productApi = {
             })
             let prod = {}
                 prod.id=product.id,
-               prod.nombre=product.nombre,
-               prod.precio=product.precio,
-               prod.marca=product.marca,
-               prod.informacion=product.informacion,
-               prod.descripcion=product.descripcion,
-               prod.categoria=product.categoria,
-               prod.subcategoria=product.subcategoria
-            
-            return res.send (prod).status(200)
+              prod.nombre=product.nombre,
+              prod.precio=product.precio,
+              prod.marca=product.marca,
+              prod.imagen= `http://localhost:3000/images/productos/${product.imagen.nombre}`,
+              prod.informacion=product.informacion,
+              prod.descripcion=product.descripcion,
+              prod.categoria=product.categoria,
+              prod.subcategoria=product.subcategoria
+                        return res.send (prod).status(200)
         }
         catch (error) {
             return res.status(500).json(error);
