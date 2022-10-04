@@ -31,13 +31,13 @@ export default function ProductDetail() {
             <div className="panel">
                 <div className="contenedorTop">
                     <section className="contenedor">
+                            <h1>
+                                 {product.nombre}
+                            </h1>
                         <figure className="img">
                             <img id="imagen" src={product.imagen} alt="" />
                         </figure>
                         <article className="contenedorDatos">
-                            <h1>
-                                Nombre : {product.nombre}
-                            </h1>
                             <h2> Precio ${product.precio}</h2>
                             <h2> Marca : {product.marca}</h2>
                         </article>

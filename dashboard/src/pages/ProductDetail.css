@@ -33,6 +33,7 @@
 }#imagen {
     width: 100%;
     border-radius: 1em;
+    max-width: 150px;
 }
 #data {
     border-radius: 10%; 
@@ -49,6 +50,7 @@
 .container {
     background-color: var(--color-white);
     display: flex;
+    align-items: center;
 }
 
 .contenedorTop{
