@@ -36,6 +36,7 @@
 
 }
 .container {
+    background-color: var(--color-white);
     display: flex;
 }
 

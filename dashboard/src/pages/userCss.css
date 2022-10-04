@@ -18,13 +18,15 @@
     color: #3A687E;
 }
 .leftSide__container h3 {
+    
    
     color: #3A687E;
 }
 
 
 .bloque {
-    background-color: var(--color-white);
+    background-color: #e6e6e6;
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
     width: 100%;
     border-radius: 3%;
     display: flex;
@@ -36,6 +38,7 @@
 }
 
 .users__container {
+    background-color: var(--color-white);
     display: flex;
     width: 100%;
     height: auto;
