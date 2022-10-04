@@ -3,16 +3,13 @@
 
 <head>
     <%- include ('../includes/head.ejs') %>
-
+    <script defer src="/scripts/validations/userEditValidation.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 </head>
 
 <body>
     <%- include ('../includes/header.ejs') %>
-
         <main>
-
-
-           
 
             <article class="formulario_contenido">
 
@@ -28,11 +25,23 @@
 
                     <label for="nombre">Nombre</label>
 
-                    <input type="text" name="nombre" id="relleno" placeholder="nombre" value="<%= user.nombre%>">
-                    <label for="nombre">Apellido</label>
+                    <input type="text" name="nombre" id="relleno" placeholder="nombre" value="<%= locals.oldData ? oldData.nombre: user.nombre %>">
+                    <% if ( locals.errors && errors.nombre ) { %>
+                        <p class="msg-error">
+                            <%= errors.nombre.msg %>
+                        </p>
+                    <% } %> 
+                    <p id="nombreError" class="msg-error errors"></p>
+                        
+                    <label for="apellido">Apellido</label>
 
-                    <input type="text" name="apellido" id="relleno" placeholder="apellido" value="<%= user.apellido%>">
-
+                    <input type="text" name="apellido" id="relleno" placeholder="apellido" value="<%= locals.oldData ? oldData.nombre: user.apellido %>">
+                    <% if ( locals.errors && errors.apellido ) { %>
+                        <p class="msg-error">
+                            <%= errors.apellido.msg %>
+                        </p>
+                        <% } %>
+                    <p id="apellidoError" class="msg-error errors"></p>
 
                     <label for="telefono">Telefono/celular</label>
 
@@ -43,9 +52,13 @@
 
                     <input type="text" name="ubicacion" id="relleno" value="<%= user.ubicacion %> ">
 
-                    <label for="imagenPerfil">Imagen de perfil</label>
+                    <label for="avatar">Imagen de perfil</label>
 
-                    <input type="file" id="ImagenPerfil" name="imagenId">
+                    <input type="file" id="avatar" name="file">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <p class="msg-error"> <%= errors.avatar.msg %> </p>
+                    <% } %>
+                    <p id="fileError" class="msg-error errors"></p>
 
                     <label for="imagen">eliminar foto</label>
                     <input class="checkbox" type="checkbox" id="imagen" name="eliminarImagen"

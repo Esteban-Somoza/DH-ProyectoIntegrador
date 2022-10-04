@@ -24,7 +24,7 @@ const usersController = {
   register: async (req, res) => {
     return res.render("./users/register", {
       title: "Registro",
-      styles: ["style", "header", "footer", "register","frontValidations"],
+      styles: ["style", "header", "footer", "register", "frontValidations"],
     })
   },
 
@@ -57,7 +57,7 @@ const usersController = {
       })
       idImagenUsuario = imagenUsuario.id; // si entra al if (osea que se subió un archivo), le asigna el ID de la nueva imagen
     }
-    
+
     req.body.imagenId = idImagenUsuario // le asigno le valor del idImagenUsuario al req.body.imagenId
 
     await usuarios.create(req.body) // se crea el producto, incluyendo el req.body.imagenId
@@ -79,7 +79,7 @@ const usersController = {
     }
 
     req.session.user = await usersController.findUserDB(req.body.email)
-    
+
     if (req.body.recordame != undefined) {
       res.cookie("recordame", userDB, { maxAge: 172800000 })
     }
@@ -112,12 +112,24 @@ const usersController = {
 
     return res.render('users/userEdit', {
       title: "Editar tu Usuario",
-      styles: ["style", "header", "footer", "userEdit"],
+      styles: ["style", "header", "footer", "userEdit", "frontValidations"],
       user: userDB
     });
   },
 
   processEdit: async function (req, res) {
+    let validaciones = validationResult(req)
+    let { errors } = validaciones
+
+    if (errors && errors.length > 0) {
+      return res.render('users/userEdit', {
+        title: "Editar tu Usuario",
+        styles: ["style", "header", "footer", "userEdit", "frontValidations"],
+        oldData: req.body,
+        errors: validaciones.mapped()
+      });
+    }
+
     let userDB = await usersController.findUserDB(req.session.user.email)
     let imagenUsuario = await imagen.findByPk(req.session.user.imagenId)
     let imagenDefault = await usersController.imagenDefault()
