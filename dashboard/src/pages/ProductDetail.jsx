@@ -55,9 +55,9 @@ export default function ProductDetail() {
                 </div>
             </div>
             {/* esto  es detalle */}
-            <div className='categories'>
-                <h3 className='titulo'>Otras Categorias</h3>
-                <Categories categories={otherCategories} />
-            </div>
         </div >)
 }
+            <div className='categories'>
+                <h3 className='titulo'>Otras Categorias</h3>
+                {/* <Categories categories={otherCategories} /> */}
+            </div>
