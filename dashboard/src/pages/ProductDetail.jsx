@@ -26,6 +26,7 @@ export default function ProductDetail() {
     }    [id]
     return (
         <div className="container">
+            {!user && <Navigate replace to="/login" />}
             <SideBar />
             <div className="panel">
                 <div className="contenedorTop">
