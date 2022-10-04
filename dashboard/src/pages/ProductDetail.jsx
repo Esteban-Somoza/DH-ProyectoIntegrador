@@ -40,7 +40,7 @@ export default function ProductDetail() {
 
 
         <div className="container">
-
+            {!user && <Navigate replace to="/login" />}
             <SideBar />
             <div className="panel">
                 <div className="contenedorTop">
@@ -84,25 +84,25 @@ export default function ProductDetail() {
 
 
         </div >
-    //   <>
-    //   <div className='categorias'>
-    //     {
-    //       categories.map((category, index) =>
-    //         <Link key={index} to={`/products/${category.nombre}`} >
-    //           <article className="cadaCategoria">
-    //             <figure >
-    //               <img src={category.imagen} alt="" className='categoriaImagen' /> Esteban
-    //             </figure>
-    //             <h4>{category.nombre}</h4>
-    //           </article>
-    //         </Link>
-    //       )
-    //     }
-    //   </div>
-    // </>
+        //   <>
+        //   <div className='categorias'>
+        //     {
+        //       categories.map((category, index) =>
+        //         <Link key={index} to={`/products/${category.nombre}`} >
+        //           <article className="cadaCategoria">
+        //             <figure >
+        //               <img src={category.imagen} alt="" className='categoriaImagen' /> Esteban
+        //             </figure>
+        //             <h4>{category.nombre}</h4>
+        //           </article>
+        //         </Link>
+        //       )
+        //     }
+        //   </div>
+        // </>
 
         // <div className="container">
-        //     {!user && <Navigate replace to="/login" />}
+
         //     <SideBar />
         //     <div className="panel">
 
@@ -123,7 +123,8 @@ export default function ProductDetail() {
         //         <h1>{product.descripcion}</h1>
         //     </div>
         // </div >
- 
 
-   )}
+
+    )
+}
 
