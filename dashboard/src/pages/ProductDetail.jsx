@@ -23,9 +23,10 @@ export default function ProductDetail() {
 
     if (info) {
         console.log(info.id)
-    }    [id]
+    } [id]
     return (
         <div className="container">
+            {!user && <Navigate replace to="/login" />}
             <SideBar />
             <div className="panel">
                 <div className="contenedorTop">
@@ -45,19 +46,14 @@ export default function ProductDetail() {
                         <h2> Categoria:{product.categoria}</h2>
                         <h2>SubCategoria:{product.subcategoria} </h2>
 
-                        <article className="cadaCategoria">
-                            <figure >
-                                <img src={categories.imagen} alt="" className='categoriaImagen' />
-                            </figure>
-                            <h4>{categories.nombre}</h4>
-                        </article>
+                     
                     </section>
+                </div>
+                <div className='categories'>
+                    <h3 className='titulo'>Otras Categorias</h3>
+                    <Categories categories={categories} />
                 </div>
             </div>
             {/* esto  es detalle */}
         </div >)
 }
-            <div className='categories'>
-                <h3 className='titulo'>Otras Categorias</h3>
-                {/* <Categories categories={otherCategories} /> */}
-            </div>
