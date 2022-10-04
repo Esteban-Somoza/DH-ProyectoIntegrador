@@ -26,9 +26,11 @@ const userApi = {
         where: { email: req.body.email },
       });
 
-      let checkPassword = compareSync(req.body.password, user.password)
-
-      if (!checkPassword || !user) return res.send(false).status(500);
+      if (!user) return res.send(true).status(200);
+      
+      let checkPassword = compareSync(req.body.password, user?.password)
+      
+      if (!checkPassword || user == null) return res.send(false).status(200);
 
       if (checkPassword) {
         let userData = {
