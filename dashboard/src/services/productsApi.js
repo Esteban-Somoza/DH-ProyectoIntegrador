@@ -14,6 +14,7 @@ export async function productFindAll () {
         try {
             let endpoint = `${baseUrl}/productfindId/${id}`
             let products = await axios.get(endpoint)
+
             return products.data
             
         } catch (error) 
