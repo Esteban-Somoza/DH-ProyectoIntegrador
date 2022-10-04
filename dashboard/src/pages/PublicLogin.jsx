@@ -3,7 +3,7 @@ import { userContext } from "../context/UserContext";
 import { useNavigate, Navigate } from "react-router-dom";
 import axios from "axios"
 // import logo from "../../../public/images/logo-sanitario.svg";
-import logo from "../../public/logoNicuesa.svg";
+import logo from "/logoNicuesa.svg";
 import "./PublicLogin.css";
 
 let logInApiUrl = "http://localhost:3000/api/userLogin"
