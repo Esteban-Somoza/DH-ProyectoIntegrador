@@ -104,8 +104,8 @@
   },
   {
     "id": 10,
-    "nombre": "Prueba",
-    "apellido": "asd",
+    "nombre": "Admin",
+    "apellido": "Isitrador",
     "email": "prueba@nicuesa.com",
     "password": "$2a$10$Hxmfag8mrd48uqNbTXnwbOQ5d.cI4SfGfBClCOud2TmhHAyhLyEpm",
     "imagenId": "avatar-1659577325458-110127457.png",

@@ -56,8 +56,9 @@ font-size: 28px;
     justify-content: space-evenly;
     padding-top: 12px;
 }
+
 #img {
-    width: 12em;
+    width: 6em;
     text-align: center;
     border-radius: 1em;
 }
