@@ -33,10 +33,7 @@ export default function PublicLogin() {
 
     const login = async e => {
         e.preventDefault()
-        console.log("hi");
         let result = await axios.post(logInApiUrl, { email: email.current.value, password: password.current.value })
-        console.log("by");
-        console.log(result);
 
         if (!result.data) {
             MySwal.fire({
