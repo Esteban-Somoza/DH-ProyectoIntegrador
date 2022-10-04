@@ -102,6 +102,31 @@ inputs.nombre.addEventListener('input', function () {
     if (!validator.isLength(value, { min: 2 })) {
         msg = "El nombre debe contener al menos 2 caracteres."
     }
+    
+    if (msg) {
+        this.style.color = "maroon"
+        this.style.outlineColor = "maroon"
+        feedback.classList.remove("valid")
+        feedback.classList.add("invalid")
+        this.classList.remove("inv")
+        this.classList.remove("fieldValid")
+        this.classList.add("fieldInvalid")
+        feedback.innerText = msg
+    }
+    else {
+        this.style.color = "black"
+        this.style.outlineColor = "black"
+        feedback.classList.remove("invalid")
+        feedback.classList.add("valid")
+        this.classList.remove("inv")
+        this.classList.remove("fieldValid")
+        this.classList.add("fieldInvalid")
+    }
+})
+inputs.apellido.addEventListener('input', function () {
+    let value = this.value
+    let feedback = document.querySelector("#apellidoError")
+    let msg = null
 
     if (msg) {
         this.style.color = "maroon"

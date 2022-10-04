@@ -25,6 +25,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 1rem;
 }
 
 .profile{
@@ -44,7 +45,7 @@
     width: auto;
     position: absolute;
     bottom: 1em;
-    right: 3em;
+    right: 2em;
     align-self: flex-end;
     cursor: pointer;
     color: black;
@@ -58,6 +59,7 @@
 .sideBar h3:hover {
     color: #3A687E;
     cursor: pointer;
+
 }
 
 .sideBar h1 {
@@ -67,18 +69,23 @@
 }
 
 .links {
-    margin: 2em 5em;
+    *margin: 2em 5em;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
 }
 
 .links a{
     
     color: black;
     background-color: white;
-    width: auto;
+    width: 80%;
     padding: .5em;
     border-radius: 1em;
     box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
+}
+
+.links a:hover {
+    color: var(--color-font);  
 }
