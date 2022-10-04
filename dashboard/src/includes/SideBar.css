@@ -12,33 +12,12 @@
     align-items: flex-start;
     text-align: center;
 }
-
-.logo {
-    width: 33%;
-    margin: 2em;
-    align-items: flex-start;
-    border-radius: 1em;
-    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
-}
-
 .sideBar figure {
     width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
 }
-
-.profile{
-    max-height: 5em;
-    
-    /* width: 100%; */
-    /* margin: auto; */
-}
-
-.icon{
-    margin-right: .5em;
-}
-
 .sideBar h3 {
     display: block;
     height: auto;
@@ -67,6 +46,27 @@
     height: auto;
     width: auto;
 }
+
+.logo {
+    width: 33%;
+    margin: 2em;
+    align-items: flex-start;
+    border-radius: 1em;
+    box-shadow: 0px 1px 6px -1px rgb(0 0 0 / 75%);
+}
+
+
+.profile{
+    max-height: 5em;
+    
+    /* width: 100%; */
+    /* margin: auto; */
+}
+
+.icon{
+    margin-right: .5em;
+}
+
 
 .links {
     *margin: 2em 5em;
