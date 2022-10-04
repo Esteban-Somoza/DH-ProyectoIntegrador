@@ -17,12 +17,9 @@ app.set("view engine", "ejs");
 app.use(cors())
 app.use(public)
 
-// Req.query Req.body //
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(method('m'));
-// app.use(require('method-override')('m'));
 
 app.use(session({
     secret: 'nodejs',

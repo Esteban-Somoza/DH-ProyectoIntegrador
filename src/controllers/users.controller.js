@@ -39,7 +39,7 @@ const usersController = {
       }
       return res.render('users/register', {
         title: "Registro",
-        styles: ["style", "header", "footer", "register"],
+        styles: ["style", "header", "footer", "register", "frontValidations"],
         oldData: req.body,
         errors: validaciones.mapped()
       });

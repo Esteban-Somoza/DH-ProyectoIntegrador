@@ -3,7 +3,6 @@ import "./Statistics.css"
 
 export default function Statistics({ title, data }) {
   let info = data.data
-  console.log(data);
   return (
     <div className='ultimoRegistro'>
       <h5>Cantidad de usuarios registrados: {data.totalAmout}</h5>

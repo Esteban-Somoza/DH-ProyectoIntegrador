@@ -71,10 +71,16 @@ h6 {
 /*---------------ESTILOS GENERALES-----------*/
 
 .msg-error {
-    color: red;
+    color: #FF5733;
     font-size: .8em;
     /* margin-top: -0.5em; */
-    margin-bottom: 0.5em;
+    /* margin-bottom: 0.5em; */
     font-weight: bold;
     /* text-align: center; */
+}
+
+.msg-error::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f06e";
+    /* color: rgb(241, 169, 0); */
+    margin-right: .5em;
 }

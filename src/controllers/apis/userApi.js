@@ -1,4 +1,4 @@
-const { usuarios, imagen } = require("../../database/models/index");
+const { usuarios } = require("../../database/models/index");
 const { compareSync } = require("bcryptjs");
 
 const userApi = {
@@ -26,8 +26,11 @@ const userApi = {
         where: { email: req.body.email },
       });
 
-      // return res.status(200).json(user)
-      if (compareSync(req.body.password, user.password)) {
+      let checkPassword = compareSync(req.body.password, user.password)
+
+      if (!checkPassword || !user) return res.send(false).status(500);
+
+      if (checkPassword) {
         let userData = {
           nombre: user.nombre,
           apellido: user.apellido,
@@ -35,13 +38,17 @@ const userApi = {
           telefono: user.telefono,
           ubicacion: user.ubicacion,
           imagen: `http://localhost:3000/images/avatars/${user.imagen.nombre}`,
+          isAdmin: user.isAdmin,
         };
+
         return res.send(userData).status(200);
-      } else throw new Error("wrong password");
+      }
+
     } catch (error) {
       return res.status(500).json(error);
     }
   },
+
   findAll: async (req, res) => {
     try {
       let usersDb = await usuarios.findAll({
@@ -58,17 +65,18 @@ const userApi = {
           isAdmin: users.isAdmin,
           ubicacion: users.ubicacion,
           telefono: users.telefono,
-          
-        
+
+
         };
         return usuario;
       });
       let count = users.length;
-      return res.send( {count, users} ).status(200);
+      return res.send({ count, users }).status(200);
     } catch (error) {
       return res.status(500).json(error);
     }
   },
+
   userId: async (req, res) => {
     try {
       let usersId = await usuarios.findByPk(req.params.id, {
@@ -91,6 +99,7 @@ const userApi = {
     } catch (error) {
       return res.status(500).json(error);
     }
-  },
+  }
 };
+
 module.exports = userApi;

@@ -1,11 +1,13 @@
 import { findId } from "../services/productsApi";
-import { useState, useEffect } from 'react'
-import { useParams, } from "react-router-dom";
+import { userContext } from "../context/UserContext";
+import { useState, useEffect, useContext } from 'react'
+import { useParams, Navigate } from "react-router-dom";
 import SideBar from "../includes/SideBar.jsx";
 import "./ProductDetail.css";
 
 
 export default function ProductDetail() {
+    const { user, userSet } = useContext(userContext)
     const { id } = useParams()
     const [product, setProduct] = useState({})
     let info = product.informacion
@@ -22,10 +24,8 @@ export default function ProductDetail() {
 
 
     return (
-
-
         <div className="container">
-
+            {!user && <Navigate replace to="/login" />}
             <SideBar />
             <div className="panel">
 
@@ -44,14 +44,7 @@ export default function ProductDetail() {
 
                 </section>
                 <h1>{product.descripcion}</h1>
-
-
-
             </div>
-
-
-
-
         </div>)
 
 }
