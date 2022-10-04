@@ -40,5 +40,4 @@ router.get("/api/userFindAll", findAll)
 router.get("/api/user/:id",  userId)
 
 
-
 module.exports = router 
