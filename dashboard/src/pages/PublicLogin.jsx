@@ -1,6 +1,6 @@
-import { useContext, useRef } from 'react'
+import { useContext, useRef, useEffect } from 'react'
 import { userContext } from "../context/UserContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import axios from "axios"
 import logo from "../../../public/images/logo-sanitario.svg";
 import "./PublicLogin.css";
@@ -14,9 +14,25 @@ export default function PublicLogin() {
     let email = useRef();
     let password = useRef();
 
+    useEffect(() => {
+        let localStorageUser = localStorage.getItem("user")
+        if (localStorageUser) {
+            setUser(localStorageUser)
+        }
+    }, [])
+
+    if (user) {
+        return <Navigate replace to="/" />
+    }
+
     const login = async e => {
         e.preventDefault()
         let result = await axios.post(logInApiUrl, { email: email.current.value, password: password.current.value })
+        if (!result.data.isAdmin) {
+            alert("this area is restricted to admins")
+            return navigate("/login")
+        }
+        localStorage.setItem('user', JSON.stringify(result.data));
         setUser(result.data)
         return navigate("/")
     }

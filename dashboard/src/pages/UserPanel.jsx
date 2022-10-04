@@ -1,15 +1,17 @@
 import React from "react";
 import { useState, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Navigate } from 'react-router-dom'
+import { userContext } from "../context/UserContext";
 
 import SideBar from "../includes/SideBar.jsx";
 import Users from "../includes/Users.jsx";
 
-import bidet from "../../../public/images/productos/bidet1.jpeg";
 import { usersFindAll, findUserId } from "../services/UsersApi";
 import "./userCss.css";
 
 export default function UserPanel() {
+  const { user, userSet } = useContext(userContext)
   let [users, setUsers] = useState();
   let [userId, setUserId] = useState();
   let [userAdmin, setUserAdmin] = useState();
@@ -19,8 +21,7 @@ export default function UserPanel() {
 
   // let userAdmin
   // let regularUser
-  console.log(userAdmin, regularUser);
-  
+
   useEffect(() => {
     async function fetchData() {
       const users = await usersFindAll();
@@ -29,7 +30,7 @@ export default function UserPanel() {
     }
     fetchData();
   }, [id]);
-  
+
   useEffect(() => {
     async function fetchData() {
       const usersId = await findUserId(id);
@@ -45,6 +46,7 @@ export default function UserPanel() {
   return (
     <>
       <div className="users__container">
+        {!user && <Navigate replace to="/login" />}
         <SideBar />
         <div className="bloque">
           <div className="leftSide">
@@ -57,7 +59,7 @@ export default function UserPanel() {
               <p>{userId && userId.telefono}</p>
               <p>Ubicacion</p>
               <p>{userId && userId.ubicacion}</p>
-    
+
             </div>
           </div>
           <div className="rightSide">

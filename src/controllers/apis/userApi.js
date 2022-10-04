@@ -35,6 +35,7 @@ const userApi = {
           telefono: user.telefono,
           ubicacion: user.ubicacion,
           imagen: `http://localhost:3000/images/avatars/${user.imagen.nombre}`,
+          isAdmin: user.isAdmin,
         };
         return res.send(userData).status(200);
       } else throw new Error("wrong password");

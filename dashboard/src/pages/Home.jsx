@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useContext, useEffect } from 'react'
+import { Navigate } from 'react-router-dom'
+import { userContext } from "../context/UserContext";
 
 import Users from "../includes/Users";
 import SideBar from "../includes/SideBar.jsx";
@@ -17,6 +19,7 @@ import "./userCss.css"
 
 
 export default function Home() {
+  const { user, userSet } = useContext(userContext)
   let [users, setUsers] = useState();
   let [cats, setCats] = useState();
   let [productStats, setProductStats] = useState();
@@ -28,11 +31,9 @@ export default function Home() {
       const products = await productFindAll()
       let userStatistics = data(users.users[users.count - 1], users.count)
       let productStatistics = data(products.data[products.count - 1], products.count)
-
       setUsers(users);
       setProductStats(productStatistics)
       setUserStats(userStatistics)
-
       return setCats(categories)
     }
     setData();
@@ -41,6 +42,7 @@ export default function Home() {
   return (
     <div className='pageBody'>
       <SideBar />
+      {!user && <Navigate replace to="/login" />}
       {cats &&
         <div className="data">
           <DataPanel title="Productos">
@@ -49,7 +51,7 @@ export default function Home() {
           </DataPanel>
           <DataPanel title="Usuarios">
             <Statistics data={userStats} title="usuario" />
-            <Users users={users.users}  />
+            <Users users={users.users} />
           </DataPanel>
         </div>
       }
