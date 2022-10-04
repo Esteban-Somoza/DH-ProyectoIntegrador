@@ -28,7 +28,7 @@
 .img {
     margin: auto;
     width: 200px;
-    margin-top: 5em;
+    margin-top: 2em;
 
 }#imagen {
     width: 100%;
@@ -42,8 +42,9 @@
 
 }
 .contenedorDeDatos{
-    margin: 2em;
+    *margin: 2em;
     *padding: 7em;
+    width: 50%;
 }
 .container {
     background-color: var(--color-white);
