@@ -37,14 +37,17 @@
                         <%= errors.categoria.msg %>
                             </p>
                             <% } %>
-                                <label for="subCategoria">SubCategoria</label>
-                                <select id="subCategoria" name="subcategoria" class="formulario_relleno"></select>
-                                <% if ( locals.errors && errors.subcategoria ) { %>
-                                    <p class="msg-error">
-                                        <%= errors.subcategoria.msg %>
-                                    </p>
-                                    <% } %>
+                            <p id="categoriaError" class="msg-error errors"></p>
 
+                            <label for="subCategoria">SubCategoria</label>
+                            <select id="subCategoria" name="subcategoria" class="formulario_relleno"></select>
+                            <% if ( locals.errors && errors.subcategoria ) { %>
+                                <p class="msg-error">
+                                    <%= errors.subcategoria.msg %>
+                                </p>
+                                <% } %>
+                                <p id="subcategoriaError" class="msg-error errors"></p>
+                                
 
                                         <!-- producto -->
                                         <h2 class="titulo">Producto</h2>
@@ -52,25 +55,27 @@
                                         <input class="formulario_relleno" type="text" name="nombre" id="nombreProducto"
                                             value="<%= locals.oldData ? oldData.nombre: null %>">
                                         <p id="nombreError" class="msg-error errors"></p>
-
-                                      <!--- <% if ( locals.errors && errors.nombre ) { %> /// errores back
+                                        
+                                        <!--- <% if ( locals.errors && errors.nombre ) { %> /// errores back
                                             <p class="msg-error">
-                                            <p class="msg-error">
-                                                <%= errors.nombre.msg %>
-                                            </p>
-                                            <% } %>--> 
+                                                <p class="msg-error">
+                                                    <%= errors.nombre.msg %>
+                                                </p>
+                                                <% } %>--> 
                                                 <label for="marca">* Marca</label>
                                                 <input class="formulario_relleno" type="text" name="marca" id="marca"
-                                                    min="1" value="<%= locals.oldData ? oldData.marca: null %>">
+                                                min="1" value="<%= locals.oldData ? oldData.marca: null %>">
                                                 <% if ( locals.errors && errors.marca ) { %>
                                                     <p class="msg-error">
                                                         <%= errors.marca.msg %>
                                                     </p>
                                                     <% } %>
+                                                    <p id="marcaError" class="msg-error errors"></p>
+
                                                         <label class="infodenombres" for="imagenProducto">* Imagen del
                                                             producto</label>
                                                         <input class="formulario_relleno" type="file"
-                                                            name="imagenProducto">
+                                                            name="imagenProducto" >
                                                         <p id="imagenError" class="msg-error errors"></p>
 
                                                         <% if (locals.errors && errors.imagenProducto) { %>
@@ -78,6 +83,8 @@
                                                                 <%= errors.imagenProducto.msg %>
                                                             </p>
                                                             <% } %>
+                                                            <p id="imagenError" class="msg-error errors"></p>
+
                                                                 <label for="descripcion">Descripcion</label>
                                                                 <textarea class="descripcion"
                                                                     name="description"> </textarea>

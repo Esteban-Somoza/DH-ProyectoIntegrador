@@ -18,22 +18,7 @@
                     enctype="multipart/form-data">
 
                     <h2 id="detalle">Editando un producto</h2>
-                    <!-- <h2> categorias</h2> 
-                        <label for="Categoria">Categoria</label>
-                        <select id="categoria" name="categoria" class="formulario_relleno" onchange="populate()"
-                            onload="selected(product.categoria)">
-                            <option value=""></option>
-                            <option value="banio">baño</option>
-                            <option value="cocina">cocina</option>
-                            <option value="tanques">tanques</option>
-                            <option value="calefaccion">calefacción</option>
-                            <option value="instalaciones">instalaciones</option>  
-                        </select>
-                        <label for="subCategoria">SubCategoria</label>
-                        <select id="subCategoria" name="subCategoria" class="formulario_relleno"></select>
-                    -->
 
-                    <!-- producto -->
                     <h2 class="titulo">Producto</h2>
                     <label for="nombre-producto">Nombres del producto</label>
                     <input class="formulario_relleno" type="text" name="nombre" min="1"
@@ -53,6 +38,7 @@
                                     <%= errors.marca.msg %>
                                 </p>
                                 <% } %>
+                                <p id="marcaError" class="msg-error errors"></p>
                                     <label class="infodenombres" for="imagenProducto">Imagen del producto</label>
                                     <input class="formulario_relleno" type="file" name="imagenProducto" value="">
                                     <% if (locals.errors && errors.imagenProducto) { %>
@@ -60,6 +46,7 @@
                                             <%= errors.imagenProducto.msg %>
                                         </p>
                                         <% } %>
+                                        <p id="imagenError" class="msg-error errors"></p>
                                             <label for="description">Descripcion</label>
                                             <textarea class="descripcion" type="textarea"
                                                 name="description"><%= product.descripcion %></textarea>
