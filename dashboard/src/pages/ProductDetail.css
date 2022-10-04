@@ -47,5 +47,13 @@
     display: flex;
 }
 
+.img{
+    width:200px
+}
+
+#imagen {
+    width: 100%
+}
+
 
 
