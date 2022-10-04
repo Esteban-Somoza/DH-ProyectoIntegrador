@@ -2,7 +2,7 @@
 /*---------------ROOT COLORS/FONTS-----------*/
 :root {
     --color-footerNav: #3A687E;
-    --color-font: rgb(22, 20, 20);
+    --color-font: #3A687E;
     --color-hover: #24d6ed;
     --color-white: rgb(239, 245, 244);
     --color-grey: rgb(190, 185, 185);
@@ -63,6 +63,8 @@ h4 {
 
 h5 {
     font-size: 1em;
+    color: var(--color-font);
+    font-weight: 700;
 }
 
 h6 {

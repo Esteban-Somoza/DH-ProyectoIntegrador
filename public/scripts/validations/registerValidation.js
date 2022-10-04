@@ -8,7 +8,6 @@ let userExists = async function (email) {
 }
 
 inputs.nombre.addEventListener('input', function () {
-    console.log(inputs.nombre);
     let value = this.value
     let feedback = document.querySelector("#nombreError")
     let msg = null
@@ -17,8 +16,25 @@ inputs.nombre.addEventListener('input', function () {
         msg = "El nombre debe contener al menos 2 caracteres."
     }
     
-    
-   
+    if (msg) {
+        this.style.color = "maroon"
+        this.style.outlineColor = "maroon"
+        feedback.classList.remove("valid")
+        feedback.classList.add("invalid")
+        this.classList.remove("inv")
+        this.classList.remove("fieldValid")
+        this.classList.add("fieldInvalid")
+        feedback.innerText = msg
+    }
+    else {
+        this.style.color = "black"
+        this.style.outlineColor = "black"
+        feedback.classList.remove("invalid")
+        feedback.classList.add("valid")
+        this.classList.remove("inv")
+        this.classList.remove("fieldValid")
+        this.classList.add("fieldInvalid")
+    }
 })
 inputs.apellido.addEventListener('input', function () {
     let value = this.value

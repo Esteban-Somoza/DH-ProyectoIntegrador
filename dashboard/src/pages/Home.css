@@ -15,6 +15,9 @@
 .adminContainer img {
     width: 50px;
 }
+.adminContainer {
+    width: 50%;
+}
 
 .dataPanel {
     background-color: white;
@@ -29,6 +32,7 @@
 
 .dataPanel h2 {
     width: 100%;
+    color: #3A687E;
 }
 
 .pageBody {
@@ -39,3 +43,7 @@
 /* img {
     width: 50px;
 } */
+
+.categorias a {
+    padding: 1rem;
+}

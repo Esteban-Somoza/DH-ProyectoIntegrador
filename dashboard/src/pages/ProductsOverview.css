@@ -13,6 +13,7 @@
 
 h1{
     width: 100%;
+    color: var(--color-font);  
 }
 
 h5 {
@@ -83,7 +84,7 @@ h5 {
 
 .categories {
     align-self: flex-end;
-    height: 150px;
+    *height: 150px;
     width: 100%;
     text-align: left;
     flex-grow: 5;
