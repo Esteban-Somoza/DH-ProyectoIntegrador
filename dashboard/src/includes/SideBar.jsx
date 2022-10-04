@@ -1,7 +1,5 @@
 import { useState, useContext, useRef, useEffect } from 'react'
 import { useNavigate, Link } from "react-router-dom";
-import logo from "../../../public/images/logo-sanitario.svg";
-import profile from "../../../public/images/avatars/avatar-1659577307192-672982377.png";
 import { userContext } from "../context/UserContext";
 import "./SideBar.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,7 +9,6 @@ export default function SideBar() {
     const { user, setUser } = useContext(userContext)
     let [users, setUsers] = useState();
 
-    console.log(users);
     const navigate = useNavigate()
 
     let logout = () => {
@@ -30,7 +27,7 @@ export default function SideBar() {
             <img src="/logoNicuesa.svg" alt="" className='logo' />
             <h1>{users && users.nombre}</h1>
             <figure>
-                <img src={profile} alt="" className='profile' />
+                <img src={users && users.imagen} alt="" className='profile' />
             </figure>
             <ul className='links'>
                 <Link to={`/`}> Home </Link>
