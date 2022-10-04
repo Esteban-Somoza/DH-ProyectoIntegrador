@@ -18,7 +18,9 @@
 
 }
 
-
+#form label {
+    margin-top: .5em;
+}
 
 .formulario_contenido h5 {
     text-align: center;
@@ -54,8 +56,9 @@ font-size: 28px;
     justify-content: space-evenly;
     padding-top: 12px;
 }
+
 #img {
-    width: 12em;
+    width: 6em;
     text-align: center;
     border-radius: 1em;
 }
@@ -113,5 +116,6 @@ font-size: 28px;
     cursor: pointer;
     outline: none;
     content: 'Seleccionar archivo';
-    
+    padding: .2em;
+    margin: .5em
 }

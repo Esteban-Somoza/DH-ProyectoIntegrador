@@ -1,21 +1,26 @@
 import React from "react";
 import { useState, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Navigate } from 'react-router-dom'
+import { userContext } from "../context/UserContext";
 
 import SideBar from "../includes/SideBar.jsx";
 import Users from "../includes/Users.jsx";
 
-import bidet from "../../../public/images/productos/bidet1.jpeg";
 import { usersFindAll, findUserId } from "../services/UsersApi";
 import "./userCss.css";
 
 export default function UserPanel() {
+  const { user, userSet } = useContext(userContext)
   let [users, setUsers] = useState();
   let [userId, setUserId] = useState();
+  let [userAdmin, setUserAdmin] = useState();
+  let [regularUser, setRegularUser] = useState();
+
   let { id } = useParams();
 
-  let userAdmin = users && users.filter((user) => user.isAdmin === true);
-  let regularUser = users && users.filter((user) => user.isAdmin === false || null);
+  // let userAdmin
+  // let regularUser
 
   useEffect(() => {
     async function fetchData() {
@@ -24,34 +29,37 @@ export default function UserPanel() {
       return setUsers(otherUsers);
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     async function fetchData() {
-      // acá te falta definir qué hacemos ni bien se ingresa 
-      //al panel y no hay un usuario por el parámetro de la URL
       const usersId = await findUserId(id);
+      let userAdmin = users && users.filter((user) => user.isAdmin === true);
+      let regularUser = users && users.filter((user) => user.isAdmin === false || user.isAdmin === null);
+      setUserAdmin(userAdmin)
+      setRegularUser(regularUser)
       return setUserId(usersId);
     }
     fetchData();
-  }, [id]);
+  }, [users]);
 
   return (
     <>
       <div className="users__container">
+        {!user && <Navigate replace to="/login" />}
         <SideBar />
         <div className="bloque">
           <div className="leftSide">
             <div className="leftSide__container">
-              <h2> {userId && userId.nombre}</h2>
+              <h1> {userId && userId.nombre}</h1>
               <img src={userId && userId.imagen} alt="" />
-              <p>Email</p>
+              <h3>Email</h3>
               <p>{userId && userId.email}</p>
-              <p>Telefono</p>
+              <h3>Telefono</h3>
               <p>{userId && userId.telefono}</p>
-              <p>Ubicacion</p>
+              <h3>Ubicacion</h3>
               <p>{userId && userId.ubicacion}</p>
-    
+
             </div>
           </div>
           <div className="rightSide">

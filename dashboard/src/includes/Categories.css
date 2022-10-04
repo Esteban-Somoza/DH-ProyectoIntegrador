@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-around;
-    width: 50%;
+    min-width: 50%;
 }
 
 .cadaCategoria {
@@ -40,5 +40,6 @@
     display: flex;
     width: 100px;
     background-color: white;
+    margin-bottom: 0.5rem;
     /* margin: 1em auto; */
 }
