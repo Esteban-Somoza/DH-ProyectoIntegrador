@@ -9,27 +9,30 @@
     margin: 2em;
     padding: 2em;
     border-radius: 2em;
-    display: flex;
     flex-wrap: wrap;
     max-height: 100%;
     box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
 }
-.contenedor h1 {
-    padding: 5px;
-    font-size:  18px;
-}
-.contenedorDatos  {
-    font-size: 16px;
-}
+
 .img {
     margin: auto;
     width: 200px;
 }
-#data {
+#imagen {
     width : 
     100%
+}
+.contenedorDeDatos{
+    margin: 2em;
+    padding: 2em;
 }
 .container {
     display: flex;
 }
+
+.contenedorTop{
+    display: flex;
+}
+
+
 
