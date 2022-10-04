@@ -22,8 +22,8 @@
                     <p class="msg-error">
                         <%= errors.nombre.msg %>
                     </p>
+                    <% } %> 
                     <p id="nombreError" class="msg-error errors"></p>
-                    <% } %>
                         <label for="apellido">Apellido</label>
                         <input type="text" name="apellido" id="apellido"   placeholder="Ingrese apellido"
                             value="<%= locals.oldData ? oldData.apellido: null %>">
@@ -31,8 +31,8 @@
                             <p class="msg-error">
                                 <%= errors.apellido.msg %>
                             </p>
-                            <p id="apellidoError" class="msg-error errors"></p>
                             <% } %>
+                            <p id="apellidoError" class="msg-error errors"></p>
 
                                 <label for="email">Email</label>
                                 <input type="email" name="email" id="email" placeholder="direccion de corre electrónico"
@@ -41,8 +41,8 @@
                                     <p class="msg-error">
                                         <%= errors.email.msg %>
                                     </p>
-                                    <p id="emailError" class="msg-error errors"></p>
                                     <% } %>
+                                    <p id="emailError" class="msg-error errors"></p>
 
                                         <label for="contraseña">Contraseña</label>
                                         <input type="password" name="password" id="contraseña"  placeholder="Contraseña"
@@ -51,8 +51,8 @@
                                             <p class="msg-error">
                                                 <%= errors.password.msg %>
                                             </p>
-                                            <p id="passwordError" class="msg-error errors"></p>
                                             <% } %>
+                                            <p id="passwordError" class="msg-error errors"></p>
                                         <label for="telefono">Telefono</label>
                                         <input type="text" name="telefono" id="telefono" placeholder="Telefono/celular"
                                             value="<%= locals.oldData ? oldData.telefono: null %>">
@@ -60,8 +60,8 @@
                                             <p class="msg-error">
                                                 <%= errors.telefono.msg %>
                                             </p>
-                                            <p id="telefonoError" class="msg-error errors"></p>
                                             <% } %>
+                                            <p id="telefonoError" class="msg-error errors"></p>
                                         <label for="ubicacion">Ubicación</label>
                                         <input type="text" name="ubicacion" id="ubicacion" placeholder="Ubicacion"
                                             value="<%= locals.oldData ? oldData.ubicacion: null %>">
@@ -69,16 +69,16 @@
                                             <p class="msg-error">
                                                 <%= errors.ubicacion.msg %>
                                             </p>
-                                            <p id="ubicacionError" class="msg-error errors"></p>
                                             <% } %>
+                                            <p id="ubicacionError" class="msg-error errors"></p>
 
                                             <label for="avatar">Foto de perfil</label>              
                                             <input type="file" 
-                                                name="imagen" id="imagen">
+                                                name="file" id="imagen">
                                                 <% if (locals.errors && errors.avatar) { %>
                                                     <p class="msg-error"> <%= errors.avatar.msg %> </p>
                                                 <% } %>
-                                                <p id="avatarError" class="msg-error errors"></p>
+                                                <p id="fileError" class="msg-error errors"></p>
 
                                                         <div id="form__botonContainer">
                                                             <button type="reset" class="form__boton reset">Borrar</button>

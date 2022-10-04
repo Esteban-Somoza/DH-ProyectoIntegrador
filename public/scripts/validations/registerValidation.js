@@ -1,14 +1,100 @@
 let form = document.forms.form
 let inputs = form.elements
 
+console.log(inputs);
 
 let userExists = async function (email) {
     let exists = await axios.post(`/api/userExists/${email}`)
     return exists
 }
 
+
+let userAlreadyExists = async function (exists) {
+    let input = inputs.email
+    let feedback = document.querySelector("#emailError")
+    let msg = null
+
+    if (exists.data.exists) {
+        msg = "El email ya está registrado"
+    }
+
+    if (msg) {
+        feedback.classList.remove("valid")
+        feedback.classList.add("invalid")
+        input.classList.remove("inv")
+        input.classList.remove("fieldValid")
+        input.classList.add("fieldInvalid")
+        feedback.innerText = msg
+    }
+
+    else {
+        feedback.classList.remove("invalid")
+        feedback.classList.add("valid")
+        input.classList.remove("inv")
+        input.classList.remove("fieldValid")
+        input.classList.add("fieldInvalid")
+    }
+}
+
+let fileValidation = function (file) {
+    var fileInput = document.getElementById('file');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    if (!allowedExtensions.exec(filePath)) {
+        alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+        fileInput.value = '';
+        return false;
+    } else {
+        //Image preview
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('imagePreview').innerHTML = '<img src="' + e.target.result + '"/>';
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+}
+
+inputs.file.addEventListener('input', function () {
+    let file = this.files[0]
+    let feedback = document.querySelector("#fileError")
+    let msg = null
+    let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+    if(!file) return
+
+    if (file.size >  3145728  ) {
+        msg = "El archivo debe pesar menos que 3mb"
+    }
+    
+    if(!allowedExtensions.exec(file.name)){
+        msg = "formatos de archivos correctos: .jpeg, .png, .gif or .jpg"
+    }
+
+    if (msg) {
+        this.style.color = "maroon"
+        this.style.outlineColor = "maroon"
+        feedback.classList.remove("valid")
+        feedback.classList.add("invalid")
+        this.classList.remove("inv")
+        this.classList.remove("fieldValid")
+        this.classList.add("fieldInvalid")
+        feedback.innerText = msg
+    }
+    else {
+        this.style.color = "black"
+        this.style.outlineColor = "black"
+        feedback.classList.remove("invalid")
+        feedback.classList.add("valid")
+        this.classList.remove("inv")
+        this.classList.remove("fieldValid")
+        this.classList.add("fieldInvalid")
+    }
+
+})
+
 inputs.nombre.addEventListener('input', function () {
-    console.log(inputs.nombre);
     let value = this.value
     let feedback = document.querySelector("#nombreError")
     let msg = null
@@ -16,19 +102,7 @@ inputs.nombre.addEventListener('input', function () {
     if (!validator.isLength(value, { min: 2 })) {
         msg = "El nombre debe contener al menos 2 caracteres."
     }
-    
-    
-   
-})
-inputs.apellido.addEventListener('input', function () {
-    let value = this.value
-    let feedback = document.querySelector("#apellidoError")
-    let msg = null
 
-    if (!validator.isLength(value, { min: 2 })) {
-        msg = "El apellido debe contener al menos 2 caracteres."
-    }
-    
     if (msg) {
         this.style.color = "maroon"
         this.style.outlineColor = "maroon"
@@ -49,6 +123,39 @@ inputs.apellido.addEventListener('input', function () {
         this.classList.add("fieldInvalid")
     }
 })
+
+inputs.apellido.addEventListener('input', function () {
+    let value = this.value
+    let feedback = document.querySelector("#apellidoError")
+    let msg = null
+
+    if (!validator.isLength(value, { min: 2 })) {
+        msg = "El apellido debe contener al menos 2 caracteres."
+    }
+
+    if (msg) {
+        this.style.color = "maroon"
+        this.style.outlineColor = "maroon"
+        feedback.classList.remove("valid")
+        feedback.classList.add("invalid")
+        this.classList.remove("inv")
+        this.classList.remove("fieldValid")
+        this.classList.add("fieldInvalid")
+        feedback.innerText = msg
+    }
+    else {
+        this.style.color = "black"
+        this.style.outlineColor = "black"
+        feedback.classList.remove("invalid")
+        feedback.classList.add("valid")
+        this.classList.remove("inv")
+        this.classList.remove("fieldValid")
+        this.classList.add("fieldInvalid")
+    }
+})
+
+
+
 
 inputs.email.addEventListener('input', function () {
     let value = this.value
@@ -82,56 +189,32 @@ inputs.email.addEventListener('input', function () {
     }
 })
 
-let emailNotFound = async function (exists) {
-    let input = inputs.email
-    let feedback = document.querySelector("#emailError")
-    let msg = null
-
-    if (!exists.data.exists) {
-        msg = "El email no está registrado"
-    }
-
-    if (msg) {
-        feedback.classList.remove("valid")
-        feedback.classList.add("invalid")
-        input.classList.remove("inv")
-        input.classList.remove("fieldValid")
-        input.classList.add("fieldInvalid")
-        feedback.innerText = msg
-    }
-
-    else {
-        feedback.classList.remove("invalid")
-        feedback.classList.add("valid")
-        input.classList.remove("inv")
-        input.classList.remove("fieldValid")
-        input.classList.add("fieldInvalid")
-    }
-}
 
 inputs.password.addEventListener('input', function () {
     let value = this.value
     let feedback = document.querySelector("#passwordError")
     let msg = null
 
-    if (value.length < 8){
+    if (value.length < 8) {
     } else {
     }
-    
+
     if (!validator.isLength(value, { min: 7 })) {
         msg = "La contraseña debe contener al menos 8 digitos"
     }
-    
+    console.log(msg);
+
     if (msg) {
         this.style.color = "maroon"
         this.style.outlineColor = "maroon"
         feedback.classList.add("invalid")
+
         this.classList.remove("inv")
         this.classList.remove("fieldValid")
         this.classList.add("fieldInvalid")
         feedback.innerText = msg
     }
-    
+
     else {
         this.style.color = "black"
         this.style.outlineColor = "black"
@@ -143,12 +226,11 @@ inputs.password.addEventListener('input', function () {
 })
 
 
-
 form.addEventListener("submit", async function (e) {
     e.preventDefault()
     let email = document.getElementById("email").value
     let exists = await userExists(email)
-    emailNotFound(exists)
+    userAlreadyExists(exists)
 
     let invalids = document.querySelectorAll(".invalid")
     let invalidFields = document.querySelectorAll(".fieldInvalid")
