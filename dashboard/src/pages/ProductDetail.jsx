@@ -12,7 +12,7 @@ export default function ProductDetail() {
     const { user, setUser } = useContext(userContext)
     const { id } = useParams()
     const [product, setProduct] = useState({})
-    const [information, setInformation] = useState({})
+    // const [information, setInformation] = useState({})
     const [properties, setProperties] = useState([])
 
 
@@ -25,15 +25,10 @@ export default function ProductDetail() {
             setProduct(product)
             return product
         }).then(result => {
-            setInformation(result.informacion)
-            return result.informacion
-        }).then(result => {
-            setProperties(getProperties(result).filter(e => e !== "id"))
+            setProperties(getProperties(result.informacion).filter(e => e !== "id"))
         })
     }, [])
 
-    console.log(information);
-    console.log(properties);
 
     return (
         <div className="container">
