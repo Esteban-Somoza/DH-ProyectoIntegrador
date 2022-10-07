@@ -8,22 +8,28 @@ import Categories from "../includes/Categories.jsx";
 
 import "./ProductDetail.css";
 
-
 export default function ProductDetail() {
-    const { user, userSet } = useContext(userContext)
+    const { user, setUser } = useContext(userContext)
     const { id } = useParams()
     const [product, setProduct] = useState({})
-    let info = product.informacion
+    // const [information, setInformation] = useState({})
+    const [properties, setProperties] = useState([])
+
+
+    function getProperties(information) {
+        return Object.getOwnPropertyNames(information)
+    }
 
     useEffect(() => {
-        findId(id)
-            .then((product) => setProduct(product))
-    }
-        , [id])
+        findId(id).then((product) => {
+            setProduct(product)
+            return product
+        }).then(result => {
+            setProperties(getProperties(result.informacion).filter(e => e !== "id"))
+        })
+    }, [])
 
-    if (info) {
-        console.log(info.id)
-    } [id]
+
     return (
         <div className="container">
             {!user && <Navigate replace to="/login" />}
@@ -31,9 +37,9 @@ export default function ProductDetail() {
             <div className="panel">
                 <div className="contenedorTop">
                     <section className="contenedor">
-                            <h1>
-                                 {product.nombre}
-                            </h1>
+                        <h1>
+                            {product.nombre}
+                        </h1>
                         <figure className="img">
                             <img id="imagen" src={product.imagen} alt="" />
                         </figure>
@@ -45,8 +51,12 @@ export default function ProductDetail() {
                     <section className="contenedorDeDatos">
                         <h2> Categoria:{product.categoria}</h2>
                         <h2>SubCategoria:{product.subcategoria} </h2>
-
-                     
+                        <br />
+                        <h2>Información: </h2>
+                        {properties &&
+                            properties.map((p, index) =>
+                                <h5 key={index}>{p}: {product.informacion[p]} </h5>
+                            )}
                     </section>
                 </div>
                 <div className='categories'>

@@ -57,6 +57,8 @@ export default function ProductsOverview() {
                                 </article>
                             </Link>)
                     }
+
+                    
                 </section>
                 <div className='categories'>
                     <h3 className='titulo'>Otras Categorias</h3>
