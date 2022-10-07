@@ -253,13 +253,35 @@ inputs.password.addEventListener('input', function () {
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault()
+    
+    // let inputsTotal = document.querySelectorAll("input")
+    // inputsTotal.forEach( e  => console.log(e.value) )
+    // console.log(inputsTotal[1].value == "");
+    // if (inputsTotal.every(e => e.value == "")){
+    //     MySwal.fire({
+    //         position: 'center',
+    //         icon: 'error',
+    //         title: 'Complete los campos',
+    //         showConfirmButton: false,
+    //         timer: 1500
+    //     })
+
+    //     return 
+    // }
+
+
     let email = document.getElementById("email").value
+     console.log(email);
     let exists = await userExists(email)
     userAlreadyExists(exists)
+
 
     let invalids = document.querySelectorAll(".invalid")
     let invalidFields = document.querySelectorAll(".fieldInvalid")
     let isCorrect = false
+
+   
+  
   
     if (invalids.length < 1) {
         isCorrect = true

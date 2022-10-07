@@ -25,7 +25,7 @@ export default function UserPanel() {
   useEffect(() => {
     async function fetchData() {
       const users = await usersFindAll();
-      let otherUsers = users.users.filter((user) => user.id != id);
+      let otherUsers = users.users
       return setUsers(otherUsers);
     }
     fetchData();
@@ -63,11 +63,11 @@ export default function UserPanel() {
             </div>
           </div>
           <div className="rightSide">
-            <h5>Administradores</h5>
-            <Users users={userAdmin} />
-            <h5>Usuarios</h5>
+            <h5>Administradores: {userAdmin && userAdmin.length}</h5>
+            <Users users={userAdmin && userAdmin.filter(user => user.id != id)} />
+            <h5>Usuarios: {regularUser && regularUser.length}</h5>
 
-            <Users users={regularUser} />
+            <Users users={regularUser && regularUser.filter(user => user.id != id)} />
 
           </div>
         </div>
