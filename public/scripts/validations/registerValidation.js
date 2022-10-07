@@ -254,20 +254,25 @@ inputs.password.addEventListener('input', function () {
 form.addEventListener("submit", async function (e) {
     e.preventDefault()
     
-    // let inputsTotal = document.querySelectorAll("input")
-    // inputsTotal.forEach( e  => console.log(e.value) )
-    // console.log(inputsTotal[1].value == "");
-    // if (inputsTotal.every(e => e.value == "")){
-    //     MySwal.fire({
-    //         position: 'center',
-    //         icon: 'error',
-    //         title: 'Complete los campos',
-    //         showConfirmButton: false,
-    //         timer: 1500
-    //     })
+    let inputsTotal = document.querySelectorAll("input")
+    if (inputsTotal[0,1,2,3,4,5,6].value == "" ){
+        
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Complete los campos',
+            showConfirmButton: false,
+            timer: 1500
+        })
 
-    //     return 
-    // }
+        return 
+    }
+
+    const inputCheck = (e) => e.value == "" ;
+    console.log(inputCheck);
+
+    console.log(inputsTotal[1].value == "");
+
 
 
     let email = document.getElementById("email").value
