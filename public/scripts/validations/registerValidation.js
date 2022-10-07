@@ -255,23 +255,22 @@ form.addEventListener("submit", async function (e) {
     e.preventDefault()
     
     let inputsTotal = document.querySelectorAll("input")
-    if (inputsTotal[0,1,2,3,4,5,6].value == "" ){
+    if (inputsTotal[1,2,3,4].value == "" ){
+        console.log(inputsTotal[1,2,3,4].value == "" );
         
         Swal.fire({
             position: 'center',
             icon: 'error',
-            title: 'Complete los campos',
+            title: 'Complete los campos de Nombre, Apellido, Email y Contraseña',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1700
         })
 
         return 
     }
 
-    const inputCheck = (e) => e.value == "" ;
-    console.log(inputCheck);
-
-    console.log(inputsTotal[1].value == "");
+   
+  
 
 
 
