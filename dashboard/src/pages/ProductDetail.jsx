@@ -17,6 +17,7 @@ export default function ProductDetail() {
 
 
     function getProperties(information) {
+        console.log(information)
         return Object.getOwnPropertyNames(information)
     }
 
@@ -29,6 +30,7 @@ export default function ProductDetail() {
         })
     }, [])
 
+    // console.log(product.information);
 
     return (
         <div className="container">
@@ -49,13 +51,22 @@ export default function ProductDetail() {
                         </article>
                     </section>
                     <section className="contenedorDeDatos">
-                        <h2> Categoria:{product.categoria}</h2>
-                        <h2>SubCategoria:{product.subcategoria} </h2>
+                        <h2> Descripcion: </h2>
+                        <h3> {product.descripcion}</h3>
+                        <br />
+                        <h2> Categoria: </h2>
+                        <h3> {product.categoria}</h3>
+                        <br />
+                        <h2>Sub-Categoria:  </h2>
+                        <h3>{product.subcategoria} </h3>
                         <br />
                         <h2>Información: </h2>
                         {properties &&
                             properties.map((p, index) =>
-                                <h5 key={index}>{p}: {product.informacion[p]} </h5>
+                                product.informacion[p] != null ? <div key={index} className="info">
+                                    <h5 >{p}: </h5><h6 >{product.informacion[p]} </h6>
+                                </div> 
+                                : null
                             )}
                     </section>
                 </div>

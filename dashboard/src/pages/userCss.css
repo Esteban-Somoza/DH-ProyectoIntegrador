@@ -38,7 +38,7 @@
 }
 
 .users__container {
-    background-color: var(--color-white);
+    /* background-color: var(--color-white); */
     display: flex;
     width: 100%;
     height: auto;

@@ -109,7 +109,9 @@ inputs.imagenProducto.addEventListener('input', function () {
 
   console.log(file);
 
-  if (!file) return
+  if (!file) {
+    msg = "Debe insertar una imagen"
+  }
 
   if (file.size > 3145728) {
     msg = "El archivo debe pesar menos que 3mb"
@@ -144,8 +146,8 @@ inputs.imagenProducto.addEventListener('input', function () {
 
 forms.addEventListener("submit", function (e) {
   e.preventDefault()
-  // checkCategory()
-  console.log("gafd");
+  console.log("sdi");
+
   let invalids = document.querySelectorAll(".invalid")
   let invalidFields = document.querySelectorAll(".fieldInvalid")
   let isCorrect = false
@@ -157,6 +159,7 @@ forms.addEventListener("submit", function (e) {
   if (isCorrect) {
     return e.target.submit()
   }
+
   else {
     for (let i = 0; i < invalidFields.length; i++) {
       invalidFields[i].classList.add("inv")
