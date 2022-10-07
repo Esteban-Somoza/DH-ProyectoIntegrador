@@ -409,3 +409,9 @@ header a h2 {
     top: 1px;
     position: relative;
 }
+
+@media (max-width: 560px){
+   .navbar_right {
+    display: none;
+   }
+}

@@ -14,7 +14,7 @@
     "apellido": "paladino",
     "email": "carlosp@nicuesa.com",
     "password": "$2a$10$sPY8aJv25QC.B1xXatEDn.zxl5v1s61CpgP9KGxIwpYoKj.oD7ymW",
-    "imagenId": "perfil-avatar4.png",
+    "imagenId": "images2.png",
     "IsAdmin": true
   },
   {
@@ -56,7 +56,7 @@
     "apellido": "nicuesa",
     "email": "GonzaloN@nicuesa.com",
     "password": "$2a$10$3XNhFc6emY/3mi0jCpZL9.86oztW1AtKfYq8Tc/1WrOpNjB7wIIDW",
-    "imagenId": "perfil-avatar4.png",
+    "imagenId": "avatar-1659577307192-672982377.png",
     "isAdmin": true,
     "telefono": 159840234,
     "ubicacion": "Buenos Aires, Tigre"
@@ -67,7 +67,7 @@
     "apellido": "Giu",
     "email": "Lucia@gmail.com",
     "password": "$2a$10$SC8YbzIezGZhWqjs62qQT.UbgJU3c76VEI/NC7PE54NICbGoj9j/q",
-    "imagenId": "mujer.webp",
+    "imagenId": "avatar-1659577307192-672982377.png",
     "isAdmin": false
   },
   {

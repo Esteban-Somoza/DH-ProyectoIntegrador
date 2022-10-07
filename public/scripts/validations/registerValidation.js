@@ -260,11 +260,11 @@ form.addEventListener("submit", async function (e) {
     let invalids = document.querySelectorAll(".invalid")
     let invalidFields = document.querySelectorAll(".fieldInvalid")
     let isCorrect = false
-
+  
     if (invalids.length < 1) {
         isCorrect = true
     }
-
+    
     if (isCorrect) {
         return e.target.submit()
     }
