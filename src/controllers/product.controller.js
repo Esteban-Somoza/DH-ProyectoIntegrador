@@ -10,6 +10,10 @@ module.exports = {
     if (!productDB) {
       return res.redirect('/products/finder')
     }
+    
+    let productsDB = await producto.findAll({ include: { all: true } })
+    let otherProducts = productsDB.filter(prod => prod.categoria === productDB.categoria && prod.id !== productDB.id)
+    let otherProductsSent = otherProducts.sort( () => .5 - Math.random() ).slice(0,3)
 
     let informacion = Object.getOwnPropertyNames(productDB.informacion.dataValues)
 
@@ -19,6 +23,7 @@ module.exports = {
       producto: productDB,
       esquema: productDB.esquema,
       informacion: informacion,
+      otherProducts: otherProductsSent
     });
   },
 

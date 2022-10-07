@@ -3,71 +3,95 @@
 
 <head>
     <%- include ('../includes/head.ejs') %>
-    <script  defer src="../../scripts/menu.js"></script>
+    <script defer src="../../scripts/menu.js"></script>
 </head>
 
 <body>
     <%- include ('../includes/header.ejs') %>
-        <!-- break  -->
-        <main>
-          <!--    <div id="ruta">
+    <!-- break  -->
+    <main>
+        <!--    <div id="ruta">
                 <h6 class="texto">productos - baño - griferia -</h6>
                 <h6 class="ruta__texto ruta__texto--resaltado">
                    // 
                 </h6> -->
-            </div>
-            <section id="producto">
-                <picture id="producto__imagen">
-                    <img src="/images/productos/<%= producto.imagen.nombre%> " alt="">
-                </picture>
-                <article id="producto__informacion">
-                    <h2 id="producto__titulo">
-                        <%= producto.nombre %>
-                    </h2>
-                    <ul id="producto__tabla">
-                        <!-- generador -->
-                        <% for( let i=0; i < informacion.length; i++ ) { let item=informacion[i]
+        </div>
+        <section id="producto">
+            <picture id="producto__imagen">
+                <img src="/images/productos/<%= producto.imagen.nombre%> " alt="">
+            </picture>
+            <article id="producto__informacion">
+                <h2 id="producto__titulo">
+                    <%= producto.nombre %>
+                </h2>
+                <br>
+                <div class="categoria">
+                    <h5> Categoria: </h5>
+                    <p><%= producto.categoria %></p>
+                </div>
+                <div class="categoria">
+                    <h5>Sub-categoria: </h5>
+                    <p> <%=  producto.subcategoria %></p>
+                </div>
+                <br>
+                <div class="categoria">
+                    <h5>Descripcion: </h5>
+                    <p>
+                        <%= producto.descripcion %>
+                    </p>
+                </div>
+                <ul id="producto__tabla">
+                    <!-- generador -->
+                    <% for( let i=0; i < informacion.length; i++ ) { let item=informacion[i]
                         if(informacion[i] == "id"){ continue }
                         if(producto.informacion[item] == "" || producto.informacion[item] == null ){ continue } %>
-                            <li class="producto__tablaItem">
-                                <h3 class="producto__itemsTabla">
-                                    <%= informacion[i] %>
-                                </h3>
-                                <h3 class="producto__infoTabla">
-                                    <%= producto.informacion[item] %>
-                                </h3>
-                            </li>
-                            <% } %>
-                    </ul>
-                    <div id="producto__compra">
-                        <h5>Valor Final:</h5>
-                        <h3> $ <%= producto.precio %>
+                    <li class="producto__tablaItem">
+                        <h3 class="producto__itemsTabla">
+                            <%= informacion[i] %>
                         </h3>
-                        
-                    </div>
-                    <% if (user && user.isAdmin){ %>
-                        
-                    <a href="/products/productDelete/<%= producto.id %> "><i  id= "basura" class="fa-solid fa-trash basura"></i></a>
-                    <a href="/products/edit/<%= producto.id %> "><i id="edit" class="fa-solid fa-pen-to-square edit"></i> </a>
+                        <h3 class="producto__infoTabla">
+                            <%= producto.informacion[item] %>
+                        </h3>
+                    </li>
                     <% } %>
-                </article>
-            </section>
-            <section id="detalles">
-                <h3>Descripción del producto</h3>
-                <ul id="detalles__navegacion">
                 </ul>
-                <article id="detalles__infoDetalle">
-                    <div><%= producto.descripcion %></div>
-                    <picture class="imagen">
-                        <img src="<%= producto.detalles %> " alt="">
-                    </picture>
-                </article>
-            </section>
-        </main>
-        <!-- break -->
+                <div id="producto__compra">
+                    <h5>Valor Final:</h5>
+                    <h3> $ <%= producto.precio %>
+                    </h3>
 
-        <%- include ('../includes/footer.ejs') %>
+                </div>
+                <% if (user && user.isAdmin){ %>
 
-       
+                <a href="/products/productDelete/<%= producto.id %> "><i id="basura"
+                        class="fa-solid fa-trash basura"></i></a>
+                <a href="/products/edit/<%= producto.id %> "><i id="edit" class="fa-solid fa-pen-to-square edit"></i>
+                </a>
+                <% } %>
+            </article>
+        </section>
+        <h2 class="otrosProductos">Otros productos de <%= producto.categoria %> </h2>
+        <section id="detalles">
+            
+
+            <% otherProducts.forEach(element=> { %>
+            <article class="productos__elemento hidden"><a class="link" href="/products/<%= element.id %> ">
+                    <div class="productos__informacion">
+                        <picture class="imagen "><img src="/images/productos/<%= element.imagen.nombre %>" alt="">
+                        </picture>
+                    </div>
+                    <h3>
+                        <%= element.nombre %>
+                    </h3>
+                </a> </article>
+            <% }) %>
+
+        </section>
+    </main>
+    <!-- break -->
+
+    <%- include ('../includes/footer.ejs') %>
+
+
 
 </html>

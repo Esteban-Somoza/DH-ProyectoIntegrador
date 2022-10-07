@@ -71,6 +71,7 @@ main h6 {
 
 #producto__titulo {
     text-align: right;
+    text-decoration: underline;
 }
 
 
@@ -120,14 +121,38 @@ main h6 {
     margin-left: auto;
 }
 
+.categoria {
+    width: 100%;
+    text-align: right;
+    margin-top: .5em;
+}
+
 /*--------------DETALLES-----------*/
 
 
 #detalles {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 5em;
+    /* flex-wrap: wrap; */
+   margin-bottom: 1em;
+}
+
+.productos__informacion {
+    height: 90%;
+    display: grid;
+}
+
+.productos__elemento {
+    width: 33%;
+}
+
+.categoria h5{
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.link {
+    height: 100%;
 }
 
 #detalles__navegacion {
@@ -147,8 +172,20 @@ main h6 {
 #detalles h3 {
     width: 100%;
     text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: auto;
 }
 
+.otrosProductos {
+    margin-top: 5em;
+    padding-top: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: underline;
+    border-top: 1px solid #565656;
+}
 
 #detalles__navegacion li {
     padding: .5em .5em;
@@ -170,14 +207,16 @@ li.elegido {
 }
 
 #detalles .imagen {
-    width: 25%;
+    min-width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 #detalles img {
-    width: 100%;
+    /* width: 100%; */
+    height: 100px;
 }
 
 /*---------------ITEMS-----------*/
@@ -219,3 +258,4 @@ li.elegido {
 .ruta__texto--resaltado {
     font-weight: bold;
 }
+

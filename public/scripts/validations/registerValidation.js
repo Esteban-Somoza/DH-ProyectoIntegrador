@@ -249,7 +249,8 @@ form.addEventListener("submit", async function (e) {
     e.preventDefault()
 
     let inputsTotal = document.querySelectorAll("input")
-    console.log(inputsTotal)
+    // console.log(inputsTotal)
+    console.log("inputs", inputsTotal[0]);
     // if (inputsTotal[0, 1, 2, 3, 4, 5, 6].value == "") {
 
     //     Swal.fire({
