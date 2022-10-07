@@ -103,7 +103,7 @@ inputs.password.addEventListener('input', function () {
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault()
-    let email = document.getElementById("email").value
+    let email = document.getElementById("email").value.toLowerCase()
     let exists = await userExists(email)
     emailNotFound(exists)
 
