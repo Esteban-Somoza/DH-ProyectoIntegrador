@@ -157,7 +157,7 @@ forms.addEventListener("submit", function (e) {
   }
 
   if (isCorrect) {
-    // return e.target.submit()
+    return e.target.submit()
   }
 
   else {
