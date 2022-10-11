@@ -12,24 +12,3 @@ menu.addEventListener('click', function () {
         menuLinks.classList.toggle('active');
     }
 })
-
-
-// menu.addEventListener("click", function toggleDropdown(event)) {
-//     // var dropdown = document.getElementById("dropdown");
-
-//     if (event.target.classList.contains('#mobile-menu')){
-//         menu.classList.toggle('is-active');
-//         menu.classList.toggle('is-active');
-//     } else {
-//         menuLinks.classList.remove('active');
-//         menu.classList.remove('is-active');
-//     }
-
-    // function toggleDropdown(event) {
-    //     // var dropdown = document.getElementById("dropdown");
-    
-    //     if (event.target.classList.contains('urunler')){
-    //         dropdown.classList.toggle('show');
-    //     } else {
-    //         dropdown.classList.remove('show');
-    //     }

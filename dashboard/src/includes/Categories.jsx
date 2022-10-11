@@ -13,7 +13,7 @@ export default function Categories({ categories }) {
                 <figure >
                   <img src={category.imagen} alt="" className='categoriaImagen' />
                 </figure>
-                <h4>{category.nombre}</h4>
+                <h4 >{category.nombre}</h4>
               </article>
             </Link>
           )

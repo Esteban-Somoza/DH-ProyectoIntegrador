@@ -23,7 +23,9 @@
     flex-wrap: wrap;
 }
 
-
+.cadaCategoria h4 {
+    width: 100%;
+}
 
 .cadaCategoria img {
     height: 95%;

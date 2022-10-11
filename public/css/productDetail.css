@@ -176,6 +176,7 @@ main h6 {
     overflow: hidden;
     white-space: nowrap;
     margin: auto;
+    font-weight: lighter;
 }
 
 .otrosProductos {

@@ -8,7 +8,6 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     let cantidadUsuarios = usuarios.index().length+2 //+2 por el desfazaje de lógica y por la default image de usuario
 
-    console.log(cantidadUsuarios);
     let products = index().map((product, index) => {
       let productMap = {
         nombre: product.name,

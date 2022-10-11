@@ -62,13 +62,13 @@ inputs.file.addEventListener('input', function () {
     let msg = null
     let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-    if(!file) return
+    if (!file) return
 
-    if (file.size >  3145728  ) {
+    if (file.size > 3145728) {
         msg = "El archivo debe pesar menos que 3mb"
     }
-    
-    if(!allowedExtensions.exec(file.name)){
+
+    if (!allowedExtensions.exec(file.name)) {
         msg = "formatos de archivos correctos: .jpeg, .png, .gif or .jpg"
     }
 
@@ -102,7 +102,7 @@ inputs.nombre.addEventListener('input', function () {
     if (!validator.isLength(value, { min: 2 })) {
         msg = "El nombre debe contener al menos 2 caracteres."
     }
-    
+
     if (msg) {
         this.style.color = "maroon"
         this.style.outlineColor = "maroon"
@@ -253,11 +253,12 @@ inputs.password.addEventListener('input', function () {
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault()
-    
+
     let inputsTotal = document.querySelectorAll("input")
-    if (inputsTotal[1,2,3,4].value == "" ){
-        console.log(inputsTotal[1,2,3,4].value == "" );
-        
+    let checkImputs = [...inputsTotal]
+    
+
+    if (checkImputs.every(i => i.value == "")) {
         Swal.fire({
             position: 'center',
             icon: 'error',
@@ -266,27 +267,29 @@ form.addEventListener("submit", async function (e) {
             timer: 1700
         })
 
-        return 
+        return
     }
 
 
     let email = document.getElementById("email").value
-     console.log(email);
-    let exists = await userExists(email)
-    userAlreadyExists(exists)
+    console.log(email);
+    if (email) {
+        let exists = await userExists(email)
+        userAlreadyExists(exists)
+    }
 
 
     let invalids = document.querySelectorAll(".invalid")
     let invalidFields = document.querySelectorAll(".fieldInvalid")
     let isCorrect = false
 
-   
-  
-  
+
+
+
     if (invalids.length < 1) {
         isCorrect = true
     }
-    
+
     if (isCorrect) {
         return e.target.submit()
     }
